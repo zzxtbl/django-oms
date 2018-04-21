@@ -33,8 +33,8 @@ class DnsRecordViewSet(viewsets.ModelViewSet):
     search_fields = ['name']
 
     def create(self, request, *args, **kwargs):
-        domain_type = request.data['domain_type']
         dnsinfo = DnsApiKey.objects.get(name=request.data['dnsname'])
+        domain_type = dnsinfo.type
         domain = request.data['domain']
         if domain_type == 'dnspod':
             dnsapi = DnspodApi(dnsinfo.key, dnsinfo.secret, '%s,%s' % (dnsinfo.key, dnsinfo.secret))
@@ -62,12 +62,12 @@ class DnsRecordViewSet(viewsets.ModelViewSet):
         self.perform_update(serializer)
 
         domaininfo = DnsDomain.objects.get(name=domain)
-        domain_type = domaininfo.type
+        dnsinfo = DnsApiKey.objects.get(name=domaininfo.dnsname)
+        domain_type = dnsinfo.type
         name = request.data['name']
         value = request.data['value']
         type = request.data['type']
         ttl = request.data['ttl']
-        dnsinfo = DnsApiKey.objects.get(name=domaininfo.dnsname)
         if domain_type == 'dnspod':
             dnsapi = DnspodApi(dnsinfo.key, dnsinfo.secret, '%s,%s' % (dnsinfo.key, dnsinfo.secret))
             record_id = request.data['record_id']
@@ -144,6 +144,20 @@ class DnspodRecordViewSet(viewsets.ViewSet):
             record = {
                 'value': value,
                 'ttl': ttl,
+            }
+            domainquery = DnsDomain.objects.get(name=domain)
+            DnsRecord.objects.update_or_create(domain=domainquery, name=sub_domain, type=record_type, **record)
+            query = dnsapi.update_record(domain, record_id, sub_domain, value, record_type, ttl=ttl)
+        elif request.data['action'] == 'switch':
+            sub_domain = request.data['sub_domain']
+            value = request.data['value2']
+            value2 = request.data['value']
+            record_type = request.data.get('record_type', record_type)
+            ttl = request.data.get('ttl', ttl)
+            record_id = request.data['record_id']
+            record = {
+                'value': value,
+                'value2': value2,
             }
             domainquery = DnsDomain.objects.get(name=domain)
             DnsRecord.objects.update_or_create(domain=domainquery, name=sub_domain, type=record_type, **record)
@@ -232,12 +246,25 @@ class GodaddyRecordViewSet(viewsets.ViewSet):
             domainquery = DnsDomain.objects.get(name=domain)
             DnsRecord.objects.update_or_create(domain=domainquery, name=sub_domain, type=record_type, **record)
             query = dnsapi.update_record(domain, sub_domain, value, record_type, ttl=ttl)
+        elif request.data['action'] == 'switch':
+            sub_domain = request.data['sub_domain']
+            value = request.data['value2']
+            value2 = request.data['value']
+            record_type = request.data.get('record_type', record_type)
+            ttl = request.data.get('ttl', ttl)
+            record = {
+                'value': value,
+                'value2': value2,
+            }
+            domainquery = DnsDomain.objects.get(name=domain)
+            DnsRecord.objects.update_or_create(domain=domainquery, name=sub_domain, type=record_type, **record)
+            query = dnsapi.update_record(domain, sub_domain, value, record_type, ttl=ttl)
         elif request.data['action'] == 'sync':
             query = dnsapi.get_records(domain)
             domainquery = DnsDomain.objects.get(name=domain)
             for item in query:
                 dnsrecord = dict()
-                dnsrecord['name'] = item['domain']
+                dnsrecord['name'] = item['name']
                 dnsrecord['type'] = item['type']
                 dnsrecord['value'] = item['data']
                 dnsrecord['ttl'] = item['ttl']
@@ -309,6 +336,20 @@ class BindRecordViewSet(viewsets.ViewSet):
             record = {
                 'value': value,
                 'ttl': ttl,
+            }
+            domainquery = DnsDomain.objects.get(name=domain)
+            DnsRecord.objects.update_or_create(domain=domainquery, name=sub_domain, type=record_type, **record)
+            query = dnsapi.update_record(domain, record_id, sub_domain, value, record_type, ttl=ttl)
+        elif request.data['action'] == 'switch':
+            sub_domain = request.data['sub_domain']
+            value = request.data['value2']
+            value2 = request.data['value']
+            record_type = request.data.get('record_type', record_type)
+            ttl = request.data.get('ttl', ttl)
+            record_id = request.data['record_id']
+            record = {
+                'value': value,
+                'value2': value2,
             }
             domainquery = DnsDomain.objects.get(name=domain)
             DnsRecord.objects.update_or_create(domain=domainquery, name=sub_domain, type=record_type, **record)

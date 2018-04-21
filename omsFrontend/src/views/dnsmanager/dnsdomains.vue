@@ -22,14 +22,16 @@
                 <el-table-column prop='name' label='名称'></el-table-column>
                 <el-table-column prop='type' label='类型'></el-table-column>
                 <el-table-column prop='value' label='值'></el-table-column>
+                <el-table-column prop='value2' label='备用值'></el-table-column>
                 <el-table-column prop='ttl' label='ttl'></el-table-column>
                 <el-table-column prop='use' label='用途'></el-table-column>
                 <el-table-column prop='desc' label='备注'></el-table-column>
                 <el-table-column label="操作">
                   <template slot-scope="props">
-                    <el-button v-if="['NS', 'SOA'].indexOf(props.row.type)<0" type="success" size="mini"
-                               @click="editGroup(props.row)">修改
-                    </el-button>
+                    <el-button-group v-if="['NS', 'SOA'].indexOf(props.row.type)<0">
+                      <el-button type="success" size="mini" @click="editGroup(props.row)">修改</el-button>
+                      <el-button type="primary" size="mini" @click="swithGroup(props.row)">交换记录</el-button>
+                    </el-button-group>
                   </template>
                 </el-table-column>
               </el-table>
@@ -138,6 +140,9 @@
         <el-form-item label="值" prop="value">
           <el-input v-model="recordForm.value"></el-input>
         </el-form-item>
+        <el-form-item label="备用值" prop="value2">
+          <el-input v-model="recordForm.value2"></el-input>
+        </el-form-item>
         <el-form-item label="ttl" prop="ttl">
           <el-input v-model="recordForm.ttl"></el-input>
         </el-form-item>
@@ -163,6 +168,9 @@
         </el-form-item>
         <el-form-item label="值" prop="value">
           <el-input v-model="recorddata.value"></el-input>
+        </el-form-item>
+        <el-form-item label="备用值" prop="value2">
+          <el-input v-model="recorddata.value2"></el-input>
         </el-form-item>
         <el-form-item label="ttl" prop="ttl">
           <el-input v-model="recorddata.ttl"></el-input>
@@ -232,6 +240,7 @@ export default {
         domain: '',
         name: '',
         value: '',
+        value2: '',
         type: 'A',
         ttl: 600,
         use: '',
@@ -355,6 +364,25 @@ export default {
         loading.close()
         this.fetchData()
         this.editRecordForm = false
+      }).catch(error => {
+        const errordata = JSON.stringify(error.response.data)
+        this.$message.error(errordata)
+      })
+    },
+    swithGroup(row) {
+      this.recorddata = row
+      let temp
+      temp = this.recorddata.value
+      this.recorddata.value = this.recorddata.value2
+      this.recorddata.value2 = temp
+      const loading = this.$loading({
+        lock: true,
+        text: '正在火速连接api修改，请稍等。。。',
+        background: 'rgba(0, 0, 0, 0.7)'
+      })
+      putDnsRecord(this.recorddata.id, this.recorddata).then(() => {
+        loading.close()
+        this.fetchData()
       }).catch(error => {
         const errordata = JSON.stringify(error.response.data)
         this.$message.error(errordata)

@@ -116,7 +116,6 @@ class BindApi(object):
         req = json.loads(ret_json, encoding='utf-8')
         return req
 
-
 if __name__ == '__main__':
     from dnsapi_key import BIND_KEYINFO
 
