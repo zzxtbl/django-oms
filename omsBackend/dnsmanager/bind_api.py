@@ -99,10 +99,12 @@ class BindApi(object):
     def add_record(self, domain, record, value, type='A', ttl=600, mx=10):
         method = 'post'
         title = '{}-{}-{}-{}'.format(domain, record, type, value)
-		if type == 'mx':
-		    data = {'title': title, 'domain': domain, 'name': record, 'value': value, 'type': type, 'ttl': ttl, 'mx': mx}
-		else:
+
+        if type == 'mx':
+            data = {'title': title, 'domain': domain, 'name': record, 'value': value, 'type': type, 'ttl': ttl, 'mx': mx}
+        else:
             data = {'title': title, 'domain': domain, 'name': record, 'value': value, 'type': type, 'ttl': ttl}
+
         ret_json = self.get_response(self.RECORD_URL, method, param_data=data)
         req = json.loads(ret_json, encoding='utf-8')
         return req
@@ -113,6 +115,7 @@ class BindApi(object):
         ret_json = self.get_response(self.RECORD_URL + str(record_id) + '/', method, param_data=data)
         req = json.loads(ret_json, encoding='utf-8')
         return req
+
 
 if __name__ == '__main__':
     from dnsapi_key import BIND_KEYINFO
