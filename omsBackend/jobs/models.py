@@ -13,6 +13,7 @@ DEPLOY_STATUS = {
 }
 
 admin_groups = ['admin', 'OMS_Super_Admin']
+sql_admin_groups = ['admin', 'OMS_Super_Admin', 'OMS_Dev_Manager']
 
 
 class Jobs(models.Model):
