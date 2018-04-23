@@ -18,15 +18,15 @@
           <el-table-column label="记录" type="expand" width="50">
             <template slot-scope="scope">
               <el-table :data='scope.row.recordData' border style="width: 100%">
-                <el-table-column prop="record_id" label="记录ID" sortable></el-table-column>
-                <el-table-column prop='name' label='名称'></el-table-column>
-                <el-table-column prop='type' label='类型'></el-table-column>
+                <el-table-column prop="record_id" label="记录ID" sortable width="100"></el-table-column>
+                <el-table-column prop='name' label='名称' width="100"></el-table-column>
+                <el-table-column prop='type' label='类型' width="100"></el-table-column>
                 <el-table-column prop='value' label='值'></el-table-column>
                 <el-table-column prop='value2' label='备用值'></el-table-column>
                 <el-table-column prop='ttl' label='ttl'></el-table-column>
                 <el-table-column prop='use' label='用途'></el-table-column>
                 <el-table-column prop='desc' label='备注'></el-table-column>
-                <el-table-column label="操作">
+                <el-table-column label="操作" width="200">
                   <template slot-scope="props">
                     <el-button-group v-if="['NS', 'SOA'].indexOf(props.row.type)<0">
                       <el-button type="success" size="mini" @click="editGroup(props.row)">修改</el-button>
@@ -182,7 +182,7 @@
           <el-input v-model="recorddata.desc" type="textarea" :autosize="{ minRows: 5, maxRows: 10}"></el-input>
         </el-form-item>
         <el-form-item>
-          <el-button type="primary" @click="editDnsRecord('recorddata')">立即创建</el-button>
+          <el-button type="primary" @click="editDnsRecord('recorddata')">立即更新</el-button>
         </el-form-item>
       </el-form>
     </el-dialog>
@@ -371,8 +371,7 @@ export default {
     },
     swithGroup(row) {
       this.recorddata = row
-      let temp
-      temp = this.recorddata.value
+      const temp = this.recorddata.value
       this.recorddata.value = this.recorddata.value2
       this.recorddata.value2 = temp
       const loading = this.$loading({

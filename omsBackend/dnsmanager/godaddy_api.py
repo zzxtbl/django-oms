@@ -204,10 +204,12 @@ class GodaddyApi(object):
         """
         record = {
             'type': record_type,
-            'name': "ddd",
+            'name': name,
             'data': value,
             'ttl': ttl
         }
+        print(domain)
+        print(record)
         url = self.API_TEMPLATE + self.RECORDS_TYPE_NAME.format(domain=domain, type=record_type, name=name)
         self._put(url, json=record)
         logging.info('Updated record. Domain {} name {} type {}'.format(domain, name, record_type))
@@ -229,4 +231,4 @@ if __name__ == '__main__':
     records = [{'data': '1.1.1.123', 'name': 'blog', 'ttl': 3600, 'type': 'A'},
                {'type': 'A', 'name': 'ggg', 'data': '1.1.1.2', 'ttl': 600}
                ]
-    print(godaddy.get_domains())
+    print(godaddy.update_record('918168.net', 'aaa', '1.1.1.3', 'A', 3600))

@@ -36,19 +36,21 @@ class DnsRecordViewSet(viewsets.ModelViewSet):
         dnsinfo = DnsApiKey.objects.get(name=request.data['dnsname'])
         domain_type = dnsinfo.type
         domain = request.data['domain']
-        if domain_type == 'dnspod':
-            dnsapi = DnspodApi(dnsinfo.key, dnsinfo.secret, '%s,%s' % (dnsinfo.key, dnsinfo.secret))
-        elif domain_type == 'godaddy':
-            dnsapi = GodaddyApi(dnsinfo.key, dnsinfo.secret)
-        elif domain_type == 'bind':
-            dnsapi = BindApi(user=dnsinfo.key, pwd=None, token=dnsinfo.secret)
-
         name = request.data['name']
         value = request.data['value']
         type = request.data['type']
         ttl = request.data['ttl']
-        query = dnsapi.add_record(domain, name, value, type, ttl)
-        request.data['record_id'] = query['id']
+        if domain_type == 'dnspod':
+            dnsapi = DnspodApi(dnsinfo.key, dnsinfo.secret, '%s,%s' % (dnsinfo.key, dnsinfo.secret))
+            query = dnsapi.add_record(domain, name, value, type, ttl)
+            request.data['record_id'] = query['id']
+        elif domain_type == 'godaddy':
+            dnsapi = GodaddyApi(dnsinfo.key, dnsinfo.secret)
+            query = dnsapi.add_record(domain, name, value, type, ttl)
+        elif domain_type == 'bind':
+            dnsapi = BindApi(user=dnsinfo.key, pwd=None, token=dnsinfo.secret)
+            query = dnsapi.add_record(domain, name, value, type, ttl)
+            request.data['record_id'] = query['id']
         serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         self.perform_create(serializer)
@@ -175,7 +177,8 @@ class DnspodRecordViewSet(viewsets.ViewSet):
                 dnsrecord['value'] = item['value']
                 dnsrecord['ttl'] = item['ttl']
                 dnsrecord['record_id'] = item['id']
-                dnsrecord['title'] = '{}-{}-{}-{}'.format(domainquery, dnsrecord['name'], dnsrecord['type'], dnsrecord['value'])
+                dnsrecord['title'] = '{}-{}-{}-{}'.format(domainquery, dnsrecord['name'], dnsrecord['type'],
+                                                          dnsrecord['value'])
                 d, create = DnsRecord.objects.update_or_create(domain=domainquery, record_id=dnsrecord['record_id'],
                                                                defaults=dnsrecord)
             return Response({'status': create})
@@ -268,7 +271,8 @@ class GodaddyRecordViewSet(viewsets.ViewSet):
                 dnsrecord['type'] = item['type']
                 dnsrecord['value'] = item['data']
                 dnsrecord['ttl'] = item['ttl']
-                dnsrecord['title'] = '{}-{}-{}-{}'.format(domainquery, dnsrecord['name'], dnsrecord['type'], dnsrecord['value'])
+                dnsrecord['title'] = '{}-{}-{}-{}'.format(domainquery, dnsrecord['name'], dnsrecord['type'],
+                                                          dnsrecord['value'])
                 d, create = DnsRecord.objects.update_or_create(domain=domainquery, name=item['name'], type=item['type'],
                                                                value=dnsrecord['value'], defaults=dnsrecord)
             return Response({'status': create})
@@ -364,7 +368,8 @@ class BindRecordViewSet(viewsets.ViewSet):
                 dnsrecord['value'] = item['value']
                 dnsrecord['ttl'] = item['ttl']
                 dnsrecord['record_id'] = item['id']
-                dnsrecord['title'] = '{}-{}-{}-{}'.format(domainquery, dnsrecord['name'], dnsrecord['type'], dnsrecord['value'])
+                dnsrecord['title'] = '{}-{}-{}-{}'.format(domainquery, dnsrecord['name'], dnsrecord['type'],
+                                                          dnsrecord['value'])
                 d, create = DnsRecord.objects.update_or_create(domain=domainquery, record_id=dnsrecord['record_id'],
                                                                defaults=dnsrecord)
             return Response({'status': create})
