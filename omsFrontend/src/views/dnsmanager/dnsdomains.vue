@@ -23,14 +23,14 @@
                 <el-table-column prop='type' label='类型' width="100"></el-table-column>
                 <el-table-column prop='value' label='值'></el-table-column>
                 <el-table-column prop='value2' label='备用值'></el-table-column>
-                <el-table-column prop='ttl' label='ttl'></el-table-column>
+                <el-table-column prop='ttl' label='ttl' width="100"></el-table-column>
                 <el-table-column prop='use' label='用途'></el-table-column>
                 <el-table-column prop='desc' label='备注'></el-table-column>
-                <el-table-column label="操作" width="200">
+                <el-table-column label="操作" width="160">
                   <template slot-scope="props">
                     <el-button-group v-if="['NS', 'SOA'].indexOf(props.row.type)<0">
                       <el-button type="success" size="mini" @click="editGroup(props.row)">修改</el-button>
-                      <el-button type="primary" size="mini" @click="swithGroup(props.row)">交换记录</el-button>
+                      <el-button type="primary" size="mini" @click="swithGroup(props.row)">交换ip</el-button>
                     </el-button-group>
                   </template>
                 </el-table-column>

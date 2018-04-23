@@ -184,10 +184,8 @@ class GodaddyApi(object):
             'data': value,
             'ttl': ttl
         }
-        print(domain)
-        print(record)
         url = self.API_TEMPLATE + self.RECORDS_TYPE_NAME.format(domain=domain, type=record_type, name=name)
-        self._put(url, json=record)
+        self._put(url, json=[record])  # json对象必须是dict
         return True
 
 
@@ -204,4 +202,4 @@ if __name__ == '__main__':
     records = [{'data': '1.1.1.123', 'name': 'blog', 'ttl': 3600, 'type': 'A'},
                {'type': 'A', 'name': 'ggg', 'data': '1.1.1.2', 'ttl': 600}
                ]
-    print(godaddy.update_record('918168.net', 'aaa', '1.1.1.3', 'A', 3600))
+    print(godaddy.update_record('918168.net', 'aaa', '1.1.1.5', 'A', 3600))
