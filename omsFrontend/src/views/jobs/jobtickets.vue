@@ -53,10 +53,8 @@
           <el-table-column prop='file_count' label='附件'>
             <template slot-scope="scope">
               <div slot="reference" class="name-wrapper" style="text-align: center; color: rgb(0,0,0)">
-                <el-badge :value="scope.row.file_count" class="badge">
-                  <el-button @click="getEncloseur(scope.row.id)" size="mini"
+                  <el-button v-if="scope.row.file_count>0" @click="getEncloseur(scope.row.id)" size="mini"
                              icon="el-icon-document"></el-button>
-                </el-badge>
               </div>
             </template>
           </el-table-column>
