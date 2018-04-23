@@ -7,11 +7,10 @@ import json
 import logging
 
 
-def initlog(logfile, logname):
+def initlog(logfile):
     """
     创建日志实例
     """
-    # logger = logging.getLogger(logname) # y
     logger = logging.getLogger()
     hdlr = logging.FileHandler(logfile, encoding="utf-8")
     formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
@@ -145,7 +144,7 @@ class DnspodApi(object):
         ret_json = self.post_data(url, pam)
         status_code = json.loads(ret_json, encoding='utf-8').get('status').get('code')
         if int(status_code) == 1:
-            return json.loads(ret_json, encoding='utf-8').get('record')
+            return ret_json
         error_code, error_message = int(status_code), self.get_error_msg(ret_json)
         logging.error("API返回错误,错误码:%d,错误说明:%s" % (error_code, error_message))
         raise ApiError(error_code, error_message)
@@ -200,7 +199,7 @@ class DnspodApi(object):
 if __name__ == '__main__':
     from dnsapi_key import DMSPOD_KEYINFO
 
-    initlog('./dnsapi.log', 'DnspodApi')
+    initlog('./dnsapi.log')
     dnsapi = DnspodApi(user=DMSPOD_KEYINFO['user'], pwd=DMSPOD_KEYINFO['pwd'])
     record_id = 353763350
     print(dnsapi.get_record_id('itimor.com', 'aaa', '1.1.1.6', 'A'))

@@ -4,21 +4,6 @@
 from __future__ import unicode_literals
 import sys
 import requests
-import logging
-
-
-def initlog(logfile, logname):
-    """
-    创建日志实例
-    """
-    # logger = logging.getLogger(logname) # 有logname就不生产日志
-    logger = logging.getLogger()
-    hdlr = logging.FileHandler(logfile)
-    formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
-    hdlr.setFormatter(formatter)
-    logger.addHandler(hdlr)
-    logger.setLevel(logging.NOTSET)
-    return logger
 
 
 class ApiError(Exception):
@@ -28,7 +13,7 @@ class ApiError(Exception):
 
 
 class GodaddyApi(object):
-    def __init__(self, api_key, api_secret, delegate=None, log_level=None):
+    def __init__(self, api_key, api_secret, delegate=None):
 
         # Logging setup
         self._api_key = api_key
@@ -72,10 +57,6 @@ class GodaddyApi(object):
     def _get_json_from_response(self, url, json=None, **kwargs):
         return self._request_submit(requests.get, url=url, json=json, **kwargs).json()
 
-    def _log_response_from_method(self, req_type, resp):
-        logging.debug('[{req_type}] response: {resp}'.format(resp=resp, req_type=req_type.upper()))
-        logging.debug('Response data: {}'.format(resp.content))
-
     def _patch(self, url, json=None, **kwargs):
         return self._request_submit(requests.patch, url=url, json=json, **kwargs)
 
@@ -88,7 +69,6 @@ class GodaddyApi(object):
 
     def _request_submit(self, func, **kwargs):
         resp = func(headers=self.get_headers(), **kwargs)
-        self._log_response_from_method(func.__name__, resp)
         self._validate_response_success(resp)
         return resp
 
@@ -120,12 +100,10 @@ class GodaddyApi(object):
             update[k] = v
         url = self.API_TEMPLATE + self.DOMAIN_INFO.format(domain=domain)
         self._patch(url, json=update)
-        logging.info("Updated domain {} with {}".format(domain, update))
 
     def get_records(self, domain, record_type=None, name=None):
         url = self._build_record_url(domain, record_type=record_type, name=name)
         data = self._get_json_from_response(url)
-        logging.debug('Retrieved {} record(s) from {}.'.format(len(data), domain))
         return data
 
     def add_record(self, domain, sub_domain, value, record_type="A", ttl=600):
@@ -144,7 +122,6 @@ class GodaddyApi(object):
         """
         url = self.API_TEMPLATE + self.RECORDS.format(domain=domain)
         self._patch(url, json=records)
-        logging.debug('Added records @ {}'.format(records))
         return True
 
     def replace_records(self, domain, records, record_type=None, name=None):
@@ -195,7 +172,6 @@ class GodaddyApi(object):
             else:
                 save.append(record)
         self.replace_records(domain, records=save)
-        logging.info("Deleted {} records @ {}".format(deleted, domain))
         return True
 
     def update_record(self, domain, name, value, record_type='A', ttl=600):
@@ -212,14 +188,11 @@ class GodaddyApi(object):
         print(record)
         url = self.API_TEMPLATE + self.RECORDS_TYPE_NAME.format(domain=domain, type=record_type, name=name)
         self._put(url, json=record)
-        logging.info('Updated record. Domain {} name {} type {}'.format(domain, name, record_type))
         return True
 
 
 if __name__ == '__main__':
     from dnsapi_key import GODADDY_KEYINFO
-
-    initlog('./dnsapi.log', 'GoDaddyApi')
 
     godaddy = GodaddyApi(GODADDY_KEYINFO['key'], GODADDY_KEYINFO['secret'])
     record = {

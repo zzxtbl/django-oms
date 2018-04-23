@@ -7,17 +7,6 @@ import json
 import urllib.parse
 
 
-class ApiError(Exception):
-    """
-    错误类，用于对外显示错误信息
-    """
-
-    def __init__(self, error_code, error_message):
-        super(ApiError, self).__init__()
-        self.error_code = int(error_code)
-        self.error_message = error_message
-
-
 class BindApi(object):
     def __init__(self, user=None, pwd=None, token=None):
         # 用户配置数据
