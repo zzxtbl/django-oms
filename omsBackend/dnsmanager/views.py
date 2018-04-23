@@ -150,20 +150,6 @@ class DnspodRecordViewSet(viewsets.ViewSet):
             domainquery = DnsDomain.objects.get(name=domain)
             DnsRecord.objects.update_or_create(domain=domainquery, name=sub_domain, type=record_type, **record)
             query = dnsapi.update_record(domain, record_id, sub_domain, value, record_type, ttl=ttl)
-        elif request.data['action'] == 'switch':
-            sub_domain = request.data['sub_domain']
-            value = request.data['value2']
-            value2 = request.data['value']
-            record_type = request.data.get('record_type', record_type)
-            ttl = request.data.get('ttl', ttl)
-            record_id = request.data['record_id']
-            record = {
-                'value': value,
-                'value2': value2,
-            }
-            domainquery = DnsDomain.objects.get(name=domain)
-            DnsRecord.objects.update_or_create(domain=domainquery, name=sub_domain, type=record_type, **record)
-            query = dnsapi.update_record(domain, record_id, sub_domain, value, record_type, ttl=ttl)
         elif request.data['action'] == 'remove':
             record_id = request.data['record_id']
             query = dnsapi.delete_record(domain, record_id)
@@ -249,19 +235,6 @@ class GodaddyRecordViewSet(viewsets.ViewSet):
             domainquery = DnsDomain.objects.get(name=domain)
             DnsRecord.objects.update_or_create(domain=domainquery, name=sub_domain, type=record_type, **record)
             query = dnsapi.update_record(domain, sub_domain, value, record_type, ttl=ttl)
-        elif request.data['action'] == 'switch':
-            sub_domain = request.data['sub_domain']
-            value = request.data['value2']
-            value2 = request.data['value']
-            record_type = request.data.get('record_type', record_type)
-            ttl = request.data.get('ttl', ttl)
-            record = {
-                'value': value,
-                'value2': value2,
-            }
-            domainquery = DnsDomain.objects.get(name=domain)
-            DnsRecord.objects.update_or_create(domain=domainquery, name=sub_domain, type=record_type, **record)
-            query = dnsapi.update_record(domain, sub_domain, value, record_type, ttl=ttl)
         elif request.data['action'] == 'sync':
             query = dnsapi.get_records(domain)
             domainquery = DnsDomain.objects.get(name=domain)
@@ -340,20 +313,6 @@ class BindRecordViewSet(viewsets.ViewSet):
             record = {
                 'value': value,
                 'ttl': ttl,
-            }
-            domainquery = DnsDomain.objects.get(name=domain)
-            DnsRecord.objects.update_or_create(domain=domainquery, name=sub_domain, type=record_type, **record)
-            query = dnsapi.update_record(domain, record_id, sub_domain, value, record_type, ttl=ttl)
-        elif request.data['action'] == 'switch':
-            sub_domain = request.data['sub_domain']
-            value = request.data['value2']
-            value2 = request.data['value']
-            record_type = request.data.get('record_type', record_type)
-            ttl = request.data.get('ttl', ttl)
-            record_id = request.data['record_id']
-            record = {
-                'value': value,
-                'value2': value2,
             }
             domainquery = DnsDomain.objects.get(name=domain)
             DnsRecord.objects.update_or_create(domain=domainquery, name=sub_domain, type=record_type, **record)
