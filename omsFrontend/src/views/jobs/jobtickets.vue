@@ -50,11 +50,13 @@
               </div>
             </template>
           </el-table-column>
-          <el-table-column prop='create_time' label='附件'>
+          <el-table-column prop='file_count' label='附件'>
             <template slot-scope="scope">
               <div slot="reference" class="name-wrapper" style="text-align: center; color: rgb(0,0,0)">
-                <el-button @click="getEncloseur(scope.row.id)" size="mini"
-                           icon="el-icon-document"></el-button>
+                <el-badge :value="scope.row.file_count" class="badge">
+                  <el-button @click="getEncloseur(scope.row.id)" size="mini"
+                             icon="el-icon-document"></el-button>
+                </el-badge>
               </div>
             </template>
           </el-table-column>
@@ -345,4 +347,8 @@ export default {
 </script>
 
 <style lang='scss'>
+  .badge {
+    margin-top: 10px;
+    margin-right: 40px;
+  }
 </style>

@@ -69,10 +69,15 @@ class DeployJobsSerializer(serializers.ModelSerializer):
 
 class DeployTicketSerializer(serializers.ModelSerializer):
     create_user = serializers.SlugRelatedField(queryset=User.objects.all(), slug_field='username')
+    file_count = serializers.SerializerMethodField()
+
+    def get_file_count(self, obj):
+        files = DeployTicketEnclosure.objects.filter(ticket=obj.id)
+        return len(files)
 
     class Meta:
         model = DeployTicket
-        fields = ['url', 'id', 'name', 'create_user', 'version', 'content', 'status', 'skype_to', 'create_time']
+        fields = ['url', 'id', 'name', 'create_user', 'version', 'content', 'status', 'skype_to', 'file_count', 'create_time']
 
 
 class DeployTicketEnclosureSerializer(serializers.ModelSerializer):
