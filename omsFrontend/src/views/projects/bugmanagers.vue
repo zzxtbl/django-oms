@@ -101,7 +101,7 @@
           @current-change="handleCurrentChange"
           :current-page.sync="currentPage"
           :page-sizes="pagesize"
-          :page-size="limit"
+          :page-size="listQuery.limit"
           :layout="pageformat"
           :total="tabletotal">
         </el-pagination>
@@ -142,8 +142,6 @@ export default {
       tabletotal: 0,
       searchdata: '',
       currentPage: 1,
-      limit: LIMIT,
-      offset: '',
       pagesize: pagesize,
       pageformat: pageformat,
       addForm: false,
@@ -170,8 +168,8 @@ export default {
         status: ''
       },
       listQuery: {
-        limit: this.limit,
-        offset: this.offset,
+        limit: LIMIT,
+        offset: '',
         status: '',
         search: ''
       }
@@ -217,11 +215,11 @@ export default {
       this.fetchData()
     },
     handleSizeChange(val) {
-      this.limit = val
+      this.listQuery.limit = val
       this.fetchData()
     },
     handleCurrentChange(val) {
-      this.offset = (val - 1) * LIMIT
+      this.listQuery.offset = (val - 1) * LIMIT
       this.fetchData()
     },
     showProject(pid) {
