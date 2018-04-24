@@ -24,7 +24,7 @@ class ProjectViewSet(viewsets.ModelViewSet):
     filter_backends = (ProjectFilterBackend, DjangoFilterBackend, SearchFilter, OrderingFilter)
     filter_class = ProjectFilter
     search_fields = ['pid', 'name', 'content', 'type__name']
-    ordering_fields = ('level', 'task_complete', 'test_complete', 'create_time', 'update_time')
+    ordering_fields = ['level', 'task_complete', 'test_complete', 'create_time', 'update_time']
 
 
 class ProjectCommentViewSet(viewsets.ModelViewSet):
@@ -45,16 +45,19 @@ class ProjectTypeViewSet(viewsets.ModelViewSet):
 
 
 class BugManagerViewSet(viewsets.ModelViewSet):
-    queryset = BugManager.objects.all()
+    queryset = BugManager.objects.all().order_by('create_time')
     serializer_class = BugManagerSerializer
-    filter_fields = ['id', 'project__id', 'test_id']
+    filter_fields = ['id', 'status', 'project__id', 'test_id']
+    search_fields = ['name', 'project__pid']
+    ordering_fields = ['create_time']
 
 
 class TestManagerViewSet(viewsets.ModelViewSet):
-    queryset = TestManager.objects.all()
+    queryset = TestManager.objects.all().order_by('create_time')
     serializer_class = TestManagerSerializer
     filter_fields = ['id', 'status', 'project__id', 'project__pid']
     search_fields = ['name', 'project__pid']
+    ordering_fields = ['create_time']
 
 
 class DemandManagerViewSet(viewsets.ModelViewSet):

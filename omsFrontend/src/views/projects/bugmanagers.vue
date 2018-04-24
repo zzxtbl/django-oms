@@ -4,18 +4,26 @@
       <div class="head-lavel">
         <div class="table-button">
           <el-button type="primary" icon="el-icon-plus" @click="addForm=true">新建</el-button>
+          <el-select v-model="listQuery.status" placeholder="请选择状态筛选" clearable @change="changeBugstatus">
+            <el-option
+              v-for="item in Object.keys(Bug_Status)"
+              :key="item"
+              :label="Bug_Status[item]"
+              :value="item">
+            </el-option>
+          </el-select>
         </div>
         <div class="table-search">
           <el-input
             placeholder="搜索 ..."
-            v-model="searchdata"
+            v-model="listQuery.search"
             @keyup.enter.native="searchClick">
             <i class="el-icon-search el-input__icon" slot="suffix" @click="searchClick"></i>
           </el-input>
         </div>
       </div>
       <div>
-        <el-table :data='tableData' border style="width: 100%">
+        <el-table :data='tableData' border style="width: 100%" @sort-change="handleSortChange">
           <el-table-column type="expand">
             <template slot-scope="props">
               <el-form label-position="left" inline class="table-expand">
@@ -72,6 +80,13 @@
             </template>
           </el-table-column>
           <el-table-column prop='test' label='关联test'></el-table-column>
+          <el-table-column prop='create_time' label='创建时间' sortable="custom">
+            <template slot-scope="scope">
+              <div slot="reference" style="text-align: center; color: rgb(0,0,0)">
+                <span>{{scope.row.create_time | parseDate}}</span>
+              </div>
+            </template>
+          </el-table-column>
           <el-table-column label="操作">
             <template slot-scope="scope">
               <el-button @click="handleEdit(scope.row)" type="success" size="small">修改</el-button>
@@ -153,6 +168,12 @@ export default {
       bugdata: {
         id: '',
         status: ''
+      },
+      listQuery: {
+        limit: this.limit,
+        offset: this.offset,
+        status: '',
+        search: ''
       }
     }
   },
@@ -163,14 +184,9 @@ export default {
 
   methods: {
     fetchData() {
-      const parms = {
-        limit: this.limit,
-        offset: this.offset,
-        name__contains: this.searchdata
-      }
-      getBugManager(parms).then(response => {
-        this.tableData = response.data.results
-        this.tabletotal = response.data.count
+      getBugManager(this.listQuery).then(response => {
+        this.tableData = response.data
+        this.tabletotal = response.data.length
       })
     },
     getDialogStatus(data) {
@@ -227,6 +243,19 @@ export default {
         this.changestatusForm = false
         this.fetchData()
       })
+    },
+    changeBugstatus() {
+      this.fetchData()
+    },
+    handleSortChange(val) {
+      if (val.order === 'ascending') {
+        this.listQuery.ordering = val.prop
+      } else if (val.order === 'descending') {
+        this.listQuery.ordering = '-' + val.prop
+      } else {
+        this.listQuery.ordering = ''
+      }
+      this.fetchData()
     }
   }
 }

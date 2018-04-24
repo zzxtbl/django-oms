@@ -23,7 +23,7 @@
         </div>
       </div>
       <div>
-        <el-table :data='tableData' border style="width: 100%">
+        <el-table :data='tableData' border style="width: 100%" @sort-change="handleSortChange">
           <el-table-column type="expand">
             <template slot-scope="props">
               <el-form label-position="left" inline class="table-expand">
@@ -54,6 +54,13 @@
             <template slot-scope="scope">
               <div slot="reference">
                 <el-button type="text" @click="showProject(scope.row.project)">{{scope.row.project}}</el-button>
+              </div>
+            </template>
+          </el-table-column>
+          <el-table-column prop='create_time' label='创建时间' sortable="custom">
+            <template slot-scope="scope">
+              <div slot="reference" style="text-align: center; color: rgb(0,0,0)">
+                <span>{{scope.row.create_time | parseDate}}</span>
               </div>
             </template>
           </el-table-column>
@@ -184,6 +191,16 @@ export default {
       })
     },
     changeTeststatus() {
+      this.fetchData()
+    },
+    handleSortChange(val) {
+      if (val.order === 'ascending') {
+        this.listQuery.ordering = val.prop
+      } else if (val.order === 'descending') {
+        this.listQuery.ordering = '-' + val.prop
+      } else {
+        this.listQuery.ordering = ''
+      }
       this.fetchData()
     }
   }

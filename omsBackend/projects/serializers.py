@@ -56,8 +56,8 @@ class BugManagerSerializer(serializers.ModelSerializer):
     class Meta:
         model = BugManager
         fields = (
-            'url', 'id', 'project', 'test', 'name', 'desc', 'degree', 'nice', 'status', 'test_user',
-            'action_user', 'test_time', 'end_time')
+            'url', 'id', 'project', 'test', 'name', 'desc', 'degree', 'nice', 'status', 'test_user', 'action_user',
+            'test_time', 'end_time', 'create_time')
 
 
 class TestManagerSerializer(serializers.ModelSerializer):
@@ -68,8 +68,8 @@ class TestManagerSerializer(serializers.ModelSerializer):
     class Meta:
         model = TestManager
         fields = (
-            'url', 'id', 'project', 'name', 'expect_result', 'actual_result', 'status', 'test_user',
-            'action_user', 'test_time')
+            'url', 'id', 'project', 'name', 'expect_result', 'actual_result', 'status', 'test_user', 'action_user',
+            'test_time', 'create_time')
 
 
 class DemandManagerSerializer(serializers.ModelSerializer):

@@ -158,6 +158,7 @@ class BugManager(models.Model):
     action_user = models.ForeignKey(User, related_name='bug_action_user', verbose_name=u'分配给')
     test_time = models.DateField(blank=True, verbose_name=u'测试时间')
     end_time = models.DateField(null=True, blank=True, verbose_name=u'关闭时间')
+    create_time = models.DateTimeField(auto_now_add=True, verbose_name=u'创建时间')
 
     def __str__(self):
         return self.name
@@ -186,6 +187,7 @@ class TestManager(models.Model):
     test_user = models.ForeignKey(User, related_name='test_test_user', verbose_name=u'测试人员')
     action_user = models.ForeignKey(User, related_name='test_action_user', verbose_name=u'开发人员')
     test_time = models.DateField(blank=True, verbose_name=u'测试时间')
+    create_time = models.DateTimeField(auto_now_add=True, verbose_name=u'创建时间')
 
     def __str__(self):
         return self.name
