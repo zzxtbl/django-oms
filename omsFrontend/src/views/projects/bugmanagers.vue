@@ -140,7 +140,6 @@ export default {
     return {
       tableData: [],
       tabletotal: 0,
-      searchdata: '',
       currentPage: 1,
       pagesize: pagesize,
       pageformat: pageformat,
@@ -183,8 +182,8 @@ export default {
   methods: {
     fetchData() {
       getBugManager(this.listQuery).then(response => {
-        this.tableData = response.data
-        this.tabletotal = response.data.length
+        this.tableData = response.data.results
+        this.tabletotal = response.data.count
       })
     },
     getDialogStatus(data) {
