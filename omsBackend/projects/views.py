@@ -49,7 +49,6 @@ class BugManagerViewSet(viewsets.ModelViewSet):
     serializer_class = BugManagerSerializer
     filter_fields = ['id', 'status', 'project__id', 'test_id']
     search_fields = ['name', 'project__pid']
-    ordering_fields = ['create_time']
 
 
 class TestManagerViewSet(viewsets.ModelViewSet):
@@ -57,7 +56,6 @@ class TestManagerViewSet(viewsets.ModelViewSet):
     serializer_class = TestManagerSerializer
     filter_fields = ['id', 'status', 'project__id', 'project__pid']
     search_fields = ['name', 'project__pid']
-    ordering_fields = ['create_time']
 
 
 class DemandManagerViewSet(viewsets.ModelViewSet):
