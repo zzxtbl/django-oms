@@ -36,7 +36,7 @@
               <router-link v-if="workticketlist_btn_edit||role==='super'" :to="'/worktickets/copyworkticket/' + pid">
                 <el-button type="primary" size="small">乾坤大挪移</el-button>
               </router-link>
-              <div class="action" v-if="username==ticketData.create_user||role==='super'||role==='testmanager'">
+              <div class="action">
                 <el-radio-group v-model="radio_status">
                   <el-radio label="0">不操作</el-radio>
                   <el-radio label="2">关闭工单</el-radio>

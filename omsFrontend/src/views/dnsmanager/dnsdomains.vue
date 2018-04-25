@@ -26,6 +26,12 @@
                 <el-table-column prop='ttl' label='ttl' width="100"></el-table-column>
                 <el-table-column prop='use' label='用途'></el-table-column>
                 <el-table-column prop='desc' label='备注'></el-table-column>
+                <el-table-column v-if="scope.row.type==='bind'" prop='tan' label='探测'>
+                  <template slot-scope="props">
+                    <el-tag v-if="props.row.tan" type="success">True</el-tag>
+                    <el-tag v-else type="danger">False</el-tag>
+                  </template>
+                </el-table-column>
                 <el-table-column label="操作" width="160">
                   <template slot-scope="props">
                     <el-button-group v-if="['NS', 'SOA'].indexOf(props.row.type)<0">
@@ -152,6 +158,9 @@
         <el-form-item label="备注" prop="desc">
           <el-input v-model="recordForm.desc" type="textarea" :autosize="{ minRows: 5, maxRows: 10}"></el-input>
         </el-form-item>
+        <el-form-item label="探测" prop="tan">
+          <el-switch v-model="recordForm.tan" active-color="#13ce66" inactive-color="#ff4949"></el-switch>
+        </el-form-item>
         <el-form-item>
           <el-button type="primary" @click="addDnsRecord('recordForm')">立即创建</el-button>
         </el-form-item>
@@ -180,6 +189,9 @@
         </el-form-item>
         <el-form-item label="备注" prop="desc">
           <el-input v-model="recorddata.desc" type="textarea" :autosize="{ minRows: 5, maxRows: 10}"></el-input>
+        </el-form-item>
+        <el-form-item label="探测" prop="tan">
+          <el-switch v-model="recorddata.tan" active-color="#13ce66" inactive-color="#ff4949"></el-switch>
         </el-form-item>
         <el-form-item>
           <el-button type="primary" @click="editDnsRecord('recorddata')">立即更新</el-button>
@@ -244,7 +256,8 @@ export default {
         type: 'A',
         ttl: 600,
         use: '',
-        desc: ''
+        desc: '',
+        tan: false
       },
       record_types: ['A', 'CNAME', 'MX', 'TXT'],
       editRecordForm: false,

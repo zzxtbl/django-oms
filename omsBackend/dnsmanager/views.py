@@ -48,8 +48,9 @@ class DnsRecordViewSet(viewsets.ModelViewSet):
             dnsapi = GodaddyApi(dnsinfo.key, dnsinfo.secret)
             query = dnsapi.add_record(domain, name, value, type, ttl)
         elif domain_type == 'bind':
+            tan = request.data['tan']
             dnsapi = BindApi(user=dnsinfo.key, pwd=None, token=dnsinfo.secret)
-            query = dnsapi.add_record(domain, name, value, type, ttl)
+            query = dnsapi.add_record(domain, name, value, type, ttl, tan)
             request.data['record_id'] = query['id']
         serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)
@@ -78,9 +79,10 @@ class DnsRecordViewSet(viewsets.ModelViewSet):
             dnsapi = GodaddyApi(dnsinfo.key, dnsinfo.secret)
             dnsapi.update_record(domain, name, value, type, ttl=ttl)
         elif domain_type == 'bind':
+            tan = request.data['tan']
             dnsapi = BindApi(user=dnsinfo.key, pwd=None, token=dnsinfo.secret)
             record_id = request.data['record_id']
-            dnsapi.update_record(record_id, domain, name, value, type, ttl=ttl)
+            dnsapi.update_record(record_id, domain, name, value, type, ttl, tan)
 
         return Response(serializer.data)
 

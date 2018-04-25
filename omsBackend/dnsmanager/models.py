@@ -65,6 +65,7 @@ class DnsRecord(models.Model):
     ttl = models.IntegerField(default=600, verbose_name=u'ttl')
     record_id = models.CharField(max_length=11, null=True, blank=True, verbose_name=u'ttl')
     use = models.TextField(null=True, blank=True, verbose_name=u'用途')
+    tan = models.BooleanField(default=False, verbose_name=u"是否探测")
     desc = models.TextField(null=True, blank=True, verbose_name=u'备注')
 
     def __str__(self):

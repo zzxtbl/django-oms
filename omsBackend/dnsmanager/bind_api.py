@@ -19,7 +19,7 @@ class BindApi(object):
         }
 
         # url
-        self.API_URL = 'http://127.0.0.1:8888/api/'
+        self.API_URL = 'http://118.193.136.206:8000/api/'
         self.DOMAIN_URL = self.API_URL + 'domains/'
         self.RECORD_URL = self.API_URL + 'records/'
 
@@ -85,22 +85,22 @@ class BindApi(object):
         req = json.loads(ret_json, encoding='utf-8')
         return req
 
-    def add_record(self, domain, record, value, type='A', ttl=600, mx=10):
+    def add_record(self, domain, record, value, type='A', ttl=600, tan=False, mx=10):
         method = 'post'
         title = '{}-{}-{}-{}'.format(domain, record, type, value)
 
         if type == 'mx':
-            data = {'title': title, 'domain': domain, 'name': record, 'value': value, 'type': type, 'ttl': ttl, 'mx': mx}
+            data = {'title': title, 'domain': domain, 'name': record, 'value': value, 'type': type, 'ttl': ttl, 'tan': tan, 'mx': mx}
         else:
-            data = {'title': title, 'domain': domain, 'name': record, 'value': value, 'type': type, 'ttl': ttl}
+            data = {'title': title, 'domain': domain, 'name': record, 'value': value, 'type': type, 'ttl': ttl, 'tan': tan}
 
         ret_json = self.get_response(self.RECORD_URL, method, param_data=data)
         req = json.loads(ret_json, encoding='utf-8')
         return req
 
-    def update_record(self, record_id, domain, record, value, type='A', ttl=600):
+    def update_record(self, record_id, domain, record, value, type='A', ttl=600, tan=False):
         method = 'put'
-        data = {'domain': domain, 'name': record, 'value': value, 'type': type, 'ttl': ttl}
+        data = {'domain': domain, 'name': record, 'value': value, 'type': type, 'ttl': ttl, 'tan': tan}
         ret_json = self.get_response(self.RECORD_URL + str(record_id) + '/', method, param_data=data)
         req = json.loads(ret_json, encoding='utf-8')
         return req
