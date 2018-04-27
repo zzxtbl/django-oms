@@ -5,7 +5,14 @@ import requests
 import json
 from datetime import datetime, timedelta
 import logging
+from sendmail import SendMail
 
+MAIL_ACOUNT = {
+    "mail_host": "mail.tb-gaming.com",
+    "mail_user": "oms@tb-gaming.com",
+    "mail_pass": "u62En68D9d",
+    "mail_postfix": "tb-gaming.com",
+}
 
 def initlog(logfile):
     """
@@ -47,20 +54,32 @@ def diffdns(alldomains, domainstatus_url, record_url):
             result['status'] = False
 
             # 自动切换ip
-            x = domain.split('.')
-            domainname = '{}.{}'.format(x[1], x[2])
-            recordname = x[0]
+            # x = domain.split('.')
+            # domainname = '{}.{}'.format(x[1], x[2])
+            # recordname = x[0]
+            #
+            # recorddata = json.loads(
+            #     requests.get('{}?domain__name={}&name={}'.format(record_url, domainname, recordname)).text)[0]
+            #
+            # if recorddata['value2']:
+            #     recorddata['value'], recorddata['value2'] = recorddata['value2'], recorddata['value']
+            #     put_url = '{}{}/'.format(record_url, recorddata['id'])
+            #     requests.put(put_url, data=recorddata)
+            #     logging.warning("%s - [域名异常，ip已经自动更换] - %s" % (domain, result))
+            # else:
+            #     logging.error("%s - [域名异常，没有设置备用ip] - %s" % (domain, result))
 
-            recorddata = json.loads(
-                requests.get('{}?domain__name={}&name={}'.format(record_url, domainname, recordname)).text)[0]
-
-            if recorddata['value2']:
-                recorddata['value'], recorddata['value2'] = recorddata['value2'], recorddata['value']
-                put_url = '{}{}/'.format(record_url, recorddata['id'])
-                requests.put(put_url, data=recorddata)
-                logging.warning("%s - [域名异常，ip已经自动更换] - %s" % (domain, result))
+            # 邮件通知
+            sub = '%s 域名异常' % domain
+            content = '大胸弟，%s 域名异常, 需要更换ip' % domain
+            to_list = 'kiven@tb-gaming.com'
+            cc_list = 'larry@tb-gaming.com'
+            sendmail = SendMail(MAIL_ACOUNT, sub, content, to_list, cc_list)
+            if sendmail.send_mail():
+                logging.info("通知邮件发送成功")
             else:
-                logging.error("%s - [域名异常，没有设置备用ip] - %s" % (domain, result))
+                logging.error("通知邮件发送失败")
+
     logging.info("轮回结束，等待下一次...")
     return
 
