@@ -76,9 +76,9 @@ def diffdns(alldomains, domainstatus_url, record_url):
             cc_list = 'larry@tb-gaming.com'
             sendmail = SendMail(MAIL_ACOUNT, sub, content, to_list, cc_list)
             if sendmail.send_mail():
-                logging.info("通知邮件发送成功")
+                logging.info("%s - [域名异常，通知邮件发送成功]" % domain)
             else:
-                logging.error("通知邮件发送失败")
+                logging.error("%s - [域名异常，通知邮件发送失败]" % domain)
 
     logging.info("轮回结束，等待下一次...")
     return
