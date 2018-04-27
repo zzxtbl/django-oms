@@ -71,7 +71,7 @@ def diffdns(alldomains, domainstatus_url, record_url):
 
             # 邮件通知
             sub = '%s 域名异常' % domain
-            content = '大胸弟，%s 域名异常, 需要更换ip' % domain
+            content = '大胸弟，%s 域名异常, 需要更换ip\n 详细信息：%s' % (domain, result)
             to_list = 'kiven@tb-gaming.com'
             cc_list = 'larry@tb-gaming.com'
             sendmail = SendMail(MAIL_ACOUNT, sub, content, to_list, cc_list)
