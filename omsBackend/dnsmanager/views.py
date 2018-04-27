@@ -10,6 +10,7 @@ from dnsmanager.serializers import DnspodDomainSerializer, DnspodRecordSerialize
 from dnsmanager.dnspod_api import DnspodApi
 from dnsmanager.godaddy_api import GodaddyApi
 from dnsmanager.bind_api import BindApi
+from rest_framework.permissions import AllowAny
 
 
 class DnsApiKeyViewSet(viewsets.ModelViewSet):
@@ -31,6 +32,7 @@ class DnsRecordViewSet(viewsets.ModelViewSet):
     serializer_class = DnsRecordSerializer
     filter_fields = ['name', 'type', 'domain__name']
     search_fields = ['name']
+    permission_classes = (AllowAny,)
 
     def create(self, request, *args, **kwargs):
         dnsinfo = DnsApiKey.objects.get(name=request.data['dnsname'])
