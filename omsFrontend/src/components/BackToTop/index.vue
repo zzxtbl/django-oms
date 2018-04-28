@@ -104,18 +104,38 @@ export default {
   .rocket {
     fill: #9aaabf;
     background: none;
-    animation: rocket 1.5s ease-in-out alternate infinite;
+    animation: rocket-w 1.5s ease-in-out alternate infinite;
   }
 
-  @-webkit-keyframes rocket {
-    25% {
-      transform: translateY(10px);
-    }
-    50%, 100% {
-      transform: translateY(0) rotate(-30deg);
-    }
-    75% {
-      transform: translateY(-10px) rotate(30deg);
-    }
+  // 温柔的小火箭
+  @-webkit-keyframes rocket-w {
+    25% { transform: translateY(10px); }
+    50% { transform: translateY(0); }
+    75% { transform: translateY(10px); }
+    100% { transform: translateY(0); }
+  }
+
+  // 变态的小火箭
+  @-webkit-keyframes rocket-q {
+    5% { transform: translateY(10px); }
+    10% { transform: translateY(0); }
+    15% { transform: translateY(10px); }
+    20% { transform: translateY(0); }
+    25% { transform: translateY(-10px); }
+    30% { transform: translateY(0); }
+    35% { transform: translateY(10px); }
+    40% { transform: translateY(0); }
+    45% { transform: translateY(10px); }
+    50% { transform: translateY(0); }
+    55% { transform: translateY(-10px); }
+    60% { transform: translateY(0); }
+    65% { transform: translateY(10px); }
+    70% { transform: translateY(0); }
+    75% { transform: translateY(10px); }
+    80% { transform: translateY(0); }
+    85% { transform: translateY(-10px); }
+    90% { transform: translateY(0); }
+    95% { transform: translateY(10px); }
+    100% { transform: translateY(-50); }
   }
 </style>
