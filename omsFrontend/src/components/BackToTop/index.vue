@@ -1,14 +1,24 @@
 <template>
   <transition :name="transitionName">
     <div class="back-to-ceiling" @click="backToTop" v-show="visible" :style="customStyle">
-      <svg width="16" height="16" viewBox="0 0 17 17" xmlns="http://www.w3.org/2000/svg"
-           class="Icon Icon--backToTopArrow" aria-hidden="true" style="height: 16px; width: 16px;">
-        <title>回到顶部</title>
-        <g>
-          <path
-            d="M12.036 15.59c0 .55-.453.995-.997.995H5.032c-.55 0-.997-.445-.997-.996V8.584H1.03c-1.1 0-1.36-.633-.578-1.416L7.33.29c.39-.39 1.026-.385 1.412 0l6.878 6.88c.782.78.523 1.415-.58 1.415h-3.004v7.004z"
-            fill-rule="evenodd"></path>
-        </g>
+      <svg t="1524884210378" class="rocket" style="" viewBox="0 0 1024 1024" version="1.1"
+           xmlns="http://www.w3.org/2000/svg" p-id="1198">
+        <defs></defs>
+        <path
+          d="M662.72 462.784l136.448 169.408v173.248l-136.448-48.32zM342.72 457.344L206.272 626.816v173.248l136.448-48.384z"
+          fill="#3A7EB9" p-id="1199"></path>
+        <path
+          d="M570.688 418.688l-142.848 1.152a266.496 266.496 0 0 1-20.288-0.576l3.712 448.64c0.256 28.928 94.272 130.048 94.272 130.048s93.888-102.656 93.632-131.584l-3.712-448.96a344.64 344.64 0 0 1-24.768 1.28z"
+          fill="#ff9454" p-id="1200"></path>
+        <path
+          d="M531.456 599.296l-63.04 0.576c-3.008 0-5.952-0.064-8.96-0.384l2.176 257.792c0.128 16.64 41.728 74.816 41.728 74.816s41.344-58.944 41.28-75.52l-2.176-257.92c-3.648 0.384-7.296 0.64-11.008 0.64z"
+          fill="#E9DF92" p-id="1201"></path>
+        <path
+          d="M554.304 93.568a324.352 324.352 0 0 0-110.592 1.728L342.72 240.768v584.512c13.824-0.96 27.968-1.536 42.368-1.536h245.248c11.84 0 23.36 0.384 34.816 1.024V253.312L554.304 93.568z"
+          fill="#B5D5EB" p-id="1202"></path>
+        <path
+          d="M541.44 94.144L500.416 35.008l-45.696 59.136v29.504h89.024v-29.504zM459.456 288.64h88.96v88.896h-88.96zM459.456 467.456h88.96v88.96h-88.96zM459.456 634.176h88.96v88.896h-88.96zM364.928 788.736h277.76v44.352h-277.76z"
+          fill="#ea94ff" p-id="1203"></path>
       </svg>
     </div>
   </transition>
@@ -33,10 +43,8 @@ export default {
         bottom: '50px',
         width: '40px',
         height: '40px',
-        'border-radius': '50px',
-        'line-height': '45px', // 请保持与高度一致以垂直居中
-        background: '#a2fdff', // 按钮的背景颜色,
-        'z-index': 1024
+        'border-radius': '4px',
+        'line-height': '45px'
       }
     },
     transitionName: {
@@ -85,7 +93,7 @@ export default {
 }
 </script>
 
-<style lang='scss'>
+<style lang="scss">
   .back-to-ceiling {
     position: fixed;
     display: inline-block;
@@ -94,7 +102,11 @@ export default {
   }
 
   .back-to-ceiling .Icon {
-    fill: rgba(251, 62, 255, 0.59);
+    fill: #9aaabf;
     background: none;
+  }
+
+  .rocket {
+    color: #ff9454;
   }
 </style>
