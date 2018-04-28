@@ -69,23 +69,16 @@
         </el-col>
       </el-row>
     </el-card>
-    <el-tooltip placement="top" content="一路向西">
-      <back-to-top transitionName="fade" :customStyle="BackToTopStyle" :visibilityHeight="300"
-                   :backPosition="50"></back-to-top>
-    </el-tooltip>
   </div>
 </template>
 <script>
 import { getDemandManager, getDemandEnclosure, getProject } from '@/api/project'
 import VueMarkdown from 'vue-markdown' // 前端解析markdown
-import BackToTop from '@/components/BackToTop'
 import { apiUrl } from '@/config'
 import { mapGetters } from 'vuex'
 
 export default {
-  components: {
-    VueMarkdown, BackToTop
-  },
+  components: { VueMarkdown },
 
   data() {
     return {
@@ -101,15 +94,6 @@ export default {
         strikethrough: true, // 中划线
         ol: true, // 有序列表
         help: true
-      },
-      BackToTopStyle: {
-        right: '50px',
-        bottom: '50px',
-        width: '40px',
-        height: '40px',
-        'border-radius': '50px',
-        'line-height': '45px', // 请保持与高度一致以垂直居中
-        background: '#a2fdff'// 按钮的背景颜色
       },
       Demand_Status: {
         0: '未审核',

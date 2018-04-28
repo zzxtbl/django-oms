@@ -5,7 +5,7 @@ import requests
 import json
 from datetime import datetime, timedelta
 import logging
-from sendmail import SendMail
+from bind_sendmail import SendMail
 
 MAIL_ACOUNT = {
     "mail_host": "mail.tb-gaming.com",

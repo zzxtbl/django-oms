@@ -130,10 +130,6 @@
         </div>
       </el-card>
     </el-card>
-    <el-tooltip placement="top" content="一路向西">
-      <back-to-top transitionName="fade" :customStyle="BackToTopStyle" :visibilityHeight="300"
-                   :backPosition="50"></back-to-top>
-    </el-tooltip>
   </div>
 </template>
 <script>
@@ -150,14 +146,11 @@ import { postUpload, postSendmessage } from 'api/tool'
 import { apiUrl, uploadurl } from '@/config'
 import VueMarkdown from 'vue-markdown' // 前端解析markdown
 import { getUser } from 'api/user'
-import BackToTop from '@/components/BackToTop'
 import { mapGetters } from 'vuex'
 import { getConversionTime } from '@/utils'
 
 export default {
-  components: {
-    VueMarkdown, BackToTop
-  },
+  components: { VueMarkdown },
 
   data() {
     return {
@@ -194,15 +187,6 @@ export default {
         help: true
       },
       users: [],
-      BackToTopStyle: {
-        right: '50px',
-        bottom: '50px',
-        width: '40px',
-        height: '40px',
-        'border-radius': '50px',
-        'line-height': '45px', // 请保持与高度一致以垂直居中
-        background: '#a2fdff'// 按钮的背景颜色
-      },
       uploadurl: uploadurl,
       STATUS_TEXT: { '0': '未接收', '1': '正在处理', '2': '已完成', '3': '搁置' },
       STATUS_TYPE: { '0': 'danger', '1': 'success', '2': 'info', '3': 'warning' },
