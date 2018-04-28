@@ -139,7 +139,6 @@ export default {
     submitForm(formName) {
       this.$refs[formName].validate((valid) => {
         if (valid) {
-          this.ruleForm.pid = 'wt' + getConversionTime()
           const parms = {
             pid: this.pid
           }
