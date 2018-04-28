@@ -101,12 +101,21 @@ export default {
     cursor: pointer;
   }
 
-  .back-to-ceiling .Icon {
+  .rocket {
     fill: #9aaabf;
     background: none;
+    animation: rocket 1.5s ease-in-out alternate infinite;
   }
 
-  .rocket {
-    color: #ff9454;
+  @-webkit-keyframes rocket {
+    25% {
+      transform: translateY(10px);
+    }
+    50%, 100% {
+      transform: translateY(0) rotate(-30deg);
+    }
+    75% {
+      transform: translateY(-10px) rotate(30deg);
+    }
   }
 </style>
