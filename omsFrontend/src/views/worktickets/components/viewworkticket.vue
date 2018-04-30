@@ -60,9 +60,8 @@
               ref="upload"
               :action="uploadurl"
               :on-success="handleSuccess"
-              :show-file-list="false"
-              :disabled="count>2?true:false">
-              <el-button slot="trigger" size="mini" type="danger" plain icon="upload2" :disabled="count>2?true:false">
+              :show-file-list="false">
+              <el-button slot="trigger" size="mini" type="danger" plain icon="upload2" :disabled="count>2">
                 上传附件
               </el-button>
               <div slot="tip" class="el-upload__tip">

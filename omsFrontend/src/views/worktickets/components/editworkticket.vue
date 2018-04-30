@@ -29,9 +29,8 @@
             ref="upload"
             :action="uploadurl"
             :show-file-list="false"
-            :disabled="count>3"
             :before-upload="beforeAvatarUpload">
-            <el-button slot="trigger" size="mini" type="success" plain :disabled="count>3">
+            <el-button slot="trigger" size="mini" type="success" plain :disabled="count>2">
               上传
             </el-button>
             <div slot="tip" class="el-upload__tip">

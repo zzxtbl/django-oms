@@ -48,7 +48,7 @@ module.exports = {
 
   // 本地上传到服务器
   uploads: `${url}/api/upload/`,
-  uploadurl: 'https://httpbin.org/post',
+  uploadurl: 'https://jsonplaceholder.typicode.com/posts/',
 
   // 登录
   login: `${url}/api/api-token-auth/`,

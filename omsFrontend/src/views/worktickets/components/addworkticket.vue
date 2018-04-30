@@ -32,7 +32,7 @@
             :on-success="handleSuccess"
             :on-remove="handleRemove"
             :file-list="fileList">
-            <el-button slot="trigger" size="small" type="primary" :disabled="count>3">
+            <el-button slot="trigger" size="small" type="primary" :disabled="count>2">
               上传文件
             </el-button>
             (可以不用上传)
@@ -54,7 +54,7 @@
 import { postWorkticket, postTicketenclosure, getTickettype } from 'api/workticket'
 import { postUpload, postSendmessage } from 'api/tool'
 import { getUser } from 'api/user'
-import { uploadurl } from '@/config'
+import { uploads } from '@/config'
 import { mapGetters } from 'vuex'
 import { getConversionTime } from '@/utils'
 
@@ -110,7 +110,7 @@ export default {
         preview: true // 预览
       },
       img_file: {},
-      uploadurl: uploadurl,
+      uploadurl: uploads,
       types: []
     }
   },

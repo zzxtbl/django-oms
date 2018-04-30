@@ -9,11 +9,13 @@ from tools.serializers import UploadSerializer, SendmailSerializer, SendmessageS
 from users.models import User
 from tasks.tasks import send_to_skype, send_to_mail
 from tools.filters import CalenderFilter
+from rest_framework.permissions import AllowAny
 
 
 class UploadViewSet(viewsets.ModelViewSet):
     queryset = Upload.objects.all().order_by("-create_time")
     serializer_class = UploadSerializer
+    permission_classes = (AllowAny,)
     filter_fields = ('username', 'type',)
 
 

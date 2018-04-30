@@ -41,7 +41,6 @@
                   ref="upload"
                   :action="uploadurl"
                   :show-file-list="false"
-                  :disabled="count>9"
                   :before-upload="beforeAvatarUpload">
                   <el-button slot="trigger" size="mini" type="danger" plain icon="upload2"
                              :disabled="count>9">

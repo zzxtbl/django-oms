@@ -32,22 +32,6 @@
         <el-form-item label="备注" prop="desc">
           <el-input v-model="ruleForm.desc" type="textarea" :autosize="{ minRows: 5, maxRows: 10}"></el-input>
         </el-form-item>
-        <!--<el-form-item label="附件">-->
-        <!--<el-upload-->
-        <!--ref="upload"-->
-        <!--:action="uploadurl"-->
-        <!--:on-success="handleSuccess"-->
-        <!--:on-remove="handleRemove"-->
-        <!--:file-list="fileList">-->
-        <!--<el-button slot="trigger" size="mini" type="success" plain :disabled="count>4">-->
-        <!--上传-->
-        <!--</el-button>-->
-        <!--<div slot="tip" class="el-upload__tip">-->
-        <!--<p>上传文件不超过10m，<a style="color: red">最多只能上传5个文件</a></p>-->
-        <!--</div>-->
-        <!--</el-upload>-->
-        <!--<hr class="heng"/>-->
-        <!--</el-form-item>-->
         <el-form-item>
           <el-button type="primary" @click="postForm('ruleForm')">提交</el-button>
           <el-button type="danger" @click="resetForm('ruleForm')">清空</el-button>

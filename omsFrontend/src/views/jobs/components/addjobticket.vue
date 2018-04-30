@@ -24,7 +24,7 @@
         :on-success="handleSuccess"
         :on-remove="handleRemove"
         :file-list="fileList">
-        <el-button slot="trigger" size="small" type="primary" :disabled="count>3">
+        <el-button slot="trigger" size="small" type="primary" :disabled="count>2">
           上传文件
         </el-button>
         (可以不用上传)

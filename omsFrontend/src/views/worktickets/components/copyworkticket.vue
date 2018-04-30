@@ -19,7 +19,6 @@
             ref="upload"
             :action="uploadurl"
             :show-file-list="false"
-            :disabled="count>4"
             :before-upload="beforeAvatarUpload">
             <el-button slot="trigger" size="mini" type="success" plain :disabled="count>4">
               上传

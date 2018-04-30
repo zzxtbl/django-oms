@@ -263,6 +263,7 @@ class BindDomainViewSet(viewsets.ViewSet):
         dnsinfo = DnsApiKey.objects.get(name=request.GET['dnsname'])
         dnsapi = BindApi(user=dnsinfo.key, pwd=None, token=dnsinfo.secret)
         query = dnsapi.get_domains()
+        print(query)
         serializer = BindDomainSerializer(query, many=True)
         return Response(serializer.data)
 

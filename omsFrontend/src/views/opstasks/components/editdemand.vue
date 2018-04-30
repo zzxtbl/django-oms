@@ -32,33 +32,6 @@
         <el-form-item label="备注" prop="desc">
           <el-input v-model="ruleForm.desc" type="textarea" :autosize="{ minRows: 5, maxRows: 10}"></el-input>
         </el-form-item>
-        <!--<el-form-item label="附件">-->
-        <!--<el-upload-->
-        <!--ref="upload"-->
-        <!--:action="uploadurl"-->
-        <!--:show-file-list="false"-->
-        <!--:disabled="count>4"-->
-        <!--:before-upload="beforeAvatarUpload">-->
-        <!--<el-button slot="trigger" size="mini" type="success" plain :disabled="count>4">-->
-        <!--上传-->
-        <!--</el-button>-->
-        <!--<div slot="tip" class="el-upload__tip">-->
-        <!--<p><a style="color: red">最多只能上传5个文件</a></p>-->
-        <!--</div>-->
-        <!--</el-upload>-->
-        <!--<hr class="heng"/>-->
-        <!--<div v-if='enclosureData.length>0' class="ticketenclosure">-->
-        <!--<ul>-->
-        <!--<li v-for="item in enclosureData" :key="item.id" v-if="item.file" style="list-style:none">-->
-        <!--<i class="fa fa-paperclip"></i>-->
-        <!--<a :href="apiurl + '/upload/' + item.file" :download="item.file">{{item.file.split('/')[1]}}</a>-->
-        <!--<el-tooltip class="item" effect="dark" content="删除附件" placement="right">-->
-        <!--<el-button type="text" icon="el-icon-delete" @click="deleteEnclosure(item.id)"></el-button>-->
-        <!--</el-tooltip>-->
-        <!--</li>-->
-        <!--</ul>-->
-        <!--</div>-->
-        <!--</el-form-item>-->
         <el-form-item>
           <el-button type="primary" @click="submitForm('ruleForm')">更新</el-button>
         </el-form-item>
