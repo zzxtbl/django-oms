@@ -47,8 +47,7 @@ module.exports = {
   pageformat: 'total, prev, pager, next, sizes',
 
   // 本地上传到服务器
-  uploads: `${url}/api/upload/`,
-  uploadurl: 'https://jsonplaceholder.typicode.com/posts/',
+  uploadurl: `${url}/api/fileupload/`,
 
   // 登录
   login: `${url}/api/api-token-auth/`,

@@ -1,0 +1,1 @@
+"C:\Program Files\IIS\Microsoft Web Deploy V3\msdeploy.exe" -verb:sync -source:apphostconfig=tbv2.1_deny_robot -dest:apphostconfig=tbv2.1_deny_robot

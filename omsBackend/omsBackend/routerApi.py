@@ -18,12 +18,13 @@ router.register(r'ticketcomments', TicketCommentViewSet)
 router.register(r'ticketenclosures', TicketEnclosureViewSet)
 router.register(r'tickettypes', TicketTypeViewSet)
 
-from tools.views import UploadViewSet, SendmailViewSet, SendmessageViewSet, CalenderViewSet
+from tools.views import UploadViewSet, SendmailViewSet, SendmessageViewSet, CalenderViewSet, FileUploadViewSet
 
 router.register(r'upload', UploadViewSet)
 router.register(r'sendmail', SendmailViewSet)
 router.register(r'sendmessage', SendmessageViewSet)
 router.register(r'calenders', CalenderViewSet)
+router.register(r'fileupload', FileUploadViewSet)
 
 from menus.views import FirstmenuViewSet, SecondmenuViewSet, ElementViewSet
 

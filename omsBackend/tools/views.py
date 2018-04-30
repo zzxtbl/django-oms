@@ -4,8 +4,8 @@
 from rest_framework import viewsets
 from rest_framework.response import Response
 from rest_framework import status
-from tools.models import Upload, Sendmail, Sendmessage, Calender
-from tools.serializers import UploadSerializer, SendmailSerializer, SendmessageSerializer, CalenderSerializer
+from tools.models import Upload, Sendmail, Sendmessage, Calender, FileUpload
+from tools.serializers import UploadSerializer, SendmailSerializer, SendmessageSerializer, CalenderSerializer, FileUploadSerializer
 from users.models import User
 from tasks.tasks import send_to_skype, send_to_mail
 from tools.filters import CalenderFilter
@@ -15,8 +15,13 @@ from rest_framework.permissions import AllowAny
 class UploadViewSet(viewsets.ModelViewSet):
     queryset = Upload.objects.all().order_by("-create_time")
     serializer_class = UploadSerializer
-    permission_classes = (AllowAny,)
     filter_fields = ('username', 'type',)
+
+
+class FileUploadViewSet(viewsets.ModelViewSet):
+    queryset = FileUpload.objects.all()
+    serializer_class = FileUploadSerializer
+    permission_classes = (AllowAny,)
 
 
 class SendmailViewSet(viewsets.ModelViewSet):

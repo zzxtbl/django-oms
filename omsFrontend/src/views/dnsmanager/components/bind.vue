@@ -185,6 +185,7 @@ export default {
     fetchData() {
       getBindDomain(this.listQuery).then(response => {
         this.tableData = response.data
+        console.log(this.tableData)
         this.tabletotal = response.data.length
         this.domainloading = false
       })

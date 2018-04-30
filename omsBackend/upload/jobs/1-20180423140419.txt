@@ -1,0 +1,36 @@
+11    stock_count = 5
+    # 每只的股票的权重，如下的权重分配会使得靠前的股票分配多一点的资金，[0.339160, 0.213986, 0.169580, ..]
+    context.stock_weights = T.norm([1 / math.log(i + 2) for i in range(0, stock_count)])
+    # 设置每只股票占用的最大资金比例
+    context.max_cash_per_instrument = 0.3
+    context.options['hold_days'] = 3
+	
+	
+12	    stock_count = 5
+    # 每只的股票的权重，如下的权重分配会使得靠前的股票分配多一点的资金，[0.339160, 0.213986, 0.169580, ..]
+    context.stock_weights = T.norm([1 / math.log(i + 2) for i in range(0, stock_count)])
+    # 设置每只股票占用的最大资金比例
+    context.max_cash_per_instrument = 0.4
+    context.options['hold_days'] = 3
+	
+13     stock_count = 5
+    # 每只的股票的权重，如下的权重分配会使得靠前的股票分配多一点的资金，[0.339160, 0.213986, 0.169580, ..]
+    context.stock_weights = T.norm([1 / math.log(i + 2) for i in range(0, stock_count)])
+    # 设置每只股票占用的最大资金比例
+    context.max_cash_per_instrument = 0.5
+    context.options['hold_days'] = 3
+	
+14     stock_count = 4
+    # 每只的股票的权重，如下的权重分配会使得靠前的股票分配多一点的资金，[0.339160, 0.213986, 0.169580, ..]
+    context.stock_weights = T.norm([1 / math.log(i + 2) for i in range(0, stock_count)])
+    # 设置每只股票占用的最大资金比例
+    context.max_cash_per_instrument = 0.4
+    context.options['hold_days'] = 3
+	
+	
+21     stock_count = 5
+    # 每只的股票的权重，如下的权重分配会使得靠前的股票分配多一点的资金，[0.339160, 0.213986, 0.169580, ..]
+    context.stock_weights = T.norm([1 / math.log(i + 2) for i in range(0, stock_count)])
+    # 设置每只股票占用的最大资金比例
+    context.max_cash_per_instrument = 0.3
+    context.options['hold_days'] = 4
