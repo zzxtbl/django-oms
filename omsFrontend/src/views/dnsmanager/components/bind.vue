@@ -191,7 +191,7 @@ export default {
     },
     fetchDnsapiData() {
       const data = {
-        type: 'dnspod'
+        type: 'bind'
       }
       getDnsapiKey(data).then(response => {
         this.dnsapis = response.data
