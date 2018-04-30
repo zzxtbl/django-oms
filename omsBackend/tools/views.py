@@ -10,6 +10,7 @@ from users.models import User
 from tasks.tasks import send_to_skype, send_to_mail
 from tools.filters import CalenderFilter
 from rest_framework.permissions import AllowAny
+from django.views.decorators.csrf import csrf_exempt
 
 
 class UploadViewSet(viewsets.ModelViewSet):
@@ -22,6 +23,13 @@ class FileUploadViewSet(viewsets.ModelViewSet):
     queryset = FileUpload.objects.all()
     serializer_class = FileUploadSerializer
     permission_classes = (AllowAny,)
+
+    @csrf_exempt
+    def post(self, request):
+        serializer = self.get_serializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        self.perform_create(serializer)
+        return Response(serializer.data)
 
 
 class SendmailViewSet(viewsets.ModelViewSet):
