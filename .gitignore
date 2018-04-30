@@ -2,7 +2,7 @@
 .idea/
 .DS_Store
 .python-version
-upload/*/
+upload/
 migrations/
 *.log
 *.out
