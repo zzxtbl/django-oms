@@ -24,12 +24,12 @@ class FileUploadViewSet(viewsets.ModelViewSet):
     serializer_class = FileUploadSerializer
     permission_classes = (AllowAny,)
 
-    @csrf_exempt
-    def post(self, request):
-        serializer = self.get_serializer(data=request.data)
-        serializer.is_valid(raise_exception=True)
-        self.perform_create(serializer)
-        return Response(serializer.data)
+    # @csrf_exempt
+    # def post(self, request):
+    #     serializer = self.get_serializer(data=request.data)
+    #     serializer.is_valid(raise_exception=True)
+    #     self.perform_create(serializer)
+    #     return Response(serializer.data)
 
 
 class SendmailViewSet(viewsets.ModelViewSet):
