@@ -93,6 +93,7 @@ module.exports = {
   menumetas: `${url}/api/menumetas/`,
 
   // tools
+  uploads: `${url}/api/upload/`,
   sendmail: `${url}/api/sendmail/`,
   sendmessage: `${url}/api/sendmessage/`,
   calenders: `${url}/api/calenders/`,
