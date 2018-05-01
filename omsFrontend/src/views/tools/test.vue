@@ -19,11 +19,6 @@
         <prism language="sql" :plugins="['toolbar', 'show-language']" :code="listQuery.search"></prism>
         <el-table :data='tableData' border style="width: 100%">
           <el-table-column prop='username' label='用户' sortable></el-table-column>
-          <el-table-column label="操作">
-            <template slot-scope="scope">
-              <el-button @click="deleteGroup(scope.row.id)" type="danger" size="small">删除</el-button>
-            </template>
-          </el-table-column>
         </el-table>
       </div>
       <div class="table-pagination">
