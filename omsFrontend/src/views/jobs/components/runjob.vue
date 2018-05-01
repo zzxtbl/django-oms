@@ -47,13 +47,13 @@
           </template>
           <hr class="heng"/>
           <div class="foot_btn">
-            <el-checkbox v-model="sendnotice" style="margin-right: 20px">发送通知</el-checkbox>
+            <!--<el-checkbox v-model="sendnotice" style="margin-right: 20px">发送通知</el-checkbox>-->
             <el-button type="danger" plain @click="changeCurstepZero">Cancel</el-button>
             <!--<el-button v-if="jobs.cur_step===jobs.total_step" type="success" @click="changeCurstep"-->
             <!--:disabled="!jobs.done">Complete-->
             <!--</el-button>-->
             <!--<el-button v-else type="primary" @click="changeCurstep">Next</el-button>-->
-            <el-button type="success" @click="changeCurstep">Complete</el-button>
+            <el-button type="success" @click="changeCurstepZero">Complete</el-button>
           </div>
         </el-card>
       </el-col>
@@ -178,7 +178,7 @@ export default {
       cur_env: {},
       cmds: [],
       jobs: {},
-      sendnotice: true,
+      sendnotice: false,
       hasversion: false,
       stepForm: {
         cur_step: 1,
