@@ -187,6 +187,7 @@ export default {
       this.count -= 1
     },
     imgAdd(pos, file) {
+      console.log(file)
       var md = this.$refs.md
       const formData = new FormData()
       formData.append('username', this.enclosureForm.create_user)
@@ -195,6 +196,7 @@ export default {
       formData.append('type', file.type)
       formData.append('archive', this.route_path[1])
       postUpload(formData).then(response => {
+        console.log(response)
         md.$imglst2Url([[pos, response.data.file]])
       })
     }
