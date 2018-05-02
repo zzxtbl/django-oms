@@ -110,3 +110,7 @@ from zkmanager.views import ZkUserViewSet, PunchViewSet, PunchSetViewSet
 router.register(r'zkusers', ZkUserViewSet)
 router.register(r'zkpunchs', PunchViewSet)
 router.register(r'zkpunchset', PunchSetViewSet)
+
+from zbmanager.views import ZbHostViewSet
+
+router.register(r'zbhosts', ZbHostViewSet, base_name='zbhosts')

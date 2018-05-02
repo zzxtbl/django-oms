@@ -40,56 +40,68 @@ class ZabbixApi(object):
         req = self.request(method, params)
         self.auth_token = req
 
-    def get_hosts(self, hostName=None):
+    def get_hosts(self, add_params=None, limit=10, offset=0):
         method = "host.get"
         params = {
             "output": "extend",
-            "filter": {"name": hostName}
+            "selectGroups": "extend",
+            "selectInterfaces": "extend",
         }
+        if add_params:
+            params.update(add_params)
         req = self.request(method, params)
-        return req
+        data = dict()
+        data['count'] = len(req)
+        data['results'] = [req[i:i + int(limit)] for i in range(0, len(req), int(limit))][int(offset)]
+        return data
 
-    def get_host_id(self, hostName):
-        return self.get_hosts(hostName)[0]["hostid"]
+    def get_hosts_byname(self, hostName):
+        params = {"filter": {"name": hostName}}
+        return self.get_hosts(params)
 
-    def get_hosts_byip(self, hostIp=None):
-        method = "hostinterface.get"
-        params = {
-            "output": "extend",
-            "filter": {"ip": hostIp}
-        }
-        req = self.request(method, params)
-        return req
+    def get_hosts_bygroup(self, groupids):
+        params = {"groupids": groupids}
+        return self.get_hosts(params)
 
-    def get_host_id_byip(self, hostIp):
-        return self.get_hosts_byip(hostIp)[0]["hostid"]
+    def get_hosts_byip(self, hostIp):
+        params = {"filter": {"ip": hostIp}}
+        return self.get_hosts(params)
 
-    def get_hostgroups(self, hostgroupName=None):
+    def get_hostgroups(self, add_params=None):
         method = "hostgroup.get"
         params = {
             "output": "extend",
-            "filter": {"name": hostgroupName}
+            "selectHosts": "extend",
         }
+        if add_params:
+            params.update(add_params)
         req = self.request(method, params)
         return req
 
-    def get_hostgroup_id(self, hostgroupName):
-        return self.get_hostgroups(hostgroupName)[0]["groupid"]
+    def get_hostgroups_byname(self, hostgroupName):
+        """
+        :param hostgroupName: type list:
+        :return:
+        """
+        params = {"filter": {"name": hostgroupName}}
+        return self.get_hostgroups(params)
 
-    def get_templetes(self, templateName=None):
+    def get_templetes(self, add_params=None):
         method = "template.get"
         params = {
             "output": "extend",
-            "filter": {"name": templateName}
         }
+        if add_params:
+            params.update(add_params)
         req = self.request(method, params)
         return req
 
-    def get_templete_id(self, templateName):
-        return self.get_templetes(templateName)[0]["templateid"]
+    def get_templetes_byname(self, templateName):
+        params = {"filter": {"name": templateName}}
+        return self.get_templetes(params)
 
     def create_host(self, hostName, hostIp, hostgroups=[], templates=[]):
-        if self.get_hosts(hostName) or self.get_hosts_byip(hostIp):
+        if self.get_hosts_byname(hostName) or self.get_hosts_byip(hostIp):
             return {"code": "10001", "msg": "The host was added, Please check later!"}
 
         group_list = [{"groupid": hostgroup_id} for hostgroup_id in hostgroups]
@@ -115,7 +127,7 @@ class ZabbixApi(object):
         return req
 
     def create_hostgroup(self, hostgroupName):
-        if self.get_hostgroups(hostgroupName):
+        if self.get_hostgroups_byname([hostgroupName]):
             return {"code": "10002", "msg": "The hostgroup was added, Please check later!"}
 
         method = "hostgroup.create"
@@ -123,10 +135,11 @@ class ZabbixApi(object):
         req = self.request(method, params)
         return req
 
-    def update_host(self, hostId, add_params):
+    def update_host(self, hostId, add_params=None):
         method = "host.update"
         params = {"hostid": hostId}
-        params.update(add_params)
+        if add_params:
+            params.update(add_params)
         req = self.request(method, params)
         return req
 
@@ -142,5 +155,9 @@ if __name__ == "__main__":
 
     zapi = ZabbixApi(zabbix_info["apiurl"], zabbix_info["username"], zabbix_info["password"])
     zapi.login()
-    hosts = zapi.get_hosts_byip("192.168.91.1")
+    groups = [
+        "Zabbix servers",
+        "Linux servers"
+    ]
+    hosts = zapi.get_hosts()
     print(hosts)
