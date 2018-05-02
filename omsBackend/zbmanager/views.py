@@ -16,9 +16,12 @@ class ZbHostViewSet(viewsets.ViewSet):
         zapi.login()
         limit = request.GET.get('limit', 10)
         offset = request.GET.get('offset', 0)
-        query = zapi.get_hosts(limit=limit, offset=offset)
+        query = zapi.get_hosts()
         serializer = ZbHostSerializer(query, many=True)
-        return Response(serializer.data)
+        data = dict()
+        data['count'] = len(serializer.data)
+        data['results'] = [serializer.data[i:i + int(limit)] for i in range(0, len(serializer.data), int(limit))][int(offset)]
+        return Response(data)
 
 
 class ZbHostGroupViewSet(viewsets.ViewSet):

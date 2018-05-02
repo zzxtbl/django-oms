@@ -40,7 +40,7 @@ class ZabbixApi(object):
         req = self.request(method, params)
         self.auth_token = req
 
-    def get_hosts(self, add_params=None, limit=10, offset=0):
+    def get_hosts(self, add_params=None):
         method = "host.get"
         params = {
             "output": "extend",
@@ -50,10 +50,7 @@ class ZabbixApi(object):
         if add_params:
             params.update(add_params)
         req = self.request(method, params)
-        data = dict()
-        data['count'] = len(req)
-        data['results'] = [req[i:i + int(limit)] for i in range(0, len(req), int(limit))][int(offset)]
-        return data
+        return req
 
     def get_hosts_byname(self, hostName):
         params = {"filter": {"name": hostName}}

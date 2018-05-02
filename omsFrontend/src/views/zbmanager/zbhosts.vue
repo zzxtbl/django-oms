@@ -18,7 +18,9 @@
           <el-table-column prop='hostid' label='主机id' sortable></el-table-column>
           <el-table-column prop='host' label='主机名'></el-table-column>
           <el-table-column prop='status' label='状态'></el-table-column>
-          <el-table-column prop='groups' label='所在组'></el-table-column>
+          <el-table-column prop='groups' label='所在组'>
+
+          </el-table-column>
           <el-table-column prop='interfaces' label='监听地址'></el-table-column>
           <!--<el-table-column label="操作">-->
             <!--<template slot-scope="scope">-->
@@ -57,7 +59,7 @@ export default {
       pageformat: pageformat,
       listQuery: {
         limit: LIMIT,
-        offset: '',
+        offset: 0,
         search: ''
       }
     }
@@ -82,7 +84,7 @@ export default {
       this.fetchData()
     },
     handleCurrentChange(val) {
-      this.listQuery.offset = (val - 1) * LIMIT
+      this.listQuery.offset = val - 1
       this.fetchData()
     },
     resetForm(formName) {
