@@ -152,5 +152,10 @@ module.exports = {
   godaddydomains: `${url}/api/godaddydomains/`,
   godaddyreecords: `${url}/api/godaddyreecords/`,
   binddomains: `${url}/api/binddomains/`,
-  bindrecords: `${url}/api/bindrecords/`
+  bindrecords: `${url}/api/bindrecords/`,
+
+  // zabbix
+  zbhosts: `${url}/api/zbhosts/`,
+  zbhostgroups: `${url}/api/zbhostgroups/`,
+  zbtemplates: `${url}/api/zbtemplates/`
 }

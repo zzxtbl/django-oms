@@ -147,11 +147,21 @@ export const asyncRouterMap = [
     name: 'dns管理',
     path: '/dnsmanager',
     component: Layout,
-    icon: 'eye',
+    icon: 'cloud',
     redirect: 'dnspoddomain',
     children: [
       { path: 'dnsapis', component: _import('dnsmanager/dnsapis'), name: 'api列表' },
       { path: 'dnsdomains', component: _import('dnsmanager/dnsdomains'), name: '域名列表' }
+    ]
+  },
+  {
+    name: 'zabbix管理',
+    path: '/zbmanager',
+    component: Layout,
+    icon: 'eye',
+    redirect: 'zbhosts',
+    children: [
+      { path: 'zbhosts', component: _import('zbmanager/zbhosts'), name: '主机列表' }
     ]
   },
   {

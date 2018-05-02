@@ -111,6 +111,8 @@ router.register(r'zkusers', ZkUserViewSet)
 router.register(r'zkpunchs', PunchViewSet)
 router.register(r'zkpunchset', PunchSetViewSet)
 
-from zbmanager.views import ZbHostViewSet
+from zbmanager.views import ZbHostViewSet, ZbHostGroupViewSet, ZbTemplateViewSet
 
 router.register(r'zbhosts', ZbHostViewSet, base_name='zbhosts')
+router.register(r'zbhostgroups', ZbHostGroupViewSet, base_name='zbhostgroups')
+router.register(r'zbtemplates', ZbTemplateViewSet, base_name='zbtemplates')
