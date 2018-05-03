@@ -10,6 +10,14 @@ export function getzkHost(query) {
   })
 }
 
+export function postzkHost(data) {
+  return request({
+    url: apiUrl.zbhosts,
+    method: 'post',
+    data
+  })
+}
+
 // zbhostgroups
 export function getzkHostGroup(query) {
   return request({

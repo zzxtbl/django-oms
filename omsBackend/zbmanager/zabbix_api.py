@@ -64,7 +64,7 @@ class ZabbixApi(object):
 
     def create_host(self, hostName, hostIp, hostgroups=[], templates=[]):
         if self.get_hosts(hostName=hostName) or self.get_hosts(hostIp=hostIp):
-            return {"code": "10001", "message": "The host was added, Please check later!"}
+            return {"code": "10001", "message": "The host was added!"}
 
         group_list = [{"groupid": hostgroup_id} for hostgroup_id in hostgroups]
         template_list = [{"templateid": templete_id} for templete_id in templates]
@@ -77,7 +77,8 @@ class ZabbixApi(object):
                     "type": 1,
                     "main": 1,
                     "useip": 1,
-                    "ip": hostIp,
+                    # "ip": hostIp,
+                    "ip": "0.0.0.0",
                     "dns": "",
                     "port": "10050"
                 }
@@ -101,7 +102,8 @@ class ZabbixApi(object):
                     "type": 1,
                     "main": 1,
                     "useip": 1,
-                    "ip": hostIp,
+                    # "ip": hostIp,
+                    "ip": "0.0.0.0",
                     "dns": "",
                     "port": "10050"
                 }
@@ -132,7 +134,7 @@ class ZabbixApi(object):
 
     def create_hostgroup(self, hostgroupName):
         if self.get_hostgroups([hostgroupName]):
-            return {"code": "10002", "message": "The hostgroup was added, Please check later!"}
+            return {"code": "10002", "message": "The hostgroup was added!"}
 
         method = "hostgroup.create"
         params = {"name": hostgroupName}
@@ -164,5 +166,5 @@ if __name__ == "__main__":
     #hosts = zapi.get_templetes('Template SNMP OS Windows')
     #hosts = zapi.get_hostgroups('Virtual machines')
     h = {'hostids': ['10232']}
-    hosts = zapi.update_host('10232', 'ooo-test', '2.1.1.2', [6], [10067])
+    hosts = zapi.create_host(['10232'])
     print(hosts)

@@ -3,6 +3,7 @@
     <el-card>
       <div class="head-lavel">
         <div class="table-button">
+          <el-button type="primary" icon="el-icon-plus" @click="addForm=true">新建</el-button>
         </div>
         <div class="table-search">
           <el-input
@@ -47,11 +48,14 @@
               </div>
             </template>
           </el-table-column>
-          <!--<el-table-column label="操作">-->
-          <!--<template slot-scope="scope">-->
-          <!--<el-button @click="deleteGroup(scope.row.id)" type="danger" size="small">删除</el-button>-->
-          <!--</template>-->
-          <!--</el-table-column>-->
+          <el-table-column label="操作">
+            <template slot-scope="scope">
+              <el-button-group>
+                <el-button type="success" size="small">修改</el-button>
+                <el-button type="danger" size="small">删除</el-button>
+              </el-button-group>
+            </template>
+          </el-table-column>
         </el-table>
       </div>
       <div class="table-pagination">
@@ -66,15 +70,37 @@
         </el-pagination>
       </div>
     </el-card>
+
+    <el-dialog :visible.sync="addForm">
+      <el-form :model="ruleForm" ref="ruleForm" label-width="100px">
+        <el-form-item label="主机名ip" prop="hostnames">
+          <el-input v-model="hostnames" type="textarea" placeholder="sh-aa-01|sh-bb-02"
+                    :autosize="{ minRows: 3, maxRows: 5}"></el-input>
+        </el-form-item>
+        <el-form-item label="主机组" prop="hostgroups">
+          <sesect-groups :selectdata="ruleForm.hostgroups" @getDatas="getGroups"></sesect-groups>
+        </el-form-item>
+        <el-form-item label="模板" prop="templates">
+          <sesect-temps :selectdata="ruleForm.templates" @getDatas="getTemps"></sesect-temps>
+        </el-form-item>
+        <el-form-item>
+          <el-button type="primary" @click="CreateGroup('ruleForm')">立即创建</el-button>
+        </el-form-item>
+      </el-form>
+    </el-dialog>
   </div>
 </template>
 
 <script>
-import { getzkHost } from 'api/zabbix'
+import { getzkHost, postzkHost } from 'api/zabbix'
 import { LIMIT, pagesize, pageformat } from '@/config'
+import sesectGroups from './components/grouptransfer.vue'
+import sesectTemps from './components/temptransfer.vue'
 
 export default {
-  components: {},
+  components: {
+    sesectGroups, sesectTemps
+  },
   data() {
     return {
       tableData: [],
@@ -89,7 +115,16 @@ export default {
       },
       STATUS_COLOR: { 0: 'success', 1: 'danger' },
       STATUS_TEXT: { 0: 'enabled', 1: 'disabled' },
-      dataloading: true
+      dataloading: true,
+      addForm: false,
+      ruleForm: {
+        hostnames: [],
+        hostgroups: [],
+        templates: []
+      },
+      hostnames: '',
+      groupdatas: [],
+      tempdatas: []
     }
   },
 
@@ -115,6 +150,33 @@ export default {
     handleCurrentChange(val) {
       this.listQuery.offset = val - 1
       this.fetchData()
+    },
+    getGroups(data) {
+      this.ruleForm.hostgroups = data
+    },
+    getTemps(data) {
+      this.ruleForm.templates = data
+    },
+    CreateGroup() {
+      this.ruleForm.action = 'create'
+      this.ruleForm.hostnames = this.hostnames.split('|')
+      postzkHost(this.ruleForm).then(response => {
+        let offset = 12
+        for (const item of response.data) {
+          offset *= 3
+          this.$notify({
+            title: item.title,
+            message: item.message,
+            type: item.type,
+            offset: offset
+          })
+        }
+        this.fetchData()
+        this.addForm = false
+      }).catch(error => {
+        const errordata = JSON.stringify(error.response.data)
+        this.$message.error(errordata)
+      })
     }
   }
 }

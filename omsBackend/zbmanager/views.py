@@ -6,6 +6,7 @@ from rest_framework.response import Response
 from zbmanager.serializers import ZbHostSerializer, ZbHostGroupSerializer, ZbTemplateSerializer
 from zbmanager.zabbix_api import ZabbixApi
 from zbmanager.zabbix_conf import zabbix_info
+import json
 
 
 class ZbHostViewSet(viewsets.ViewSet):
@@ -32,19 +33,19 @@ class ZbHostViewSet(viewsets.ViewSet):
             hostgroups = request.data['hostgroups']
             templates = request.data['templates']
             results = []
-            for host in hostnames:
-                hostName = host.split('|')[0]
-                hostIp = host.split('|')[0]
-                req = zapi.create_host(hostName, hostIp, hostgroups, templates)
-                results.append(req)
+            for hostName in hostnames:
+                req = zapi.create_host(hostName, hostgroups, templates)
+                if req["code"]:
+                    results.append({"title": hostName, "type": "error", "message": req["message"]})
+                else:
+                    results.append({"title": hostName, "type": "success", "message": req})
             return Response(results)
         if request.data['action'] == 'update':
             hostId = request.data['hostId']
             hostName = request.data['hostName']
-            hostIp = request.data['hostIp']
             hostgroups = request.data['hostgroups']
             templates = request.data['templates']
-            results = zapi.update_host(hostId, hostName, hostIp, hostgroups, templates)
+            results = zapi.update_host(hostId, hostName, hostgroups, templates)
             return Response(results)
         if request.data['action'] == 'delete':
             hostIds = request.data['hostIds']
@@ -58,15 +59,15 @@ class ZbHostGroupViewSet(viewsets.ViewSet):
     def list(self, request):
         zapi = ZabbixApi(zabbix_info["apiurl"], zabbix_info["username"], zabbix_info["password"])
         zapi.login()
-        limit = request.GET.get('limit', 10)
-        offset = request.GET.get('offset', 0)
         query = zapi.get_hostgroups()
         serializer = ZbHostGroupSerializer(query, many=True)
-        data = dict()
-        data['count'] = len(serializer.data)
-        data['results'] = [serializer.data[i:i + int(limit)] for i in range(0, len(serializer.data), int(limit))][
-            int(offset)]
-        return Response(data)
+        # limit = request.GET.get('limit', 10)
+        # offset = request.GET.get('offset', 0)
+        # data = dict()
+        # data['count'] = len(serializer.data)
+        # data['results'] = [serializer.data[i:i + int(limit)] for i in range(0, len(serializer.data), int(limit))][
+        #     int(offset)]
+        return Response(serializer.data)
 
 
 class ZbTemplateViewSet(viewsets.ViewSet):

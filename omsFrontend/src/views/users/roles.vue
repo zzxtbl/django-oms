@@ -3,7 +3,7 @@
     <el-card>
       <div class="head-lavel">
         <div class="table-button">
-          <el-button type="primary" icon="el-icon-plus" @click="addGroup=true">新建角色对象</el-button>
+          <el-button type="primary" icon="el-icon-plus" @click="addGroup=true">新建</el-button>
         </div>
         <div class="table-search">
           <el-input
@@ -44,7 +44,7 @@
           <el-input v-model="ruleForm.name"></el-input>
         </el-form-item>
         <el-form-item label="描述" prop="desc">
-          <el-input v-model="ruleForm.desc"></el-input>
+          <el-input v-model="ruleForm.desc" type="textarea" :autosize="{ minRows: 5, maxRows: 10}"></el-input>
         </el-form-item>
         <el-form-item>
           <el-button type="primary" @click="addGroupSubmit('ruleForm')">立即创建</el-button>
@@ -98,7 +98,6 @@ export default {
         this.tabletotal = response.data.count
       })
     },
-
     addGroupSubmit(formName) {
       this.$refs[formName].validate((valid) => {
         if (valid) {
