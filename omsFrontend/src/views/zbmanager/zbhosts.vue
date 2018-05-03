@@ -14,18 +14,43 @@
         </div>
       </div>
       <div>
-        <el-table :data='tableData' border style="width: 100%">
-          <el-table-column prop='hostid' label='主机id' sortable></el-table-column>
+        <el-table v-loading="dataloading"
+                  element-loading-text="让子弹飞一会儿"
+                  element-loading-background="rgba(0, 0, 0, 0.8)"
+                  :data='tableData' border style="width: 100%">
+          <el-table-column prop='hostid' label='id'></el-table-column>
           <el-table-column prop='host' label='主机名'></el-table-column>
-          <el-table-column prop='status' label='状态'></el-table-column>
-          <el-table-column prop='groups' label='所在组'>
-
+          <el-table-column prop='status' label='状态'>
+            <template slot-scope="scope">
+              <div slot="reference" class="name-wrapper" style="text-align: center">
+                <el-tag :type="STATUS_COLOR[scope.row.status]">
+                  {{STATUS_TEXT[scope.row.status]}}
+                </el-tag>
+              </div>
+            </template>
           </el-table-column>
-          <el-table-column prop='interfaces' label='监听地址'></el-table-column>
+          <el-table-column prop='groups' label='所在组'>
+            <template slot-scope="scope">
+              <div slot="reference" class="name-wrapper" style="text-align: center">
+                <el-tag v-for="item in scope.row.groups" :key="item.groupid" size="mini" style="margin-right: 3px">
+                  {{item.name}}
+                </el-tag>
+              </div>
+            </template>
+          </el-table-column>
+          <el-table-column prop='interfaces' label='监听地址'>
+            <template slot-scope="scope">
+              <div slot="reference" class="name-wrapper" style="text-align: center">
+                <el-tag size="mini" style="margin-right: 3px">
+                  {{scope.row.interfaces[0].ip}}:{{scope.row.interfaces[0].port}}
+                </el-tag>
+              </div>
+            </template>
+          </el-table-column>
           <!--<el-table-column label="操作">-->
-            <!--<template slot-scope="scope">-->
-              <!--<el-button @click="deleteGroup(scope.row.id)" type="danger" size="small">删除</el-button>-->
-            <!--</template>-->
+          <!--<template slot-scope="scope">-->
+          <!--<el-button @click="deleteGroup(scope.row.id)" type="danger" size="small">删除</el-button>-->
+          <!--</template>-->
           <!--</el-table-column>-->
         </el-table>
       </div>
@@ -61,7 +86,10 @@ export default {
         limit: LIMIT,
         offset: 0,
         search: ''
-      }
+      },
+      STATUS_COLOR: { 0: 'success', 1: 'danger' },
+      STATUS_TEXT: { 0: 'enabled', 1: 'disabled' },
+      dataloading: true
     }
   },
 
@@ -74,6 +102,7 @@ export default {
       getzkHost(this.listQuery).then(response => {
         this.tableData = response.data.results
         this.tabletotal = response.data.count
+        this.dataloading = false
       })
     },
     searchClick() {
@@ -86,9 +115,6 @@ export default {
     handleCurrentChange(val) {
       this.listQuery.offset = val - 1
       this.fetchData()
-    },
-    resetForm(formName) {
-      this.$refs[formName].resetFields()
     }
   }
 }

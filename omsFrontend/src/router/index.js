@@ -161,7 +161,8 @@ export const asyncRouterMap = [
     icon: 'eye',
     redirect: 'zbhosts',
     children: [
-      { path: 'zbhosts', component: _import('zbmanager/zbhosts'), name: '主机列表' }
+      { path: 'zbhosts', component: _import('zbmanager/zbhosts'), name: '主机列表' },
+      { path: 'zbhostgroups', component: _import('zbmanager/zbhostgroups'), name: '主机组列表' }
     ]
   },
   {

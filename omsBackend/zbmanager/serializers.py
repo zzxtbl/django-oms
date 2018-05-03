@@ -15,6 +15,7 @@ class ZbHostSerializer(serializers.Serializer):
 class ZbHostGroupSerializer(serializers.Serializer):
     groupid = serializers.IntegerField()
     name = serializers.CharField()
+    hosts = serializers.JSONField()
 
 
 class ZbTemplateSerializer(serializers.Serializer):
