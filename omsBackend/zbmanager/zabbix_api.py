@@ -48,6 +48,7 @@ class ZabbixApi(object):
         params = {
             "output": "extend",
             "selectGroups": "extend",
+            "selectParentTemplates": "extend",
             "selectInterfaces": "extend",
             "groupids": groupid,
             "filter": {
@@ -62,7 +63,7 @@ class ZabbixApi(object):
         req = self.request(method, params)
         return req
 
-    def create_host(self, hostName, hostIp, hostgroups=[], templates=[]):
+    def create_host(self, hostName, hostgroups, templates, hostIp='0.0.0.0'):
         if self.get_hosts(hostName=hostName) or self.get_hosts(hostIp=hostIp):
             return {"code": "10001", "message": "The host was added!"}
 
@@ -89,7 +90,8 @@ class ZabbixApi(object):
         req = self.request(method, params)
         return req
 
-    def update_host(self, hostId, hostName, hostIp, hostgroups=[], templates=[]):
+    def update_host(self, hostId, hostName, hostgroups, templates, hostIp='0.0.0.0'):
+
         group_list = [{"groupid": hostgroup_id} for hostgroup_id in hostgroups]
         template_list = [{"templateid": templete_id} for templete_id in templates]
 

@@ -20,8 +20,8 @@ export default {
   props: ['selectdata'],
   data() {
     return {
+      value: [],
       alldata: [],
-      value: this.selectdata,
       changedata: false
     }
   },
@@ -48,13 +48,13 @@ export default {
     handleChange(value, direction, movedKeys) {
       this.$emit('getDatas', value)
     }
+  },
+  watch: {
+    // 监控rowdata值的变化，有变化立即刷新数据
+    selectdata() {
+      this.getData()
+    }
   }
-//  watch: {
-//    // 监控rowdata值的变化，有变化立即刷新数据
-//    selectdata() {
-//      this.getData()
-//    }
-//  }
 }
 </script>
 

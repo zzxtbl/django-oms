@@ -41,15 +41,24 @@ class ZbHostViewSet(viewsets.ViewSet):
                     results.append({"title": hostName, "type": "success", "message": req})
             return Response(results)
         if request.data['action'] == 'update':
-            hostId = request.data['hostId']
-            hostName = request.data['hostName']
+            hostId = request.data['hostid']
+            hostName = request.data['host']
             hostgroups = request.data['hostgroups']
             templates = request.data['templates']
-            results = zapi.update_host(hostId, hostName, hostgroups, templates)
+            req = zapi.update_host(hostId, hostName, hostgroups, templates)
+            if req["code"]:
+                results = [{"title": hostName, "type": "error", "message": req["message"]}]
+            else:
+                results = [{"title": hostName, "type": "success", "message": req}]
             return Response(results)
         if request.data['action'] == 'delete':
             hostIds = request.data['hostIds']
-            results = zapi.delete_host(hostIds)
+            hostName = request.data['host']
+            req = zapi.delete_host(hostIds)
+            if req["code"]:
+                results = [{"title": hostName, "type": "error", "message": req["message"]}]
+            else:
+                results = [{"title": hostName, "type": "success", "message": req}]
             return Response(results)
 
 

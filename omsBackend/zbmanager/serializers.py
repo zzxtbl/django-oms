@@ -9,6 +9,7 @@ class ZbHostSerializer(serializers.Serializer):
     host = serializers.CharField()
     status = serializers.CharField()
     groups = serializers.JSONField()
+    parentTemplates = serializers.JSONField()
     interfaces = serializers.JSONField()
 
 
