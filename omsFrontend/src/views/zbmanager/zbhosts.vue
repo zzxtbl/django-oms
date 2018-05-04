@@ -51,8 +51,8 @@
           <el-table-column label="操作">
             <template slot-scope="scope">
               <el-button-group>
-                <el-button type="success" size="small" @click="ChangeGroup(scope.row)">修改</el-button>
-                <el-button type="danger" size="small">删除</el-button>
+                <el-button type="success" size="small" @click="changeGroup(scope.row)">修改</el-button>
+                <el-button type="danger" size="small" @click="deleteGroup(scope.row)">删除</el-button>
               </el-button-group>
             </template>
           </el-table-column>
@@ -84,7 +84,7 @@
           <sesect-temps :selectdata="ruleForm.templates" @getDatas="getTemps"></sesect-temps>
         </el-form-item>
         <el-form-item>
-          <el-button type="primary" @click="CreateGroup('ruleForm')">立即创建</el-button>
+          <el-button type="primary" @click="createGroup('ruleForm')">立即创建</el-button>
         </el-form-item>
       </el-form>
     </el-dialog>
@@ -101,7 +101,7 @@
           <sesect-temps :selectdata="rowdata.templates" @getDatas="getTemps"></sesect-temps>
         </el-form-item>
         <el-form-item>
-          <el-button type="primary" @click="UpdateGroup('rowdata')">立即更新</el-button>
+          <el-button type="primary" @click="updateGroup('rowdata')">立即更新</el-button>
         </el-form-item>
       </el-form>
     </el-dialog>
@@ -176,7 +176,7 @@ export default {
       this.ruleForm.templates = data
       this.rowdata.templates = data
     },
-    CreateGroup() {
+    createGroup() {
       this.ruleForm.action = 'create'
       this.ruleForm.hostnames = this.hostnames.split('|')
       postzkHost(this.ruleForm).then(response => {
@@ -197,7 +197,7 @@ export default {
         this.$message.error(errordata)
       })
     },
-    ChangeGroup(row) {
+    changeGroup(row) {
       this.rowdata.hostid = row.hostid
       this.rowdata.host = row.host
       this.rowdata.hostgroups = []
@@ -210,7 +210,7 @@ export default {
       }
       this.editForm = true
     },
-    UpdateGroup() {
+    updateGroup() {
       this.rowdata.action = 'update'
       postzkHost(this.rowdata).then(response => {
         let offset = 11
@@ -225,6 +225,25 @@ export default {
         }
         this.fetchData()
         this.editForm = false
+      }).catch(error => {
+        const errordata = JSON.stringify(error.response.data)
+        this.$message.error(errordata)
+      })
+    },
+    deleteGroup(row) {
+      row.action = 'delete'
+      postzkHost(row).then(response => {
+        let offset = 11
+        for (const item of response.data) {
+          offset *= 3
+          this.$notify({
+            title: item.title,
+            message: item.message,
+            type: item.type,
+            offset: offset
+          })
+        }
+        this.fetchData()
       }).catch(error => {
         const errordata = JSON.stringify(error.response.data)
         this.$message.error(errordata)

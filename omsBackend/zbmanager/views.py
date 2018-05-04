@@ -35,9 +35,9 @@ class ZbHostViewSet(viewsets.ViewSet):
             results = []
             for hostName in hostnames:
                 req = zapi.create_host(hostName, hostgroups, templates)
-                if req["code"]:
+                try:
                     results.append({"title": hostName, "type": "error", "message": req["message"]})
-                else:
+                except:
                     results.append({"title": hostName, "type": "success", "message": req})
             return Response(results)
         if request.data['action'] == 'update':
@@ -46,18 +46,18 @@ class ZbHostViewSet(viewsets.ViewSet):
             hostgroups = request.data['hostgroups']
             templates = request.data['templates']
             req = zapi.update_host(hostId, hostName, hostgroups, templates)
-            if req["code"]:
-                results = [{"title": hostName, "type": "error", "message": req["message"]}]
-            else:
+            try:
+                results = [{"title": hostName, "type": "error", "message": req["data"]}]
+            except:
                 results = [{"title": hostName, "type": "success", "message": req}]
             return Response(results)
         if request.data['action'] == 'delete':
-            hostIds = request.data['hostIds']
+            hostIds = [request.data['hostid']]
             hostName = request.data['host']
             req = zapi.delete_host(hostIds)
-            if req["code"]:
+            try:
                 results = [{"title": hostName, "type": "error", "message": req["message"]}]
-            else:
+            except:
                 results = [{"title": hostName, "type": "success", "message": req}]
             return Response(results)
 

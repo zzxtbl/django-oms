@@ -64,7 +64,7 @@ class ZabbixApi(object):
         return req
 
     def create_host(self, hostName, hostgroups, templates, hostIp='0.0.0.0'):
-        if self.get_hosts(hostName=hostName) or self.get_hosts(hostIp=hostIp):
+        if self.get_hosts(hostName=hostName):
             return {"code": "10001", "message": "The host was added!"}
 
         group_list = [{"groupid": hostgroup_id} for hostgroup_id in hostgroups]
@@ -168,5 +168,5 @@ if __name__ == "__main__":
     #hosts = zapi.get_templetes('Template SNMP OS Windows')
     #hosts = zapi.get_hostgroups('Virtual machines')
     h = {'hostids': ['10232']}
-    hosts = zapi.create_host(['10232'])
+    hosts = zapi.update_host('10233', 'sh-aa-02', )
     print(hosts)
