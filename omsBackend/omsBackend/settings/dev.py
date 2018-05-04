@@ -78,3 +78,14 @@ salt_info = {
 
 from salts.saltapi import SaltAPI
 sapi = SaltAPI(url=salt_info["url"], username=salt_info["username"], password=salt_info["password"])
+
+from zbmanager.zabbix_api import ZabbixApi
+
+zabbix_info = {
+    'apiurl': 'http://zabbix.tbsysmanager.com/api_jsonrpc.php',
+    'username': 'kiven',
+    'password': 'la37ZjKVSANUFJIx'
+}
+
+zapi = ZabbixApi(zabbix_info["apiurl"], zabbix_info["username"], zabbix_info["password"])
+zapi.login()
