@@ -4,11 +4,13 @@
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from omsBackend.settings import sapi
-from django.views.decorators.cache import cache_page
+from salts.models import SaltState, StateJob
+from salts.serializers import SaltStateSerializer, StateJobSerializer
 from hosts.models import Host
 from records.models import Record
 import json_tools
 from utils.tools import removeNone
+from rest_framework import viewsets
 
 
 @api_view()
@@ -18,7 +20,6 @@ def get_all_key(request):
     return Response({"results": data, "count": count})
 
 
-@cache_page(7200)
 @api_view()
 def minions_status(request):
     data = sapi.minions_status()
@@ -128,3 +129,46 @@ def sync_remote_server(request, method):
     print("no_update_list: %s" % no_update_list)
 
     return Response({"results": data, "count": count})
+
+
+class SaltStateViewSet(viewsets.ModelViewSet):
+    queryset = SaltState.objects.all()
+    serializer_class = SaltStateSerializer
+    filter_fields = ['name']
+
+
+class StateJobViewSet(viewsets.ModelViewSet):
+    queryset = StateJob.objects.all().order_by('-create_time')
+    serializer_class = StateJobSerializer
+    filter_fields = ['statejob__name', 'status']
+
+
+@api_view()
+def update_states_status(request):
+    try:
+        job = request.GET['job__id']
+        jobs = StateJob.objects.filter(job__id=job).filter(deploy_status='deploy')
+        count = len(jobs)
+        for job in jobs:
+            j_id = job.j_id
+            j = StateJob.objects.get(j_id=j_id)
+            job_status = sapi.check_job(j_id)
+            print(list(set(job_status.values()))[0])
+            try:
+                if list(set(job_status.values()))[0]:
+                    import re
+                    j.result = sapi.get_state_result(j_id)
+                    for error in j.result.values():
+                        error_result = bool(re.search(r'Error', error, re.I))
+                        if error_result > 0:
+                            j.deploy_status = 'failed'
+                        else:
+                            j.deploy_status = 'success'
+                else:
+                    j.deploy_status = 'deploy'
+            except Exception as e:
+                pass
+            j.save()
+        return Response({"results": 'success', "count": count})
+    except Exception as e:
+        return Response({"results": '?job__name=wtf', "count": 1024})

@@ -116,3 +116,9 @@ from zbmanager.views import ZbHostViewSet, ZbHostGroupViewSet, ZbTemplateViewSet
 router.register(r'zbhosts', ZbHostViewSet, base_name='zbhosts')
 router.register(r'zbhostgroups', ZbHostGroupViewSet, base_name='zbhostgroups')
 router.register(r'zbtemplates', ZbTemplateViewSet, base_name='zbtemplates')
+
+
+from salts.views import SaltStateViewSet, StateJobViewSet
+
+router.register(r'saltstates', SaltStateViewSet)
+router.register(r'saltjobs', StateJobViewSet)

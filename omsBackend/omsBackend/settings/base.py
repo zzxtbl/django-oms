@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     'wikis',
     'hosts',
     'jobs',
+    'salts',
     'records',
     'projects',
     'optasks',

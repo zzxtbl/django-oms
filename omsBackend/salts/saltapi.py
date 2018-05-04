@@ -35,6 +35,7 @@ class SaltAPI(object):
         req = requests.post(loginurl, data=data, headers=self.__header, verify=False)
         try:
             token = req.json()["return"][0]["token"]
+            print(token)
             self.token_s_time = datetime.datetime.now()
             return token
         except KeyError:
@@ -114,7 +115,16 @@ class SaltAPI(object):
         """
 
         data = {'client': client, 'tgt': tgt, 'fun': 'cmd.run', 'arg': arg, 'expr_form': expr_form}
-        print(data)
+        content = self.salt_request(data)
+        ret = content['return'][0]['jid']
+        return ret
+
+    def remote_state(self, tgt, client='local_async', expr_form='list', arg=''):
+        """
+        异步执行远程命令、部署模块
+        """
+
+        data = {'client': client, 'tgt': tgt, 'fun': 'state.sls', 'arg': arg, 'expr_form': expr_form}
         content = self.salt_request(data)
         ret = content['return'][0]['jid']
         return ret
@@ -127,6 +137,16 @@ class SaltAPI(object):
         data = {'client': 'runner', 'fun': 'jobs.lookup_jid', 'jid': jid}
         content = self.salt_request(data)
         ret = content['return'][0]
+        return ret
+
+    def get_state_result(self, jid):
+        """
+        通过jid获取执行结果
+        """
+
+        data = {'client': 'runner', 'fun': 'jobs.lookup_jid', 'jid': jid}
+        content = self.salt_request(data)
+        ret = content['return'][0]['data']
         return ret
 
     def get_job_info(self, jid=''):
@@ -175,12 +195,11 @@ class SaltAPI(object):
 
 def main():
     sapi = SaltAPI(url=salt_info["url"], username=salt_info["username"], password=salt_info["password"])
-    jid = '20180221113323607348'
-    tgt = ['tw-btj-web-test-01']
-    arg = 'ls'
-    # jid = sapi.remote_cmd(tgt=tgt, fun='cmd.run', arg=cmd)
-    # print(jid)
-    print(sapi.get_result(20180308105331061269))
+    tgt = ['wx-51-proxy-test-01']
+    arg = 'centos.common.pkgs'
+    jid = sapi.remote_state(tgt=tgt, arg=arg)
+    print(jid)
+    #print(sapi.get_result(20180504165051970595))
     #print(sapi.remote_cmd(tgt=tgt, arg=arg))
 
 
