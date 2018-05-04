@@ -44,8 +44,7 @@ class ZbHostViewSet(viewsets.ViewSet):
             hostId = request.data['hostid']
             hostName = request.data['host']
             hostgroups = request.data['hostgroups']
-            templates = request.data['templates']
-            req = zapi.update_host(hostId, hostName, hostgroups, templates)
+            req = zapi.update_host(hostId, hostName, hostgroups)
             try:
                 results = [{"title": hostName, "type": "error", "message": req["data"]}]
             except:

@@ -51,7 +51,7 @@
           <el-table-column label="操作">
             <template slot-scope="scope">
               <el-button-group>
-                <el-button type="success" size="small" @click="changeGroup(scope.row)">修改</el-button>
+                <el-button type="success" size="small" @click="changeGroup(scope.row)" disabled>修改</el-button>
                 <el-button type="danger" size="small" @click="deleteGroup(scope.row)">删除</el-button>
               </el-button-group>
             </template>
@@ -96,9 +96,6 @@
         </el-form-item>
         <el-form-item label="主机组" prop="hostgroups">
           <sesect-groups :selectdata="rowdata.hostgroups" @getDatas="getGroups"></sesect-groups>
-        </el-form-item>
-        <el-form-item label="模板" prop="templates">
-          <sesect-temps :selectdata="rowdata.templates" @getDatas="getTemps"></sesect-temps>
         </el-form-item>
         <el-form-item>
           <el-button type="primary" @click="updateGroup('rowdata')">立即更新</el-button>
@@ -204,14 +201,11 @@ export default {
       for (const item of row.groups) {
         this.rowdata.hostgroups.push(parseInt(item.groupid))
       }
-      this.rowdata.templates = []
-      for (const item of row.parentTemplates) {
-        this.rowdata.templates.push(parseInt(item.templateid))
-      }
       this.editForm = true
     },
     updateGroup() {
       this.rowdata.action = 'update'
+      console.log(this.rowdata)
       postzkHost(this.rowdata).then(response => {
         let offset = 11
         for (const item of response.data) {

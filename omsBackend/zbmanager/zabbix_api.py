@@ -78,8 +78,7 @@ class ZabbixApi(object):
                     "type": 1,
                     "main": 1,
                     "useip": 1,
-                    # "ip": hostIp,
-                    "ip": "0.0.0.0",
+                    "ip": hostIp,
                     "dns": "",
                     "port": "10050"
                 }
@@ -90,10 +89,13 @@ class ZabbixApi(object):
         req = self.request(method, params)
         return req
 
-    def update_host(self, hostId, hostName, hostgroups, templates, hostIp='0.0.0.0'):
-
+    def update_host(self, hostId, hostName=None, hostgroups=None, templates_clear=[], hostIp='0.0.0.0'):
+        """
+        zabbix api更新主机模板时，主机名对模板中的一些item有依赖，无法正常更新主机，这个update用起来很不方便
+        """
         group_list = [{"groupid": hostgroup_id} for hostgroup_id in hostgroups]
-        template_list = [{"templateid": templete_id} for templete_id in templates]
+        # templates_clear_list = [{"templateid": templete_id} for templete_id in templates_clear]
+        # template_list = [{"templateid": templete_id} for templete_id in templates]
 
         method = "host.update"
         params = {
@@ -104,14 +106,14 @@ class ZabbixApi(object):
                     "type": 1,
                     "main": 1,
                     "useip": 1,
-                    # "ip": hostIp,
-                    "ip": "0.0.0.0",
+                    "ip": hostIp,
                     "dns": "",
                     "port": "10050"
                 }
             ],
             "groups": group_list,
-            "templates": template_list,
+            # "templates_clear": templates_clear_list,
+            # "templates": template_list,
         }
         req = self.request(method, params)
         return req
@@ -164,9 +166,9 @@ if __name__ == "__main__":
         "Zabbix servers",
         "Linux servers"
     ]
-    #hosts = zapi.get_hosts()
-    #hosts = zapi.get_templetes('Template SNMP OS Windows')
-    #hosts = zapi.get_hostgroups('Virtual machines')
+    # hosts = zapi.get_hosts()
+    # hosts = zapi.get_templetes('Template SNMP OS Windows')
+    # hosts = zapi.get_hostgroups('Virtual machines')
     h = {'hostids': ['10232']}
-    hosts = zapi.update_host('10233', 'sh-aa-02', )
+    hosts = zapi.update_host('10235', hostgroups=[6])
     print(hosts)
