@@ -6,7 +6,7 @@
           <div slot="header">
             <span>执行state</span>
           </div>
-          <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="70px">
+          <el-form :model="ruleForm" ref="ruleForm" label-width="70px">
             <el-form-item label="选择主机" prop="hosts">
               <sesect-hosts :selecthost="ruleForm.hosts" @gethosts="getHosts"></sesect-hosts>
             </el-form-item>
@@ -40,20 +40,8 @@
           <div>
             <el-table :data='tableData' @selection-change="handleSelectionChange" style="width: 100%">
               <el-table-column type="selection" v-if="role==='super'"></el-table-column>
-              <el-table-column prop='version' label='发布版本'>
-                <template slot-scope="scope">
-                  <div slot="reference">
-                    <el-popover
-                      placement="top"
-                      width="200"
-                      trigger="hover"
-                      :content="scope.row.content">
-                      <el-button size="mini" slot="reference">{{scope.row.version}}</el-button>
-                    </el-popover>
-                  </div>
-                </template>
-              </el-table-column>
-              <el-table-column prop='deploy_status' label='发布状态' sortable>
+              <el-table-column prop='statejob' label='名称'></el-table-column>
+              <el-table-column prop='status' label='状态' sortable>
                 <template slot-scope="scope">
                   <div slot="reference">
                     <el-button plain size="mini" :type="DEPLOY_STATUS[scope.row.deploy_status].type"
@@ -63,8 +51,6 @@
                   </div>
                 </template>
               </el-table-column>
-              <el-table-column prop='env' label='发布步骤'></el-table-column>
-              <el-table-column prop='deploy_cmd_host' label='命令目标'></el-table-column>
               <el-table-column prop='action_user' label='发布人'></el-table-column>
               <el-table-column prop='create_time' label='发布时间' sortable>
                 <template slot-scope="scope">
@@ -114,9 +100,8 @@
   </div>
 </template>
 <script>
-import { getJob, getDeployenv, getDeploycmd } from '@/api/job'
-import { getDeployJob, deleteDeployJob, getUpdateJobsStatus } from '@/api/job'
-import { getSaltStateGroup, getSaltState } from 'api/salt'
+import { deleteDeployJob, getUpdateJobsStatus } from '@/api/job'
+import { getSaltStateGroup, getSaltState, getSaltStateJob } from 'api/salt'
 import { mapGetters } from 'vuex'
 import { LIMIT, pagesize, pageformat } from '@/config'
 import sesectHosts from '../components/hosttransfer.vue'
@@ -186,7 +171,6 @@ export default {
   created() {
     this.fetchGroupData()
     this.fetchJobData()
-    this.fetchDeployJobData()
   },
   methods: {
     fetchGroupData() {
@@ -203,47 +187,11 @@ export default {
       })
     },
     fetchJobData() {
-      const parmas = null
-      getJob(parmas, this.job_id).then(response => {
-        this.jobs = response.data
-        this.ruleForm.job = this.jobs.name
-        const parmas = {
-          job__id: this.job_id
-        }
-        getDeployenv(parmas).then(response => {
-          this.steps = response.data
-        })
-        const data = {
-          job__id: this.job_id,
-          level: this.jobs.cur_step
-        }
-        this.fetchJobenvData(data)
-      })
-    },
-    fetchJobenvData(parmas) {
-      getDeployenv(parmas).then(response => {
-        this.cur_env = response.data[0]
-        if (this.cur_env) {
-          this.ruleForm.env = this.cur_env.id
-          this.fetchDeploycmdData(this.cur_env.id)
-        }
-      })
-    },
-    fetchDeploycmdData(env) {
-      const parmas = {
-        env__id: env
-      }
-      getDeploycmd(parmas).then(response => {
-        this.checkedcmds = this.cmds = response.data
-      })
-    },
-    fetchDeployJobData() {
-      this.listQuery.job__id = this.job_id
-      getDeployJob(this.listQuery).then(response => {
+      getSaltStateJob(this.listQuery).then(response => {
         this.tableData = response.data.results
         this.tabletotal = response.data.count
         const job_status = this.tableData.map(function(item) {
-          return item.deploy_status
+          return item.status
         })
         if (job_status.indexOf('deploy') > -1) {
           this.check_job_status = setInterval(() => {
