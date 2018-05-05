@@ -71,7 +71,7 @@ def update_jobs_status(request):
             try:
                 if list(set(job_status.values()))[0]:
                     import re
-                    j.result = sapi.get_result(j_id)
+                    j.result = sapi.get_cmd_result(j_id)
                     for error in j.result.values():
                         error_result = bool(re.search(r'Error', error, re.I))
                         if error_result > 0:

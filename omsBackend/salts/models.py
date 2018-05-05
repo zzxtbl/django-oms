@@ -7,6 +7,7 @@ from users.models import User
 
 class SaltState(models.Model):
     name = models.CharField(max_length=20, verbose_name=u'名称')
+    group = models.ForeignKey('SaltStateGroup', verbose_name=u'分组')
     cmd = models.CharField(max_length=100, verbose_name=u'state命令')
     desc = models.TextField(null=True, blank=True, verbose_name=u'备注')
 
@@ -16,6 +17,18 @@ class SaltState(models.Model):
     class Meta:
         verbose_name = u'state服务'
         verbose_name_plural = u'state服务'
+
+
+class SaltStateGroup(models.Model):
+    name = models.CharField(max_length=20, verbose_name=u'名称')
+    desc = models.TextField(null=True, blank=True, verbose_name=u'备注')
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = u'state服务组'
+        verbose_name_plural = u'state服务组'
 
 
 RUN_STATUS = {

@@ -118,7 +118,8 @@ router.register(r'zbhostgroups', ZbHostGroupViewSet, base_name='zbhostgroups')
 router.register(r'zbtemplates', ZbTemplateViewSet, base_name='zbtemplates')
 
 
-from salts.views import SaltStateViewSet, StateJobViewSet
+from salts.views import SaltStateViewSet, StateJobViewSet, SaltStateGroupViewSet
 
 router.register(r'saltstates', SaltStateViewSet)
+router.register(r'saltstategroups', SaltStateGroupViewSet)
 router.register(r'saltjobs', StateJobViewSet)

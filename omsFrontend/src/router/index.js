@@ -21,7 +21,7 @@ import Layout from '../views/layout/Layout'
     noCache: true                if fasle ,the page will no be cached(default is false)
   }
  **/
-export const constantRouterMap = [
+export const baseRouterMap = [
   { path: '/login', component: _import('login/index'), hidden: true },
   { path: '/404', component: _import('errorPage/404'), hidden: true },
   { path: '/403', component: _import('errorPage/403'), hidden: true },
@@ -52,7 +52,7 @@ export const constantRouterMap = [
 export default new Router({
   // mode: 'history', // 后端支持可开
   scrollBehavior: () => ({ y: 0 }),
-  routes: constantRouterMap
+  routes: baseRouterMap
 })
 
 export const asyncRouterMap = [
@@ -128,7 +128,9 @@ export const asyncRouterMap = [
       { path: 'opsdemands', component: _import('opstasks/demands'), name: '项目列表' },
       { path: 'addopsdemand', hidden: true, component: _import('opstasks/components/adddemand'), name: '添加项目' },
       { path: 'editopsdemand/:id', hidden: true, component: _import('opstasks/components/editdemand'), name: '编辑项目' },
-      { path: 'viewopsdemand/:id', hidden: true, component: _import('opstasks/components/viewdemand'), name: '查看项目' }
+      { path: 'viewopsdemand/:id', hidden: true, component: _import('opstasks/components/viewdemand'), name: '查看项目' },
+      { path: 'index', component: _import('salts/index'), name: 'state管理' },
+      { path: 'cmdrun', component: _import('salts/cmdrun'), name: '执行命令' }
     ]
   },
   {
@@ -211,24 +213,20 @@ export const asyncRouterMap = [
     redirect: 'upload',
     children: [
       { path: 'upload', component: _import('tools/upload'), name: '上传列表' },
-      // { path: 'opswikiadmin', component: _import('wikis/opswikiadmin'), name: '运维文档管理' },
-      // { path: 'addopswiki', hidden: true, component: _import('wikis/components/addopswiki'), name: '添加运维文档' },
-      // { path: 'editopswiki/:wikiid', hidden: true, component: _import('wikis/components/editopswiki'), name: '编辑运维文档' },
-      // { path: 'viewopswiki/:wikiid', hidden: true, component: _import('wikis/components/viewopswiki'), name: '查看运维文档' },
       { path: 'test', component: _import('tools/test'), name: '测试页面' }
     ]
-  },
-  {
-    name: 'salt管理',
-    path: '/salts',
-    component: Layout,
-    icon: 'cube',
-    redirect: 'cmdrun',
-    children: [
-      { path: 'index', component: _import('salts/index'), name: 'salt状态' },
-      { path: 'cmdrun', component: _import('salts/cmdrun'), name: '远程执行命令' }
-    ]
   }
+  // {
+  //   name: 'salt管理',
+  //   path: '/salts',
+  //   component: Layout,
+  //   icon: 'cube',
+  //   redirect: 'cmdrun',
+  //   children: [
+  //     { path: 'index', component: _import('salts/index'), name: 'state管理' },
+  //     { path: 'cmdrun', component: _import('salts/cmdrun'), name: '执行命令' }
+  //   ]
+  // }
 ]
 
 export const errorRouterMap = [

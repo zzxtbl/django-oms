@@ -35,7 +35,6 @@ class SaltAPI(object):
         req = requests.post(loginurl, data=data, headers=self.__header, verify=False)
         try:
             token = req.json()["return"][0]["token"]
-            print(token)
             self.token_s_time = datetime.datetime.now()
             return token
         except KeyError:
@@ -129,7 +128,7 @@ class SaltAPI(object):
         ret = content['return'][0]['jid']
         return ret
 
-    def get_result(self, jid):
+    def get_cmd_result(self, jid):
         """
         通过jid获取执行结果
         """
@@ -199,7 +198,7 @@ def main():
     arg = 'centos.common.pkgs'
     jid = sapi.remote_state(tgt=tgt, arg=arg)
     print(jid)
-    #print(sapi.get_result(20180504165051970595))
+    #print(sapi.get_cmd_result(20180504165051970595))
     #print(sapi.remote_cmd(tgt=tgt, arg=arg))
 
 

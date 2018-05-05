@@ -116,11 +116,12 @@ module.exports = {
   sqltickets: `${url}/api/sqltickets/`,
 
   // salt
-  get_all_key: `${url}/api/salts/get_all_key/`,
-  minions_status: `${url}/api/salts/minions_status/`,
-  get_minion_info: `${url}/api/salts/get_minion_info/`,
+  saltstates: `${url}/api/saltstates/`,
+  saltstategroups: `${url}/api/saltstategroups/`,
+  saltjobs: `${url}/api/saltjobs/`,
   cmdrun: `${url}/api/salts/cmdrun/`,
-  get_result: `${url}/api/salts/get_result/`,
+  get_cmd_result: `${url}/api/salts/get_cmd_result/`,
+  update_states_status: `${url}/api/salts/update_states_status/`,
   sync_remote_server: `${url}/api/salts/sync_remote_server/`,
 
   // 项目

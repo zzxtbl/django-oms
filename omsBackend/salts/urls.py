@@ -6,9 +6,7 @@ from salts import views
 
 urlpatterns = [
     url(r'^get_all_key/', views.get_all_key),
-    url(r'^minions_status/', views.minions_status),
-    url(r'^get_minion_info/(?P<key_id>\w+)', views.get_minion_info),
     url(r'^cmdrun/', views.cmdrun),
-    url(r'^get_result/(?P<jid>\w+)', views.get_result),
+    url(r'^get_cmd_result/(?P<jid>\w+)', views.get_cmd_result),
     url(r'^sync_remote_server/(?P<method>\w+)', views.sync_remote_server),
 ]

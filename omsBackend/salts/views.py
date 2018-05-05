@@ -4,8 +4,8 @@
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from omsBackend.settings import sapi
-from salts.models import SaltState, StateJob
-from salts.serializers import SaltStateSerializer, StateJobSerializer
+from salts.models import SaltState, StateJob, SaltStateGroup
+from salts.serializers import SaltStateSerializer, StateJobSerializer, SaltStateGroupSerializer
 from hosts.models import Host
 from records.models import Record
 import json_tools
@@ -20,29 +20,6 @@ def get_all_key(request):
     return Response({"results": data, "count": count})
 
 
-@api_view()
-def minions_status(request):
-    data = sapi.minions_status()
-    up = data['up']
-    down = data['down']
-    ups = []
-    downs = []
-    for host in up:
-        ups.append({'hostname': host, 'status': 'up'})
-    for host in down:
-        downs.append({'hostname': host, 'status': 'down'})
-    data['up'] = ups
-    data['down'] = downs
-    return Response({"results": data})
-
-
-@api_view()
-def get_minion_info(request, key_id):
-    data = sapi.get_minion_info(key_id)
-    count = len(data)
-    return Response({"results": data, "count": count})
-
-
 @api_view(['POST'])
 def cmdrun(request):
     hosts = request.data["hosts"]
@@ -53,8 +30,8 @@ def cmdrun(request):
 
 
 @api_view()
-def get_result(request, jid):
-    data = sapi.get_result(jid)
+def get_cmd_result(request, jid):
+    data = sapi.get_cmd_result(jid)
     count = len(data)
     return Response({"results": data, "count": count})
 
@@ -134,6 +111,12 @@ def sync_remote_server(request, method):
 class SaltStateViewSet(viewsets.ModelViewSet):
     queryset = SaltState.objects.all()
     serializer_class = SaltStateSerializer
+    filter_fields = ['name', 'group__name']
+
+
+class SaltStateGroupViewSet(viewsets.ModelViewSet):
+    queryset = SaltStateGroup.objects.all()
+    serializer_class = SaltStateGroupSerializer
     filter_fields = ['name']
 
 

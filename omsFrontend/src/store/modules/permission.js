@@ -1,4 +1,4 @@
-import { asyncRouterMap, constantRouterMap, errorRouterMap } from '@/router'
+import { asyncRouterMap, baseRouterMap, errorRouterMap } from '@/router'
 
 /**
  * 通过name判断是否与当前用户权限匹配
@@ -37,13 +37,13 @@ function filterAsyncRouter(asyncRouterMap, menus) {
 
 const permission = {
   state: {
-    routers: constantRouterMap,
+    routers: baseRouterMap,
     addRouters: []
   },
   mutations: {
     SET_ROUTERS: (state, routers) => {
       state.addRouters = routers
-      state.routers = constantRouterMap.concat(routers)
+      state.routers = baseRouterMap.concat(routers)
     }
   },
   actions: {

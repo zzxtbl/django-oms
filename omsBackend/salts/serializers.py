@@ -2,7 +2,7 @@
 # author: itimor
 
 from rest_framework import serializers
-from salts.models import SaltState, StateJob
+from salts.models import SaltState, StateJob, SaltStateGroup
 from users.models import User
 from omsBackend.settings import sapi
 
@@ -10,7 +10,13 @@ from omsBackend.settings import sapi
 class SaltStateSerializer(serializers.ModelSerializer):
     class Meta:
         model = SaltState
-        fields = ['url', 'id', 'name', 'cmd', 'desc']
+        fields = ['url', 'id', 'name', 'group', 'cmd', 'desc']
+
+
+class SaltStateGroupSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = SaltStateGroup
+        fields = ['url', 'id', 'name', 'desc']
 
 
 class StateJobSerializer(serializers.ModelSerializer):
