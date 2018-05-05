@@ -3,7 +3,7 @@
     <el-card>
       <div class="head-lavel">
         <div class="table-button">
-          <el-button type="danger">state服务</el-button>
+          <el-button type="success">state服务</el-button>
           <el-button type="primary" icon="el-icon-plus" @click="addForm=true">新建</el-button>
         </div>
         <div class="table-search">
