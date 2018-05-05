@@ -85,7 +85,7 @@
       </div>
 
       <div v-if="ticketData.ticket_status<2">
-        <el-form :model="commentForm" ref="mailcontent" label-width="80px" class="demo-ruleForm">
+        <el-form :model="commentForm" ref="mailcontent" label-width="80px">
           <hr class="heng"/>
           <el-form-item label="问题处理" prop="content">
             <mavon-editor style="z-index: 1" v-model="mailcontent" code_style="monokai" :toolbars="toolbars"

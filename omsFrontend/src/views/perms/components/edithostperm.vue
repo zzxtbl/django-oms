@@ -1,5 +1,5 @@
 <template>
-  <el-form :model="rowdata" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
+  <el-form :model="rowdata" :rules="rules" ref="ruleForm" label-width="100px">
     <el-form-item label="用户组" prop="usergroups">
       <el-input v-model="rowdata.usergroups" disabled></el-input>
     </el-form-item>

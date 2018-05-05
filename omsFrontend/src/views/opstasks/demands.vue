@@ -234,7 +234,7 @@ export default {
         limit: LIMIT,
         offset: '',
         pid: '',
-        status: '',
+        status: '0',
         create_user__username: '',
         search: '',
         ordering: ''

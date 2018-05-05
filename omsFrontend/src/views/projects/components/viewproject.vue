@@ -79,7 +79,7 @@
             </el-card>
 
             <div v-if="ticketData.status!=7">
-              <el-form :model="commentForm" ref="content" label-width="90px" class="demo-ruleForm">
+              <el-form :model="commentForm" ref="content" label-width="90px">
                 <hr class="heng"/>
                 <el-form-item label="问题处理" prop="content">
                   <mavon-editor style="z-index: 1" v-model="commentForm.content" code_style="monokai"

@@ -1,5 +1,5 @@
 <template xmlns="http://www.w3.org/1999/html">
-  <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
+  <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px">
     <el-form-item label="用户名" prop="username">
       <el-input v-model="ruleForm.username"></el-input>
     </el-form-item>

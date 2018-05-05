@@ -1,5 +1,5 @@
 <template>
-  <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
+  <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px">
     <el-form-item label="用户组" prop="usergroups">
       <el-select v-model="ruleForm.usergroups" placeholder="请选择用户组">
         <el-option v-for="item in groups" :key="item.name" :value="item.name"></el-option>

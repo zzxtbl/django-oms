@@ -130,6 +130,7 @@ export const asyncRouterMap = [
       { path: 'editopsdemand/:id', hidden: true, component: _import('opstasks/components/editdemand'), name: '编辑项目' },
       { path: 'viewopsdemand/:id', hidden: true, component: _import('opstasks/components/viewdemand'), name: '查看项目' },
       { path: 'index', component: _import('salts/index'), name: 'state管理' },
+      { path: 'runstate', component: _import('salts/runstate'), name: '执行state' },
       { path: 'cmdrun', component: _import('salts/cmdrun'), name: '执行命令' }
     ]
   },

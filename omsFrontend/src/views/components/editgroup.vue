@@ -1,5 +1,5 @@
 <template>
-  <el-form :model="rowdata" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
+  <el-form :model="rowdata" :rules="rules" ref="ruleForm" label-width="100px">
     <el-form-item label="名称" prop="name">
       <el-input v-model="rowdata.name"></el-input>
     </el-form-item>

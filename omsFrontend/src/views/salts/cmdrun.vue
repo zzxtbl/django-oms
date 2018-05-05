@@ -1,7 +1,7 @@
 <template>
   <div class="components-container" style='height:100vh'>
     <el-card class="runcmd">
-      <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
+      <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px">
         <el-form-item label="选择主机" prop="hosts">
           <sesect-hosts :selecthost="ruleForm.hosts" @gethosts="getHosts"></sesect-hosts>
         </el-form-item>

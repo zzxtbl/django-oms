@@ -8,6 +8,8 @@ from omsBackend.settings import sapi
 
 
 class SaltStateSerializer(serializers.ModelSerializer):
+    group = serializers.SlugRelatedField(queryset=SaltStateGroup.objects.all(), slug_field='name')
+
     class Meta:
         model = SaltState
         fields = ['url', 'id', 'name', 'group', 'cmd', 'desc']
