@@ -6,18 +6,17 @@
           <div slot="header">
             <span>执行state</span>
           </div>
-          <el-form label-width="70px">
+          <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="70px">
+            <el-form-item label="选择主机" prop="hosts">
+              <sesect-hosts :selecthost="ruleForm.hosts" @gethosts="getHosts"></sesect-hosts>
+            </el-form-item>
+            <hr class="heng"/>
             <el-form-item v-for="item in stategroups" :key="item.id" :label="item.name">
               <el-button v-for="cmd in item.cmds" :key="cmd.id" size="mini" @click="ruleForm.selectcmd=cmd.cmd">
                 {{cmd.name}}
               </el-button>
             </el-form-item>
-          </el-form>
-          <hr class="heng"/>
-          <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="70px">
-            <el-form-item label="选择主机" prop="hosts">
-              <sesect-hosts :selecthost="ruleForm.hosts" @gethosts="getHosts"></sesect-hosts>
-            </el-form-item>
+            <hr class="heng"/>
             <el-form-item>
               <el-button type="primary" @click="submitForm('ruleForm')">执行</el-button>
             </el-form-item>
