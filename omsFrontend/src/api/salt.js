@@ -89,9 +89,35 @@ export function deleteSaltStateGroup(id) {
 }
 
 // saltjobs
-export function getSaltStateJob(query, id) {
+export function getSaltStateJob(query) {
   return request({
-    url: id ? apiURL.saltjobs + id + '/' : apiURL.saltjobs,
+    url: apiURL.saltjobs,
+    method: 'get',
+    params: query
+  })
+}
+
+export function postSaltStateJob(data) {
+  return request({
+    url: apiURL.saltjobs,
+    method: 'post',
+    data
+  })
+}
+
+// update_states_status
+export function getUpdateStatesStatus(query) {
+  return request({
+    url: apiURL.update_states_status,
+    method: 'get',
+    params: query
+  })
+}
+
+// get_state_bygroup
+export function getStatesStatusBygroup(query) {
+  return request({
+    url: apiURL.get_state_bygroup,
     method: 'get',
     params: query
   })

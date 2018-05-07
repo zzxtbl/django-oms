@@ -63,7 +63,7 @@ class DnsRecord(models.Model):
     value = models.CharField(max_length=300, verbose_name=u'值')
     value2 = models.CharField(max_length=50, null=True, blank=True, verbose_name=u"备用记录值")
     ttl = models.IntegerField(default=600, verbose_name=u'ttl')
-    record_id = models.CharField(max_length=11, null=True, blank=True, verbose_name=u'ttl')
+    record_id = models.CharField(max_length=11, null=True, blank=True, verbose_name=u'record_id')
     use = models.TextField(null=True, blank=True, verbose_name=u'用途')
     tan = models.BooleanField(default=False, verbose_name=u"是否探测")
     desc = models.TextField(null=True, blank=True, verbose_name=u'备注')

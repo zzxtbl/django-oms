@@ -10,6 +10,7 @@ from jobs.filters import JobFilterBackend, SqlTicketFilterBackend
 from rest_framework.filters import SearchFilter, DjangoFilterBackend
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
+import json
 
 
 class JobsViewSet(viewsets.ModelViewSet):
@@ -71,9 +72,10 @@ def update_jobs_status(request):
             try:
                 if list(set(job_status.values()))[0]:
                     import re
-                    j.result = sapi.get_cmd_result(j_id)
-                    for error in j.result.values():
-                        error_result = bool(re.search(r'Error', error, re.I))
+                    results = sapi.get_cmd_result(j_id)
+                    j.result = json.dumps(results)
+                    for result in results.values():
+                        error_result = bool(re.search(r'Error', result, re.I))
                         if error_result > 0:
                             j.deploy_status = 'failed'
                         else:

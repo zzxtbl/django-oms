@@ -121,7 +121,8 @@ module.exports = {
   saltjobs: `${url}/api/saltjobs/`,
   cmdrun: `${url}/api/salts/cmdrun/`,
   get_cmd_result: `${url}/api/salts/get_cmd_result/`,
-  update_states_status: `${url}/api/salts/update_states_status/`,
+  update_states_status: `${url}/api/update_states_status/`,
+  get_state_bygroup: `${url}/api/get_state_bygroup/`,
   sync_remote_server: `${url}/api/salts/sync_remote_server/`,
 
   // 项目

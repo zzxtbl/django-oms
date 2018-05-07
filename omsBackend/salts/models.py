@@ -45,6 +45,7 @@ class StateJob(models.Model):
     hosts = models.CharField(max_length=100, null=True, blank=True, verbose_name=u'目标主机')
     action_user = models.ForeignKey(User, verbose_name=u'操作人')
     result = models.TextField(null=True, blank=True, verbose_name=u'结果')
+    done = models.BooleanField(default=False, verbose_name=u'完成')
     create_time = models.DateTimeField(auto_now_add=True, verbose_name=u'创建时间')
 
     def __str__(self):

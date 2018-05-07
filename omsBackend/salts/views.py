@@ -11,7 +11,7 @@ from records.models import Record
 import json_tools
 from utils.tools import removeNone
 from rest_framework import viewsets
-
+import json
 
 @api_view()
 def get_all_key(request):
@@ -114,6 +114,25 @@ class SaltStateViewSet(viewsets.ModelViewSet):
     filter_fields = ['name', 'group__name']
 
 
+@api_view()
+def get_state_bygroup(request):
+    from operator import itemgetter
+    from itertools import groupby
+    if request.method == 'GET':
+        queryset = SaltState.objects.all()
+        rows = SaltStateSerializer(queryset,  context={'request': request}, many=True).data
+        rows.sort(key=itemgetter('group'))
+        results = []
+        for group, items in groupby(rows, key=itemgetter('group')):
+            q = dict()
+            q['name'] = group
+            q['state'] = []
+            for i in items:
+                q['state'].append(i)
+            results.append(q)
+        return Response(results)
+
+
 class SaltStateGroupViewSet(viewsets.ModelViewSet):
     queryset = SaltStateGroup.objects.all()
     serializer_class = SaltStateGroupSerializer
@@ -123,14 +142,13 @@ class SaltStateGroupViewSet(viewsets.ModelViewSet):
 class StateJobViewSet(viewsets.ModelViewSet):
     queryset = StateJob.objects.all().order_by('-create_time')
     serializer_class = StateJobSerializer
-    filter_fields = ['statejob__name', 'status']
+    search_fields = ['statejob__name', 'status']
 
 
 @api_view()
 def update_states_status(request):
     try:
-        job = request.GET['job__id']
-        jobs = StateJob.objects.filter(job__id=job).filter(deploy_status='deploy')
+        jobs = StateJob.objects.filter(status='deploy')
         count = len(jobs)
         for job in jobs:
             j_id = job.j_id
@@ -139,19 +157,23 @@ def update_states_status(request):
             print(list(set(job_status.values()))[0])
             try:
                 if list(set(job_status.values()))[0]:
-                    import re
-                    j.result = sapi.get_state_result(j_id)
-                    for error in j.result.values():
-                        error_result = bool(re.search(r'Error', error, re.I))
-                        if error_result > 0:
-                            j.deploy_status = 'failed'
-                        else:
-                            j.deploy_status = 'success'
+                    results = sapi.get_state_result(j_id)
+                    j.result = json.dumps(results)
+                    result_status = []
+                    for oo in results.values():
+                        for xx in oo.values():
+                            result_status.append(xx['result'])
+                    if False in result_status:
+                        j.status = 'failed'
+                    else:
+                        j.status = 'success'
+                    j.done = True
                 else:
-                    j.deploy_status = 'deploy'
+                    j.status = 'deploy'
             except Exception as e:
+                print(e)
                 pass
             j.save()
         return Response({"results": 'success', "count": count})
     except Exception as e:
-        return Response({"results": '?job__name=wtf', "count": 1024})
+        return Response({"results": 'tnnd', "count": 1024})

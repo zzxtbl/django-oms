@@ -11,13 +11,14 @@ from omsBackend import settings
 from omsBackend.routerApi import router
 from perms.views import routers
 from jobs.views import update_jobs_status
-from salts.views import update_states_status
+from salts.views import update_states_status, get_state_bygroup
 
 urlpatterns = static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + [
     url(r'^api/', include(router.urls)),
     url(r'^api/routers/(?P<username>\w+)', routers, name="myrouter"),
     url(r'^api/update_jobs_status/', update_jobs_status, name="update_jobs_status"),
     url(r'^api/update_states_status/', update_states_status, name="update_states_status"),
+    url(r'^api/get_state_bygroup/', get_state_bygroup, name="get_state_bygroup"),
 
     # salt
     url(r'^api/salts/', include('salts.urls')),

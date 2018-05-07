@@ -8,17 +8,17 @@
           </div>
           <el-form :model="ruleForm" ref="ruleForm" label-width="70px">
             <el-form-item label="选择主机" prop="hosts">
-              <sesect-hosts :selecthost="ruleForm.hosts" @gethosts="getHosts"></sesect-hosts>
+              <sesect-hosts :selecthost="selecthosts" @gethosts="getHosts"></sesect-hosts>
             </el-form-item>
             <hr class="heng"/>
-            <el-form-item v-for="item in stategroups" :key="item.id" :label="item.name">
-              <el-button v-for="cmd in item.cmds" :key="cmd.id" size="mini" @click="ruleForm.selectcmd=cmd.cmd">
-                {{cmd.name}}
+            <el-form-item v-for="item in stateDates" :key="item.id" :label="item.name">
+              <el-button v-for="state in item.state" :key="state.id" size="mini" @click="ruleForm.statejob=state.name">
+                {{state.name}}
               </el-button>
             </el-form-item>
             <hr class="heng"/>
             <el-form-item>
-              <el-button type="primary" @click="submitForm('ruleForm')">执行</el-button>
+              <el-button type="primary" @click="submitForm()">执行</el-button>
             </el-form-item>
           </el-form>
         </el-card>
@@ -38,21 +38,20 @@
             </el-input>
           </div>
           <div>
-            <el-table :data='tableData' @selection-change="handleSelectionChange" style="width: 100%">
-              <el-table-column type="selection" v-if="role==='super'"></el-table-column>
+            <el-table :data='tableData' style="width: 100%">
               <el-table-column prop='statejob' label='名称'></el-table-column>
               <el-table-column prop='status' label='状态' sortable>
                 <template slot-scope="scope">
                   <div slot="reference">
-                    <el-button plain size="mini" :type="DEPLOY_STATUS[scope.row.deploy_status].type"
-                               :icon="DEPLOY_STATUS[scope.row.deploy_status].icon">
-                      {{DEPLOY_STATUS[scope.row.deploy_status].text}}
+                    <el-button plain size="mini" :type="STATE_STATUS[scope.row.status].type"
+                               :icon="STATE_STATUS[scope.row.status].icon">
+                      {{STATE_STATUS[scope.row.status].text}}
                     </el-button>
                   </div>
                 </template>
               </el-table-column>
               <el-table-column prop='action_user' label='发布人'></el-table-column>
-              <el-table-column prop='create_time' label='发布时间' sortable>
+              <el-table-column prop='create_time' label='创建时间' sortable>
                 <template slot-scope="scope">
                   <div slot="reference">
                     {{scope.row.create_time | formatTime}}
@@ -70,8 +69,7 @@
           </div>
           <div class="table-footer">
 
-            <div class="table-button" v-if="role==='super'">
-              <el-button type="danger" icon="delete" :disabled="butstatus" @click="deleteForm">删除记录</el-button>
+            <div class="table-button">
             </div>
             <div class="table-pagination">
               <el-pagination
@@ -100,9 +98,7 @@
   </div>
 </template>
 <script>
-import { deleteDeployJob, getUpdateJobsStatus } from '@/api/job'
-import { getSaltStateGroup, getSaltState, getSaltStateJob } from 'api/salt'
-import { mapGetters } from 'vuex'
+import { getStatesStatusBygroup, getSaltStateJob, getUpdateStatesStatus, postSaltStateJob } from 'api/salt'
 import { LIMIT, pagesize, pageformat } from '@/config'
 import sesectHosts from '../components/hosttransfer.vue'
 
@@ -112,32 +108,11 @@ export default {
     return {
       selectcmd: '',
       route_path: this.$route.path.split('/'),
-      job_id: this.$route.params.job_id,
-      versionForm: {
-        version: '',
-        content: ''
-      },
       ruleForm: {
-        job: '',
-        env: '',
-        deploy_hosts: [],
-        deploy_cmd: '',
-        action_user: localStorage.getItem('username'),
-        deploy_cmd_host: 'null'
+        statejob: '',
+        hosts: '',
+        action_user: localStorage.getItem('username')
       },
-      steps: [],
-      cur_env: {},
-      cmds: [],
-      jobs: {},
-      sendnotice: false,
-      hasversion: false,
-      stepForm: {
-        cur_step: 1,
-        done: false
-      },
-      onlyread: false,
-      checkAll: true,
-      checkedcmds: [],
       currentPage: 1,
       listQuery: {
         limit: LIMIT,
@@ -148,42 +123,26 @@ export default {
       pageformat: pageformat,
       tableData: [],
       tabletotal: 0,
-      DEPLOY_STATUS: {
-        deploy: { text: '发布中', type: 'primary', icon: 'el-icon-loading' },
-        success: { text: '发布成功', type: 'success', icon: 'el-icon-success' },
-        failed: { text: '发布失败', type: 'danger', icon: 'el-icon-error' }
+      STATE_STATUS: {
+        deploy: { text: '执行中', type: 'primary', icon: 'el-icon-loading' },
+        success: { text: '执行成功', type: 'success', icon: 'el-icon-success' },
+        failed: { text: '执行失败', type: 'danger', icon: 'el-icon-error' }
       },
-      selectId: [],
-      butstatus: true,
       showresult: false,
       job_results: [],
       check_job_status: '',
-      deploy_cmds: [],
-      stategroups: [],
+      stateDates: [],
       selecthosts: []
     }
   },
-  computed: {
-    ...mapGetters([
-      'role'
-    ])
-  },
   created() {
-    this.fetchGroupData()
+    this.fetchStateData()
     this.fetchJobData()
   },
   methods: {
-    fetchGroupData() {
-      getSaltStateGroup().then(response => {
-        this.stategroups = response.data
-        this.stategroups.map(function(data) {
-          const parmas = {
-            group__name: data.name
-          }
-          getSaltState(parmas).then(response => {
-            data['cmds'] = response.data
-          })
-        })
+    fetchStateData() {
+      getStatesStatusBygroup().then(response => {
+        this.stateDates = response.data
       })
     },
     fetchJobData() {
@@ -195,14 +154,10 @@ export default {
         })
         if (job_status.indexOf('deploy') > -1) {
           this.check_job_status = setInterval(() => {
-            const pramas = {
-              job__id: this.job_id
-            }
-            getUpdateJobsStatus(pramas).then(response => {
+            getUpdateStatesStatus().then(response => {
               if (response.data.count === 0) {
                 clearInterval(this.check_job_status)
-                this.jobs.done = true
-                this.fetchDeployJobData()
+                this.fetchJobData()
               } else {
                 console.log('check job_status 3/s')
               }
@@ -214,33 +169,18 @@ export default {
         }
       })
     },
+    submitForm() {
+      postSaltStateJob(this.ruleForm).then(response => {
+        this.fetchJobData()
+      })
+    },
     handleSizeChange(val) {
       this.listQuery.limit = val
-      this.fetchDeployJobData()
+      this.fetchJobData()
     },
     handleCurrentChange(val) {
       this.listQuery.offset = (val - 1) * LIMIT
-      this.fetchDeployJobData()
-    },
-    handleSelectionChange(val) {
-      this.selectId = []
-      for (var i = 0, len = val.length; i < len; i++) {
-        this.selectId.push(val[i].id)
-      }
-      if (this.selectId.length > 0) {
-        this.butstatus = false
-      } else {
-        this.butstatus = true
-      }
-    },
-    deleteForm() {
-      clearInterval(this.check_job_status)
-      for (var i = 0, len = this.selectId.length; i < len; i++) {
-        deleteDeployJob(this.selectId[i]).then(response => {
-          delete this.selectId[i]
-        })
-      }
-      setTimeout(this.fetchDeployJobData, 1000)
+      this.fetchJobData()
     },
     showJobResult(row) {
       this.showresult = true
@@ -252,10 +192,10 @@ export default {
       this.job_results = a
     },
     searchClick() {
-      this.fetchDeployJobData()
+      this.fetchJobData()
     },
     getHosts(data) {
-      this.ruleForm.hosts = data
+      this.ruleForm.hosts = data.join()
     }
   }
 }

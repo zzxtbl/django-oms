@@ -120,7 +120,7 @@ class SaltAPI(object):
 
     def remote_state(self, tgt, client='local_async', expr_form='list', arg=''):
         """
-        异步执行远程命令、部署模块
+        异步执行state模块
         """
 
         data = {'client': client, 'tgt': tgt, 'fun': 'state.sls', 'arg': arg, 'expr_form': expr_form}
@@ -145,7 +145,10 @@ class SaltAPI(object):
 
         data = {'client': 'runner', 'fun': 'jobs.lookup_jid', 'jid': jid}
         content = self.salt_request(data)
-        ret = content['return'][0]['data']
+        try:
+            ret = content['return'][0]['data']
+        except:
+            ret = content['return'][0]
         return ret
 
     def get_job_info(self, jid=''):
@@ -194,11 +197,11 @@ class SaltAPI(object):
 
 def main():
     sapi = SaltAPI(url=salt_info["url"], username=salt_info["username"], password=salt_info["password"])
-    tgt = ['wx-51-proxy-test-01']
+    tgt = ['sh-51-payproxy-test-01']
     arg = 'centos.common.pkgs'
     jid = sapi.remote_state(tgt=tgt, arg=arg)
     print(jid)
-    #print(sapi.get_cmd_result(20180504165051970595))
+    #print(sapi.get_cmd_result(20180507141812257525))
     #print(sapi.remote_cmd(tgt=tgt, arg=arg))
 
 
