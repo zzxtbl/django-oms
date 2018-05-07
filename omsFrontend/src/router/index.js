@@ -128,10 +128,7 @@ export const asyncRouterMap = [
       { path: 'opsdemands', component: _import('opstasks/demands'), name: '项目列表' },
       { path: 'addopsdemand', hidden: true, component: _import('opstasks/components/adddemand'), name: '添加项目' },
       { path: 'editopsdemand/:id', hidden: true, component: _import('opstasks/components/editdemand'), name: '编辑项目' },
-      { path: 'viewopsdemand/:id', hidden: true, component: _import('opstasks/components/viewdemand'), name: '查看项目' },
-      { path: 'index', component: _import('salts/index'), name: 'state管理' },
-      { path: 'runstate', component: _import('salts/runstate'), name: '执行state' },
-      { path: 'cmdrun', component: _import('salts/cmdrun'), name: '执行命令' }
+      { path: 'viewopsdemand/:id', hidden: true, component: _import('opstasks/components/viewdemand'), name: '查看项目' }
     ]
   },
   {
@@ -195,6 +192,18 @@ export const asyncRouterMap = [
     ]
   },
   {
+    name: 'salt管理',
+    path: '/salts',
+    component: Layout,
+    icon: 'cube',
+    redirect: 'cmdrun',
+    children: [
+      { path: 'index', component: _import('salts/index'), name: 'state管理' },
+      { path: 'runstate', component: _import('salts/runstate'), name: '执行state' },
+      { path: 'cmdrun', component: _import('salts/cmdrun'), name: '执行命令' }
+    ]
+  },
+  {
     name: '主机管理',
     path: '/hosts',
     component: Layout,
@@ -217,17 +226,6 @@ export const asyncRouterMap = [
       { path: 'test', component: _import('tools/test'), name: '测试页面' }
     ]
   }
-  // {
-  //   name: 'salt管理',
-  //   path: '/salts',
-  //   component: Layout,
-  //   icon: 'cube',
-  //   redirect: 'cmdrun',
-  //   children: [
-  //     { path: 'index', component: _import('salts/index'), name: 'state管理' },
-  //     { path: 'cmdrun', component: _import('salts/cmdrun'), name: '执行命令' }
-  //   ]
-  // }
 ]
 
 export const errorRouterMap = [
