@@ -41,7 +41,8 @@ export default {
       pwdType: 'password',
       eye: 'eye',
       loading: false,
-      showDialog: false
+      showDialog: false,
+      bgindex: 0
     }
   },
   methods: {
@@ -78,10 +79,15 @@ export default {
         'http://pic1.win4000.com/wallpaper/2/582687feb0f49.jpg',
         'http://pic1.win4000.com/wallpaper/d/584e538de8003.jpg',
         'http://pic1.win4000.com/wallpaper/9/5854ebc3ae1a7.jpg',
-        'http://pic1.win4000.com/wallpaper/2/582687fb30871.jpg'
+        'http://pic1.win4000.com/wallpaper/2/582687fb30871.jpg',
+        'http://cdn2.wallpapersok.com/uploads/picture/877/63877/velikobritaniya-angliya-norfolk-7684.jpg'
       ]
-      const index = parseInt(Math.random() * (image_list.length - 1))
-      document.getElementsByClassName('login-container')[0].style.background = 'url(' + image_list[index] + ')'
+      document.getElementsByClassName('login-container')[0].style.background = 'url(' + image_list[this.bgindex] + ')'
+      if (this.bgindex < image_list.length - 1) {
+        this.bgindex += 1
+      } else {
+        this.bgindex = 0
+      }
     }
   },
   created() {
@@ -105,8 +111,7 @@ export default {
     background: url('../../assets/bg-images/bg0.jpg');
     // background-color: $bg;
     width: 100%;
-    height: 100%;
-    background-size: 100% 100%;
+    // background-size: 100% 100%;
     input:-webkit-autofill {
       -webkit-box-shadow: 0 0 0px 1000px #293444 inset !important;
       -webkit-text-fill-color: #fff !important;
