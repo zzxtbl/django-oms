@@ -8,20 +8,24 @@
         <span class="svg-container svg-container_login">
           <icon name="user"></icon>
         </span>
-        <el-input name="username" type="text" v-model="loginForm.username" autoComplete="on" placeholder="用户名"/>
+        <el-input name="username" type="text" v-model="loginForm.username" autoComplete="on"
+                  placeholder="用户名"></el-input>
       </el-form-item>
 
       <el-form-item prop="password">
         <span class="svg-container"> <icon name="key"></icon></span>
         <el-input name="password" :type="pwdType" @keyup.enter.native="handleLogin" v-model="loginForm.password"
-                  autoComplete="on" placeholder="密码"/>
-        <span class="show-pwd" @click="showPwd"><icon :name="eye"></icon></span>
+                  autoComplete="on" placeholder="密码">
+          <span class="svg-container" slot="suffix" @click="showPwd"><icon :name="eye"></icon></span>
+        </el-input>
       </el-form-item>
-
-      <el-button type="primary" style="width:100%;margin-bottom:30px;" :loading="loading"
-                 @click.native.prevent="handleLogin">Login
+      <el-button type="primary" class="login-button" :loading="loading" @click.native.prevent="handleLogin">Login
       </el-button>
     </el-form>
+
+    <el-tooltip effect="dark" content="切换背景" placement="top">
+      <el-button class="qie" type="primary" size="mini" icon="el-icon-refresh" @click="changeBg"></el-button>
+    </el-tooltip>
   </div>
 </template>
 
@@ -67,6 +71,17 @@ export default {
           return false
         }
       })
+    },
+    changeBg() {
+      const image_list = [
+        'http://pic1.win4000.com/wallpaper/2/582687f045785.jpg',
+        'http://pic1.win4000.com/wallpaper/2/582687feb0f49.jpg',
+        'http://pic1.win4000.com/wallpaper/d/584e538de8003.jpg',
+        'http://pic1.win4000.com/wallpaper/9/5854ebc3ae1a7.jpg',
+        'http://pic1.win4000.com/wallpaper/2/582687fb30871.jpg'
+      ]
+      const index = parseInt(Math.random() * (image_list.length - 1))
+      document.getElementsByClassName('login-container')[0].style.background = 'url(' + image_list[index] + ')'
     }
   },
   created() {
@@ -83,12 +98,15 @@ export default {
 
   $bg: #2d3a4b;
   $dark_gray: #889aa4;
-  $light_gray: #eee;
+  $light_gray: #d1eec4;
 
   .login-container {
     @include relative;
-    height: 100vh;
-    background-color: $bg;
+    background: url('../../assets/bg-images/bg0.jpg');
+    // background-color: $bg;
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
     input:-webkit-autofill {
       -webkit-box-shadow: 0 0 0px 1000px #293444 inset !important;
       -webkit-text-fill-color: #fff !important;
@@ -123,12 +141,11 @@ export default {
       }
     }
     .title {
-      font-size: 26px;
-      font-weight: 400;
+      font-size: 28px;
+      font-weight: 500;
       color: $light_gray;
       margin: 0px auto 40px auto;
       text-align: center;
-      font-weight: bold;
     }
     .login-form {
       position: absolute;
@@ -153,10 +170,17 @@ export default {
       cursor: pointer;
       user-select: none;
     }
-    .thirdparty-button {
+    .login-button {
+      width: 100%;
+      background-color: #7cb3d2;
+      border-color: #a8cae3;
+    }
+    .qie {
       position: absolute;
-      right: 35px;
-      bottom: 28px;
+      right: 0;
+      bottom: 0;
+      background: transparent;
+      border: none;
     }
   }
 </style>

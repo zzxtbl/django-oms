@@ -50,6 +50,15 @@
                   </div>
                 </template>
               </el-table-column>
+              <el-table-column prop='action_user' label='执行主机'>
+                <template slot-scope="scope">
+                  <div slot="reference" class="name-wrapper" style="text-align: center">
+                    <el-tag v-for="item in scope.row.hosts.split('|')" :key="item.id" size="mini" style="margin-right: 3px">
+                      {{item}}
+                    </el-tag>
+                  </div>
+                </template>
+              </el-table-column>
               <el-table-column prop='action_user' label='发布人'></el-table-column>
               <el-table-column prop='create_time' label='创建时间' sortable>
                 <template slot-scope="scope">
