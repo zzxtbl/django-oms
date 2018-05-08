@@ -21,7 +21,7 @@
             {% if config.site_name == page.title %}
                 {{ config.site_name }}
             {% else %}
-              <a class="md-header-nav__topic" href="/">
+              <a class="md-header-nav__topic" href="{{ base_url }}">
                 {{ config.site_name }}
               </a>
               <span class="md-header-nav__topic">
