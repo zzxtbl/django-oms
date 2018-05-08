@@ -1,0 +1,6 @@
+site_name: omsdoc
+theme_dir: cinder
+copyright: "Copyright @ <a href='https://github.com/chrissimpkins/cinder/blob/master/LICENSE.md'>MIT license"
+pages:
+  - Home: index.md
+  - About: about.md
