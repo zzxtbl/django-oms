@@ -38,11 +38,16 @@ If you are using MkDocs v0.15.0 or higher, you can install the Cinder theme with
 
 MkDocs projects use a YAML settings file called `mkdocs.yml`.  This is located in the root of your project directory after you use the `mkdocs new` command.  Open the file in a text editor and modify it to define Cinder in the `theme` setting as follows (note that this is case-sensitive):
 
-<pre><code class="yaml">site_name: [YOURPROJECT]
-theme: cinder
-pages:
-- Home: index.md
-</code></pre>
+``` python
+def create(self, validated_data):
+    cmd = SaltState.objects.get(name=validated_data["statejob"]).cmd
+    hosts = validated_data["hosts"]
+    jid = sapi.remote_state(tgt=hosts.split(','), arg=cmd)
+    validated_data["j_id"] = jid
+    job = StateJob.objects.create(**validated_data)
+    job.save()
+    return job
+```
 
 **Theme Updates**: If you choose the pip install approach, you can update your Cinder theme to new releases with the command `$ pip install --upgrade mkdocs-cinder`.  Then re-build your static site files (see instructions below).
 
