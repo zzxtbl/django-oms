@@ -4,12 +4,6 @@
 import requests
 import datetime
 
-salt_info = {
-    "url": "http://salt.tbsysmanager.com:8080",
-    "username": "saltdev",
-    "password": "FF01VeF4hs1FqZ5M"
-}
-
 
 class SaltAPI(object):
     def __init__(self, url, username, password):
@@ -196,6 +190,8 @@ class SaltAPI(object):
 
 
 def main():
+    from salt_conf import salt_info
+
     sapi = SaltAPI(url=salt_info["url"], username=salt_info["username"], password=salt_info["password"])
     tgt = ['sh-51-payproxy-test-01']
     arg = 'centos.common.pkgs'

@@ -159,7 +159,7 @@ AUTH_USER_MODEL = "users.User"
 
 CORS_ORIGIN_ALLOW_ALL = True
 
-# 使用ldap认证
+# 使用ldap认证, 使用django自带认证请注释下面这行
 LDAP_AUTH_USE_TLS = False
 
 # The LDAP class that represents a user.

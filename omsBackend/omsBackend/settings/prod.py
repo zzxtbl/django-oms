@@ -12,7 +12,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'oms',
         'USER': 'oms',
-        'PASSWORD': 'sUT.a2^{O1j8WSWo',
+        'PASSWORD': 'jjyy',
         'HOST': '127.0.0.1',
         'PORT': '5432'
     }
@@ -21,9 +21,9 @@ DATABASES = {
 # 使用ldap认证
 AUTHENTICATION_BACKENDS = ("django_python3_ldap.auth.LDAPBackend",)
 LDAP_AUTH_URL = "ldap://192.168.6.101:389"
-LDAP_AUTH_SEARCH_BASE = "ou=AllUser,dc=tb-gaming,dc=local"
-LDAP_AUTH_CONNECTION_USERNAME = r'tb-gaming\itconfig'
-LDAP_AUTH_CONNECTION_PASSWORD = r'TUjweiAHZQ'
+LDAP_AUTH_SEARCH_BASE = "ou=AllUser,dc=oms,dc=com"
+LDAP_AUTH_CONNECTION_USERNAME = r'oms\admin'
+LDAP_AUTH_CONNECTION_PASSWORD = r'jjyy'
 
 # # Redis
 # REDIS_OPTIONS = {
@@ -47,10 +47,10 @@ LDAP_AUTH_CONNECTION_PASSWORD = r'TUjweiAHZQ'
 
 # email账号
 MAIL_ACOUNT = {
-    "mail_host": "mail.tb-gaming.com",
-    "mail_user": "oms@tb-gaming.com",
-    "mail_pass": "u62En68D9d",
-    "mail_postfix": "tb-gaming.com",
+    "mail_host": "mail@oms.com",
+    "mail_user": "admin@oms.com",
+    "mail_pass": "jjyy",
+    "mail_postfix": "oms.com",
 }
 
 # 登录skype
@@ -58,8 +58,8 @@ from skpy import Skype
 
 # skype账号
 SK_ACOUNT = {
-    'sk_user': 'oms@tb-gaming.com',
-    'sk_pass': 'tengfa@918'
+    'sk_user': 'admin@oms.com',
+    'sk_pass': 'jjyy'
 }
 SK = Skype(SK_ACOUNT["sk_user"], SK_ACOUNT["sk_pass"])
 #SK = 'skype'
@@ -90,9 +90,9 @@ CACHES = {
 
 # saltapi
 salt_info = {
-    "url": "http://salt.tbsysmanager.com:8080",
-    "username": "saltdev",
-    "password": "FF01VeF4hs1FqZ5M"
+    "url": "http://salt.oms.com/api/",
+    "username": "saltapi",
+    "password": "saltapi"
 }
 
 from salts.saltapi import SaltAPI
@@ -102,9 +102,9 @@ sapi = SaltAPI(url=salt_info["url"], username=salt_info["username"], password=sa
 from zbmanager.zabbix_api import ZabbixApi
 
 zabbix_info = {
-    'apiurl': 'http://zabbix.tbsysmanager.com/api_jsonrpc.php',
-    'username': 'kiven',
-    'password': 'la37ZjKVSANUFJIx'
+    'apiurl': 'http://zabbix.oms.com/api_jsonrpc.php',
+    'username': 'admin',
+    'password': 'zabbix'
 }
 
 zapi = ZabbixApi(zabbix_info["apiurl"], zabbix_info["username"], zabbix_info["password"])

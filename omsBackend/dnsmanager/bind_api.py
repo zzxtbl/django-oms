@@ -106,7 +106,7 @@ class BindApi(object):
         return req
 
 if __name__ == '__main__':
-    from dnsapi_key import BIND_KEYINFO
+    from dnsapi_conf import BIND_KEYINFO
 
     bindapi = BindApi(user=BIND_KEYINFO['user'], pwd=BIND_KEYINFO['pwd'])
     data = {'name': 'itimor.ph'}

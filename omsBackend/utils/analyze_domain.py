@@ -8,11 +8,12 @@ import logging
 from bind_sendmail import SendMail
 
 MAIL_ACOUNT = {
-    "mail_host": "mail.tb-gaming.com",
-    "mail_user": "oms@tb-gaming.com",
-    "mail_pass": "u62En68D9d",
-    "mail_postfix": "tb-gaming.com",
+    "mail_host": "mail@oms.com",
+    "mail_user": "admin@oms.com",
+    "mail_pass": "jjyy",
+    "mail_postfix": "oms.com",
 }
+
 
 def initlog(logfile):
     """

@@ -2,7 +2,7 @@
 # author: itimor
 
 zabbix_info = {
-    'apiurl': 'http://zabbix.tbsysmanager.com/api_jsonrpc.php',
-    'username': 'kiven',
-    'password': 'la37ZjKVSANUFJIx'
+    'apiurl': 'http://zabbix.oms.com/api_jsonrpc.php',
+    'username': 'admin',
+    'password': 'zabbix'
 }

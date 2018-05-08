@@ -190,7 +190,7 @@ class GodaddyApi(object):
 
 
 if __name__ == '__main__':
-    from dnsapi_key import GODADDY_KEYINFO
+    from dnsapi_conf import GODADDY_KEYINFO
 
     godaddy = GodaddyApi(GODADDY_KEYINFO['key'], GODADDY_KEYINFO['secret'])
     record = {

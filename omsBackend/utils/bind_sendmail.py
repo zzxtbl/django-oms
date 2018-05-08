@@ -53,14 +53,14 @@ if __name__ == '__main__':
     # from omsBackend.settings import MAIL_ACOUNT
 
     MAIL_ACOUNT = {
-        "mail_host": "mail.tb-gaming.com",
-        "mail_user": "oms@tb-gaming.com",
-        "mail_pass": "u62En68D9d",
-        "mail_postfix": "tb-gaming.com",
+        "mail_host": "mail@oms.com",
+        "mail_user": "admin@oms.com",
+        "mail_pass": "jjyy",
+        "mail_postfix": "oms.com",
     }
     sub = 'aaa'
     content = 'bbb'
-    to_list = 'kiven@tb-gaming.com'
+    to_list = 'ooxx@oms.com'
     cc_list = ''
     sendmail = SendMail(MAIL_ACOUNT, sub, content, to_list, cc_list)
 
