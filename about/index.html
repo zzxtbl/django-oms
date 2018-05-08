@@ -1,408 +1,1251 @@
+
+
+
+
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <link rel="shortcut icon" href="../img/favicon.ico">
-
-    <title>About - omsdoc</title>
-
-    <link href="../css/bootstrap-custom.css" rel="stylesheet">
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/2.018/css/hack.min.css">
-    <link href='//fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
-    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
-    <link href="../css/base.css" rel="stylesheet">
-    <link href="../css/cinder.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/highlight.css">
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-        <![endif]-->
-
-    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
-    <script>
-    WebFont.load({
-        google: {
-            families: ['Open Sans', 'PT Sans']
-        }
-    });
-    </script>
-
+<html lang="zh" class="no-js">
+  <head>
     
-</head>
-
-<body>
-
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container">
-
-        <!-- Collapsed navigation -->
-        <div class="navbar-header">
-            <!-- Expander button -->
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="oms运维管理系统 python salt django zabbox oms">
+      
+      
+        <link rel="canonical" href="https://itimor.github.io/ojbk-oms/about/">
+      
+      
+        <meta name="author" content="itimor">
+      
+      
+        <meta name="lang:clipboard.copy" content="复制">
+      
+        <meta name="lang:clipboard.copied" content="已复制">
+      
+        <meta name="lang:search.language" content="jp">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="没有找到符合条件的结果">
+      
+        <meta name="lang:search.result.one" content="找到 1 个符合条件的结果">
+      
+        <meta name="lang:search.result.other" content="# 个符合条件的结果">
+      
+        <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
+      
+      <link rel="shortcut icon" href="../">
+      <meta name="generator" content="mkdocs-0.17.3, mkdocs-material-2.7.3">
+    
+    
+      
+        <title>About - oms运维管理系统</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.8d40d89b.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.6079476c.css">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Hind+Siliguri:300,400,400i,700|Noto+Sans">
+        <style>body,input{font-family:"Hind Siliguri","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Noto Sans","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="cyan" data-md-color-accent="purple">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <a href="#specimen" tabindex="1" class="md-skip">
+        跳转至
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="oms运维管理系统" class="md-header-nav__button md-logo">
+          
+            <img src="../assets/images/favicon.ico" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <a class="md-header-nav__topic" href="/">
+                oms运维管理系统
+              </a>
+              <span class="md-header-nav__topic">
+                About
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            键入以开始搜索
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
             
 
-            <!-- Main title -->
 
-            <a class="navbar-brand" href="..">omsdoc</a>
-        </div>
+  
 
-        <!-- Expanded navigation -->
-        <div class="navbar-collapse collapse">
-                <!-- Main navigation -->
-                <ul class="nav navbar-nav">
-                
-                
-                    <li >
-                        <a href="..">Home</a>
-                    </li>
-                
-                
-                
-                    <li class="active">
-                        <a href="./">About</a>
-                    </li>
-                
-                
-                </ul>
 
-            <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
-                            <i class="fa fa-search"></i> Search
-                        </a>
-                    </li>
-                    <li >
-                        <a rel="next" href="..">
-                            <i class="fa fa-arrow-left"></i> Previous
-                        </a>
-                    </li>
-                    <li class="disabled">
-                        <a rel="prev" >
-                            Next <i class="fa fa-arrow-right"></i>
-                        </a>
-                    </li>
-            </ul>
-        </div>
+  <a href="https://github.com/itimor/ojbk-oms/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      github
     </div>
-</div>
+  </a>
 
-    <div class="container">
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
         
-        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
-    <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#typography">Typography</a></li>
-            <li class="second-level"><a href="#typefaces">Typefaces</a></li>
-                
-            <li class="second-level"><a href="#body-copy">Body Copy</a></li>
-                
-            <li class="second-level"><a href="#lead-body-copy">Lead Body Copy</a></li>
-                
-            <li class="second-level"><a href="#headings">Headings</a></li>
-                
-            <li class="second-level"><a href="#blockquotes">Blockquotes</a></li>
-                
-            <li class="second-level"><a href="#lists">Lists</a></li>
-                
-            <li class="second-level"><a href="#horizontal-description-lists">Horizontal Description Lists</a></li>
-                
-            <li class="second-level"><a href="#contextual-colors">Contextual Colors</a></li>
-                
-        <li class="first-level "><a href="#code">Code</a></li>
-            <li class="second-level"><a href="#inline-code">Inline Code</a></li>
-                
-        <li class="first-level "><a href="#tables">Tables</a></li>
-            <li class="second-level"><a href="#striped-table">Striped Table</a></li>
-                
-            <li class="second-level"><a href="#bordered-table">Bordered Table</a></li>
-                
-        <li class="first-level "><a href="#buttons">Buttons</a></li>
-            <li class="second-level"><a href="#default-buttons">Default Buttons</a></li>
-                
-            <li class="second-level"><a href="#styled-buttons">Styled Buttons</a></li>
-                
-            <li class="second-level"><a href="#button-sizes">Button Sizes</a></li>
-                
-            <li class="second-level"><a href="#block-level-buttons">Block Level Buttons</a></li>
-                
+      
+      
+        
+
+<nav class="md-tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href=".." title="Home" class="md-tabs__link md-tabs__link--active">
+        Home
+      </a>
+    
+  </li>
+
+      
+        
+      
     </ul>
-</div></div>
-        <div class="col-md-9" role="main">
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <img src="../assets/images/favicon.ico" width="48" height="48">
+      
+    </span>
+  </label>
+  
+    <div class="md-nav__source">
+      
 
-<h1>Cinder Theme Specimen</h1>
 
-<h2 id="typography">Typography</h2>
-<h3 id="typefaces">Typefaces</h3>
-<ul>
-<li>Headers: <a href="https://www.google.com/fonts/specimen/PT+Sans">PT Sans</a></li>
-<li>Body: <a href="https://www.google.com/fonts/specimen/Open+Sans">Open Sans</a></li>
-<li>Code: <a href="http://sourcefoundry.org/hack/">Hack</a></li>
-</ul>
-<h3 id="body-copy">Body Copy</h3>
-<p>You think water moves fast? You should see ice. <strong>It moves like it has a mind</strong>. Like it knows it killed the world once and got a taste for murder. <em>After the avalanche, it took us a week to climb out</em>. Now, I don't know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out.</p>
-<p>Now we took an oath, that I'm breaking now. <a href="#">We said</a> we'd say it was the snow that killed the other two, but it wasn't.  Nature is lethal but it doesn't hold a candle to man.</p>
-<p>Like inline code?  Here is a string for you <code>010101010</code>.</p>
-<h3 id="lead-body-copy">Lead Body Copy</h3>
-<p class="lead">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.</p>
+  
 
-<h3 id="headings">Headings</h3>
-<p>All HTML headings, <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code>, are available. <code>.h1</code> through <code>.h6</code> classes are also available, for when you want to match the font styling of a heading but still want your text to be displayed inline.</p>
-<h1>h1. Heading</h1>
 
-<h2>h2. Heading</h2>
+  <a href="https://github.com/itimor/ojbk-oms/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      github
+    </div>
+  </a>
 
-<h3>h3. Heading</h3>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
 
-<h4>h4. Heading</h4>
 
-<h5>h5. Heading</h5>
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
 
-<h6>h6. Heading</h6>
+    
+      
+      
+      
 
-<h1>h1. Heading <small>Secondary text</small></h1>
+  
 
-<h2>h2. Heading <small>Secondary text</small></h2>
 
-<h3>h3. Heading <small>Secondary text</small></h3>
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        About
+      </label>
+    
+    <a href="./" title="About" class="md-nav__link md-nav__link--active">
+      About
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#body-copy" title="Body copy" class="md-nav__link">
+    Body copy
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#headings" title="Headings" class="md-nav__link">
+    Headings
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-3rd-level" title="The 3rd level" class="md-nav__link">
+    The 3rd level
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-4th-level" title="The 4th level" class="md-nav__link">
+    The 4th level
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-5th-level" title="The 5th level" class="md-nav__link">
+    The 5th level
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-6th-level" title="The 6th level" class="md-nav__link">
+    The 6th level
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#headings-with-secondary-text" title="Headings with secondary text" class="md-nav__link">
+    Headings with secondary text
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-3rd-level-with-secondary-text" title="The 3rd level with secondary text" class="md-nav__link">
+    The 3rd level with secondary text
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-4th-level-with-secondary-text" title="The 4th level with secondary text" class="md-nav__link">
+    The 4th level with secondary text
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-5th-level-with-secondary-text" title="The 5th level with secondary text" class="md-nav__link">
+    The 5th level with secondary text
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-6th-level-with-secondary-text" title="The 6th level with secondary text" class="md-nav__link">
+    The 6th level with secondary text
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#blockquotes" title="Blockquotes" class="md-nav__link">
+    Blockquotes
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#blockquote-nesting" title="Blockquote nesting" class="md-nav__link">
+    Blockquote nesting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-content-blocks" title="Other content blocks" class="md-nav__link">
+    Other content blocks
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lists" title="Lists" class="md-nav__link">
+    Lists
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unordered-lists" title="Unordered lists" class="md-nav__link">
+    Unordered lists
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ordered-lists" title="Ordered lists" class="md-nav__link">
+    Ordered lists
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#definition-lists" title="Definition lists" class="md-nav__link">
+    Definition lists
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-blocks" title="Code blocks" class="md-nav__link">
+    Code blocks
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inline" title="Inline" class="md-nav__link">
+    Inline
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listing" title="Listing" class="md-nav__link">
+    Listing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#horizontal-rules" title="Horizontal rules" class="md-nav__link">
+    Horizontal rules
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-tables" title="Data tables" class="md-nav__link">
+    Data tables
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
 
-<h4>h4. Heading <small>Secondary text</small></h4>
-
-<h5>h5. Heading <small>Secondary text</small></h5>
-
-<h6>h6. Heading <small>Secondary text</small></h6>
-
-<h3 id="blockquotes">Blockquotes</h3>
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#body-copy" title="Body copy" class="md-nav__link">
+    Body copy
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#headings" title="Headings" class="md-nav__link">
+    Headings
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-3rd-level" title="The 3rd level" class="md-nav__link">
+    The 3rd level
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-4th-level" title="The 4th level" class="md-nav__link">
+    The 4th level
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-5th-level" title="The 5th level" class="md-nav__link">
+    The 5th level
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-6th-level" title="The 6th level" class="md-nav__link">
+    The 6th level
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#headings-with-secondary-text" title="Headings with secondary text" class="md-nav__link">
+    Headings with secondary text
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-3rd-level-with-secondary-text" title="The 3rd level with secondary text" class="md-nav__link">
+    The 3rd level with secondary text
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-4th-level-with-secondary-text" title="The 4th level with secondary text" class="md-nav__link">
+    The 4th level with secondary text
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-5th-level-with-secondary-text" title="The 5th level with secondary text" class="md-nav__link">
+    The 5th level with secondary text
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-6th-level-with-secondary-text" title="The 6th level with secondary text" class="md-nav__link">
+    The 6th level with secondary text
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#blockquotes" title="Blockquotes" class="md-nav__link">
+    Blockquotes
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#blockquote-nesting" title="Blockquote nesting" class="md-nav__link">
+    Blockquote nesting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-content-blocks" title="Other content blocks" class="md-nav__link">
+    Other content blocks
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lists" title="Lists" class="md-nav__link">
+    Lists
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unordered-lists" title="Unordered lists" class="md-nav__link">
+    Unordered lists
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ordered-lists" title="Ordered lists" class="md-nav__link">
+    Ordered lists
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#definition-lists" title="Definition lists" class="md-nav__link">
+    Definition lists
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-blocks" title="Code blocks" class="md-nav__link">
+    Code blocks
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inline" title="Inline" class="md-nav__link">
+    Inline
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listing" title="Listing" class="md-nav__link">
+    Listing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#horizontal-rules" title="Horizontal rules" class="md-nav__link">
+    Horizontal rules
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-tables" title="Data tables" class="md-nav__link">
+    Data tables
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/itimor/ojbk-oms/edit/master/docs/about.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="specimen">Specimen<a class="headerlink" href="#specimen" title="Permanent link">&para;</a></h1>
+<h2 id="body-copy">Body copy<a class="headerlink" href="#body-copy" title="Permanent link">&para;</a></h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras arcu libero,
+mollis sed massa vel, <em>ornare viverra ex</em>. Mauris a ullamcorper lacus. Nullam
+urna elit, malesuada eget finibus ut, ullamcorper ac tortor. Vestibulum sodales
+pulvinar nisl, pharetra aliquet est. Quisque volutpat erat ac nisi accumsan
+tempor.</p>
+<p><strong>Sed suscipit</strong>, orci non pretium pretium, quam mi gravida metus, vel
+venenatis justo est condimentum diam. Maecenas non ornare justo. Nam a ipsum
+eros. <a href="../">Nulla aliquam</a> orci sit amet nisl posuere malesuada. Proin aliquet
+nulla velit, quis ultricies orci feugiat et. <code>Ut tincidunt sollicitudin</code>
+tincidunt. Aenean ullamcorper sit amet nulla at interdum.</p>
+<h2 id="headings">Headings<a class="headerlink" href="#headings" title="Permanent link">&para;</a></h2>
+<h3 id="the-3rd-level">The 3<sup>rd</sup> level<a class="headerlink" href="#the-3rd-level" title="Permanent link">&para;</a></h3>
+<h4 id="the-4th-level">The 4<sup>th</sup> level<a class="headerlink" href="#the-4th-level" title="Permanent link">&para;</a></h4>
+<h5 id="the-5th-level">The 5<sup>th</sup> level<a class="headerlink" href="#the-5th-level" title="Permanent link">&para;</a></h5>
+<h6 id="the-6th-level">The 6<sup>th</sup> level<a class="headerlink" href="#the-6th-level" title="Permanent link">&para;</a></h6>
+<h2 id="headings-with-secondary-text">Headings <small>with secondary text</small><a class="headerlink" href="#headings-with-secondary-text" title="Permanent link">&para;</a></h2>
+<h3 id="the-3rd-level-with-secondary-text">The 3<sup>rd</sup> level <small>with secondary text</small><a class="headerlink" href="#the-3rd-level-with-secondary-text" title="Permanent link">&para;</a></h3>
+<h4 id="the-4th-level-with-secondary-text">The 4<sup>th</sup> level <small>with secondary text</small><a class="headerlink" href="#the-4th-level-with-secondary-text" title="Permanent link">&para;</a></h4>
+<h5 id="the-5th-level-with-secondary-text">The 5<sup>th</sup> level <small>with secondary text</small><a class="headerlink" href="#the-5th-level-with-secondary-text" title="Permanent link">&para;</a></h5>
+<h6 id="the-6th-level-with-secondary-text">The 6<sup>th</sup> level <small>with secondary text</small><a class="headerlink" href="#the-6th-level-with-secondary-text" title="Permanent link">&para;</a></h6>
+<h2 id="blockquotes">Blockquotes<a class="headerlink" href="#blockquotes" title="Permanent link">&para;</a></h2>
 <blockquote>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-  <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+<p>Morbi eget dapibus felis. Vivamus venenatis porttitor tortor sit amet rutrum.
+  Pellentesque aliquet quam enim, eu volutpat urna rutrum a. Nam vehicula nunc
+  mauris, a ultricies libero efficitur sed. <em>Class aptent</em> taciti sociosqu ad
+  litora torquent per conubia nostra, per inceptos himenaeos. Sed molestie
+  imperdiet consectetur.</p>
 </blockquote>
-
-<h3 id="lists">Lists</h3>
+<h3 id="blockquote-nesting">Blockquote nesting<a class="headerlink" href="#blockquote-nesting" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Sed aliquet</strong>, neque at rutrum mollis, neque nisi tincidunt nibh, vitae
+  faucibus lacus nunc at lacus. Nunc scelerisque, quam id cursus sodales, lorem
+  <a href="../">libero fermentum</a> urna, ut efficitur elit ligula et nunc.</p>
+<blockquote>
+<p>Mauris dictum mi lacus, sit amet pellentesque urna vehicula fringilla.
+    Ut sit amet placerat ante. Proin sed elementum nulla. Nunc vitae sem odio.
+    Suspendisse ac eros arcu. Vivamus orci erat, volutpat a tempor et, rutrum.
+    eu odio.</p>
+<blockquote>
+<p><code>Suspendisse rutrum facilisis risus</code>, eu posuere neque commodo a.
+      Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed nec leo
+      bibendum, sodales mauris ut, tincidunt massa.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<h3 id="other-content-blocks">Other content blocks<a class="headerlink" href="#other-content-blocks" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>Vestibulum vitae orci quis ante viverra ultricies ut eget turpis. Sed eu
+  lectus dapibus, eleifend nulla varius, lobortis turpis. In ac hendrerit nisl,
+  sit amet laoreet nibh.
+  <div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">_extends</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">target</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">arguments</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">source</span> <span class="o">=</span> <span class="nx">arguments</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">key</span> <span class="k">in</span> <span class="nx">source</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">target</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span> <span class="o">=</span> <span class="nx">source</span><span class="p">[</span><span class="nx">key</span><span class="p">];</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="nx">target</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div></p>
+<blockquote>
+<p>Praesent at <code class="codehilite"><span class="k">return</span> <span class="nx">target</span></code>, sodales nibh vel, tempor felis. Fusce
+      vel lacinia lacus. Suspendisse rhoncus nunc non nisi iaculis ultrices.
+      Donec consectetur mauris non neque imperdiet, eget volutpat libero.</p>
+</blockquote>
+</blockquote>
+<h2 id="lists">Lists<a class="headerlink" href="#lists" title="Permanent link">&para;</a></h2>
+<h3 id="unordered-lists">Unordered lists<a class="headerlink" href="#unordered-lists" title="Permanent link">&para;</a></h3>
 <ul>
-<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
-<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
-<li><code>mkdocs build</code> - Build the documentation site.</li>
-<li><code>mkdocs help</code> - Print this help message.</li>
+<li>
+<p>Sed sagittis eleifend rutrum. Donec vitae suscipit est. Nullam tempus tellus
+  non sem sollicitudin, quis rutrum leo facilisis. Nulla tempor lobortis orci,
+  at elementum urna sodales vitae. In in vehicula nulla, quis ornare libero.</p>
+<ul>
+<li>Duis mollis est eget nibh volutpat, fermentum aliquet dui mollis.</li>
+<li>Nam vulputate tincidunt fringilla.</li>
+<li>Nullam dignissim ultrices urna non auctor.</li>
 </ul>
-<h3 id="horizontal-description-lists">Horizontal Description Lists</h3>
-<dl class="dl-horizontal">
-  <dt>Something</dt>
-  <dd>This is something</dd>
-  <dt>SomethingElse</dt>
-  <dd>This is something else</dd>
+</li>
+<li>
+<p>Aliquam metus eros, pretium sed nulla venenatis, faucibus auctor ex. Proin ut
+  eros sed sapien ullamcorper consequat. Nunc ligula ante, fringilla at aliquam
+  ac, aliquet sed mauris.</p>
+</li>
+<li>
+<p>Nulla et rhoncus turpis. Mauris ultricies elementum leo. Duis efficitur
+  accumsan nibh eu mattis. Vivamus tempus velit eros, porttitor placerat nibh
+  lacinia sed. Aenean in finibus diam.</p>
+</li>
+</ul>
+<h3 id="ordered-lists">Ordered lists<a class="headerlink" href="#ordered-lists" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Integer vehicula feugiat magna, a mollis tellus. Nam mollis ex ante, quis
+  elementum eros tempor rutrum. Aenean efficitur lobortis lacinia. Nulla
+  consectetur feugiat sodales.</p>
+</li>
+<li>
+<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
+  ridiculus mus. Aliquam ornare feugiat quam et egestas. Nunc id erat et quam
+  pellentesque lacinia eu vel odio.</p>
+<ol>
+<li>
+<p>Vivamus venenatis porttitor tortor sit amet rutrum. Pellentesque aliquet
+  quam enim, eu volutpat urna rutrum a. Nam vehicula nunc mauris, a
+  ultricies libero efficitur sed.</p>
+<ol>
+<li>Mauris dictum mi lacus</li>
+<li>Ut sit amet placerat ante</li>
+<li>Suspendisse ac eros arcu</li>
+</ol>
+</li>
+<li>
+<p>Morbi eget dapibus felis. Vivamus venenatis porttitor tortor sit amet
+  rutrum. Pellentesque aliquet quam enim, eu volutpat urna rutrum a. Sed
+  aliquet, neque at rutrum mollis, neque nisi tincidunt nibh.</p>
+</li>
+<li>
+<p>Pellentesque eget <code class="codehilite"><span class="kd">var</span> <span class="nx">_extends</span></code> ornare tellus, ut gravida mi.
+<div class="codehilite"><pre><span></span><span class="hll"><span class="kd">var</span> <span class="nx">_extends</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">target</span><span class="p">)</span> <span class="p">{</span>
+</span>  <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">arguments</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">source</span> <span class="o">=</span> <span class="nx">arguments</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">key</span> <span class="k">in</span> <span class="nx">source</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">target</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span> <span class="o">=</span> <span class="nx">source</span><span class="p">[</span><span class="nx">key</span><span class="p">];</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="nx">target</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div></p>
+</li>
+</ol>
+</li>
+<li>
+<p>Vivamus id mi enim. Integer id turpis sapien. Ut condimentum lobortis
+  sagittis. Aliquam purus tellus, faucibus eget urna at, iaculis venenatis
+  nulla. Vivamus a pharetra leo.</p>
+</li>
+</ol>
+<h3 id="definition-lists">Definition lists<a class="headerlink" href="#definition-lists" title="Permanent link">&para;</a></h3>
+<dl>
+<dt>Lorem ipsum dolor sit amet</dt>
+<dd>
+<p>Sed sagittis eleifend rutrum. Donec vitae suscipit est. Nullam tempus
+tellus non sem sollicitudin, quis rutrum leo facilisis. Nulla tempor
+lobortis orci, at elementum urna sodales vitae. In in vehicula nulla.</p>
+<p>Duis mollis est eget nibh volutpat, fermentum aliquet dui mollis.
+Nam vulputate tincidunt fringilla.
+Nullam dignissim ultrices urna non auctor.</p>
+</dd>
+<dt>Cras arcu libero</dt>
+<dd>
+<p>Aliquam metus eros, pretium sed nulla venenatis, faucibus auctor ex. Proin
+ut eros sed sapien ullamcorper consequat. Nunc ligula ante, fringilla at
+aliquam ac, aliquet sed mauris.</p>
+</dd>
 </dl>
+<h2 id="code-blocks">Code blocks<a class="headerlink" href="#code-blocks" title="Permanent link">&para;</a></h2>
+<h3 id="inline">Inline<a class="headerlink" href="#inline" title="Permanent link">&para;</a></h3>
+<p>Morbi eget <code>dapibus felis</code>. Vivamus <em><code>venenatis porttitor</code></em> tortor sit amet
+rutrum. Class aptent taciti sociosqu ad litora torquent per conubia nostra,
+per inceptos himenaeos. <a href="../"><code>Pellentesque aliquet quam enim</code></a>, eu volutpat urna
+rutrum a.</p>
+<p>Nam vehicula nunc <code class="codehilite"><span class="k">return</span> <span class="nx">target</span></code> mauris, a ultricies libero efficitur
+sed. Sed molestie imperdiet consectetur. Vivamus a pharetra leo. Pellentesque
+eget ornare tellus, ut gravida mi. Fusce vel lacinia lacus.</p>
+<h3 id="listing">Listing<a class="headerlink" href="#listing" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">_extends</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">target</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">arguments</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">source</span> <span class="o">=</span> <span class="nx">arguments</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">key</span> <span class="k">in</span> <span class="nx">source</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">target</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span> <span class="o">=</span> <span class="nx">source</span><span class="p">[</span><span class="nx">key</span><span class="p">];</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="hll">  <span class="k">return</span> <span class="nx">target</span><span class="p">;</span>
+</span><span class="p">};</span>
+</pre></div>
 
-<h3 id="contextual-colors">Contextual Colors</h3>
-<p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
 
-<p class="text-primary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-
-<p class="text-success">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-
-<p class="text-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-
-<p class="text-warning">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-
-<p class="text-danger">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-
-<h2 id="code">Code</h2>
-<h3 id="inline-code">Inline Code</h3>
-<p>This is an example of inline code <code>#import requests</code></p>
-<h3>Preformatted Code Blocks <small>with Syntax Highlighting</small></h3>
-
-<pre><code class="python">def convert_markdown(markdown_source, config, site_navigation=None):
-    """
-    Convert the Markdown source file to HTML as per the config and
-    site_navigation. Return a tuple of the HTML as a string, the parsed table
-    of contents, and a dictionary of any metadata that was specified in the
-    Markdown file.
-    """
-
-    extensions = [
-        RelativePathExtension(site_navigation, config['strict'])
-    ] + config['markdown_extensions']
-
-    return utils.convert_markdown(
-        markdown_source=markdown_source,
-        extensions=extensions,
-        extension_configs=config['mdx_configs']
-    )
-</code></pre>
-
-<h2 id="tables">Tables</h2>
-<h3 id="striped-table">Striped Table</h3>
-<table class="table table-striped">
+<h2 id="horizontal-rules">Horizontal rules<a class="headerlink" href="#horizontal-rules" title="Permanent link">&para;</a></h2>
+<p>Aenean in finibus diam. Duis mollis est eget nibh volutpat, fermentum aliquet
+dui mollis. Nam vulputate tincidunt fringilla. Nullam dignissim ultrices urna
+non auctor.</p>
+<hr />
+<p>Integer vehicula feugiat magna, a mollis tellus. Nam mollis ex ante, quis
+elementum eros tempor rutrum. Aenean efficitur lobortis lacinia. Nulla
+consectetur feugiat sodales.</p>
+<h2 id="data-tables">Data tables<a class="headerlink" href="#data-tables" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Sollicitudo / Pellentesi</th>
+<th>consectetur</th>
+<th>adipiscing</th>
+<th>elit</th>
+<th>arcu</th>
+<th>sed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vivamus a pharetra</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ornare viverra ex</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Mauris a ullamcorper</td>
+<td>yes</td>
+<td>yes</td>
+<td>partial</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Nullam urna elit</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Malesuada eget finibus</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ullamcorper</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Vestibulum sodales</td>
+<td>yes</td>
+<td>-</td>
+<td>yes</td>
+<td>-</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Pulvinar nisl</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Pharetra aliquet est</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Sed suscipit</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Orci non pretium</td>
+<td>yes</td>
+<td>partial</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p>Sed sagittis eleifend rutrum. Donec vitae suscipit est. Nullam tempus tellus
+non sem sollicitudin, quis rutrum leo facilisis. Nulla tempor lobortis orci,
+at elementum urna sodales vitae. In in vehicula nulla, quis ornare libero.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Left</th>
+<th align="center">Center</th>
+<th align="right">Right</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Lorem</td>
+<td align="center"><em>dolor</em></td>
+<td align="right"><code>amet</code></td>
+</tr>
+<tr>
+<td align="left"><a href="../">ipsum</a></td>
+<td align="center"><strong>sit</strong></td>
+<td align="right"></td>
+</tr>
+</tbody>
+</table>
+<p>Vestibulum vitae orci quis ante viverra ultricies ut eget turpis. Sed eu
+lectus dapibus, eleifend nulla varius, lobortis turpis. In ac hendrerit nisl,
+sit amet laoreet nibh.</p>
+<table>
+  <colgroup>
+    <col width="30%">
+    <col width="70%">
+  </colgroup>
   <thead>
-      <tr>
-        <th>#</th>
-        <th>Head 1</th>
-        <th>Head 2</th>
-        <th>Head 3</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Box 1</td>
-        <td>Box 2</td>
-        <td>Box 3</td>
-      </tr>
-        <tr>
-        <th scope="row">2</th>
-        <td>Box 4</td>
-        <td>Box 5</td>
-        <td>Box 6</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>Box 7</td>
-        <td>Box 8</td>
-        <td>Box 9</td>
-      </tr>
+    <tr class="header">
+      <th>Table</th>
+      <th>with colgroups (Pandoc)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Lorem</td>
+      <td>ipsum dolor sit amet.</td>
+    </tr>
+    <tr>
+      <td>Sed sagittis</td>
+      <td>eleifend rutrum. Donec vitae suscipit est.</td>
+    </tr>
   </tbody>
 </table>
+                
+                  
+                
+              
+              
+                
 
-<h3 id="bordered-table">Bordered Table</h3>
-<table class="table table-bordered">
-  <thead>
-      <tr>
-        <th>#</th>
-        <th>Head 1</th>
-        <th>Head 2</th>
-        <th>Head 3</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Box 1</td>
-        <td>Box 2</td>
-        <td>Box 3</td>
-      </tr>
-        <tr>
-        <th scope="row">2</th>
-        <td>Box 4</td>
-        <td>Box 5</td>
-        <td>Box 6</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>Box 7</td>
-        <td>Box 8</td>
-        <td>Box 9</td>
-      </tr>
-  </tbody>
-</table>
 
-<h2 id="buttons">Buttons</h2>
-<h3 id="default-buttons">Default Buttons</h3>
-<p><a class="btn btn-default" href="#" role="button">Link</a>
-<button class="btn btn-default" type="submit">Button</button>
-<input class="btn btn-default" type="button" value="Input">
-<input class="btn btn-default" type="submit" value="Submit"></p>
-<h3 id="styled-buttons">Styled Buttons</h3>
-<!-- Standard button -->
-
-<p><button type="button" class="btn btn-default">Default</button></p>
-<!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-
-<p><button type="button" class="btn btn-primary">Primary</button></p>
-<!-- Indicates a successful or positive action -->
-
-<p><button type="button" class="btn btn-success">Success</button></p>
-<!-- Contextual button for informational alert messages -->
-
-<p><button type="button" class="btn btn-info">Info</button></p>
-<!-- Indicates caution should be taken with this action -->
-
-<p><button type="button" class="btn btn-warning">Warning</button></p>
-<!-- Indicates a dangerous or potentially negative action -->
-
-<p><button type="button" class="btn btn-danger">Danger</button></p>
-<h3 id="button-sizes">Button Sizes</h3>
-<p>
-  <button type="button" class="btn btn-primary btn-lg">Large button</button>
-  <button type="button" class="btn btn-default btn-lg">Large button</button>
-</p>
-
-<p>
-  <button type="button" class="btn btn-primary">Default button</button>
-  <button type="button" class="btn btn-default">Default button</button>
-</p>
-
-<p>
-  <button type="button" class="btn btn-primary btn-sm">Small button</button>
-  <button type="button" class="btn btn-default btn-sm">Small button</button>
-</p>
-
-<p>
-  <button type="button" class="btn btn-primary btn-xs">Extra small button</button>
-  <button type="button" class="btn btn-default btn-xs">Extra small button</button>
-</p>
-
-<h3 id="block-level-buttons">Block Level Buttons</h3>
-<p><button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
-<button type="button" class="btn btn-default btn-lg btn-block">Block level button</button></p></div>
-        
-    </div>
-
-    <footer class="col-md-12 text-center">
-        <hr>
-        <p>
-        <small>Copyright @ Itimor<br></small>
-        
-        <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p></small>
-    </footer>
-
-    <script src="../js/jquery-1.10.2.min.js"></script>
-    <script src="../js/bootstrap-3.0.3.min.js"></script>
-    <script src="../js/highlight.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-    <script>
-    var base_url = '..';
-    </script>
-    <script data-main="../mkdocs/js/search.js"></script>
-    <script src="../js/base.js"></script>
-    <script src="../search/require.js"></script>
-    <script src="../search/search.js"></script>
-
-    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">
-                        <span aria-hidden="true">&times;</span>
-                        <span class="sr-only">Close</span>
-                    </button>
-                    <h4 class="modal-title" id="exampleModalLabel">Search</h4>
-                </div>
-                <div class="modal-body">
-                    <p>
-                        From here you can search these documents. Enter your search terms below.
-                    </p>
-                    <form role="form">
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
-                        </div>
-                    </form>
-                    <div id="mkdocs-search-results"></div>
-                </div>
-                <div class="modal-footer">
-                </div>
-            </div>
+              
+            </article>
+          </div>
         </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href=".." title="Home" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  后退
+                </span>
+                Home
+              </span>
+            </div>
+          </a>
+        
+        
+      </nav>
     </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright @ Itimor
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/itimor" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/itimor" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://linkedin.com/in/itimor" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
 
-    </body>
-
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.0cf9b500.js"></script>
+      
+        
+        
+          
+          <script src="../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+                <script src="../assets/javascripts/lunr/tinyseg.js"></script>
+              
+              
+                <script src="../assets/javascripts/lunr/lunr.jp.js"></script>
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"0.17.3",url:{base:".."}})</script>
+      
+        <script src="../search/require.js"></script>
+      
+        <script src="../search/search.js"></script>
+      
+    
+    
+      
+    
+  </body>
 </html>
