@@ -61,4 +61,6 @@
 
 ```
 mkdocs serve --dev-addr=0.0.0.0:5000
+mkdocs build
+mkdocs gh-deploy
 ```
