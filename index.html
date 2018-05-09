@@ -129,185 +129,278 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#about">About</a></li>
-        <li class="first-level "><a href="#install">Install</a></li>
-            <li class="second-level"><a href="#install-mkdocs-create-a-new-project">Install MkDocs &amp; Create a New Project</a></li>
+        <li class="first-level active"><a href="#mkdocs">MkDocs</a></li>
+            <li class="second-level"><a href="#overview">Overview</a></li>
                 
-            <li class="second-level"><a href="#install-the-cinder-theme">Install the Cinder Theme</a></li>
+                <li class="third-level"><a href="#host-anywhere">Host anywhere</a></li>
+                <li class="third-level"><a href="#great-themes-available">Great themes available</a></li>
+                <li class="third-level"><a href="#preview-your-site-as-you-work">Preview your site as you work</a></li>
+                <li class="third-level"><a href="#easy-to-customize">Easy to customize</a></li>
+            <li class="second-level"><a href="#installation">Installation</a></li>
                 
-                <li class="third-level"><a href="#1-install-with-pip">1. Install with pip</a></li>
-                <li class="third-level"><a href="#2-manual-install">2. Manual Install</a></li>
-        <li class="first-level "><a href="#test-with-a-local-site-server">Test with a Local Site Server</a></li>
-        <li class="first-level "><a href="#create-your-site">Create Your Site</a></li>
-            <li class="second-level"><a href="#add-content-with-markdown-syntax">Add Content with Markdown Syntax</a></li>
+                <li class="third-level"><a href="#install-with-a-package-manager">Install with a Package Manager</a></li>
+                <li class="third-level"><a href="#manual-installation">Manual Installation</a></li>
+            <li class="second-level"><a href="#getting-started">Getting Started</a></li>
                 
-            <li class="second-level"><a href="#add-new-pages">Add New Pages</a></li>
+            <li class="second-level"><a href="#adding-pages">Adding pages</a></li>
                 
-        <li class="first-level "><a href="#build-your-site">Build Your Site</a></li>
-        <li class="first-level "><a href="#site-customization">Site Customization</a></li>
-            <li class="second-level"><a href="#site-favicon">Site Favicon</a></li>
+            <li class="second-level"><a href="#theming-our-documentation">Theming our documentation</a></li>
                 
-            <li class="second-level"><a href="#add-your-own-css-stylesheets">Add Your Own CSS Stylesheets</a></li>
+            <li class="second-level"><a href="#changing-the-favicon-icon">Changing the Favicon Icon</a></li>
                 
-            <li class="second-level"><a href="#add-your-own-javascript">Add Your Own JavaScript</a></li>
+            <li class="second-level"><a href="#building-the-site">Building the site</a></li>
                 
-            <li class="second-level"><a href="#github-or-bitbucket-repository-link">Github or Bitbucket Repository Link</a></li>
+            <li class="second-level"><a href="#other-commands-and-options">Other Commands and Options</a></li>
                 
-            <li class="second-level"><a href="#license-declaration-and-link">License Declaration and Link</a></li>
+            <li class="second-level"><a href="#deploying">Deploying</a></li>
                 
-        <li class="first-level "><a href="#issues">Issues</a></li>
-        <li class="first-level "><a href="#license">License</a></li>
+            <li class="second-level"><a href="#getting-help">Getting help</a></li>
+                
     </ul>
 </div></div>
         <div class="col-md-9 content" role="main">
 
-<h1>Cinder Theme <small>for MkDocs</small></h1>
-
-<h2 id="about">About<a class="headerlink" href="#about" title="Permanent link">(ง •̀_•́)ง</a></h2>
-<p>Cinder is a clean, responsive theme for static documentation sites that are generated with <a href="https://github.com/mkdocs/mkdocs">MkDocs</a>. It's built on the <a href="http://getbootstrap.com/">Bootstrap framework</a> and includes pre-packaged syntax highlighting (<a href="https://highlightjs.org/">highlight.js</a>), icons (<i class="fa fa-flag"></i> <a href="https://fortawesome.github.io/Font-Awesome/">FontAwesome</a>), and a smashingly legible type scheme to get your message out to your users.</p>
-<p>You are looking at the theme and can see a selection of the theme elements on the <a href="./specimen/">Specimen page</a>.</p>
-<h2 id="install">Install<a class="headerlink" href="#install" title="Permanent link">(ง •̀_•́)ง</a></h2>
-<p><strong><em>Required</em></strong>: Python 2.6+ or 3.3+</p>
-<h3 id="install-mkdocs-create-a-new-project">Install MkDocs &amp; Create a New Project<a class="headerlink" href="#install-mkdocs-create-a-new-project" title="Permanent link">(ง •̀_•́)ง</a></h3>
-<p>If you haven't installed MkDocs yet, use the following command to install it:</p>
-<pre><code class="nohighlight">$ pip install mkdocs</code></pre>
-
-<p>Next, navigate to a clean directory and create a new MkDocs project with the following command:</p>
-<pre><code class="nohighlight">$ mkdocs new [projectname]</code></pre>
-
-<p>Replace <code>[projectname]</code> with the name of your project (without the brackets).</p>
-<p>Then navigate to the root of your project directory:</p>
-<pre><code class="nohighlight">$ cd [projectname]</code></pre>
-
-<h3 id="install-the-cinder-theme">Install the Cinder Theme<a class="headerlink" href="#install-the-cinder-theme" title="Permanent link">(ง •̀_•́)ง</a></h3>
-<p>Choose one of the following install approaches:</p>
-<h4 id="1-install-with-pip">1. Install with pip<a class="headerlink" href="#1-install-with-pip" title="Permanent link">(ง •̀_•́)ง</a></h4>
-<p>If you are using MkDocs v0.15.0 or higher, you can install the Cinder theme with pip using the command:</p>
-<pre><code class="nohighlight">$ pip install mkdocs-cinder</code></pre>
-
-<p>MkDocs projects use a YAML settings file called <code>mkdocs.yml</code>.  This is located in the root of your project directory after you use the <code>mkdocs new</code> command.  Open the file in a text editor and modify it to define Cinder in the <code>theme</code> setting as follows (note that this is case-sensitive):</p>
-<pre><code class="python">def create(self, validated_data):
-    cmd = SaltState.objects.get(name=validated_data[&quot;statejob&quot;]).cmd
-    hosts = validated_data[&quot;hosts&quot;]
-    jid = sapi.remote_state(tgt=hosts.split(','), arg=cmd)
-    validated_data[&quot;j_id&quot;] = jid
-    job = StateJob.objects.create(**validated_data)
-    job.save()
-    return job
+<h1 id="mkdocs">MkDocs<a class="headerlink" href="#mkdocs" title="Permanent link">(ง •̀_•́)ง</a></h1>
+<p>Project documentation with&nbsp;Markdown.</p>
+<hr />
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">(ง •̀_•́)ง</a></h2>
+<p>MkDocs is a <strong>fast</strong>, <strong>simple</strong> and <strong>downright gorgeous</strong> static site
+generator that's geared towards building project documentation. Documentation
+source files are written in Markdown, and configured with a single YAML
+configuration file.</p>
+<h3 id="host-anywhere">Host anywhere<a class="headerlink" href="#host-anywhere" title="Permanent link">(ง •̀_•́)ง</a></h3>
+<p>MkDocs builds completely static HTML sites that you can host on GitHub pages,
+Amazon S3, or <a href="./user-guide/deploying-your-docs/">anywhere</a> else you choose.</p>
+<h3 id="great-themes-available">Great themes available<a class="headerlink" href="#great-themes-available" title="Permanent link">(ง •̀_•́)ง</a></h3>
+<p>There's a stack of good looking themes available for MkDocs. Choose between
+the built in themes: <a href="./user-guide/styling-your-docs/#mkdocs">mkdocs</a> and <a href="./user-guide/styling-your-docs/#readthedocs">readthedocs</a>, select one of the 3<sup>rd</sup>
+party themes in the <a href="https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes">MkDocs wiki</a>, or <a href="./user-guide/custom-themes/">build your own</a>.</p>
+<h3 id="preview-your-site-as-you-work">Preview your site as you work<a class="headerlink" href="#preview-your-site-as-you-work" title="Permanent link">(ง •̀_•́)ง</a></h3>
+<p>The built-in dev-server allows you to preview your documentation as you're
+writing it. It will even auto-reload and refresh your browser whenever you save
+your changes.</p>
+<h3 id="easy-to-customize">Easy to customize<a class="headerlink" href="#easy-to-customize" title="Permanent link">(ง •̀_•́)ง</a></h3>
+<p>Get your project documentation looking just the way you want it by customizing
+the theme.</p>
+<hr />
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">(ง •̀_•́)ง</a></h2>
+<h3 id="install-with-a-package-manager">Install with a Package Manager<a class="headerlink" href="#install-with-a-package-manager" title="Permanent link">(ง •̀_•́)ง</a></h3>
+<p>If you have and use a package manager (such as <a href="https://help.ubuntu.com/community/AptGet/Howto">apt-get</a>, <a href="http://dnf.readthedocs.io/en/latest/index.html">dnf</a>, <a href="http://brew.sh/">homebrew</a>,
+<a href="http://yum.baseurl.org/">yum</a>, <a href="https://chocolatey.org/">chocolatey</a>, etc.) to install packages on your system, then you may
+want to search for a "MkDocs" package and, if a recent version is available,
+install it with your package manager (check your system's documentation for
+details). That's it, you're done! Skip down to <a href="#getting-started">Getting Started</a>.</p>
+<p>If your package manager does not have a recent "MkDocs" package, you can still
+use your package manager to install "Python" and "pip". Then you can use pip to
+<a href="#installing-mkdocs">install MkDocs</a>.</p>
+<h3 id="manual-installation">Manual Installation<a class="headerlink" href="#manual-installation" title="Permanent link">(ง •̀_•́)ง</a></h3>
+<p>In order to manually install MkDocs you'll need <a href="https://www.python.org/">Python</a> installed on your
+system, as well as the Python package manager, <a href="http://pip.readthedocs.io/en/stable/installing/">pip</a>. You can check if you have
+these already installed from the command line:</p>
+<pre><code class="bash">$ python --version
+Python 2.7.2
+$ pip --version
+pip 1.5.2
 </code></pre>
 
-<p><strong>Theme Updates</strong>: If you choose the pip install approach, you can update your Cinder theme to new releases with the command <code>$ pip install --upgrade mkdocs-cinder</code>.  Then re-build your static site files (see instructions below).</p>
-<h4 id="2-manual-install">2. Manual Install<a class="headerlink" href="#2-manual-install" title="Permanent link">(ง •̀_•́)ง</a></h4>
-<p>Download the Cinder theme archive.</p>
-<p><a href="https://github.com/chrissimpkins/cinder/archive/v0.10.0.zip"><button type="button" class="btn btn-success"><i class="fa fa-cloud-download"></i>  Download Cinder v0.10.0</button></a></p>
-<p>Unpack the contents of the archive into a directory named <code>cinder</code> at the top level of your MkDocs project directory.</p>
-<p>Your project directory should now look like this:</p>
-<pre><code class="nohighlight">.
-├── mkdocs.yml
-├── cinder
-│     ├── css
-│     ├── img
-│     ├── js
-│     ├── base.html
-│     ├── content.html
-│     ├── 404.html
-│     ├── nav-sub.html
-│     ├── nav.html
-│     └── toc.html
-└── docs
-      └── index.md
+<p>MkDocs supports Python versions 2.7, 3.4, 3.5, 3.6 and pypy.</p>
+<h4 id="installing-python">Installing Python<a class="headerlink" href="#installing-python" title="Permanent link">(ง •̀_•́)ง</a></h4>
+<p>Install <a href="https://www.python.org/">Python</a> by downloading an installer appropriate for your system from
+<a href="https://www.python.org/downloads/">python.org</a> and running it.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you are installing Python on Windows, be sure to check the box to have
+Python added to your PATH if the installer offers such an option (it's
+normally off by default).</p>
+<p><img alt="Add Python to PATH" src="./img/win-py-install.png" /></p>
+</div>
+<h4 id="installing-pip">Installing pip<a class="headerlink" href="#installing-pip" title="Permanent link">(ง •̀_•́)ง</a></h4>
+<p>If you're using a recent version of Python, the Python package manager, <a href="http://pip.readthedocs.io/en/stable/installing/">pip</a>,
+is most likely installed by default. However, you may need to upgrade pip to the
+lasted version:</p>
+<pre><code class="bash">pip install --upgrade pip
 </code></pre>
 
-<p>MkDocs projects use a YAML settings file called <code>mkdocs.yml</code>.  This is located in the root of your project directory after you use the <code>mkdocs new</code> command.  Open the file in a text editor and modify it to include the <code>theme_dir</code> setting as follows:</p>
-<pre><code class="yaml">site_name: [YOURPROJECT]
-theme_dir: cinder
-pages:
-- Home: index.md
+<p>If you need to install <a href="http://pip.readthedocs.io/en/stable/installing/">pip</a> for the first time, download <a href="https://bootstrap.pypa.io/get-pip.py">get-pip.py</a>.
+Then run the following command to install it:</p>
+<pre><code class="bash">python get-pip.py
 </code></pre>
 
-<p><strong>Theme Updates</strong>: If you choose the manual install approach, you can update your Cinder theme by downloading the new cinder.zip release archive and including it in your project. Then re-build your static site files (see instructions below).</p>
-<h2 id="test-with-a-local-site-server">Test with a Local Site Server<a class="headerlink" href="#test-with-a-local-site-server" title="Permanent link">(ง •̀_•́)ง</a></h2>
-<p>Use the following command to establish a local server for your site:</p>
-<pre><code class="nohighlight">$ mkdocs serve</code></pre>
+<h4 id="installing-mkdocs">Installing MkDocs<a class="headerlink" href="#installing-mkdocs" title="Permanent link">(ง •̀_•́)ง</a></h4>
+<p>Install the <code>mkdocs</code> package using pip:</p>
+<pre><code class="bash">pip install mkdocs
+</code></pre>
 
-<p>Then open your site in any browser at the URL <code>http://localhost:8000</code>.</p>
-<h2 id="create-your-site">Create Your Site<a class="headerlink" href="#create-your-site" title="Permanent link">(ง •̀_•́)ง</a></h2>
-<h3 id="add-content-with-markdown-syntax">Add Content with Markdown Syntax<a class="headerlink" href="#add-content-with-markdown-syntax" title="Permanent link">(ง •̀_•́)ง</a></h3>
-<p>Get to work on your site home page by opening the <code>docs/index.md</code> file and editing it in Markdown syntax.  The HTML automatically updates in the browser when you save the Markdown file if you use the MkDocs server (see command above).</p>
-<h3 id="add-new-pages">Add New Pages<a class="headerlink" href="#add-new-pages" title="Permanent link">(ง •̀_•́)ง</a></h3>
-<p>Add new pages to your site by creating a new Markdown file in your <code>docs</code> directory, then linking to the new page in the <code>mkdocs.yml</code> file.  This uses a <code>Page Name : Markdown file</code> syntax.</p>
-<p>For example, to add an About page using a Markdown file that is located on the path <code>docs/about.md</code>, you would format the <code>mkdocs.yml</code> file as follows:</p>
-<pre><code class="yaml">site_name: [YOURPROJECT]
-theme_dir: cinder
+<p>You should now have the <code>mkdocs</code> command installed on your system. Run <code>mkdocs
+--version</code> to check that everything worked okay.</p>
+<pre><code class="bash">$ mkdocs --version
+mkdocs, version 0.15.3
+</code></pre>
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you would like manpages installed for MkDocs, the <a href="https://github.com/click-contrib/click-man">click-man</a> tool can
+generate and install them for you. Simply run the following two commands:</p>
+<pre><code>pip install click-man
+click-man --target path/to/man/pages mkdocs
+</code></pre>
+<p>See the <a href="https://github.com/click-contrib/click-man#automatic-man-page-installation-with-setuptools-and-pip">click-man documentation</a> for an explaination of why manpages are
+not automaticaly generated and installed by pip.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you are using Windows, some of the above commands may not work
+out-of-the-box.</p>
+<p>A quick solution may be to preface every Python command with <code>python -m</code>
+like this:</p>
+<pre><code>python -m pip install mkdocs
+python -m mkdocs
+</code></pre>
+<p>For a more permanent solution, you may need to edit your <code>PATH</code> environment
+variable to include the <code>Scripts</code> directory of your Python installation.
+Recent versions of Python include a script to do this for you. Navigate to
+your Python installation directory (for example <code>C:\Python34\</code>), open the
+<code>Tools</code>, then <code>Scripts</code> folder, and run the <code>win_add2path.py</code> file by double
+clicking on it. Alternatively, you can <a href="https://svn.python.org/projects/python/trunk/Tools/scripts/win_add2path.py">download</a> the script and run it
+(<code>python win_add2path.py</code>).</p>
+</div>
+<hr />
+<h2 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permanent link">(ง •̀_•́)ง</a></h2>
+<p>Getting started is super easy.</p>
+<pre><code class="bash">mkdocs new my-project
+cd my-project
+</code></pre>
+
+<p>Take a moment to review the initial project that has been created for you.</p>
+<p><img alt="The initial MkDocs layout" src="./img/initial-layout.png" /></p>
+<p>There's a single configuration file named <code>mkdocs.yml</code>, and a folder named
+<code>docs</code> that will contain your documentation source files. Right now the <code>docs</code>
+folder just contains a single documentation page, named <code>index.md</code>.</p>
+<p>MkDocs comes with a built-in dev-server that lets you preview your documentation
+as you work on it. Make sure you're in the same directory as the <code>mkdocs.yml</code>
+configuration file, and then start the server by running the <code>mkdocs serve</code>
+command:</p>
+<pre><code class="bash">$ mkdocs serve
+INFO    -  Building documentation...
+INFO    -  Cleaning site directory
+[I 160402 15:50:43 server:271] Serving on http://127.0.0.1:8000
+[I 160402 15:50:43 handlers:58] Start watching changes
+[I 160402 15:50:43 handlers:60] Start detecting changes
+</code></pre>
+
+<p>Open up <code>http://127.0.0.1:8000/</code> in your browser, and you'll see the default
+home page being displayed:</p>
+<p><img alt="The MkDocs live server" src="./img/screenshot.png" /></p>
+<p>The dev-server also supports auto-reloading, and will rebuild your documentation
+whenever anything in the configuration file, documentation directory, or theme
+directory changes.</p>
+<p>Open the <code>docs/index.md</code> document in your text editor of choice, change the
+initial heading to <code>MkLorum</code>, and save your changes. Your browser will
+auto-reload and you should see your updated documentation immediately.</p>
+<p>Now try editing the configuration file: <code>mkdocs.yml</code>. Change the
+<a href="./user-guide/configuration/#site_name"><code>site_name</code></a> setting to <code>MkLorum</code> and save the file.</p>
+<pre><code class="yaml">site_name: MkLorum
+</code></pre>
+
+<p>Your browser should immediately reload, and you'll see your new site name take
+effect.</p>
+<p><img alt="The site_name setting" src="./img/site-name.png" /></p>
+<h2 id="adding-pages">Adding pages<a class="headerlink" href="#adding-pages" title="Permanent link">(ง •̀_•́)ง</a></h2>
+<p>Now add a second page to your documentation:</p>
+<pre><code class="bash">curl 'https://jaspervdj.be/lorem-markdownum/markdown.txt' &gt; docs/about.md
+</code></pre>
+
+<p>As our documentation site will include some navigation headers, you may want to
+edit the configuration file and add some information about the order, title, and
+nesting of each page in the navigation header by adding a <a href="./user-guide/configuration/#pages"><code>pages</code></a>
+setting:</p>
+<pre><code class="yaml">site_name: MkLorum
 pages:
-- Home: index.md
-- About: about.md</code></pre>
+    - Home: index.md
+    - About: about.md
+</code></pre>
 
-<p>Add additional pages to your site by repeating the above series of steps.</p>
-<h2 id="build-your-site">Build Your Site<a class="headerlink" href="#build-your-site" title="Permanent link">(ง •̀_•́)ง</a></h2>
-<p>Build your site files with the command:</p>
-<pre><code class="nohighlight">$ mkdocs build</code></pre>
-
-<p>Your site files are built in the <code>site</code> directory and are ready to use.  Deploy the contents of the <code>site</code> directory to your web server.</p>
-<h2 id="site-customization">Site Customization<a class="headerlink" href="#site-customization" title="Permanent link">(ง •̀_•́)ง</a></h2>
-<p>The following are a few common customizations that you might be interested in.  For much more detail about the configuration of your site, check out the <a href="https://github.com/mkdocs/mkdocs/blob/master/docs/user-guide/configuration.md">MkDocs Configuration documentation</a>.</p>
-<h3 id="site-favicon">Site Favicon<a class="headerlink" href="#site-favicon" title="Permanent link">(ง •̀_•́)ง</a></h3>
-<p>Place your site favicon image file in the top level of your docs directory and then include a new <code>site_favicon:</code> field in the <code>mkdocs.yml</code> file:</p>
-<pre><code class="yaml">site_name: [YOURPROJECT]
-theme_dir: cinder
-site_favicon: favicon.ico
+<p>Save your changes and you'll now see a navigation bar with <code>Home</code> and <code>About</code>
+items on the left as well as <code>Search</code>, <code>Previous</code>, and <code>Next</code> items on the
+right.</p>
+<p><img alt="Screenshot" src="./img/multipage.png" /></p>
+<p>Try the menu items and navigate back and forth between pages. Then click on
+<code>Search</code>. A search dialog will appear, allowing you to search for any text on
+any page. Notice that the search results include every occurrence of the search
+term on the site and links directly to the section of the page in which the
+search term appears. You get of all that with no effort or configuration on your
+part!</p>
+<p><img alt="Screenshot" src="./img/search.png" /></p>
+<h2 id="theming-our-documentation">Theming our documentation<a class="headerlink" href="#theming-our-documentation" title="Permanent link">(ง •̀_•́)ง</a></h2>
+<p>Now change the configuration file to alter how the documentation is displayed by
+changing the theme. Edit the <code>mkdocs.yml</code> file and add a <a href="./user-guide/configuration/#theme"><code>theme</code></a> setting:</p>
+<pre><code class="yaml">site_name: MkLorum
 pages:
-  - Home: index.md
-  - About: about.md</code></pre>
+    - Home: index.md
+    - About: about.md
+theme: readthedocs
+</code></pre>
 
-<h3 id="add-your-own-css-stylesheets">Add Your Own CSS Stylesheets<a class="headerlink" href="#add-your-own-css-stylesheets" title="Permanent link">(ง •̀_•́)ง</a></h3>
-<p>Create a <code>css</code> directory inside your <code>docs</code> directory and add your CSS files.  You can overwrite any of the Cinder styles in your CSS files.  Then include your CSS files in the <code>mkdocs.yml</code> file with the <code>extra_css</code> field:</p>
-<pre><code class="yaml">site_name: [YOURPROJECT]
-theme_dir: cinder
-extra_css:
-  - "css/mystyle.css"
-  - "css/myotherstyle.css"
-pages:
-  - Home: index.md
-  - About: about.md</code></pre>
+<p>Save your changes, and you'll see the ReadTheDocs theme being used.</p>
+<p><img alt="Screenshot" src="./img/readthedocs.png" /></p>
+<h2 id="changing-the-favicon-icon">Changing the Favicon Icon<a class="headerlink" href="#changing-the-favicon-icon" title="Permanent link">(ง •̀_•́)ง</a></h2>
+<p>By default, MkDocs uses the <a href="./img/favicon.ico">MkDocs favicon</a> icon. To use a different icon, create
+an <code>img</code> subdirectory in your <code>docs_dir</code> and copy your custom <code>favicon.ico</code> file
+to that directory. MkDocs will automatically detect and use that file as your
+favicon icon.</p>
+<h2 id="building-the-site">Building the site<a class="headerlink" href="#building-the-site" title="Permanent link">(ง •̀_•́)ง</a></h2>
+<p>That's looking good. You're ready to deploy the first pass of your <code>MkLorum</code>
+documentation. First build the documentation:</p>
+<pre><code class="bash">mkdocs build
+</code></pre>
 
-<p>Your CSS styles fall at the end of the cascade and will override all styles included in the theme (including Bootstrap and default Cinder styles).  You can find the Cinder and Bootstrap CSS files on the paths <code>cinder/css/cinder.css</code> and <code>cinder/css/bootstrap.min.css</code>, respectively.</p>
-<h3 id="add-your-own-javascript">Add Your Own JavaScript<a class="headerlink" href="#add-your-own-javascript" title="Permanent link">(ง •̀_•́)ง</a></h3>
-<p>Create a <code>js</code> directory inside your <code>docs</code> directory and add your JS files.  Then include your JS files in the <code>mkdocs.yml</code> file with the <code>extra_js</code> field:</p>
-<pre><code class="yaml">site_name: [YOURPROJECT]
-theme_dir: cinder
-extra_js:
-  - "js/myscript.js"
-  - "js/myotherscript.js"
-pages:
-  - Home: index.md
-  - About: about.md</code></pre>
+<p>This will create a new directory, named <code>site</code>. Take a look inside the
+directory:</p>
+<pre><code class="bash">$ ls site
+about  fonts  index.html  license  search.html
+css    img    js          mkdocs   sitemap.xml
+</code></pre>
 
-<h3 id="github-or-bitbucket-repository-link">Github or Bitbucket Repository Link<a class="headerlink" href="#github-or-bitbucket-repository-link" title="Permanent link">(ง •̀_•́)ง</a></h3>
-<p>Include the <code>repo_url</code> field and define it with your repository URL:</p>
-<pre><code class="yaml">site_name: [YOURPROJECT]
-theme_dir: cinder
-repo_url: "https://github.com/chrissimpkins/cinder"
-pages:
-  - Home: index.md
-  - About: about.md</code></pre>
+<p>Notice that your source documentation has been output as two HTML files named
+<code>index.html</code> and <code>about/index.html</code>. You also have various other media that's
+been copied into the <code>site</code> directory as part of the documentation theme. You
+even have a <code>sitemap.xml</code> file and <code>mkdocs/search_index.json</code>.</p>
+<p>If you're using source code control such as <code>git</code> you probably don't want to
+check your documentation builds into the repository. Add a line containing
+<code>site/</code> to your <code>.gitignore</code> file.</p>
+<pre><code class="bash">echo &quot;site/&quot; &gt;&gt; .gitignore
+</code></pre>
 
-<p>The link appears at the upper right hand corner of your site.</p>
-<h3 id="license-declaration-and-link">License Declaration and Link<a class="headerlink" href="#license-declaration-and-link" title="Permanent link">(ง •̀_•́)ง</a></h3>
-<p>The Cinder theme displays your license declaration in the footer if you include a <code>copyright</code> field and define it with the text (and optionally the HTML link) that you would like to display:</p>
-<pre><code class="yaml">site_name: [YOURPROJECT]
-theme_dir: cinder
-copyright: "Cinder is licensed under the &lt;a href='https://github.com/chrissimpkins/cinder/blob/master/LICENSE.md'&gt;MIT license</a>"
-pages:
-  - Home: index.md
-  - About: about.md</code></pre>
+<p>If you're using another source code control tool you'll want to check its
+documentation on how to ignore specific directories.</p>
+<p>After some time, files may be removed from the documentation but they will still
+reside in the <code>site</code> directory. To remove those stale files, just run <code>mkdocs</code>
+with the <code>--clean</code> switch.</p>
+<pre><code class="bash">mkdocs build --clean
+</code></pre>
 
-<h2 id="issues">Issues<a class="headerlink" href="#issues" title="Permanent link">(ง •̀_•́)ง</a></h2>
-<p>If you have any issues with the theme, please report them on the Cinder repository:</p>
-<p><a href="https://github.com/chrissimpkins/cinder/issues/new"><button class="btn btn-primary" type="submit">Report Issue</button></a>
-<a href="https://github.com/chrissimpkins/cinder/issues"><button class="btn btn-primary" type="submit">Active Issues</button></a></p>
-<h2 id="license">License<a class="headerlink" href="#license" title="Permanent link">(ง •̀_•́)ง</a></h2>
-<p>Cinder is licensed under the MIT license. The full text of the license is available <a href="https://github.com/chrissimpkins/cinder/blob/master/LICENSE.md">here</a>.</p></div>
+<h2 id="other-commands-and-options">Other Commands and Options<a class="headerlink" href="#other-commands-and-options" title="Permanent link">(ง •̀_•́)ง</a></h2>
+<p>There are various other commands and options available. For a complete list of
+commands, use the <code>--help</code> flag:</p>
+<pre><code class="bash">mkdocs --help
+</code></pre>
+
+<p>To view a list of options available on a given command, use the <code>--help</code> flag
+with that command. For example, to get a list of all options available for the
+<code>build</code> command run the following:</p>
+<pre><code class="bash">mkdocs build --help
+</code></pre>
+
+<h2 id="deploying">Deploying<a class="headerlink" href="#deploying" title="Permanent link">(ง •̀_•́)ง</a></h2>
+<p>The documentation site that you just built only uses static files so you'll be
+able to host it from pretty much anywhere. <a href="https://help.github.com/articles/creating-project-pages-manually/">GitHub project pages</a> and <a href="http://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html">Amazon
+S3</a> may be good hosting options, depending upon your needs. Upload the contents
+of the entire <code>site</code> directory to wherever you're hosting your website from and
+you're done. For specific instructions on a number of common hosts, see the
+<a href="./user-guide/deploying-your-docs/">Deploying your Docs</a> page.</p>
+<h2 id="getting-help">Getting help<a class="headerlink" href="#getting-help" title="Permanent link">(ง •̀_•́)ง</a></h2>
+<p>To get help with MkDocs, please use the <a href="https://groups.google.com/forum/#!forum/mkdocs">discussion group</a>, <a href="https://github.com/mkdocs/mkdocs/issues">GitHub issues</a> or
+the MkDocs IRC channel <code>#mkdocs</code> on freenode.</p></div>
         
     </div>
 
@@ -364,5 +457,5 @@ pages:
 
 <!--
 MkDocs version : 0.17.3
-Build Date UTC : 2018-05-09 08:55:54
+Build Date UTC : 2018-05-09 09:34:25
 -->
