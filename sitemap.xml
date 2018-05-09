@@ -11,10 +11,26 @@
 
     
     <url>
+     <loc>https://itimor.github.io/ojbk-oms//blog/</loc>
+     <lastmod>2018-05-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+        
+    <url>
      <loc>https://itimor.github.io/ojbk-oms//about/</loc>
      <lastmod>2018-05-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
+        
+    <url>
+     <loc>https://itimor.github.io/ojbk-oms//about/about/</loc>
+     <lastmod>2018-05-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
     
 
 </urlset>

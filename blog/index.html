@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="oms运维管理系统 python salt django zabbox oms">  
+    <link rel="canonical" href="https://itimor.github.io/ojbk-oms/blog/">
+    <link rel="shortcut icon" href="../img/favicon.ico">
+
+    <title>Blog - oms运维管理系统</title>
+
+    <link href="../css/bootstrap-custom.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/2.018/css/hack.min.css">
+    <link href='//fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../css/base.css" rel="stylesheet">
+    <link href="../css/cinder.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/highlight.css">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+    <script>
+    WebFont.load({
+        google: {
+            families: ['Open Sans', 'PT Sans']
+        }
+    });
+    </script>
+
+    
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="..">
+                <img src="../img/favicon.ico" height="20"/>
+                oms运维管理系统
+            </a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="..">Home</a>
+                    </li>
+                
+                
+                
+                    <li class="active">
+                        <a href="./">Blog</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../about/">view</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../about/about/">me</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                            <i class="fa fa-search"></i> Search
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="next" href="..">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../about/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/itimor/ojbk-oms/edit/master/docs/blog.md">Edit on Github</a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#specimen">Specimen</a></li>
+            <li class="second-level"><a href="#body-copy">Body copy</a></li>
+                
+            <li class="second-level"><a href="#headings">Headings</a></li>
+                
+                <li class="third-level"><a href="#the-3rd-level">The 3rd level</a></li>
+            <li class="second-level"><a href="#headings-with-secondary-text">Headings with secondary text</a></li>
+                
+                <li class="third-level"><a href="#the-3rd-level-with-secondary-text">The 3rd level with secondary text</a></li>
+            <li class="second-level"><a href="#blockquotes">Blockquotes</a></li>
+                
+                <li class="third-level"><a href="#blockquote-nesting">Blockquote nesting</a></li>
+                <li class="third-level"><a href="#other-content-blocks">Other content blocks</a></li>
+            <li class="second-level"><a href="#lists">Lists</a></li>
+                
+                <li class="third-level"><a href="#unordered-lists">Unordered lists</a></li>
+                <li class="third-level"><a href="#ordered-lists">Ordered lists</a></li>
+                <li class="third-level"><a href="#definition-lists">Definition lists</a></li>
+            <li class="second-level"><a href="#code-blocks">Code blocks</a></li>
+                
+                <li class="third-level"><a href="#inline">Inline</a></li>
+                <li class="third-level"><a href="#listing">Listing</a></li>
+            <li class="second-level"><a href="#horizontal-rules">Horizontal rules</a></li>
+                
+            <li class="second-level"><a href="#data-tables">Data tables</a></li>
+                
+    </ul>
+</div></div>
+        <div class="col-md-9 content" role="main">
+
+<h1 id="specimen">Specimen<a class="headerlink" href="#specimen" title="Permanent link">(ง •̀_•́)ง</a></h1>
+<h2 id="body-copy">Body copy<a class="headerlink" href="#body-copy" title="Permanent link">(ง •̀_•́)ง</a></h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras arcu libero,
+mollis sed massa vel, <em>ornare viverra ex</em>. Mauris a ullamcorper lacus. Nullam
+urna elit, malesuada eget finibus ut, ullamcorper ac tortor. Vestibulum sodales
+pulvinar nisl, pharetra aliquet est. Quisque volutpat erat ac nisi accumsan
+tempor.</p>
+<p><strong>Sed suscipit</strong>, orci non pretium pretium, quam mi gravida metus, vel
+venenatis justo est condimentum diam. Maecenas non ornare justo. Nam a ipsum
+eros. <a href="../">Nulla aliquam</a> orci sit amet nisl posuere malesuada. Proin aliquet
+nulla velit, quis ultricies orci feugiat et. <code>Ut tincidunt sollicitudin</code>
+tincidunt. Aenean ullamcorper sit amet nulla at interdum.</p>
+<h2 id="headings">Headings<a class="headerlink" href="#headings" title="Permanent link">(ง •̀_•́)ง</a></h2>
+<h3 id="the-3rd-level">The 3<sup>rd</sup> level<a class="headerlink" href="#the-3rd-level" title="Permanent link">(ง •̀_•́)ง</a></h3>
+<h4 id="the-4th-level">The 4<sup>th</sup> level<a class="headerlink" href="#the-4th-level" title="Permanent link">(ง •̀_•́)ง</a></h4>
+<h5 id="the-5th-level">The 5<sup>th</sup> level<a class="headerlink" href="#the-5th-level" title="Permanent link">(ง •̀_•́)ง</a></h5>
+<h6 id="the-6th-level">The 6<sup>th</sup> level<a class="headerlink" href="#the-6th-level" title="Permanent link">(ง •̀_•́)ง</a></h6>
+<h2 id="headings-with-secondary-text">Headings <small>with secondary text</small><a class="headerlink" href="#headings-with-secondary-text" title="Permanent link">(ง •̀_•́)ง</a></h2>
+<h3 id="the-3rd-level-with-secondary-text">The 3<sup>rd</sup> level <small>with secondary text</small><a class="headerlink" href="#the-3rd-level-with-secondary-text" title="Permanent link">(ง •̀_•́)ง</a></h3>
+<h4 id="the-4th-level-with-secondary-text">The 4<sup>th</sup> level <small>with secondary text</small><a class="headerlink" href="#the-4th-level-with-secondary-text" title="Permanent link">(ง •̀_•́)ง</a></h4>
+<h5 id="the-5th-level-with-secondary-text">The 5<sup>th</sup> level <small>with secondary text</small><a class="headerlink" href="#the-5th-level-with-secondary-text" title="Permanent link">(ง •̀_•́)ง</a></h5>
+<h6 id="the-6th-level-with-secondary-text">The 6<sup>th</sup> level <small>with secondary text</small><a class="headerlink" href="#the-6th-level-with-secondary-text" title="Permanent link">(ง •̀_•́)ง</a></h6>
+<h2 id="blockquotes">Blockquotes<a class="headerlink" href="#blockquotes" title="Permanent link">(ง •̀_•́)ง</a></h2>
+<blockquote>
+<p>Morbi eget dapibus felis. Vivamus venenatis porttitor tortor sit amet rutrum.
+  Pellentesque aliquet quam enim, eu volutpat urna rutrum a. Nam vehicula nunc
+  mauris, a ultricies libero efficitur sed. <em>Class aptent</em> taciti sociosqu ad
+  litora torquent per conubia nostra, per inceptos himenaeos. Sed molestie
+  imperdiet consectetur.</p>
+</blockquote>
+<h3 id="blockquote-nesting">Blockquote nesting<a class="headerlink" href="#blockquote-nesting" title="Permanent link">(ง •̀_•́)ง</a></h3>
+<blockquote>
+<p><strong>Sed aliquet</strong>, neque at rutrum mollis, neque nisi tincidunt nibh, vitae
+  faucibus lacus nunc at lacus. Nunc scelerisque, quam id cursus sodales, lorem
+  <a href="../">libero fermentum</a> urna, ut efficitur elit ligula et nunc.</p>
+<blockquote>
+<p>Mauris dictum mi lacus, sit amet pellentesque urna vehicula fringilla.
+    Ut sit amet placerat ante. Proin sed elementum nulla. Nunc vitae sem odio.
+    Suspendisse ac eros arcu. Vivamus orci erat, volutpat a tempor et, rutrum.
+    eu odio.</p>
+<blockquote>
+<p><code>Suspendisse rutrum facilisis risus</code>, eu posuere neque commodo a.
+      Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed nec leo
+      bibendum, sodales mauris ut, tincidunt massa.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<h3 id="other-content-blocks">Other content blocks<a class="headerlink" href="#other-content-blocks" title="Permanent link">(ง •̀_•́)ง</a></h3>
+<blockquote>
+<p>Vestibulum vitae orci quis ante viverra ultricies ut eget turpis. Sed eu
+  lectus dapibus, eleifend nulla varius, lobortis turpis. In ac hendrerit nisl,
+  sit amet laoreet nibh.
+  <code>js
+  var _extends = function(target) {
+    for (var i = 1; i &lt; arguments.length; i++) {
+      var source = arguments[i];
+      for (var key in source) {
+        target[key] = source[key];
+      }
+    }
+    return target;
+  };</code></p>
+<blockquote>
+<p>Praesent at <code class="highlight"><span class="k">return</span> <span class="nx">target</span></code>, sodales nibh vel, tempor felis. Fusce
+      vel lacinia lacus. Suspendisse rhoncus nunc non nisi iaculis ultrices.
+      Donec consectetur mauris non neque imperdiet, eget volutpat libero.</p>
+</blockquote>
+</blockquote>
+<h2 id="lists">Lists<a class="headerlink" href="#lists" title="Permanent link">(ง •̀_•́)ง</a></h2>
+<h3 id="unordered-lists">Unordered lists<a class="headerlink" href="#unordered-lists" title="Permanent link">(ง •̀_•́)ง</a></h3>
+<ul>
+<li>
+<p>Sed sagittis eleifend rutrum. Donec vitae suscipit est. Nullam tempus tellus
+  non sem sollicitudin, quis rutrum leo facilisis. Nulla tempor lobortis orci,
+  at elementum urna sodales vitae. In in vehicula nulla, quis ornare libero.</p>
+<ul>
+<li>Duis mollis est eget nibh volutpat, fermentum aliquet dui mollis.</li>
+<li>Nam vulputate tincidunt fringilla.</li>
+<li>Nullam dignissim ultrices urna non auctor.</li>
+</ul>
+</li>
+<li>
+<p>Aliquam metus eros, pretium sed nulla venenatis, faucibus auctor ex. Proin ut
+  eros sed sapien ullamcorper consequat. Nunc ligula ante, fringilla at aliquam
+  ac, aliquet sed mauris.</p>
+</li>
+<li>
+<p>Nulla et rhoncus turpis. Mauris ultricies elementum leo. Duis efficitur
+  accumsan nibh eu mattis. Vivamus tempus velit eros, porttitor placerat nibh
+  lacinia sed. Aenean in finibus diam.</p>
+</li>
+</ul>
+<h3 id="ordered-lists">Ordered lists<a class="headerlink" href="#ordered-lists" title="Permanent link">(ง •̀_•́)ง</a></h3>
+<ol>
+<li>
+<p>Integer vehicula feugiat magna, a mollis tellus. Nam mollis ex ante, quis
+  elementum eros tempor rutrum. Aenean efficitur lobortis lacinia. Nulla
+  consectetur feugiat sodales.</p>
+</li>
+<li>
+<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
+  ridiculus mus. Aliquam ornare feugiat quam et egestas. Nunc id erat et quam
+  pellentesque lacinia eu vel odio.</p>
+<ol>
+<li>
+<p>Vivamus venenatis porttitor tortor sit amet rutrum. Pellentesque aliquet
+  quam enim, eu volutpat urna rutrum a. Nam vehicula nunc mauris, a
+  ultricies libero efficitur sed.</p>
+<ol>
+<li>Mauris dictum mi lacus</li>
+<li>Ut sit amet placerat ante</li>
+<li>Suspendisse ac eros arcu</li>
+</ol>
+</li>
+<li>
+<p>Morbi eget dapibus felis. Vivamus venenatis porttitor tortor sit amet
+  rutrum. Pellentesque aliquet quam enim, eu volutpat urna rutrum a. Sed
+  aliquet, neque at rutrum mollis, neque nisi tincidunt nibh.</p>
+</li>
+<li>
+<p>Pellentesque eget <code class="highlight"><span class="kd">var</span> <span class="nx">_extends</span></code> ornare tellus, ut gravida mi.
+<code>js hl_lines=&quot;1&quot;
+var _extends = function(target) {
+  for (var i = 1; i &lt; arguments.length; i++) {
+    var source = arguments[i];
+    for (var key in source) {
+      target[key] = source[key];
+    }
+  }
+  return target;
+};</code></p>
+</li>
+</ol>
+</li>
+<li>
+<p>Vivamus id mi enim. Integer id turpis sapien. Ut condimentum lobortis
+  sagittis. Aliquam purus tellus, faucibus eget urna at, iaculis venenatis
+  nulla. Vivamus a pharetra leo.</p>
+</li>
+</ol>
+<h3 id="definition-lists">Definition lists<a class="headerlink" href="#definition-lists" title="Permanent link">(ง •̀_•́)ง</a></h3>
+<dl>
+<dt>Lorem ipsum dolor sit amet</dt>
+<dd>
+<p>Sed sagittis eleifend rutrum. Donec vitae suscipit est. Nullam tempus
+tellus non sem sollicitudin, quis rutrum leo facilisis. Nulla tempor
+lobortis orci, at elementum urna sodales vitae. In in vehicula nulla.</p>
+<p>Duis mollis est eget nibh volutpat, fermentum aliquet dui mollis.
+Nam vulputate tincidunt fringilla.
+Nullam dignissim ultrices urna non auctor.</p>
+</dd>
+<dt>Cras arcu libero</dt>
+<dd>
+<p>Aliquam metus eros, pretium sed nulla venenatis, faucibus auctor ex. Proin
+ut eros sed sapien ullamcorper consequat. Nunc ligula ante, fringilla at
+aliquam ac, aliquet sed mauris.</p>
+</dd>
+</dl>
+<h2 id="code-blocks">Code blocks<a class="headerlink" href="#code-blocks" title="Permanent link">(ง •̀_•́)ง</a></h2>
+<h3 id="inline">Inline<a class="headerlink" href="#inline" title="Permanent link">(ง •̀_•́)ง</a></h3>
+<p>Morbi eget <code>dapibus felis</code>. Vivamus <em><code>venenatis porttitor</code></em> tortor sit amet
+rutrum. Class aptent taciti sociosqu ad litora torquent per conubia nostra,
+per inceptos himenaeos. <a href="../"><code>Pellentesque aliquet quam enim</code></a>, eu volutpat urna
+rutrum a.</p>
+<p>Nam vehicula nunc <code class="highlight"><span class="k">return</span> <span class="nx">target</span></code> mauris, a ultricies libero efficitur
+sed. Sed molestie imperdiet consectetur. Vivamus a pharetra leo. Pellentesque
+eget ornare tellus, ut gravida mi. Fusce vel lacinia lacus.</p>
+<h3 id="listing">Listing<a class="headerlink" href="#listing" title="Permanent link">(ง •̀_•́)ง</a></h3>
+<pre><code>#!js hl_lines="8"
+var _extends = function(target) {
+  for (var i = 1; i &lt; arguments.length; i++) {
+    var source = arguments[i];
+    for (var key in source) {
+      target[key] = source[key];
+    }
+  }
+  return target;
+};
+</code></pre>
+<h2 id="horizontal-rules">Horizontal rules<a class="headerlink" href="#horizontal-rules" title="Permanent link">(ง •̀_•́)ง</a></h2>
+<p>Aenean in finibus diam. Duis mollis est eget nibh volutpat, fermentum aliquet
+dui mollis. Nam vulputate tincidunt fringilla. Nullam dignissim ultrices urna
+non auctor.</p>
+<hr />
+<p>Integer vehicula feugiat magna, a mollis tellus. Nam mollis ex ante, quis
+elementum eros tempor rutrum. Aenean efficitur lobortis lacinia. Nulla
+consectetur feugiat sodales.</p>
+<h2 id="data-tables">Data tables<a class="headerlink" href="#data-tables" title="Permanent link">(ง •̀_•́)ง</a></h2>
+<table>
+<thead>
+<tr>
+<th>Sollicitudo / Pellentesi</th>
+<th>consectetur</th>
+<th>adipiscing</th>
+<th>elit</th>
+<th>arcu</th>
+<th>sed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vivamus a pharetra</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ornare viverra ex</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Mauris a ullamcorper</td>
+<td>yes</td>
+<td>yes</td>
+<td>partial</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Nullam urna elit</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Malesuada eget finibus</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ullamcorper</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Vestibulum sodales</td>
+<td>yes</td>
+<td>-</td>
+<td>yes</td>
+<td>-</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Pulvinar nisl</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Pharetra aliquet est</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Sed suscipit</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Orci non pretium</td>
+<td>yes</td>
+<td>partial</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p>Sed sagittis eleifend rutrum. Donec vitae suscipit est. Nullam tempus tellus
+non sem sollicitudin, quis rutrum leo facilisis. Nulla tempor lobortis orci,
+at elementum urna sodales vitae. In in vehicula nulla, quis ornare libero.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Left</th>
+<th align="center">Center</th>
+<th align="right">Right</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Lorem</td>
+<td align="center"><em>dolor</em></td>
+<td align="right"><code>amet</code></td>
+</tr>
+<tr>
+<td align="left"><a href="../">ipsum</a></td>
+<td align="center"><strong>sit</strong></td>
+<td align="right"></td>
+</tr>
+</tbody>
+</table>
+<p>Vestibulum vitae orci quis ante viverra ultricies ut eget turpis. Sed eu
+lectus dapibus, eleifend nulla varius, lobortis turpis. In ac hendrerit nisl,
+sit amet laoreet nibh.</p>
+<table>
+  <colgroup>
+    <col width="30%">
+    <col width="70%">
+  </colgroup>
+  <thead>
+    <tr class="header">
+      <th>Table</th>
+      <th>with colgroups (Pandoc)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Lorem</td>
+      <td>ipsum dolor sit amet.</td>
+    </tr>
+    <tr>
+      <td>Sed sagittis</td>
+      <td>eleifend rutrum. Donec vitae suscipit est.</td>
+    </tr>
+  </tbody>
+</table></div>
+        
+    </div>
+
+    <footer class="col-md-12 text-center">
+        <hr>
+        <p>
+        <small>Copyright @ Itimor<br></small>
+        
+        <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p></small>
+    </footer>
+
+    <script src="../js/jquery-1.10.2.min.js"></script>
+    <script src="../js/bootstrap-3.0.3.min.js"></script>
+    <script src="../js/highlight.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+    var base_url = '..';
+    </script>
+    <script data-main="../mkdocs/js/search.js"></script>
+    <script src="../js/base.js"></script>
+    <script src="../search/require.js"></script>
+    <script src="../search/search.js"></script>
+
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                    <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        From here you can search these documents. Enter your search terms below.
+                    </p>
+                    <form role="form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                        </div>
+                    </form>
+                    <div id="mkdocs-search-results"></div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </body>
+
+</html>
