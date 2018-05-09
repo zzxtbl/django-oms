@@ -1,12 +1,13 @@
 site_name: oms运维管理系统
-site_url: 'https://itimor.github.io/ojbk-oms/'
-repo_url: 'https://github.com/itimor/ojbk-oms'
-repo_name: 'github'
 site_description: 'oms运维管理系统 python salt django zabbox oms'
-site_author: 'itimor'
+site_url: 'https://itimor.github.io/ojbk-oms/'
+
+repo_name: 'Github'
+repo_url: 'https://github.com/itimor/ojbk-oms'
+
 theme:
-  name: null
-  custom_dir: themes/material
+  name: cinder
+  custom_dir: themes/cinder
   language: zh
   palette:
     primary: cyan
@@ -18,19 +19,28 @@ theme:
   feature:
     tabs: true
 
+extra:
+  social:
+    - type: 'github'
+      link: 'https://github.com/itimor'
+    - type: 'twitter'
+      link: 'https://twitter.com/itimor'
+    - type: 'linkedin'
+      link: 'https://linkedin.com/in/itimor'
+  search:
+    language: 'en, zh'
+
 copyright: "Copyright @ Itimor"
-pages:
-  - Home: index.md
-  - About: about.md
 
 use_directory_urls: true
 
 markdown_extensions:
     - admonition
-    - codehilite:
-        guess_lang: false
-        linenums: false
-    - toc(permalink=true)
+#    - codehilite:
+#        guess_lang: false
+#        linenums: false
+    - toc:
+        permalink: (ง •̀_•́)ง
     - footnotes
     - meta
     - def_list
@@ -45,15 +55,9 @@ markdown_extensions:
     - pymdownx.magiclink
     - pymdownx.mark
     - pymdownx.smartsymbols
-    - pymdownx.superfences
     - pymdownx.tasklist
     - pymdownx.tilde
 
-extra:
-  social:
-    - type: 'github'
-      link: 'https://github.com/itimor'
-    - type: 'twitter'
-      link: 'https://twitter.com/itimor'
-    - type: 'linkedin'
-      link: 'https://linkedin.com/in/itimor'
+pages:
+  - Home: index.md
+  - About: about.md

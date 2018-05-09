@@ -64,6 +64,7 @@ div.source-links {
     display: block;
     padding: 5px 20px;
     z-index: 1;
+    color: #70aebe;
 }
 .bs-sidebar .nav > li > a:hover,
 .bs-sidebar .nav > li > a:focus {
