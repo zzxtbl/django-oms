@@ -9,6 +9,10 @@ body {
     background-color: #FFF;
     color: #343838;
 }
+.content{
+    background-color: white;
+    top: 10px;
+}
 h1, h2, h3, h4, h5, h6 {
     font-family:'PT Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     color: #222;
@@ -49,15 +53,17 @@ pre {
 }
 .navbar-default {
     background-color: #343838;
-    border-bottom: 8px #EBF2F2 solid;
+    // border-bottom: 8px #EBF2F2 solid;
 }
 .bs-sidenav {
-    background-image: url("../img/grid11.png");
-    background-repeat: repeat;
-    font-size: 12px;
+    background-image: url("../img/grid.png");
+    background-size:cover;
+    font-size: 14px;
 }
 .well {
     background-color: #FCFDFF;
+    margin-bottom: 70px;
+    margin-right: -15px;
 }
 .btn-default {
     background-color:#FCFDFF;
