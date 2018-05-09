@@ -4362,7 +4362,7 @@ textarea.input-group-sm > .form-control, textarea.input-group-sm > .input-group-
 .navbar-brand {
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     float: left;
-    padding: 15px;
+    padding: 10px;
     font-size: 20px;
     font-weight: 600;
     line-height: 30px
