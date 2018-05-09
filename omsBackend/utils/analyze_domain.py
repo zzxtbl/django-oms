@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # author: itimor
 
@@ -5,14 +6,9 @@ import requests
 import json
 from datetime import datetime, timedelta
 import logging
-from bind_sendmail import SendMail
-
-MAIL_ACOUNT = {
-    "mail_host": "mail@oms.com",
-    "mail_user": "admin@oms.com",
-    "mail_pass": "jjyy",
-    "mail_postfix": "oms.com",
-}
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
 
 
 def initlog(logfile):
@@ -48,7 +44,7 @@ def diffdns(alldomains, domainstatus_url, record_url):
         result['error_node'] = ee
         result['url'] = domain
 
-        if len(ss) > result['node_count'] / 2:
+        if len(ss) > result['node_count'] / 2 or len(ss) == result['node_count']:
             result['status'] = True
             logging.info("%s - [域名正常，不需要变换ip] - %s" % (domain, result))
         else:
@@ -74,16 +70,50 @@ def diffdns(alldomains, domainstatus_url, record_url):
             sub = '%s 域名异常' % domain
             content = '大胸弟，%s 域名异常, 需要更换ip\n 详细信息：%s' % (domain, result)
             to_list = 'kiven@tb-gaming.com'
-            cc_list = 'larry@tb-gaming.com'
-            sendmail = SendMail(MAIL_ACOUNT, sub, content, to_list, cc_list)
-            if sendmail.send_mail():
+            cc_list = 'kiven@tb-gaming.com'
+            if send_mail(sub, content, to_list, cc_list):
                 logging.info("%s - [域名异常，通知邮件发送成功]" % domain)
             else:
                 logging.error("%s - [域名异常，通知邮件发送失败]" % domain)
+                # 发送邮件函数
 
     logging.info("轮回结束，等待下一次...")
     return
 
+
+def send_mail(sub, content, to_list, cc_list):
+    MAIL_ACOUNT = {
+    "mail_host": "mail@oms.com",
+    "mail_user": "admin@oms.com",
+    "mail_pass": "jjyy",
+    "mail_postfix": "oms.com",
+	}
+    me = MAIL_ACOUNT["mail_user"] + "<" + MAIL_ACOUNT["mail_user"] + "@" + MAIL_ACOUNT["mail_postfix"] + ">"
+    # f = open(context)
+    # msg = MIMEText(f.read(),_charset="utf-8")
+    # f.close()
+    # msg = MIMEText(context)
+    msg = MIMEMultipart('alternative')
+    msg['Subject'] = sub
+    msg['From'] = me
+    msg['To'] = to_list
+    msg['Cc'] = cc_list
+    list = msg['Cc'].split(',')
+    list.append(msg['To'])
+    context = MIMEText(content, _subtype='html', _charset='utf-8')  # 解决乱码
+    msg.attach(context)
+    try:
+        send_smtp = smtplib.SMTP()
+        send_smtp.connect(MAIL_ACOUNT["mail_user"], 587)
+        send_smtp.starttls()
+        send_smtp.login(MAIL_ACOUNT["mail_user"], MAIL_ACOUNT["mail_pass"])
+
+        send_smtp.sendmail(me, list, msg.as_string())
+        send_smtp.close()
+        return {"code": 'success', "msg": "通知邮件发送成功"}
+    except Exception as e:
+        print(e)
+        return {"code": 'error', "msg": "通知邮件发送失败"}
 
 if __name__ == '__main__':
     initlog('./tan.log')
