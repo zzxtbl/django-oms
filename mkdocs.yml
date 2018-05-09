@@ -60,4 +60,7 @@ markdown_extensions:
 
 pages:
   - Home: index.md
-  - About: about.md
+  - Blog: blog.md
+  - About:
+      - view: about/index.md
+      - me: about/about.md
