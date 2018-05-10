@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="oms运维管理系统 python salt django zabbox oms">  
-    <link rel="canonical" href="https://itimor.github.io/django-oms/oms/base/">
+    <link rel="canonical" href="https://itimor.github.io/django-oms/oms/user/">
     <link rel="shortcut icon" href="../../img/favicon.ico">
 
-    <title>基础系统 - oms运维管理系统</title>
+    <title>用户模块 - oms运维管理系统</title>
 
     <link href="../../css/bootstrap-custom.css" rel="stylesheet">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -85,25 +85,25 @@
                         
                             
 <li class="active">
-    <a href="./">基础系统</a>
+    <a href="./">用户模块</a>
 </li>
 
                         
                             
 <li >
-    <a href="../perm/">权限 & 菜单模块</a>
+    <a href="../menu/">菜单模块</a>
 </li>
 
                         
                             
 <li >
-    <a href="../host/">主机 & salt模块</a>
+    <a href="../host/">主机 ღ salt模块</a>
 </li>
 
                         
                             
 <li >
-    <a href="../dns/">dns & zabbix模块</a>
+    <a href="../dns/">dns ღ zabbix模块</a>
 </li>
 
                         
@@ -152,12 +152,12 @@
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="../perm/">
+                        <a rel="prev" href="../menu/">
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://github.com/itimor/django-oms/edit/master/docs/oms/base.md">Edit on Github</a>
+                        <a href="https://github.com/itimor/django-oms/edit/master/docs/oms/user.md">Edit on Github</a>
                     </li>
             </ul>
         </div>
@@ -168,17 +168,32 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#dns">dns模块</a></li>
-            <li class="second-level"><a href="#_1">请等待后续完善。。。</a></li>
+        <li class="first-level active"><a href="#_1">用户模块</a></li>
+            <li class="second-level"><a href="#_2">用户</a></li>
+                
+                <li class="third-level"><a href="#1-django">1. django自定义用户</a></li>
+                <li class="third-level"><a href="#2-adldap">2. 账号与AD域控结合(ldap)</a></li>
+            <li class="second-level"><a href="#_3">用户组</a></li>
+                
+            <li class="second-level"><a href="#_4">角色</a></li>
                 
     </ul>
 </div></div>
         <div class="col-md-9 content" role="main">
 
-<h1 id="dns">dns模块<a class="headerlink" href="#dns" title="Permanent link">(ง •̀_•́)ง</a></h1>
+<h1 id="_1">用户模块<a class="headerlink" href="#_1" title="Permanent link">(ง •̀_•́)ง</a></h1>
 <hr />
-<h2 id="_1">请等待后续完善。。。<a class="headerlink" href="#_1" title="Permanent link">(ง •̀_•́)ง</a></h2>
-<p><img alt="404" src="../../images/404.jpg" /></p></div>
+<h2 id="_2">用户<a class="headerlink" href="#_2" title="Permanent link">(ง •̀_•́)ง</a></h2>
+<h3 id="1-django">1. django自定义用户<a class="headerlink" href="#1-django" title="Permanent link">(ง •̀_•́)ง</a></h3>
+<p>用户表增加 <code>通知属性</code> 字段，因为公司的主要通讯工具用的是skype，所以这个项目我加的是<code>skype</code>，你也可以把它定义成其他字段。</p>
+<h3 id="2-adldap">2. 账号与AD域控结合(ldap)<a class="headerlink" href="#2-adldap" title="Permanent link">(ง •̀_•́)ง</a></h3>
+<p>使用的是 <code>django-python3-ldap</code> 模块，集中用户管理，但是这个模块原本是不能同步用户组数据到oms系统，而这个系统所使用的权限管理是基于用户组做的， 所以必须对其稍作修改，文件 <a href="https://github.com/itimor/django-oms/blob/master/ldap.py">lday.py</a>, 替换 <code>/to/path/site-packages/django_python3_ldap/ldap.py</code>, 这样就可以同步用户组信息了， 甚至你还可增加其他字段， 改改脚本一样能同步。</p>
+<p><img alt="首页" src="../../images/base/base1.png" /></p>
+<hr />
+<h2 id="_3">用户组<a class="headerlink" href="#_3" title="Permanent link">(ง •̀_•́)ง</a></h2>
+<p>这个只是定义了表，数据是从 <code>ldap</code> 同步过来的，oms系统的菜单、按钮、部分数据等权限都是围绕它做的。</p>
+<h2 id="_4">角色<a class="headerlink" href="#_4" title="Permanent link">(ง •̀_•́)ง</a></h2>
+<p>保留字段没有使用，用得着的人可以启用它。</p></div>
         
     </div>
 
