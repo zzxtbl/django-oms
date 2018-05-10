@@ -3,16 +3,8 @@
 
     
     <url>
-     <loc>https://itimor.github.io/ojbk-oms//</loc>
-     <lastmod>2018-05-09</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>https://itimor.github.io/ojbk-oms//blog/</loc>
-     <lastmod>2018-05-09</lastmod>
+     <loc>https://itimor.github.io/django-oms//</loc>
+     <lastmod>2018-05-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -20,14 +12,84 @@
     
         
     <url>
-     <loc>https://itimor.github.io/ojbk-oms//about/</loc>
-     <lastmod>2018-05-09</lastmod>
+     <loc>https://itimor.github.io/django-oms//oms/</loc>
+     <lastmod>2018-05-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://itimor.github.io/ojbk-oms//about/about/</loc>
-     <lastmod>2018-05-09</lastmod>
+     <loc>https://itimor.github.io/django-oms//oms/user/</loc>
+     <lastmod>2018-05-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://itimor.github.io/django-oms//oms/perm/</loc>
+     <lastmod>2018-05-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://itimor.github.io/django-oms//oms/host/</loc>
+     <lastmod>2018-05-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://itimor.github.io/django-oms//oms/salt/</loc>
+     <lastmod>2018-05-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://itimor.github.io/django-oms//oms/job/</loc>
+     <lastmod>2018-05-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://itimor.github.io/django-oms//oms/tool/</loc>
+     <lastmod>2018-05-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://itimor.github.io/django-oms//oms/workticket/</loc>
+     <lastmod>2018-05-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://itimor.github.io/django-oms//oms/project/</loc>
+     <lastmod>2018-05-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://itimor.github.io/django-oms//oms/zabbix/</loc>
+     <lastmod>2018-05-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://itimor.github.io/django-oms//oms/dns/</loc>
+     <lastmod>2018-05-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>https://itimor.github.io/django-oms//about/</loc>
+     <lastmod>2018-05-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://itimor.github.io/django-oms//about/me/</loc>
+     <lastmod>2018-05-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         

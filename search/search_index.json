@@ -2,238 +2,253 @@
     "docs": [
         {
             "location": "/",
-            "text": "MkDocs\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nProject documentation with\u00a0Markdown.\n\n\n\n\nOverview\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nMkDocs is a \nfast\n, \nsimple\n and \ndownright gorgeous\n static site\ngenerator that's geared towards building project documentation. Documentation\nsource files are written in Markdown, and configured with a single YAML\nconfiguration file.\n\n\nHost anywhere\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nMkDocs builds completely static HTML sites that you can host on GitHub pages,\nAmazon S3, or \nanywhere\n else you choose.\n\n\nGreat themes available\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nThere's a stack of good looking themes available for MkDocs. Choose between\nthe built in themes: \nmkdocs\n and \nreadthedocs\n, select one of the 3\nrd\n\nparty themes in the \nMkDocs wiki\n, or \nbuild your own\n.\n\n\nPreview your site as you work\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nThe built-in dev-server allows you to preview your documentation as you're\nwriting it. It will even auto-reload and refresh your browser whenever you save\nyour changes.\n\n\nEasy to customize\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nGet your project documentation looking just the way you want it by customizing\nthe theme.\n\n\n\n\nInstallation\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nInstall with a Package Manager\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nIf you have and use a package manager (such as \napt-get\n, \ndnf\n, \nhomebrew\n,\n\nyum\n, \nchocolatey\n, etc.) to install packages on your system, then you may\nwant to search for a \"MkDocs\" package and, if a recent version is available,\ninstall it with your package manager (check your system's documentation for\ndetails). That's it, you're done! Skip down to \nGetting Started\n.\n\n\nIf your package manager does not have a recent \"MkDocs\" package, you can still\nuse your package manager to install \"Python\" and \"pip\". Then you can use pip to\n\ninstall MkDocs\n.\n\n\nManual Installation\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nIn order to manually install MkDocs you'll need \nPython\n installed on your\nsystem, as well as the Python package manager, \npip\n. You can check if you have\nthese already installed from the command line:\n\n\n$ python --version\nPython 2.7.2\n$ pip --version\npip 1.5.2\n\n\n\n\nMkDocs supports Python versions 2.7, 3.4, 3.5, 3.6 and pypy.\n\n\nInstalling Python\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nInstall \nPython\n by downloading an installer appropriate for your system from\n\npython.org\n and running it.\n\n\n\n\nNote\n\n\nIf you are installing Python on Windows, be sure to check the box to have\nPython added to your PATH if the installer offers such an option (it's\nnormally off by default).\n\n\n\n\n\n\nInstalling pip\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nIf you're using a recent version of Python, the Python package manager, \npip\n,\nis most likely installed by default. However, you may need to upgrade pip to the\nlasted version:\n\n\npip install --upgrade pip\n\n\n\n\nIf you need to install \npip\n for the first time, download \nget-pip.py\n.\nThen run the following command to install it:\n\n\npython get-pip.py\n\n\n\n\nInstalling MkDocs\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nInstall the \nmkdocs\n package using pip:\n\n\npip install mkdocs\n\n\n\n\nYou should now have the \nmkdocs\n command installed on your system. Run \nmkdocs\n--version\n to check that everything worked okay.\n\n\n$ mkdocs --version\nmkdocs, version 0.15.3\n\n\n\n\n\n\nNote\n\n\nIf you would like manpages installed for MkDocs, the \nclick-man\n tool can\ngenerate and install them for you. Simply run the following two commands:\n\n\npip install click-man\nclick-man --target path/to/man/pages mkdocs\n\n\n\nSee the \nclick-man documentation\n for an explaination of why manpages are\nnot automaticaly generated and installed by pip.\n\n\n\n\n\n\nNote\n\n\nIf you are using Windows, some of the above commands may not work\nout-of-the-box.\n\n\nA quick solution may be to preface every Python command with \npython -m\n\nlike this:\n\n\npython -m pip install mkdocs\npython -m mkdocs\n\n\n\nFor a more permanent solution, you may need to edit your \nPATH\n environment\nvariable to include the \nScripts\n directory of your Python installation.\nRecent versions of Python include a script to do this for you. Navigate to\nyour Python installation directory (for example \nC:\\Python34\\\n), open the\n\nTools\n, then \nScripts\n folder, and run the \nwin_add2path.py\n file by double\nclicking on it. Alternatively, you can \ndownload\n the script and run it\n(\npython win_add2path.py\n).\n\n\n\n\n\n\nGetting Started\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nGetting started is super easy.\n\n\nmkdocs new my-project\ncd my-project\n\n\n\n\nTake a moment to review the initial project that has been created for you.\n\n\n\n\nThere's a single configuration file named \nmkdocs.yml\n, and a folder named\n\ndocs\n that will contain your documentation source files. Right now the \ndocs\n\nfolder just contains a single documentation page, named \nindex.md\n.\n\n\nMkDocs comes with a built-in dev-server that lets you preview your documentation\nas you work on it. Make sure you're in the same directory as the \nmkdocs.yml\n\nconfiguration file, and then start the server by running the \nmkdocs serve\n\ncommand:\n\n\n$ mkdocs serve\nINFO    -  Building documentation...\nINFO    -  Cleaning site directory\n[I 160402 15:50:43 server:271] Serving on http://127.0.0.1:8000\n[I 160402 15:50:43 handlers:58] Start watching changes\n[I 160402 15:50:43 handlers:60] Start detecting changes\n\n\n\n\nOpen up \nhttp://127.0.0.1:8000/\n in your browser, and you'll see the default\nhome page being displayed:\n\n\n\n\nThe dev-server also supports auto-reloading, and will rebuild your documentation\nwhenever anything in the configuration file, documentation directory, or theme\ndirectory changes.\n\n\nOpen the \ndocs/index.md\n document in your text editor of choice, change the\ninitial heading to \nMkLorum\n, and save your changes. Your browser will\nauto-reload and you should see your updated documentation immediately.\n\n\nNow try editing the configuration file: \nmkdocs.yml\n. Change the\n\nsite_name\n setting to \nMkLorum\n and save the file.\n\n\nsite_name: MkLorum\n\n\n\n\nYour browser should immediately reload, and you'll see your new site name take\neffect.\n\n\n\n\nAdding pages\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nNow add a second page to your documentation:\n\n\ncurl 'https://jaspervdj.be/lorem-markdownum/markdown.txt' > docs/about.md\n\n\n\n\nAs our documentation site will include some navigation headers, you may want to\nedit the configuration file and add some information about the order, title, and\nnesting of each page in the navigation header by adding a \npages\n\nsetting:\n\n\nsite_name: MkLorum\npages:\n    - Home: index.md\n    - About: about.md\n\n\n\n\nSave your changes and you'll now see a navigation bar with \nHome\n and \nAbout\n\nitems on the left as well as \nSearch\n, \nPrevious\n, and \nNext\n items on the\nright.\n\n\n\n\nTry the menu items and navigate back and forth between pages. Then click on\n\nSearch\n. A search dialog will appear, allowing you to search for any text on\nany page. Notice that the search results include every occurrence of the search\nterm on the site and links directly to the section of the page in which the\nsearch term appears. You get of all that with no effort or configuration on your\npart!\n\n\n\n\nTheming our documentation\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nNow change the configuration file to alter how the documentation is displayed by\nchanging the theme. Edit the \nmkdocs.yml\n file and add a \ntheme\n setting:\n\n\nsite_name: MkLorum\npages:\n    - Home: index.md\n    - About: about.md\ntheme: readthedocs\n\n\n\n\nSave your changes, and you'll see the ReadTheDocs theme being used.\n\n\n\n\nChanging the Favicon Icon\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nBy default, MkDocs uses the \nMkDocs favicon\n icon. To use a different icon, create\nan \nimg\n subdirectory in your \ndocs_dir\n and copy your custom \nfavicon.ico\n file\nto that directory. MkDocs will automatically detect and use that file as your\nfavicon icon.\n\n\nBuilding the site\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nThat's looking good. You're ready to deploy the first pass of your \nMkLorum\n\ndocumentation. First build the documentation:\n\n\nmkdocs build\n\n\n\n\nThis will create a new directory, named \nsite\n. Take a look inside the\ndirectory:\n\n\n$ ls site\nabout  fonts  index.html  license  search.html\ncss    img    js          mkdocs   sitemap.xml\n\n\n\n\nNotice that your source documentation has been output as two HTML files named\n\nindex.html\n and \nabout/index.html\n. You also have various other media that's\nbeen copied into the \nsite\n directory as part of the documentation theme. You\neven have a \nsitemap.xml\n file and \nmkdocs/search_index.json\n.\n\n\nIf you're using source code control such as \ngit\n you probably don't want to\ncheck your documentation builds into the repository. Add a line containing\n\nsite/\n to your \n.gitignore\n file.\n\n\necho \"site/\" >> .gitignore\n\n\n\n\nIf you're using another source code control tool you'll want to check its\ndocumentation on how to ignore specific directories.\n\n\nAfter some time, files may be removed from the documentation but they will still\nreside in the \nsite\n directory. To remove those stale files, just run \nmkdocs\n\nwith the \n--clean\n switch.\n\n\nmkdocs build --clean\n\n\n\n\nOther Commands and Options\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nThere are various other commands and options available. For a complete list of\ncommands, use the \n--help\n flag:\n\n\nmkdocs --help\n\n\n\n\nTo view a list of options available on a given command, use the \n--help\n flag\nwith that command. For example, to get a list of all options available for the\n\nbuild\n command run the following:\n\n\nmkdocs build --help\n\n\n\n\nDeploying\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nThe documentation site that you just built only uses static files so you'll be\nable to host it from pretty much anywhere. \nGitHub project pages\n and \nAmazon\nS3\n may be good hosting options, depending upon your needs. Upload the contents\nof the entire \nsite\n directory to wherever you're hosting your website from and\nyou're done. For specific instructions on a number of common hosts, see the\n\nDeploying your Docs\n page.\n\n\nGetting help\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nTo get help with MkDocs, please use the \ndiscussion group\n, \nGitHub issues\n or\nthe MkDocs IRC channel \n#mkdocs\n on freenode.",
+            "text": "\u6982\u8ff0\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n\u968f\u4fbf\u5199\u5199\n\n\n\n\n\u9879\u76ee\u7ec4\u6210\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n\n\n\u672c\u9879\u76ee\u57fa\u4e8epython3.6\u548cvue2.0\u5f00\u53d1\uff0c\u91c7\u7528\u7684\u524d\u540e\u7aef\u5206\u79bb\u6a21\u5f0f\n\n\n\n\n\u540e\u7aef\uff1a\u57fa\u4e8epython3\u548cdjango\u6784\u5efaapi,\u63d0\u4f9b\u6570\u636e\u652f\u6301\n\n\n\u524d\u7aef\uff1a \u57fa\u4e8e \nVue.js\n \u548c \nelement\n\uff0c\u9875\u9762\u5c55\u793a\u5927\u90e8\u5206\u53c2\u8003\nvue-element-admin\n, \u5728\u8fd9\u91cc\u5341\u5206\u611f\u8c22PanJiaChen\u7684\u5f00\u6e90\u3002\n\n\n\u6548\u679c\u56fe\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n\n\n\u5148\u6765\u51e0\u5f20\u6837\u56fe\n\n\n\n\n1. \u9996\u9875\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n\n\n2. \u5de5\u5355\u7cfb\u7edf\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n\n\n3. \u53d1\u5e03\u7cfb\u7edf\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n\n\n4. \u6267\u884c\u547d\u4ee4\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n\n\n\u76ee\u5f55\u4ecb\u7ecd\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n1. \u540e\u7aef\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n.\n\u251c\u2500\u2500 celery.service             # celery\u5728centos7\u7684\u542f\u52a8\u6587\u4ef6\n\u251c\u2500\u2500 dnsmanager                 # dns\u6a21\u5757\n\u251c\u2500\u2500 hosts                      # \u4e3b\u673a\u6a21\u5757\n\u251c\u2500\u2500 __init__.py                \n\u251c\u2500\u2500 init.sh                    # \u521d\u59cb\u5316\u811a\u672c\n\u251c\u2500\u2500 jobs                       # \u53d1\u5e03\u7cfb\u7edf\n\u251c\u2500\u2500 manage.py           \n\u251c\u2500\u2500 menus                      # \u83dc\u5355\u6a21\u5757\n\u251c\u2500\u2500 omsBackend                 # django\u4e3b\u914d\u76ee\u5f55\n\u251c\u2500\u2500 omsBackend.sock            \n\u251c\u2500\u2500 oms.ini                    # uwsgi \u542f\u52a8\u914d\u7f6e\n\u251c\u2500\u2500 oms.service                # oms\u5728centos7\u7684\u542f\u52a8\u6587\u4ef6\n\u251c\u2500\u2500 perms                      # \u6743\u9650\u6a21\u5757\n\u251c\u2500\u2500 projects                   # \u9879\u76ee\u6a21\u5757\n\u251c\u2500\u2500 records                    # \u65e5\u5fd7\u5ba1\u8ba1\n\u251c\u2500\u2500 requirements.txt           # \u5b89\u88c5\u5305\u4f9d\u8d56\u6587\u4ef6\n\u251c\u2500\u2500 salts                      # saltapi\u6a21\u5757\n\u251c\u2500\u2500 tasks                      # celery\u4efb\u52a1\n\u251c\u2500\u2500 tools                      # \u5de5\u5177\u7ba1\u7406\n\u251c\u2500\u2500 upload                     # \u4e0a\u4f20\u6587\u4ef6\n\u251c\u2500\u2500 users                      # \u7528\u6237\u6a21\u5757\n\u251c\u2500\u2500 utils                      # \u5c0f\u811a\u672c\u7ba1\u7406\n\u251c\u2500\u2500 wikis                      # \u6587\u6863\u7cfb\u7edf\n\u251c\u2500\u2500 worktickets                # \u5de5\u5355\u7cfb\u7edf\n\u251c\u2500\u2500 zbmanager                  # zabbix\u6a21\u5757\n\u2514\u2500\u2500 zkmanager                  # \u4e2d\u63a7\u8003\u52e4\u673a\n\n\n\n\n2. \u524d\u7aef\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n.\n\u251c\u2500\u2500 build                      // \u6784\u5efa\u76f8\u5173  \n\u251c\u2500\u2500 config                     // \u914d\u7f6e\u76f8\u5173\n\u251c\u2500\u2500 src                        // \u6e90\u4ee3\u7801\n\u2502   \u251c\u2500\u2500 api                    // \u6240\u6709\u8bf7\u6c42\n\u2502   \u251c\u2500\u2500 assets                 // \u4e3b\u9898 \u5b57\u4f53\u7b49\u9759\u6001\u8d44\u6e90\n\u2502   \u251c\u2500\u2500 components             // \u5168\u5c40\u516c\u7528\u7ec4\u4ef6\n|   \u251c\u2500\u2500 directive              // \u81ea\u5b9a\u4e49\u6307\u4ee4\n\u2502   \u251c\u2500\u2500 filtres                // \u5168\u5c40filter\n\u2502   \u251c\u2500\u2500 router                 // \u8def\u7531\n\u2502   \u251c\u2500\u2500 store                  // \u5168\u5c40store\u7ba1\u7406\n\u2502   \u251c\u2500\u2500 styles                 // \u5168\u5c40\u6837\u5f0f\n\u2502   \u251c\u2500\u2500 utils                  // \u5168\u5c40\u516c\u7528\u65b9\u6cd5\n\u2502   \u251c\u2500\u2500 views                  // \u9875\u9762\n\u2502   \u251c\u2500\u2500 App.vue                // \u5165\u53e3\u9875\u9762\n\u2502   \u251c\u2500\u2500 main.js                // \u5165\u53e3 \u52a0\u8f7d\u7ec4\u4ef6 \u521d\u59cb\u5316\u7b49\n\u2502   \u251c\u2500\u2500 config.js              // \u914d\u7f6e\u6587\u4ef6\n\u2502   \u2514\u2500\u2500 permission.js          // \u6743\u9650\u68c0\u67e5\n\u251c\u2500\u2500 static                     // \u7b2c\u4e09\u65b9\u8d44\u6e90\n\u2502   \u251c\u2500\u2500 js                     //  \u7b2c\u4e09\u65b9js\n\u2502   \u2514\u2500\u2500 rest_framework         // rest_framework\u7684js\u548ccss\n\u251c\u2500\u2500 .babelrc                   // babel-loader \u914d\u7f6e\n\u251c\u2500\u2500 eslintrc.js                // eslint \u914d\u7f6e\u9879\n\u251c\u2500\u2500 .gitignore                 // git \u5ffd\u7565\u9879\n\u251c\u2500\u2500 favicon.ico                // favicon\u56fe\u6807\n\u251c\u2500\u2500 index.html                 // html\u6a21\u677f\n\u2514\u2500\u2500 package.json               // package.json\n\n\n\n\n\u9879\u76ee\u521d\u59cb\u5316\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n1. \u514b\u9686\u9879\u76ee\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\ngit clone https://github.com/itimor/django-oms.git\n\n\n\n\n2. \u540e\u7aef\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n# \u5b89\u88c5python\u4f9d\u8d56\ncd omsBackend\npip install -r requirements.txt\n\n# \u751f\u6210\u6570\u636e\u5e93\u6587\u4ef6\n# \u628a\u6bcf\u4e2a\u6a21\u5757 makemigrations\npython manage.py makemigrations \u6a21\u5757\u540d\n\n#\u521d\u59cb\u5316\u6570\u636e\u5e93\npython manage.py migrate\n\n#\u521b\u5efaadmin\u7528\u6237\npython manage.py createsuperuser \n\n#\u542f\u52a8\npython manage.py runserver 0.0.0.0:8000\n\n\n\n\n\n3. \u524d\u7aef\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n# \u5b89\u88c5\u4f9d\u8d56\nnpm install\n#\u6216\u8005\nnpm install --registry=https://registry.npm.taobao.org\n\n# \u672c\u5730\u5f00\u53d1 \u5f00\u542f\u670d\u52a1\nnpm run dev\n\n# \u6253\u5305\nnpm run build\n\n\n\n\n\u540e\u7eed\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n\n\n\n\n\u5b8c\u6210\u4ee5\u4e0a\u6b65\u9aa4\u540e\uff0c\u5927\u6982\u4e5f\u8bb8\u53ef\u80fd\u9879\u76ee\u53ef\u4ee5\u7528\u4e86\u5427\uff0c \u9879\u76ee\u672c\u8eab\u662f\u6309\u7167\u516c\u53f8\u57fa\u672c\u9700\u8981\u5f00\u53d1\u7684\uff0c\u6240\u4ee5\u60f3\u4f7f\u7528\u6b64\u9879\u76ee\u4f60\u8fd8\u5f97\u6839\u636e\u81ea\u5df1\u516c\u53f8\u7684\u89c4\u5219\u6765\u8fdb\u884c\u4fee\u6539\u4f7f\u7528\uff0c\u5982\u6709\u5176\u5b83\u95ee\u9898\uff0c\u53ef\u4ee5\u53ca\u65f6\u62cd\u7816(issue)\n\n\n\u540e\u7eed\u53ef\u80fd\u8981\u5f04\u4e2a\u5468\u62a5\u7cfb\u7edf\uff0c \u6bcf\u5468\u7ed3\u675f\u4e4b\u524d\u5728oms\u7cfb\u7edf\u4e0a\u53d1\u5e03\u5468\u62a5\uff0c\u65b9\u4fbf\u9886\u5bfc\u7edf\u8ba1\u3001\u67e5\u770b\u3002",
             "title": "Home"
         },
         {
-            "location": "/#mkdocs",
-            "text": "Project documentation with\u00a0Markdown.",
-            "title": "MkDocs"
+            "location": "/#_1",
+            "text": "\u968f\u4fbf\u5199\u5199",
+            "title": "\u6982\u8ff0"
         },
         {
-            "location": "/#overview",
-            "text": "MkDocs is a  fast ,  simple  and  downright gorgeous  static site\ngenerator that's geared towards building project documentation. Documentation\nsource files are written in Markdown, and configured with a single YAML\nconfiguration file.",
-            "title": "Overview"
+            "location": "/#_2",
+            "text": "\u672c\u9879\u76ee\u57fa\u4e8epython3.6\u548cvue2.0\u5f00\u53d1\uff0c\u91c7\u7528\u7684\u524d\u540e\u7aef\u5206\u79bb\u6a21\u5f0f   \u540e\u7aef\uff1a\u57fa\u4e8epython3\u548cdjango\u6784\u5efaapi,\u63d0\u4f9b\u6570\u636e\u652f\u6301  \u524d\u7aef\uff1a \u57fa\u4e8e  Vue.js  \u548c  element \uff0c\u9875\u9762\u5c55\u793a\u5927\u90e8\u5206\u53c2\u8003 vue-element-admin , \u5728\u8fd9\u91cc\u5341\u5206\u611f\u8c22PanJiaChen\u7684\u5f00\u6e90\u3002",
+            "title": "\u9879\u76ee\u7ec4\u6210"
         },
         {
-            "location": "/#host-anywhere",
-            "text": "MkDocs builds completely static HTML sites that you can host on GitHub pages,\nAmazon S3, or  anywhere  else you choose.",
-            "title": "Host anywhere"
+            "location": "/#_3",
+            "text": "\u5148\u6765\u51e0\u5f20\u6837\u56fe",
+            "title": "\u6548\u679c\u56fe"
         },
         {
-            "location": "/#great-themes-available",
-            "text": "There's a stack of good looking themes available for MkDocs. Choose between\nthe built in themes:  mkdocs  and  readthedocs , select one of the 3 rd \nparty themes in the  MkDocs wiki , or  build your own .",
-            "title": "Great themes available"
-        },
-        {
-            "location": "/#preview-your-site-as-you-work",
-            "text": "The built-in dev-server allows you to preview your documentation as you're\nwriting it. It will even auto-reload and refresh your browser whenever you save\nyour changes.",
-            "title": "Preview your site as you work"
-        },
-        {
-            "location": "/#easy-to-customize",
-            "text": "Get your project documentation looking just the way you want it by customizing\nthe theme.",
-            "title": "Easy to customize"
-        },
-        {
-            "location": "/#installation",
+            "location": "/#1",
             "text": "",
-            "title": "Installation"
+            "title": "1. \u9996\u9875"
         },
         {
-            "location": "/#install-with-a-package-manager",
-            "text": "If you have and use a package manager (such as  apt-get ,  dnf ,  homebrew , yum ,  chocolatey , etc.) to install packages on your system, then you may\nwant to search for a \"MkDocs\" package and, if a recent version is available,\ninstall it with your package manager (check your system's documentation for\ndetails). That's it, you're done! Skip down to  Getting Started .  If your package manager does not have a recent \"MkDocs\" package, you can still\nuse your package manager to install \"Python\" and \"pip\". Then you can use pip to install MkDocs .",
-            "title": "Install with a Package Manager"
-        },
-        {
-            "location": "/#manual-installation",
-            "text": "In order to manually install MkDocs you'll need  Python  installed on your\nsystem, as well as the Python package manager,  pip . You can check if you have\nthese already installed from the command line:  $ python --version\nPython 2.7.2\n$ pip --version\npip 1.5.2  MkDocs supports Python versions 2.7, 3.4, 3.5, 3.6 and pypy.",
-            "title": "Manual Installation"
-        },
-        {
-            "location": "/#installing-python",
-            "text": "Install  Python  by downloading an installer appropriate for your system from python.org  and running it.   Note  If you are installing Python on Windows, be sure to check the box to have\nPython added to your PATH if the installer offers such an option (it's\nnormally off by default).",
-            "title": "Installing Python"
-        },
-        {
-            "location": "/#installing-pip",
-            "text": "If you're using a recent version of Python, the Python package manager,  pip ,\nis most likely installed by default. However, you may need to upgrade pip to the\nlasted version:  pip install --upgrade pip  If you need to install  pip  for the first time, download  get-pip.py .\nThen run the following command to install it:  python get-pip.py",
-            "title": "Installing pip"
-        },
-        {
-            "location": "/#installing-mkdocs",
-            "text": "Install the  mkdocs  package using pip:  pip install mkdocs  You should now have the  mkdocs  command installed on your system. Run  mkdocs\n--version  to check that everything worked okay.  $ mkdocs --version\nmkdocs, version 0.15.3   Note  If you would like manpages installed for MkDocs, the  click-man  tool can\ngenerate and install them for you. Simply run the following two commands:  pip install click-man\nclick-man --target path/to/man/pages mkdocs  See the  click-man documentation  for an explaination of why manpages are\nnot automaticaly generated and installed by pip.    Note  If you are using Windows, some of the above commands may not work\nout-of-the-box.  A quick solution may be to preface every Python command with  python -m \nlike this:  python -m pip install mkdocs\npython -m mkdocs  For a more permanent solution, you may need to edit your  PATH  environment\nvariable to include the  Scripts  directory of your Python installation.\nRecent versions of Python include a script to do this for you. Navigate to\nyour Python installation directory (for example  C:\\Python34\\ ), open the Tools , then  Scripts  folder, and run the  win_add2path.py  file by double\nclicking on it. Alternatively, you can  download  the script and run it\n( python win_add2path.py ).",
-            "title": "Installing MkDocs"
-        },
-        {
-            "location": "/#getting-started",
-            "text": "Getting started is super easy.  mkdocs new my-project\ncd my-project  Take a moment to review the initial project that has been created for you.   There's a single configuration file named  mkdocs.yml , and a folder named docs  that will contain your documentation source files. Right now the  docs \nfolder just contains a single documentation page, named  index.md .  MkDocs comes with a built-in dev-server that lets you preview your documentation\nas you work on it. Make sure you're in the same directory as the  mkdocs.yml \nconfiguration file, and then start the server by running the  mkdocs serve \ncommand:  $ mkdocs serve\nINFO    -  Building documentation...\nINFO    -  Cleaning site directory\n[I 160402 15:50:43 server:271] Serving on http://127.0.0.1:8000\n[I 160402 15:50:43 handlers:58] Start watching changes\n[I 160402 15:50:43 handlers:60] Start detecting changes  Open up  http://127.0.0.1:8000/  in your browser, and you'll see the default\nhome page being displayed:   The dev-server also supports auto-reloading, and will rebuild your documentation\nwhenever anything in the configuration file, documentation directory, or theme\ndirectory changes.  Open the  docs/index.md  document in your text editor of choice, change the\ninitial heading to  MkLorum , and save your changes. Your browser will\nauto-reload and you should see your updated documentation immediately.  Now try editing the configuration file:  mkdocs.yml . Change the site_name  setting to  MkLorum  and save the file.  site_name: MkLorum  Your browser should immediately reload, and you'll see your new site name take\neffect.",
-            "title": "Getting Started"
-        },
-        {
-            "location": "/#adding-pages",
-            "text": "Now add a second page to your documentation:  curl 'https://jaspervdj.be/lorem-markdownum/markdown.txt' > docs/about.md  As our documentation site will include some navigation headers, you may want to\nedit the configuration file and add some information about the order, title, and\nnesting of each page in the navigation header by adding a  pages \nsetting:  site_name: MkLorum\npages:\n    - Home: index.md\n    - About: about.md  Save your changes and you'll now see a navigation bar with  Home  and  About \nitems on the left as well as  Search ,  Previous , and  Next  items on the\nright.   Try the menu items and navigate back and forth between pages. Then click on Search . A search dialog will appear, allowing you to search for any text on\nany page. Notice that the search results include every occurrence of the search\nterm on the site and links directly to the section of the page in which the\nsearch term appears. You get of all that with no effort or configuration on your\npart!",
-            "title": "Adding pages"
-        },
-        {
-            "location": "/#theming-our-documentation",
-            "text": "Now change the configuration file to alter how the documentation is displayed by\nchanging the theme. Edit the  mkdocs.yml  file and add a  theme  setting:  site_name: MkLorum\npages:\n    - Home: index.md\n    - About: about.md\ntheme: readthedocs  Save your changes, and you'll see the ReadTheDocs theme being used.",
-            "title": "Theming our documentation"
-        },
-        {
-            "location": "/#changing-the-favicon-icon",
-            "text": "By default, MkDocs uses the  MkDocs favicon  icon. To use a different icon, create\nan  img  subdirectory in your  docs_dir  and copy your custom  favicon.ico  file\nto that directory. MkDocs will automatically detect and use that file as your\nfavicon icon.",
-            "title": "Changing the Favicon Icon"
-        },
-        {
-            "location": "/#building-the-site",
-            "text": "That's looking good. You're ready to deploy the first pass of your  MkLorum \ndocumentation. First build the documentation:  mkdocs build  This will create a new directory, named  site . Take a look inside the\ndirectory:  $ ls site\nabout  fonts  index.html  license  search.html\ncss    img    js          mkdocs   sitemap.xml  Notice that your source documentation has been output as two HTML files named index.html  and  about/index.html . You also have various other media that's\nbeen copied into the  site  directory as part of the documentation theme. You\neven have a  sitemap.xml  file and  mkdocs/search_index.json .  If you're using source code control such as  git  you probably don't want to\ncheck your documentation builds into the repository. Add a line containing site/  to your  .gitignore  file.  echo \"site/\" >> .gitignore  If you're using another source code control tool you'll want to check its\ndocumentation on how to ignore specific directories.  After some time, files may be removed from the documentation but they will still\nreside in the  site  directory. To remove those stale files, just run  mkdocs \nwith the  --clean  switch.  mkdocs build --clean",
-            "title": "Building the site"
-        },
-        {
-            "location": "/#other-commands-and-options",
-            "text": "There are various other commands and options available. For a complete list of\ncommands, use the  --help  flag:  mkdocs --help  To view a list of options available on a given command, use the  --help  flag\nwith that command. For example, to get a list of all options available for the build  command run the following:  mkdocs build --help",
-            "title": "Other Commands and Options"
-        },
-        {
-            "location": "/#deploying",
-            "text": "The documentation site that you just built only uses static files so you'll be\nable to host it from pretty much anywhere.  GitHub project pages  and  Amazon\nS3  may be good hosting options, depending upon your needs. Upload the contents\nof the entire  site  directory to wherever you're hosting your website from and\nyou're done. For specific instructions on a number of common hosts, see the Deploying your Docs  page.",
-            "title": "Deploying"
-        },
-        {
-            "location": "/#getting-help",
-            "text": "To get help with MkDocs, please use the  discussion group ,  GitHub issues  or\nthe MkDocs IRC channel  #mkdocs  on freenode.",
-            "title": "Getting help"
-        },
-        {
-            "location": "/blog/",
-            "text": "Specimen\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nBody copy\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Cras arcu libero,\nmollis sed massa vel, \nornare viverra ex\n. Mauris a ullamcorper lacus. Nullam\nurna elit, malesuada eget finibus ut, ullamcorper ac tortor. Vestibulum sodales\npulvinar nisl, pharetra aliquet est. Quisque volutpat erat ac nisi accumsan\ntempor.\n\n\nSed suscipit\n, orci non pretium pretium, quam mi gravida metus, vel\nvenenatis justo est condimentum diam. Maecenas non ornare justo. Nam a ipsum\neros. \nNulla aliquam\n orci sit amet nisl posuere malesuada. Proin aliquet\nnulla velit, quis ultricies orci feugiat et. \nUt tincidunt sollicitudin\n\ntincidunt. Aenean ullamcorper sit amet nulla at interdum.\n\n\nHeadings\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nThe 3\nrd\n level\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nThe 4\nth\n level\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nThe 5\nth\n level\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nThe 6\nth\n level\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nHeadings \nwith secondary text\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nThe 3\nrd\n level \nwith secondary text\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nThe 4\nth\n level \nwith secondary text\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nThe 5\nth\n level \nwith secondary text\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nThe 6\nth\n level \nwith secondary text\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nBlockquotes\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n\n\nMorbi eget dapibus felis. Vivamus venenatis porttitor tortor sit amet rutrum.\n  Pellentesque aliquet quam enim, eu volutpat urna rutrum a. Nam vehicula nunc\n  mauris, a ultricies libero efficitur sed. \nClass aptent\n taciti sociosqu ad\n  litora torquent per conubia nostra, per inceptos himenaeos. Sed molestie\n  imperdiet consectetur.\n\n\n\n\nBlockquote nesting\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n\n\nSed aliquet\n, neque at rutrum mollis, neque nisi tincidunt nibh, vitae\n  faucibus lacus nunc at lacus. Nunc scelerisque, quam id cursus sodales, lorem\n  \nlibero fermentum\n urna, ut efficitur elit ligula et nunc.\n\n\n\n\nMauris dictum mi lacus, sit amet pellentesque urna vehicula fringilla.\n    Ut sit amet placerat ante. Proin sed elementum nulla. Nunc vitae sem odio.\n    Suspendisse ac eros arcu. Vivamus orci erat, volutpat a tempor et, rutrum.\n    eu odio.\n\n\n\n\nSuspendisse rutrum facilisis risus\n, eu posuere neque commodo a.\n      Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed nec leo\n      bibendum, sodales mauris ut, tincidunt massa.\n\n\n\n\n\n\n\n\nOther content blocks\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n\n\nVestibulum vitae orci quis ante viverra ultricies ut eget turpis. Sed eu\n  lectus dapibus, eleifend nulla varius, lobortis turpis. In ac hendrerit nisl,\n  sit amet laoreet nibh.\n  \njs\n  var _extends = function(target) {\n    for (var i = 1; i < arguments.length; i++) {\n      var source = arguments[i];\n      for (var key in source) {\n        target[key] = source[key];\n      }\n    }\n    return target;\n  };\n\n\n\n\nPraesent at \nreturn\n \ntarget\n, sodales nibh vel, tempor felis. Fusce\n      vel lacinia lacus. Suspendisse rhoncus nunc non nisi iaculis ultrices.\n      Donec consectetur mauris non neque imperdiet, eget volutpat libero.\n\n\n\n\n\n\nLists\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nUnordered lists\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n\n\n\n\nSed sagittis eleifend rutrum. Donec vitae suscipit est. Nullam tempus tellus\n  non sem sollicitudin, quis rutrum leo facilisis. Nulla tempor lobortis orci,\n  at elementum urna sodales vitae. In in vehicula nulla, quis ornare libero.\n\n\n\n\nDuis mollis est eget nibh volutpat, fermentum aliquet dui mollis.\n\n\nNam vulputate tincidunt fringilla.\n\n\nNullam dignissim ultrices urna non auctor.\n\n\n\n\n\n\n\n\nAliquam metus eros, pretium sed nulla venenatis, faucibus auctor ex. Proin ut\n  eros sed sapien ullamcorper consequat. Nunc ligula ante, fringilla at aliquam\n  ac, aliquet sed mauris.\n\n\n\n\n\n\nNulla et rhoncus turpis. Mauris ultricies elementum leo. Duis efficitur\n  accumsan nibh eu mattis. Vivamus tempus velit eros, porttitor placerat nibh\n  lacinia sed. Aenean in finibus diam.\n\n\n\n\n\n\nOrdered lists\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n\n\n\n\nInteger vehicula feugiat magna, a mollis tellus. Nam mollis ex ante, quis\n  elementum eros tempor rutrum. Aenean efficitur lobortis lacinia. Nulla\n  consectetur feugiat sodales.\n\n\n\n\n\n\nCum sociis natoque penatibus et magnis dis parturient montes, nascetur\n  ridiculus mus. Aliquam ornare feugiat quam et egestas. Nunc id erat et quam\n  pellentesque lacinia eu vel odio.\n\n\n\n\n\n\nVivamus venenatis porttitor tortor sit amet rutrum. Pellentesque aliquet\n  quam enim, eu volutpat urna rutrum a. Nam vehicula nunc mauris, a\n  ultricies libero efficitur sed.\n\n\n\n\nMauris dictum mi lacus\n\n\nUt sit amet placerat ante\n\n\nSuspendisse ac eros arcu\n\n\n\n\n\n\n\n\nMorbi eget dapibus felis. Vivamus venenatis porttitor tortor sit amet\n  rutrum. Pellentesque aliquet quam enim, eu volutpat urna rutrum a. Sed\n  aliquet, neque at rutrum mollis, neque nisi tincidunt nibh.\n\n\n\n\n\n\nPellentesque eget \nvar\n \n_extends\n ornare tellus, ut gravida mi.\n\njs hl_lines=\"1\"\nvar _extends = function(target) {\n  for (var i = 1; i < arguments.length; i++) {\n    var source = arguments[i];\n    for (var key in source) {\n      target[key] = source[key];\n    }\n  }\n  return target;\n};\n\n\n\n\n\n\n\n\n\n\nVivamus id mi enim. Integer id turpis sapien. Ut condimentum lobortis\n  sagittis. Aliquam purus tellus, faucibus eget urna at, iaculis venenatis\n  nulla. Vivamus a pharetra leo.\n\n\n\n\n\n\nDefinition lists\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n\n\nLorem ipsum dolor sit amet\n\n\n\n\nSed sagittis eleifend rutrum. Donec vitae suscipit est. Nullam tempus\ntellus non sem sollicitudin, quis rutrum leo facilisis. Nulla tempor\nlobortis orci, at elementum urna sodales vitae. In in vehicula nulla.\n\n\nDuis mollis est eget nibh volutpat, fermentum aliquet dui mollis.\nNam vulputate tincidunt fringilla.\nNullam dignissim ultrices urna non auctor.\n\n\n\n\nCras arcu libero\n\n\n\n\nAliquam metus eros, pretium sed nulla venenatis, faucibus auctor ex. Proin\nut eros sed sapien ullamcorper consequat. Nunc ligula ante, fringilla at\naliquam ac, aliquet sed mauris.\n\n\n\n\n\n\nCode blocks\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nInline\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nMorbi eget \ndapibus felis\n. Vivamus \nvenenatis porttitor\n tortor sit amet\nrutrum. Class aptent taciti sociosqu ad litora torquent per conubia nostra,\nper inceptos himenaeos. \nPellentesque aliquet quam enim\n, eu volutpat urna\nrutrum a.\n\n\nNam vehicula nunc \nreturn\n \ntarget\n mauris, a ultricies libero efficitur\nsed. Sed molestie imperdiet consectetur. Vivamus a pharetra leo. Pellentesque\neget ornare tellus, ut gravida mi. Fusce vel lacinia lacus.\n\n\nListing\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n#!js hl_lines=\"8\"\nvar _extends = function(target) {\n  for (var i = 1; i < arguments.length; i++) {\n    var source = arguments[i];\n    for (var key in source) {\n      target[key] = source[key];\n    }\n  }\n  return target;\n};\n\n\n\nHorizontal rules\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nAenean in finibus diam. Duis mollis est eget nibh volutpat, fermentum aliquet\ndui mollis. Nam vulputate tincidunt fringilla. Nullam dignissim ultrices urna\nnon auctor.\n\n\n\n\nInteger vehicula feugiat magna, a mollis tellus. Nam mollis ex ante, quis\nelementum eros tempor rutrum. Aenean efficitur lobortis lacinia. Nulla\nconsectetur feugiat sodales.\n\n\nData tables\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n\n\n\n\n\n\nSollicitudo / Pellentesi\n\n\nconsectetur\n\n\nadipiscing\n\n\nelit\n\n\narcu\n\n\nsed\n\n\n\n\n\n\n\n\n\n\nVivamus a pharetra\n\n\nyes\n\n\nyes\n\n\nyes\n\n\nyes\n\n\nyes\n\n\n\n\n\n\nOrnare viverra ex\n\n\nyes\n\n\nyes\n\n\nyes\n\n\nyes\n\n\nyes\n\n\n\n\n\n\nMauris a ullamcorper\n\n\nyes\n\n\nyes\n\n\npartial\n\n\nyes\n\n\nyes\n\n\n\n\n\n\nNullam urna elit\n\n\nyes\n\n\nyes\n\n\nyes\n\n\nyes\n\n\nyes\n\n\n\n\n\n\nMalesuada eget finibus\n\n\nyes\n\n\nyes\n\n\nyes\n\n\nyes\n\n\nyes\n\n\n\n\n\n\nUllamcorper\n\n\nyes\n\n\nyes\n\n\nyes\n\n\nyes\n\n\nyes\n\n\n\n\n\n\nVestibulum sodales\n\n\nyes\n\n\n-\n\n\nyes\n\n\n-\n\n\nyes\n\n\n\n\n\n\nPulvinar nisl\n\n\nyes\n\n\nyes\n\n\nyes\n\n\n-\n\n\n-\n\n\n\n\n\n\nPharetra aliquet est\n\n\nyes\n\n\nyes\n\n\nyes\n\n\nyes\n\n\nyes\n\n\n\n\n\n\nSed suscipit\n\n\nyes\n\n\nyes\n\n\nyes\n\n\nyes\n\n\nyes\n\n\n\n\n\n\nOrci non pretium\n\n\nyes\n\n\npartial\n\n\n-\n\n\n-\n\n\n-\n\n\n\n\n\n\n\n\nSed sagittis eleifend rutrum. Donec vitae suscipit est. Nullam tempus tellus\nnon sem sollicitudin, quis rutrum leo facilisis. Nulla tempor lobortis orci,\nat elementum urna sodales vitae. In in vehicula nulla, quis ornare libero.\n\n\n\n\n\n\n\n\nLeft\n\n\nCenter\n\n\nRight\n\n\n\n\n\n\n\n\n\n\nLorem\n\n\ndolor\n\n\namet\n\n\n\n\n\n\nipsum\n\n\nsit\n\n\n\n\n\n\n\n\n\n\nVestibulum vitae orci quis ante viverra ultricies ut eget turpis. Sed eu\nlectus dapibus, eleifend nulla varius, lobortis turpis. In ac hendrerit nisl,\nsit amet laoreet nibh.\n\n\n\n  \n\n    \n\n    \n\n  \n\n  \n\n    \n\n      \nTable\n\n      \nwith colgroups (Pandoc)\n\n    \n\n  \n\n  \n\n    \n\n      \nLorem\n\n      \nipsum dolor sit amet.\n\n    \n\n    \n\n      \nSed sagittis\n\n      \neleifend rutrum. Donec vitae suscipit est.",
-            "title": "Blog"
-        },
-        {
-            "location": "/blog/#specimen",
+            "location": "/#2",
             "text": "",
-            "title": "Specimen"
+            "title": "2. \u5de5\u5355\u7cfb\u7edf"
         },
         {
-            "location": "/blog/#body-copy",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras arcu libero,\nmollis sed massa vel,  ornare viverra ex . Mauris a ullamcorper lacus. Nullam\nurna elit, malesuada eget finibus ut, ullamcorper ac tortor. Vestibulum sodales\npulvinar nisl, pharetra aliquet est. Quisque volutpat erat ac nisi accumsan\ntempor.  Sed suscipit , orci non pretium pretium, quam mi gravida metus, vel\nvenenatis justo est condimentum diam. Maecenas non ornare justo. Nam a ipsum\neros.  Nulla aliquam  orci sit amet nisl posuere malesuada. Proin aliquet\nnulla velit, quis ultricies orci feugiat et.  Ut tincidunt sollicitudin \ntincidunt. Aenean ullamcorper sit amet nulla at interdum.",
-            "title": "Body copy"
-        },
-        {
-            "location": "/blog/#headings",
+            "location": "/#3",
             "text": "",
-            "title": "Headings"
+            "title": "3. \u53d1\u5e03\u7cfb\u7edf"
         },
         {
-            "location": "/blog/#the-3rd-level",
+            "location": "/#4",
             "text": "",
-            "title": "The 3rd level"
+            "title": "4. \u6267\u884c\u547d\u4ee4"
         },
         {
-            "location": "/blog/#the-4th-level",
+            "location": "/#_4",
             "text": "",
-            "title": "The 4th level"
+            "title": "\u76ee\u5f55\u4ecb\u7ecd"
         },
         {
-            "location": "/blog/#the-5th-level",
+            "location": "/#1_1",
+            "text": ".\n\u251c\u2500\u2500 celery.service             # celery\u5728centos7\u7684\u542f\u52a8\u6587\u4ef6\n\u251c\u2500\u2500 dnsmanager                 # dns\u6a21\u5757\n\u251c\u2500\u2500 hosts                      # \u4e3b\u673a\u6a21\u5757\n\u251c\u2500\u2500 __init__.py                \n\u251c\u2500\u2500 init.sh                    # \u521d\u59cb\u5316\u811a\u672c\n\u251c\u2500\u2500 jobs                       # \u53d1\u5e03\u7cfb\u7edf\n\u251c\u2500\u2500 manage.py           \n\u251c\u2500\u2500 menus                      # \u83dc\u5355\u6a21\u5757\n\u251c\u2500\u2500 omsBackend                 # django\u4e3b\u914d\u76ee\u5f55\n\u251c\u2500\u2500 omsBackend.sock            \n\u251c\u2500\u2500 oms.ini                    # uwsgi \u542f\u52a8\u914d\u7f6e\n\u251c\u2500\u2500 oms.service                # oms\u5728centos7\u7684\u542f\u52a8\u6587\u4ef6\n\u251c\u2500\u2500 perms                      # \u6743\u9650\u6a21\u5757\n\u251c\u2500\u2500 projects                   # \u9879\u76ee\u6a21\u5757\n\u251c\u2500\u2500 records                    # \u65e5\u5fd7\u5ba1\u8ba1\n\u251c\u2500\u2500 requirements.txt           # \u5b89\u88c5\u5305\u4f9d\u8d56\u6587\u4ef6\n\u251c\u2500\u2500 salts                      # saltapi\u6a21\u5757\n\u251c\u2500\u2500 tasks                      # celery\u4efb\u52a1\n\u251c\u2500\u2500 tools                      # \u5de5\u5177\u7ba1\u7406\n\u251c\u2500\u2500 upload                     # \u4e0a\u4f20\u6587\u4ef6\n\u251c\u2500\u2500 users                      # \u7528\u6237\u6a21\u5757\n\u251c\u2500\u2500 utils                      # \u5c0f\u811a\u672c\u7ba1\u7406\n\u251c\u2500\u2500 wikis                      # \u6587\u6863\u7cfb\u7edf\n\u251c\u2500\u2500 worktickets                # \u5de5\u5355\u7cfb\u7edf\n\u251c\u2500\u2500 zbmanager                  # zabbix\u6a21\u5757\n\u2514\u2500\u2500 zkmanager                  # \u4e2d\u63a7\u8003\u52e4\u673a",
+            "title": "1. \u540e\u7aef"
+        },
+        {
+            "location": "/#2_1",
+            "text": ".\n\u251c\u2500\u2500 build                      // \u6784\u5efa\u76f8\u5173  \n\u251c\u2500\u2500 config                     // \u914d\u7f6e\u76f8\u5173\n\u251c\u2500\u2500 src                        // \u6e90\u4ee3\u7801\n\u2502   \u251c\u2500\u2500 api                    // \u6240\u6709\u8bf7\u6c42\n\u2502   \u251c\u2500\u2500 assets                 // \u4e3b\u9898 \u5b57\u4f53\u7b49\u9759\u6001\u8d44\u6e90\n\u2502   \u251c\u2500\u2500 components             // \u5168\u5c40\u516c\u7528\u7ec4\u4ef6\n|   \u251c\u2500\u2500 directive              // \u81ea\u5b9a\u4e49\u6307\u4ee4\n\u2502   \u251c\u2500\u2500 filtres                // \u5168\u5c40filter\n\u2502   \u251c\u2500\u2500 router                 // \u8def\u7531\n\u2502   \u251c\u2500\u2500 store                  // \u5168\u5c40store\u7ba1\u7406\n\u2502   \u251c\u2500\u2500 styles                 // \u5168\u5c40\u6837\u5f0f\n\u2502   \u251c\u2500\u2500 utils                  // \u5168\u5c40\u516c\u7528\u65b9\u6cd5\n\u2502   \u251c\u2500\u2500 views                  // \u9875\u9762\n\u2502   \u251c\u2500\u2500 App.vue                // \u5165\u53e3\u9875\u9762\n\u2502   \u251c\u2500\u2500 main.js                // \u5165\u53e3 \u52a0\u8f7d\u7ec4\u4ef6 \u521d\u59cb\u5316\u7b49\n\u2502   \u251c\u2500\u2500 config.js              // \u914d\u7f6e\u6587\u4ef6\n\u2502   \u2514\u2500\u2500 permission.js          // \u6743\u9650\u68c0\u67e5\n\u251c\u2500\u2500 static                     // \u7b2c\u4e09\u65b9\u8d44\u6e90\n\u2502   \u251c\u2500\u2500 js                     //  \u7b2c\u4e09\u65b9js\n\u2502   \u2514\u2500\u2500 rest_framework         // rest_framework\u7684js\u548ccss\n\u251c\u2500\u2500 .babelrc                   // babel-loader \u914d\u7f6e\n\u251c\u2500\u2500 eslintrc.js                // eslint \u914d\u7f6e\u9879\n\u251c\u2500\u2500 .gitignore                 // git \u5ffd\u7565\u9879\n\u251c\u2500\u2500 favicon.ico                // favicon\u56fe\u6807\n\u251c\u2500\u2500 index.html                 // html\u6a21\u677f\n\u2514\u2500\u2500 package.json               // package.json",
+            "title": "2. \u524d\u7aef"
+        },
+        {
+            "location": "/#_5",
             "text": "",
-            "title": "The 5th level"
+            "title": "\u9879\u76ee\u521d\u59cb\u5316"
         },
         {
-            "location": "/blog/#the-6th-level",
+            "location": "/#1_2",
+            "text": "git clone https://github.com/itimor/django-oms.git",
+            "title": "1. \u514b\u9686\u9879\u76ee"
+        },
+        {
+            "location": "/#2_2",
+            "text": "# \u5b89\u88c5python\u4f9d\u8d56\ncd omsBackend\npip install -r requirements.txt\n\n# \u751f\u6210\u6570\u636e\u5e93\u6587\u4ef6\n# \u628a\u6bcf\u4e2a\u6a21\u5757 makemigrations\npython manage.py makemigrations \u6a21\u5757\u540d\n\n#\u521d\u59cb\u5316\u6570\u636e\u5e93\npython manage.py migrate\n\n#\u521b\u5efaadmin\u7528\u6237\npython manage.py createsuperuser \n\n#\u542f\u52a8\npython manage.py runserver 0.0.0.0:8000",
+            "title": "2. \u540e\u7aef"
+        },
+        {
+            "location": "/#3_1",
+            "text": "# \u5b89\u88c5\u4f9d\u8d56\nnpm install\n#\u6216\u8005\nnpm install --registry=https://registry.npm.taobao.org\n\n# \u672c\u5730\u5f00\u53d1 \u5f00\u542f\u670d\u52a1\nnpm run dev\n\n# \u6253\u5305\nnpm run build",
+            "title": "3. \u524d\u7aef"
+        },
+        {
+            "location": "/#_6",
+            "text": "\u5b8c\u6210\u4ee5\u4e0a\u6b65\u9aa4\u540e\uff0c\u5927\u6982\u4e5f\u8bb8\u53ef\u80fd\u9879\u76ee\u53ef\u4ee5\u7528\u4e86\u5427\uff0c \u9879\u76ee\u672c\u8eab\u662f\u6309\u7167\u516c\u53f8\u57fa\u672c\u9700\u8981\u5f00\u53d1\u7684\uff0c\u6240\u4ee5\u60f3\u4f7f\u7528\u6b64\u9879\u76ee\u4f60\u8fd8\u5f97\u6839\u636e\u81ea\u5df1\u516c\u53f8\u7684\u89c4\u5219\u6765\u8fdb\u884c\u4fee\u6539\u4f7f\u7528\uff0c\u5982\u6709\u5176\u5b83\u95ee\u9898\uff0c\u53ef\u4ee5\u53ca\u65f6\u62cd\u7816(issue)  \u540e\u7eed\u53ef\u80fd\u8981\u5f04\u4e2a\u5468\u62a5\u7cfb\u7edf\uff0c \u6bcf\u5468\u7ed3\u675f\u4e4b\u524d\u5728oms\u7cfb\u7edf\u4e0a\u53d1\u5e03\u5468\u62a5\uff0c\u65b9\u4fbf\u9886\u5bfc\u7edf\u8ba1\u3001\u67e5\u770b\u3002",
+            "title": "\u540e\u7eed"
+        },
+        {
+            "location": "/oms/",
+            "text": "\u53ef\u6a21\u5757\u53ca\u529f\u80fd\u8be6\u7ec6\u4ecb\u7ecd\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n\n\n\u8bf7\u7b49\u5f85\u540e\u7eed\u5b8c\u5584\u3002\u3002\u3002\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07",
+            "title": "\u5f00\u59cb"
+        },
+        {
+            "location": "/oms/#_1",
             "text": "",
-            "title": "The 6th level"
+            "title": "\u53ef\u6a21\u5757\u53ca\u529f\u80fd\u8be6\u7ec6\u4ecb\u7ecd"
         },
         {
-            "location": "/blog/#headings-with-secondary-text",
+            "location": "/oms/#_2",
             "text": "",
-            "title": "Headings with secondary text"
+            "title": "\u8bf7\u7b49\u5f85\u540e\u7eed\u5b8c\u5584\u3002\u3002\u3002"
         },
         {
-            "location": "/blog/#the-3rd-level-with-secondary-text",
+            "location": "/oms/user/",
+            "text": "\u7528\u6237\u6a21\u5757\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n\n\n\u8bf7\u7b49\u5f85\u540e\u7eed\u5b8c\u5584\u3002\u3002\u3002\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07",
+            "title": "\u7528\u6237\u6a21\u5757"
+        },
+        {
+            "location": "/oms/user/#_1",
             "text": "",
-            "title": "The 3rd level with secondary text"
+            "title": "\u7528\u6237\u6a21\u5757"
         },
         {
-            "location": "/blog/#the-4th-level-with-secondary-text",
+            "location": "/oms/user/#_2",
             "text": "",
-            "title": "The 4th level with secondary text"
+            "title": "\u8bf7\u7b49\u5f85\u540e\u7eed\u5b8c\u5584\u3002\u3002\u3002"
         },
         {
-            "location": "/blog/#the-5th-level-with-secondary-text",
+            "location": "/oms/perm/",
+            "text": "\u6743\u9650\u548c\u83dc\u5355\u6a21\u5757\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n\n\n\u8bf7\u7b49\u5f85\u540e\u7eed\u5b8c\u5584\u3002\u3002\u3002\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07",
+            "title": "\u6743\u9650&\u83dc\u5355\u6a21\u5757"
+        },
+        {
+            "location": "/oms/perm/#_1",
             "text": "",
-            "title": "The 5th level with secondary text"
+            "title": "\u6743\u9650\u548c\u83dc\u5355\u6a21\u5757"
         },
         {
-            "location": "/blog/#the-6th-level-with-secondary-text",
+            "location": "/oms/perm/#_2",
             "text": "",
-            "title": "The 6th level with secondary text"
+            "title": "\u8bf7\u7b49\u5f85\u540e\u7eed\u5b8c\u5584\u3002\u3002\u3002"
         },
         {
-            "location": "/blog/#blockquotes",
-            "text": "Morbi eget dapibus felis. Vivamus venenatis porttitor tortor sit amet rutrum.\n  Pellentesque aliquet quam enim, eu volutpat urna rutrum a. Nam vehicula nunc\n  mauris, a ultricies libero efficitur sed.  Class aptent  taciti sociosqu ad\n  litora torquent per conubia nostra, per inceptos himenaeos. Sed molestie\n  imperdiet consectetur.",
-            "title": "Blockquotes"
+            "location": "/oms/host/",
+            "text": "\u4e3b\u673a\u6a21\u5757\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n\n\n\u8bf7\u7b49\u5f85\u540e\u7eed\u5b8c\u5584\u3002\u3002\u3002\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07",
+            "title": "\u4e3b\u673a\u6a21\u5757"
         },
         {
-            "location": "/blog/#blockquote-nesting",
-            "text": "Sed aliquet , neque at rutrum mollis, neque nisi tincidunt nibh, vitae\n  faucibus lacus nunc at lacus. Nunc scelerisque, quam id cursus sodales, lorem\n   libero fermentum  urna, ut efficitur elit ligula et nunc.   Mauris dictum mi lacus, sit amet pellentesque urna vehicula fringilla.\n    Ut sit amet placerat ante. Proin sed elementum nulla. Nunc vitae sem odio.\n    Suspendisse ac eros arcu. Vivamus orci erat, volutpat a tempor et, rutrum.\n    eu odio.   Suspendisse rutrum facilisis risus , eu posuere neque commodo a.\n      Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed nec leo\n      bibendum, sodales mauris ut, tincidunt massa.",
-            "title": "Blockquote nesting"
-        },
-        {
-            "location": "/blog/#other-content-blocks",
-            "text": "Vestibulum vitae orci quis ante viverra ultricies ut eget turpis. Sed eu\n  lectus dapibus, eleifend nulla varius, lobortis turpis. In ac hendrerit nisl,\n  sit amet laoreet nibh.\n   js\n  var _extends = function(target) {\n    for (var i = 1; i < arguments.length; i++) {\n      var source = arguments[i];\n      for (var key in source) {\n        target[key] = source[key];\n      }\n    }\n    return target;\n  };   Praesent at  return   target , sodales nibh vel, tempor felis. Fusce\n      vel lacinia lacus. Suspendisse rhoncus nunc non nisi iaculis ultrices.\n      Donec consectetur mauris non neque imperdiet, eget volutpat libero.",
-            "title": "Other content blocks"
-        },
-        {
-            "location": "/blog/#lists",
+            "location": "/oms/host/#_1",
             "text": "",
-            "title": "Lists"
+            "title": "\u4e3b\u673a\u6a21\u5757"
         },
         {
-            "location": "/blog/#unordered-lists",
-            "text": "Sed sagittis eleifend rutrum. Donec vitae suscipit est. Nullam tempus tellus\n  non sem sollicitudin, quis rutrum leo facilisis. Nulla tempor lobortis orci,\n  at elementum urna sodales vitae. In in vehicula nulla, quis ornare libero.   Duis mollis est eget nibh volutpat, fermentum aliquet dui mollis.  Nam vulputate tincidunt fringilla.  Nullam dignissim ultrices urna non auctor.     Aliquam metus eros, pretium sed nulla venenatis, faucibus auctor ex. Proin ut\n  eros sed sapien ullamcorper consequat. Nunc ligula ante, fringilla at aliquam\n  ac, aliquet sed mauris.    Nulla et rhoncus turpis. Mauris ultricies elementum leo. Duis efficitur\n  accumsan nibh eu mattis. Vivamus tempus velit eros, porttitor placerat nibh\n  lacinia sed. Aenean in finibus diam.",
-            "title": "Unordered lists"
-        },
-        {
-            "location": "/blog/#ordered-lists",
-            "text": "Integer vehicula feugiat magna, a mollis tellus. Nam mollis ex ante, quis\n  elementum eros tempor rutrum. Aenean efficitur lobortis lacinia. Nulla\n  consectetur feugiat sodales.    Cum sociis natoque penatibus et magnis dis parturient montes, nascetur\n  ridiculus mus. Aliquam ornare feugiat quam et egestas. Nunc id erat et quam\n  pellentesque lacinia eu vel odio.    Vivamus venenatis porttitor tortor sit amet rutrum. Pellentesque aliquet\n  quam enim, eu volutpat urna rutrum a. Nam vehicula nunc mauris, a\n  ultricies libero efficitur sed.   Mauris dictum mi lacus  Ut sit amet placerat ante  Suspendisse ac eros arcu     Morbi eget dapibus felis. Vivamus venenatis porttitor tortor sit amet\n  rutrum. Pellentesque aliquet quam enim, eu volutpat urna rutrum a. Sed\n  aliquet, neque at rutrum mollis, neque nisi tincidunt nibh.    Pellentesque eget  var   _extends  ornare tellus, ut gravida mi. js hl_lines=\"1\"\nvar _extends = function(target) {\n  for (var i = 1; i < arguments.length; i++) {\n    var source = arguments[i];\n    for (var key in source) {\n      target[key] = source[key];\n    }\n  }\n  return target;\n};      Vivamus id mi enim. Integer id turpis sapien. Ut condimentum lobortis\n  sagittis. Aliquam purus tellus, faucibus eget urna at, iaculis venenatis\n  nulla. Vivamus a pharetra leo.",
-            "title": "Ordered lists"
-        },
-        {
-            "location": "/blog/#definition-lists",
-            "text": "Lorem ipsum dolor sit amet   Sed sagittis eleifend rutrum. Donec vitae suscipit est. Nullam tempus\ntellus non sem sollicitudin, quis rutrum leo facilisis. Nulla tempor\nlobortis orci, at elementum urna sodales vitae. In in vehicula nulla.  Duis mollis est eget nibh volutpat, fermentum aliquet dui mollis.\nNam vulputate tincidunt fringilla.\nNullam dignissim ultrices urna non auctor.   Cras arcu libero   Aliquam metus eros, pretium sed nulla venenatis, faucibus auctor ex. Proin\nut eros sed sapien ullamcorper consequat. Nunc ligula ante, fringilla at\naliquam ac, aliquet sed mauris.",
-            "title": "Definition lists"
-        },
-        {
-            "location": "/blog/#code-blocks",
+            "location": "/oms/host/#_2",
             "text": "",
-            "title": "Code blocks"
+            "title": "\u8bf7\u7b49\u5f85\u540e\u7eed\u5b8c\u5584\u3002\u3002\u3002"
         },
         {
-            "location": "/blog/#inline",
-            "text": "Morbi eget  dapibus felis . Vivamus  venenatis porttitor  tortor sit amet\nrutrum. Class aptent taciti sociosqu ad litora torquent per conubia nostra,\nper inceptos himenaeos.  Pellentesque aliquet quam enim , eu volutpat urna\nrutrum a.  Nam vehicula nunc  return   target  mauris, a ultricies libero efficitur\nsed. Sed molestie imperdiet consectetur. Vivamus a pharetra leo. Pellentesque\neget ornare tellus, ut gravida mi. Fusce vel lacinia lacus.",
-            "title": "Inline"
+            "location": "/oms/salt/",
+            "text": "salt\u6a21\u5757\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n\n\n\u8bf7\u7b49\u5f85\u540e\u7eed\u5b8c\u5584\u3002\u3002\u3002\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07",
+            "title": "salt\u6a21\u5757"
         },
         {
-            "location": "/blog/#listing",
-            "text": "#!js hl_lines=\"8\"\nvar _extends = function(target) {\n  for (var i = 1; i < arguments.length; i++) {\n    var source = arguments[i];\n    for (var key in source) {\n      target[key] = source[key];\n    }\n  }\n  return target;\n};",
-            "title": "Listing"
+            "location": "/oms/salt/#salt",
+            "text": "",
+            "title": "salt\u6a21\u5757"
         },
         {
-            "location": "/blog/#horizontal-rules",
-            "text": "Aenean in finibus diam. Duis mollis est eget nibh volutpat, fermentum aliquet\ndui mollis. Nam vulputate tincidunt fringilla. Nullam dignissim ultrices urna\nnon auctor.   Integer vehicula feugiat magna, a mollis tellus. Nam mollis ex ante, quis\nelementum eros tempor rutrum. Aenean efficitur lobortis lacinia. Nulla\nconsectetur feugiat sodales.",
-            "title": "Horizontal rules"
+            "location": "/oms/salt/#_1",
+            "text": "",
+            "title": "\u8bf7\u7b49\u5f85\u540e\u7eed\u5b8c\u5584\u3002\u3002\u3002"
         },
         {
-            "location": "/blog/#data-tables",
-            "text": "Sollicitudo / Pellentesi  consectetur  adipiscing  elit  arcu  sed      Vivamus a pharetra  yes  yes  yes  yes  yes    Ornare viverra ex  yes  yes  yes  yes  yes    Mauris a ullamcorper  yes  yes  partial  yes  yes    Nullam urna elit  yes  yes  yes  yes  yes    Malesuada eget finibus  yes  yes  yes  yes  yes    Ullamcorper  yes  yes  yes  yes  yes    Vestibulum sodales  yes  -  yes  -  yes    Pulvinar nisl  yes  yes  yes  -  -    Pharetra aliquet est  yes  yes  yes  yes  yes    Sed suscipit  yes  yes  yes  yes  yes    Orci non pretium  yes  partial  -  -  -     Sed sagittis eleifend rutrum. Donec vitae suscipit est. Nullam tempus tellus\nnon sem sollicitudin, quis rutrum leo facilisis. Nulla tempor lobortis orci,\nat elementum urna sodales vitae. In in vehicula nulla, quis ornare libero.     Left  Center  Right      Lorem  dolor  amet    ipsum  sit      Vestibulum vitae orci quis ante viverra ultricies ut eget turpis. Sed eu\nlectus dapibus, eleifend nulla varius, lobortis turpis. In ac hendrerit nisl,\nsit amet laoreet nibh.  \n   \n     \n     \n   \n   \n     \n       Table \n       with colgroups (Pandoc) \n     \n   \n   \n     \n       Lorem \n       ipsum dolor sit amet. \n     \n     \n       Sed sagittis \n       eleifend rutrum. Donec vitae suscipit est.",
-            "title": "Data tables"
+            "location": "/oms/job/",
+            "text": "\u53d1\u5e03\u7cfb\u7edf\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n\n\n\u8bf7\u7b49\u5f85\u540e\u7eed\u5b8c\u5584\u3002\u3002\u3002\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07",
+            "title": "\u53d1\u5e03\u7cfb\u7edf"
+        },
+        {
+            "location": "/oms/job/#_1",
+            "text": "",
+            "title": "\u53d1\u5e03\u7cfb\u7edf"
+        },
+        {
+            "location": "/oms/job/#_2",
+            "text": "",
+            "title": "\u8bf7\u7b49\u5f85\u540e\u7eed\u5b8c\u5584\u3002\u3002\u3002"
+        },
+        {
+            "location": "/oms/tool/",
+            "text": "\u5de5\u5177\u6a21\u5757\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n\n\n\u8bf7\u7b49\u5f85\u540e\u7eed\u5b8c\u5584\u3002\u3002\u3002\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07",
+            "title": "\u5de5\u5177\u4ecb\u7ecd"
+        },
+        {
+            "location": "/oms/tool/#_1",
+            "text": "",
+            "title": "\u5de5\u5177\u6a21\u5757"
+        },
+        {
+            "location": "/oms/tool/#_2",
+            "text": "",
+            "title": "\u8bf7\u7b49\u5f85\u540e\u7eed\u5b8c\u5584\u3002\u3002\u3002"
+        },
+        {
+            "location": "/oms/workticket/",
+            "text": "\u5de5\u5355\u7cfb\u7edf\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n\n\n\u8bf7\u7b49\u5f85\u540e\u7eed\u5b8c\u5584\u3002\u3002\u3002\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07",
+            "title": "\u5de5\u5355\u7cfb\u7edf"
+        },
+        {
+            "location": "/oms/workticket/#_1",
+            "text": "",
+            "title": "\u5de5\u5355\u7cfb\u7edf"
+        },
+        {
+            "location": "/oms/workticket/#_2",
+            "text": "",
+            "title": "\u8bf7\u7b49\u5f85\u540e\u7eed\u5b8c\u5584\u3002\u3002\u3002"
+        },
+        {
+            "location": "/oms/project/",
+            "text": "\u9879\u76ee\u7ba1\u7406\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n\n\n\u8bf7\u7b49\u5f85\u540e\u7eed\u5b8c\u5584\u3002\u3002\u3002\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07",
+            "title": "\u9879\u76ee\u7ba1\u7406"
+        },
+        {
+            "location": "/oms/project/#_1",
+            "text": "",
+            "title": "\u9879\u76ee\u7ba1\u7406"
+        },
+        {
+            "location": "/oms/project/#_2",
+            "text": "",
+            "title": "\u8bf7\u7b49\u5f85\u540e\u7eed\u5b8c\u5584\u3002\u3002\u3002"
+        },
+        {
+            "location": "/oms/zabbix/",
+            "text": "zabbix\u7ba1\u7406\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n\n\n\u8bf7\u7b49\u5f85\u540e\u7eed\u5b8c\u5584\u3002\u3002\u3002\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07",
+            "title": "zabbix\u7ba1\u7406"
+        },
+        {
+            "location": "/oms/zabbix/#zabbix",
+            "text": "",
+            "title": "zabbix\u7ba1\u7406"
+        },
+        {
+            "location": "/oms/zabbix/#_1",
+            "text": "",
+            "title": "\u8bf7\u7b49\u5f85\u540e\u7eed\u5b8c\u5584\u3002\u3002\u3002"
+        },
+        {
+            "location": "/oms/dns/",
+            "text": "dns\u6a21\u5757\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n\n\n\u8bf7\u7b49\u5f85\u540e\u7eed\u5b8c\u5584\u3002\u3002\u3002\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07",
+            "title": "dns\u7ba1\u7406"
+        },
+        {
+            "location": "/oms/dns/#dns",
+            "text": "",
+            "title": "dns\u6a21\u5757"
+        },
+        {
+            "location": "/oms/dns/#_1",
+            "text": "",
+            "title": "\u8bf7\u7b49\u5f85\u540e\u7eed\u5b8c\u5584\u3002\u3002\u3002"
         },
         {
             "location": "/about/",
             "text": "Cinder Theme \nfor MkDocs\n\n\n\nAbout\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nCinder is a clean, responsive theme for static documentation sites that are generated with \nMkDocs\n. It's built on the \nBootstrap framework\n and includes pre-packaged syntax highlighting (\nhighlight.js\n), icons (\n \nFontAwesome\n), and a smashingly legible type scheme to get your message out to your users.\n\n\nYou are looking at the theme and can see a selection of the theme elements on the \nSpecimen page\n.\n\n\nInstall\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nRequired\n: Python 2.6+ or 3.3+\n\n\nInstall MkDocs & Create a New Project\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nIf you haven't installed MkDocs yet, use the following command to install it:\n\n\n$ pip install mkdocs\n\n\n\nNext, navigate to a clean directory and create a new MkDocs project with the following command:\n\n\n$ mkdocs new [projectname]\n\n\n\nReplace \n[projectname]\n with the name of your project (without the brackets).\n\n\nThen navigate to the root of your project directory:\n\n\n$ cd [projectname]\n\n\n\nInstall the Cinder Theme\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nChoose one of the following install approaches:\n\n\n1. Install with pip\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nIf you are using MkDocs v0.15.0 or higher, you can install the Cinder theme with pip using the command:\n\n\n$ pip install mkdocs-cinder\n\n\n\nMkDocs projects use a YAML settings file called \nmkdocs.yml\n.  This is located in the root of your project directory after you use the \nmkdocs new\n command.  Open the file in a text editor and modify it to define Cinder in the \ntheme\n setting as follows (note that this is case-sensitive):\n\n\ndef create(self, validated_data):\n    cmd = SaltState.objects.get(name=validated_data[\"statejob\"]).cmd\n    hosts = validated_data[\"hosts\"]\n    jid = sapi.remote_state(tgt=hosts.split(','), arg=cmd)\n    validated_data[\"j_id\"] = jid\n    job = StateJob.objects.create(**validated_data)\n    job.save()\n    return job\n\n\n\n\nTheme Updates\n: If you choose the pip install approach, you can update your Cinder theme to new releases with the command \n$ pip install --upgrade mkdocs-cinder\n.  Then re-build your static site files (see instructions below).\n\n\n2. Manual Install\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nDownload the Cinder theme archive.\n\n\n  Download Cinder v0.10.0\n\n\nUnpack the contents of the archive into a directory named \ncinder\n at the top level of your MkDocs project directory.\n\n\nYour project directory should now look like this:\n\n\n.\n\u251c\u2500\u2500 mkdocs.yml\n\u251c\u2500\u2500 cinder\n\u2502     \u251c\u2500\u2500 css\n\u2502     \u251c\u2500\u2500 img\n\u2502     \u251c\u2500\u2500 js\n\u2502     \u251c\u2500\u2500 base.html\n\u2502\u00a0\u00a0   \u251c\u2500\u2500 content.html\n\u2502     \u251c\u2500\u2500 404.html\n\u2502     \u251c\u2500\u2500 nav-sub.html\n\u2502\u00a0\u00a0   \u251c\u2500\u2500 nav.html\n\u2502\u00a0\u00a0   \u2514\u2500\u2500 toc.html\n\u2514\u2500\u2500 docs\n      \u2514\u2500\u2500 index.md\n\n\n\n\nMkDocs projects use a YAML settings file called \nmkdocs.yml\n.  This is located in the root of your project directory after you use the \nmkdocs new\n command.  Open the file in a text editor and modify it to include the \ntheme_dir\n setting as follows:\n\n\nsite_name: [YOURPROJECT]\ntheme_dir: cinder\npages:\n- Home: index.md\n\n\n\n\nTheme Updates\n: If you choose the manual install approach, you can update your Cinder theme by downloading the new cinder.zip release archive and including it in your project. Then re-build your static site files (see instructions below).\n\n\nTest with a Local Site Server\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nUse the following command to establish a local server for your site:\n\n\n$ mkdocs serve\n\n\n\nThen open your site in any browser at the URL \nhttp://localhost:8000\n.\n\n\nCreate Your Site\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nAdd Content with Markdown Syntax\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nGet to work on your site home page by opening the \ndocs/index.md\n file and editing it in Markdown syntax.  The HTML automatically updates in the browser when you save the Markdown file if you use the MkDocs server (see command above).\n\n\nAdd New Pages\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nAdd new pages to your site by creating a new Markdown file in your \ndocs\n directory, then linking to the new page in the \nmkdocs.yml\n file.  This uses a \nPage Name : Markdown file\n syntax.\n\n\nFor example, to add an About page using a Markdown file that is located on the path \ndocs/about.md\n, you would format the \nmkdocs.yml\n file as follows:\n\n\nsite_name: [YOURPROJECT]\ntheme_dir: cinder\npages:\n- Home: index.md\n- About: about.md\n\n\n\nAdd additional pages to your site by repeating the above series of steps.\n\n\nBuild Your Site\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nBuild your site files with the command:\n\n\n$ mkdocs build\n\n\n\nYour site files are built in the \nsite\n directory and are ready to use.  Deploy the contents of the \nsite\n directory to your web server.\n\n\nSite Customization\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nThe following are a few common customizations that you might be interested in.  For much more detail about the configuration of your site, check out the \nMkDocs Configuration documentation\n.\n\n\nSite Favicon\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nPlace your site favicon image file in the top level of your docs directory and then include a new \nsite_favicon:\n field in the \nmkdocs.yml\n file:\n\n\nsite_name: [YOURPROJECT]\ntheme_dir: cinder\nsite_favicon: favicon.ico\npages:\n  - Home: index.md\n  - About: about.md\n\n\n\nAdd Your Own CSS Stylesheets\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nCreate a \ncss\n directory inside your \ndocs\n directory and add your CSS files.  You can overwrite any of the Cinder styles in your CSS files.  Then include your CSS files in the \nmkdocs.yml\n file with the \nextra_css\n field:\n\n\nsite_name: [YOURPROJECT]\ntheme_dir: cinder\nextra_css:\n  - \"css/mystyle.css\"\n  - \"css/myotherstyle.css\"\npages:\n  - Home: index.md\n  - About: about.md\n\n\n\nYour CSS styles fall at the end of the cascade and will override all styles included in the theme (including Bootstrap and default Cinder styles).  You can find the Cinder and Bootstrap CSS files on the paths \ncinder/css/cinder.css\n and \ncinder/css/bootstrap.min.css\n, respectively.\n\n\nAdd Your Own JavaScript\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nCreate a \njs\n directory inside your \ndocs\n directory and add your JS files.  Then include your JS files in the \nmkdocs.yml\n file with the \nextra_js\n field:\n\n\nsite_name: [YOURPROJECT]\ntheme_dir: cinder\nextra_js:\n  - \"js/myscript.js\"\n  - \"js/myotherscript.js\"\npages:\n  - Home: index.md\n  - About: about.md\n\n\n\nGithub or Bitbucket Repository Link\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nInclude the \nrepo_url\n field and define it with your repository URL:\n\n\nsite_name: [YOURPROJECT]\ntheme_dir: cinder\nrepo_url: \"https://github.com/chrissimpkins/cinder\"\npages:\n  - Home: index.md\n  - About: about.md\n\n\n\nThe link appears at the upper right hand corner of your site.\n\n\nLicense Declaration and Link\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nThe Cinder theme displays your license declaration in the footer if you include a \ncopyright\n field and define it with the text (and optionally the HTML link) that you would like to display:\n\n\nsite_name: [YOURPROJECT]\ntheme_dir: cinder\ncopyright: \"Cinder is licensed under the <a href='https://github.com/chrissimpkins/cinder/blob/master/LICENSE.md'>MIT license\n\"\npages:\n  - Home: index.md\n  - About: about.md\n\n\n\nIssues\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nIf you have any issues with the theme, please report them on the Cinder repository:\n\n\nReport Issue\n\n\nActive Issues\n\n\nLicense\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nCinder is licensed under the MIT license. The full text of the license is available \nhere\n.",
-            "title": "view"
+            "title": "about"
         },
         {
             "location": "/about/#about",
@@ -331,127 +346,127 @@
             "title": "License"
         },
         {
-            "location": "/about/about/",
+            "location": "/about/me/",
             "text": "Specimen\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nBody copy\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Cras arcu libero,\nmollis sed massa vel, \nornare viverra ex\n. Mauris a ullamcorper lacus. Nullam\nurna elit, malesuada eget finibus ut, ullamcorper ac tortor. Vestibulum sodales\npulvinar nisl, pharetra aliquet est. Quisque volutpat erat ac nisi accumsan\ntempor.\n\n\nSed suscipit\n, orci non pretium pretium, quam mi gravida metus, vel\nvenenatis justo est condimentum diam. Maecenas non ornare justo. Nam a ipsum\neros. \nNulla aliquam\n orci sit amet nisl posuere malesuada. Proin aliquet\nnulla velit, quis ultricies orci feugiat et. \nUt tincidunt sollicitudin\n\ntincidunt. Aenean ullamcorper sit amet nulla at interdum.\n\n\nHeadings\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nThe 3\nrd\n level\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nThe 4\nth\n level\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nThe 5\nth\n level\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nThe 6\nth\n level\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nHeadings \nwith secondary text\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nThe 3\nrd\n level \nwith secondary text\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nThe 4\nth\n level \nwith secondary text\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nThe 5\nth\n level \nwith secondary text\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nThe 6\nth\n level \nwith secondary text\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nBlockquotes\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n\n\nMorbi eget dapibus felis. Vivamus venenatis porttitor tortor sit amet rutrum.\n  Pellentesque aliquet quam enim, eu volutpat urna rutrum a. Nam vehicula nunc\n  mauris, a ultricies libero efficitur sed. \nClass aptent\n taciti sociosqu ad\n  litora torquent per conubia nostra, per inceptos himenaeos. Sed molestie\n  imperdiet consectetur.\n\n\n\n\nBlockquote nesting\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n\n\nSed aliquet\n, neque at rutrum mollis, neque nisi tincidunt nibh, vitae\n  faucibus lacus nunc at lacus. Nunc scelerisque, quam id cursus sodales, lorem\n  \nlibero fermentum\n urna, ut efficitur elit ligula et nunc.\n\n\n\n\nMauris dictum mi lacus, sit amet pellentesque urna vehicula fringilla.\n    Ut sit amet placerat ante. Proin sed elementum nulla. Nunc vitae sem odio.\n    Suspendisse ac eros arcu. Vivamus orci erat, volutpat a tempor et, rutrum.\n    eu odio.\n\n\n\n\nSuspendisse rutrum facilisis risus\n, eu posuere neque commodo a.\n      Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed nec leo\n      bibendum, sodales mauris ut, tincidunt massa.\n\n\n\n\n\n\n\n\nOther content blocks\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n\n\nVestibulum vitae orci quis ante viverra ultricies ut eget turpis. Sed eu\n  lectus dapibus, eleifend nulla varius, lobortis turpis. In ac hendrerit nisl,\n  sit amet laoreet nibh.\n  \njs\n  var _extends = function(target) {\n    for (var i = 1; i < arguments.length; i++) {\n      var source = arguments[i];\n      for (var key in source) {\n        target[key] = source[key];\n      }\n    }\n    return target;\n  };\n\n\n\n\nPraesent at \nreturn\n \ntarget\n, sodales nibh vel, tempor felis. Fusce\n      vel lacinia lacus. Suspendisse rhoncus nunc non nisi iaculis ultrices.\n      Donec consectetur mauris non neque imperdiet, eget volutpat libero.\n\n\n\n\n\n\nLists\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nUnordered lists\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n\n\n\n\nSed sagittis eleifend rutrum. Donec vitae suscipit est. Nullam tempus tellus\n  non sem sollicitudin, quis rutrum leo facilisis. Nulla tempor lobortis orci,\n  at elementum urna sodales vitae. In in vehicula nulla, quis ornare libero.\n\n\n\n\nDuis mollis est eget nibh volutpat, fermentum aliquet dui mollis.\n\n\nNam vulputate tincidunt fringilla.\n\n\nNullam dignissim ultrices urna non auctor.\n\n\n\n\n\n\n\n\nAliquam metus eros, pretium sed nulla venenatis, faucibus auctor ex. Proin ut\n  eros sed sapien ullamcorper consequat. Nunc ligula ante, fringilla at aliquam\n  ac, aliquet sed mauris.\n\n\n\n\n\n\nNulla et rhoncus turpis. Mauris ultricies elementum leo. Duis efficitur\n  accumsan nibh eu mattis. Vivamus tempus velit eros, porttitor placerat nibh\n  lacinia sed. Aenean in finibus diam.\n\n\n\n\n\n\nOrdered lists\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n\n\n\n\nInteger vehicula feugiat magna, a mollis tellus. Nam mollis ex ante, quis\n  elementum eros tempor rutrum. Aenean efficitur lobortis lacinia. Nulla\n  consectetur feugiat sodales.\n\n\n\n\n\n\nCum sociis natoque penatibus et magnis dis parturient montes, nascetur\n  ridiculus mus. Aliquam ornare feugiat quam et egestas. Nunc id erat et quam\n  pellentesque lacinia eu vel odio.\n\n\n\n\n\n\nVivamus venenatis porttitor tortor sit amet rutrum. Pellentesque aliquet\n  quam enim, eu volutpat urna rutrum a. Nam vehicula nunc mauris, a\n  ultricies libero efficitur sed.\n\n\n\n\nMauris dictum mi lacus\n\n\nUt sit amet placerat ante\n\n\nSuspendisse ac eros arcu\n\n\n\n\n\n\n\n\nMorbi eget dapibus felis. Vivamus venenatis porttitor tortor sit amet\n  rutrum. Pellentesque aliquet quam enim, eu volutpat urna rutrum a. Sed\n  aliquet, neque at rutrum mollis, neque nisi tincidunt nibh.\n\n\n\n\n\n\nPellentesque eget \nvar\n \n_extends\n ornare tellus, ut gravida mi.\n\njs hl_lines=\"1\"\nvar _extends = function(target) {\n  for (var i = 1; i < arguments.length; i++) {\n    var source = arguments[i];\n    for (var key in source) {\n      target[key] = source[key];\n    }\n  }\n  return target;\n};\n\n\n\n\n\n\n\n\n\n\nVivamus id mi enim. Integer id turpis sapien. Ut condimentum lobortis\n  sagittis. Aliquam purus tellus, faucibus eget urna at, iaculis venenatis\n  nulla. Vivamus a pharetra leo.\n\n\n\n\n\n\nDefinition lists\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n\n\nLorem ipsum dolor sit amet\n\n\n\n\nSed sagittis eleifend rutrum. Donec vitae suscipit est. Nullam tempus\ntellus non sem sollicitudin, quis rutrum leo facilisis. Nulla tempor\nlobortis orci, at elementum urna sodales vitae. In in vehicula nulla.\n\n\nDuis mollis est eget nibh volutpat, fermentum aliquet dui mollis.\nNam vulputate tincidunt fringilla.\nNullam dignissim ultrices urna non auctor.\n\n\n\n\nCras arcu libero\n\n\n\n\nAliquam metus eros, pretium sed nulla venenatis, faucibus auctor ex. Proin\nut eros sed sapien ullamcorper consequat. Nunc ligula ante, fringilla at\naliquam ac, aliquet sed mauris.\n\n\n\n\n\n\nCode blocks\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nInline\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nMorbi eget \ndapibus felis\n. Vivamus \nvenenatis porttitor\n tortor sit amet\nrutrum. Class aptent taciti sociosqu ad litora torquent per conubia nostra,\nper inceptos himenaeos. \nPellentesque aliquet quam enim\n, eu volutpat urna\nrutrum a.\n\n\nNam vehicula nunc \nreturn\n \ntarget\n mauris, a ultricies libero efficitur\nsed. Sed molestie imperdiet consectetur. Vivamus a pharetra leo. Pellentesque\neget ornare tellus, ut gravida mi. Fusce vel lacinia lacus.\n\n\nListing\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n#!js hl_lines=\"8\"\nvar _extends = function(target) {\n  for (var i = 1; i < arguments.length; i++) {\n    var source = arguments[i];\n    for (var key in source) {\n      target[key] = source[key];\n    }\n  }\n  return target;\n};\n\n\n\nHorizontal rules\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nAenean in finibus diam. Duis mollis est eget nibh volutpat, fermentum aliquet\ndui mollis. Nam vulputate tincidunt fringilla. Nullam dignissim ultrices urna\nnon auctor.\n\n\n\n\nInteger vehicula feugiat magna, a mollis tellus. Nam mollis ex ante, quis\nelementum eros tempor rutrum. Aenean efficitur lobortis lacinia. Nulla\nconsectetur feugiat sodales.\n\n\nData tables\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n\n\n\n\n\n\nSollicitudo / Pellentesi\n\n\nconsectetur\n\n\nadipiscing\n\n\nelit\n\n\narcu\n\n\nsed\n\n\n\n\n\n\n\n\n\n\nVivamus a pharetra\n\n\nyes\n\n\nyes\n\n\nyes\n\n\nyes\n\n\nyes\n\n\n\n\n\n\nOrnare viverra ex\n\n\nyes\n\n\nyes\n\n\nyes\n\n\nyes\n\n\nyes\n\n\n\n\n\n\nMauris a ullamcorper\n\n\nyes\n\n\nyes\n\n\npartial\n\n\nyes\n\n\nyes\n\n\n\n\n\n\nNullam urna elit\n\n\nyes\n\n\nyes\n\n\nyes\n\n\nyes\n\n\nyes\n\n\n\n\n\n\nMalesuada eget finibus\n\n\nyes\n\n\nyes\n\n\nyes\n\n\nyes\n\n\nyes\n\n\n\n\n\n\nUllamcorper\n\n\nyes\n\n\nyes\n\n\nyes\n\n\nyes\n\n\nyes\n\n\n\n\n\n\nVestibulum sodales\n\n\nyes\n\n\n-\n\n\nyes\n\n\n-\n\n\nyes\n\n\n\n\n\n\nPulvinar nisl\n\n\nyes\n\n\nyes\n\n\nyes\n\n\n-\n\n\n-\n\n\n\n\n\n\nPharetra aliquet est\n\n\nyes\n\n\nyes\n\n\nyes\n\n\nyes\n\n\nyes\n\n\n\n\n\n\nSed suscipit\n\n\nyes\n\n\nyes\n\n\nyes\n\n\nyes\n\n\nyes\n\n\n\n\n\n\nOrci non pretium\n\n\nyes\n\n\npartial\n\n\n-\n\n\n-\n\n\n-\n\n\n\n\n\n\n\n\nSed sagittis eleifend rutrum. Donec vitae suscipit est. Nullam tempus tellus\nnon sem sollicitudin, quis rutrum leo facilisis. Nulla tempor lobortis orci,\nat elementum urna sodales vitae. In in vehicula nulla, quis ornare libero.\n\n\n\n\n\n\n\n\nLeft\n\n\nCenter\n\n\nRight\n\n\n\n\n\n\n\n\n\n\nLorem\n\n\ndolor\n\n\namet\n\n\n\n\n\n\nipsum\n\n\nsit\n\n\n\n\n\n\n\n\n\n\nVestibulum vitae orci quis ante viverra ultricies ut eget turpis. Sed eu\nlectus dapibus, eleifend nulla varius, lobortis turpis. In ac hendrerit nisl,\nsit amet laoreet nibh.\n\n\n\n  \n\n    \n\n    \n\n  \n\n  \n\n    \n\n      \nTable\n\n      \nwith colgroups (Pandoc)\n\n    \n\n  \n\n  \n\n    \n\n      \nLorem\n\n      \nipsum dolor sit amet.\n\n    \n\n    \n\n      \nSed sagittis\n\n      \neleifend rutrum. Donec vitae suscipit est.",
             "title": "me"
         },
         {
-            "location": "/about/about/#specimen",
+            "location": "/about/me/#specimen",
             "text": "",
             "title": "Specimen"
         },
         {
-            "location": "/about/about/#body-copy",
+            "location": "/about/me/#body-copy",
             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras arcu libero,\nmollis sed massa vel,  ornare viverra ex . Mauris a ullamcorper lacus. Nullam\nurna elit, malesuada eget finibus ut, ullamcorper ac tortor. Vestibulum sodales\npulvinar nisl, pharetra aliquet est. Quisque volutpat erat ac nisi accumsan\ntempor.  Sed suscipit , orci non pretium pretium, quam mi gravida metus, vel\nvenenatis justo est condimentum diam. Maecenas non ornare justo. Nam a ipsum\neros.  Nulla aliquam  orci sit amet nisl posuere malesuada. Proin aliquet\nnulla velit, quis ultricies orci feugiat et.  Ut tincidunt sollicitudin \ntincidunt. Aenean ullamcorper sit amet nulla at interdum.",
             "title": "Body copy"
         },
         {
-            "location": "/about/about/#headings",
+            "location": "/about/me/#headings",
             "text": "",
             "title": "Headings"
         },
         {
-            "location": "/about/about/#the-3rd-level",
+            "location": "/about/me/#the-3rd-level",
             "text": "",
             "title": "The 3rd level"
         },
         {
-            "location": "/about/about/#the-4th-level",
+            "location": "/about/me/#the-4th-level",
             "text": "",
             "title": "The 4th level"
         },
         {
-            "location": "/about/about/#the-5th-level",
+            "location": "/about/me/#the-5th-level",
             "text": "",
             "title": "The 5th level"
         },
         {
-            "location": "/about/about/#the-6th-level",
+            "location": "/about/me/#the-6th-level",
             "text": "",
             "title": "The 6th level"
         },
         {
-            "location": "/about/about/#headings-with-secondary-text",
+            "location": "/about/me/#headings-with-secondary-text",
             "text": "",
             "title": "Headings with secondary text"
         },
         {
-            "location": "/about/about/#the-3rd-level-with-secondary-text",
+            "location": "/about/me/#the-3rd-level-with-secondary-text",
             "text": "",
             "title": "The 3rd level with secondary text"
         },
         {
-            "location": "/about/about/#the-4th-level-with-secondary-text",
+            "location": "/about/me/#the-4th-level-with-secondary-text",
             "text": "",
             "title": "The 4th level with secondary text"
         },
         {
-            "location": "/about/about/#the-5th-level-with-secondary-text",
+            "location": "/about/me/#the-5th-level-with-secondary-text",
             "text": "",
             "title": "The 5th level with secondary text"
         },
         {
-            "location": "/about/about/#the-6th-level-with-secondary-text",
+            "location": "/about/me/#the-6th-level-with-secondary-text",
             "text": "",
             "title": "The 6th level with secondary text"
         },
         {
-            "location": "/about/about/#blockquotes",
+            "location": "/about/me/#blockquotes",
             "text": "Morbi eget dapibus felis. Vivamus venenatis porttitor tortor sit amet rutrum.\n  Pellentesque aliquet quam enim, eu volutpat urna rutrum a. Nam vehicula nunc\n  mauris, a ultricies libero efficitur sed.  Class aptent  taciti sociosqu ad\n  litora torquent per conubia nostra, per inceptos himenaeos. Sed molestie\n  imperdiet consectetur.",
             "title": "Blockquotes"
         },
         {
-            "location": "/about/about/#blockquote-nesting",
+            "location": "/about/me/#blockquote-nesting",
             "text": "Sed aliquet , neque at rutrum mollis, neque nisi tincidunt nibh, vitae\n  faucibus lacus nunc at lacus. Nunc scelerisque, quam id cursus sodales, lorem\n   libero fermentum  urna, ut efficitur elit ligula et nunc.   Mauris dictum mi lacus, sit amet pellentesque urna vehicula fringilla.\n    Ut sit amet placerat ante. Proin sed elementum nulla. Nunc vitae sem odio.\n    Suspendisse ac eros arcu. Vivamus orci erat, volutpat a tempor et, rutrum.\n    eu odio.   Suspendisse rutrum facilisis risus , eu posuere neque commodo a.\n      Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed nec leo\n      bibendum, sodales mauris ut, tincidunt massa.",
             "title": "Blockquote nesting"
         },
         {
-            "location": "/about/about/#other-content-blocks",
+            "location": "/about/me/#other-content-blocks",
             "text": "Vestibulum vitae orci quis ante viverra ultricies ut eget turpis. Sed eu\n  lectus dapibus, eleifend nulla varius, lobortis turpis. In ac hendrerit nisl,\n  sit amet laoreet nibh.\n   js\n  var _extends = function(target) {\n    for (var i = 1; i < arguments.length; i++) {\n      var source = arguments[i];\n      for (var key in source) {\n        target[key] = source[key];\n      }\n    }\n    return target;\n  };   Praesent at  return   target , sodales nibh vel, tempor felis. Fusce\n      vel lacinia lacus. Suspendisse rhoncus nunc non nisi iaculis ultrices.\n      Donec consectetur mauris non neque imperdiet, eget volutpat libero.",
             "title": "Other content blocks"
         },
         {
-            "location": "/about/about/#lists",
+            "location": "/about/me/#lists",
             "text": "",
             "title": "Lists"
         },
         {
-            "location": "/about/about/#unordered-lists",
+            "location": "/about/me/#unordered-lists",
             "text": "Sed sagittis eleifend rutrum. Donec vitae suscipit est. Nullam tempus tellus\n  non sem sollicitudin, quis rutrum leo facilisis. Nulla tempor lobortis orci,\n  at elementum urna sodales vitae. In in vehicula nulla, quis ornare libero.   Duis mollis est eget nibh volutpat, fermentum aliquet dui mollis.  Nam vulputate tincidunt fringilla.  Nullam dignissim ultrices urna non auctor.     Aliquam metus eros, pretium sed nulla venenatis, faucibus auctor ex. Proin ut\n  eros sed sapien ullamcorper consequat. Nunc ligula ante, fringilla at aliquam\n  ac, aliquet sed mauris.    Nulla et rhoncus turpis. Mauris ultricies elementum leo. Duis efficitur\n  accumsan nibh eu mattis. Vivamus tempus velit eros, porttitor placerat nibh\n  lacinia sed. Aenean in finibus diam.",
             "title": "Unordered lists"
         },
         {
-            "location": "/about/about/#ordered-lists",
+            "location": "/about/me/#ordered-lists",
             "text": "Integer vehicula feugiat magna, a mollis tellus. Nam mollis ex ante, quis\n  elementum eros tempor rutrum. Aenean efficitur lobortis lacinia. Nulla\n  consectetur feugiat sodales.    Cum sociis natoque penatibus et magnis dis parturient montes, nascetur\n  ridiculus mus. Aliquam ornare feugiat quam et egestas. Nunc id erat et quam\n  pellentesque lacinia eu vel odio.    Vivamus venenatis porttitor tortor sit amet rutrum. Pellentesque aliquet\n  quam enim, eu volutpat urna rutrum a. Nam vehicula nunc mauris, a\n  ultricies libero efficitur sed.   Mauris dictum mi lacus  Ut sit amet placerat ante  Suspendisse ac eros arcu     Morbi eget dapibus felis. Vivamus venenatis porttitor tortor sit amet\n  rutrum. Pellentesque aliquet quam enim, eu volutpat urna rutrum a. Sed\n  aliquet, neque at rutrum mollis, neque nisi tincidunt nibh.    Pellentesque eget  var   _extends  ornare tellus, ut gravida mi. js hl_lines=\"1\"\nvar _extends = function(target) {\n  for (var i = 1; i < arguments.length; i++) {\n    var source = arguments[i];\n    for (var key in source) {\n      target[key] = source[key];\n    }\n  }\n  return target;\n};      Vivamus id mi enim. Integer id turpis sapien. Ut condimentum lobortis\n  sagittis. Aliquam purus tellus, faucibus eget urna at, iaculis venenatis\n  nulla. Vivamus a pharetra leo.",
             "title": "Ordered lists"
         },
         {
-            "location": "/about/about/#definition-lists",
+            "location": "/about/me/#definition-lists",
             "text": "Lorem ipsum dolor sit amet   Sed sagittis eleifend rutrum. Donec vitae suscipit est. Nullam tempus\ntellus non sem sollicitudin, quis rutrum leo facilisis. Nulla tempor\nlobortis orci, at elementum urna sodales vitae. In in vehicula nulla.  Duis mollis est eget nibh volutpat, fermentum aliquet dui mollis.\nNam vulputate tincidunt fringilla.\nNullam dignissim ultrices urna non auctor.   Cras arcu libero   Aliquam metus eros, pretium sed nulla venenatis, faucibus auctor ex. Proin\nut eros sed sapien ullamcorper consequat. Nunc ligula ante, fringilla at\naliquam ac, aliquet sed mauris.",
             "title": "Definition lists"
         },
         {
-            "location": "/about/about/#code-blocks",
+            "location": "/about/me/#code-blocks",
             "text": "",
             "title": "Code blocks"
         },
         {
-            "location": "/about/about/#inline",
+            "location": "/about/me/#inline",
             "text": "Morbi eget  dapibus felis . Vivamus  venenatis porttitor  tortor sit amet\nrutrum. Class aptent taciti sociosqu ad litora torquent per conubia nostra,\nper inceptos himenaeos.  Pellentesque aliquet quam enim , eu volutpat urna\nrutrum a.  Nam vehicula nunc  return   target  mauris, a ultricies libero efficitur\nsed. Sed molestie imperdiet consectetur. Vivamus a pharetra leo. Pellentesque\neget ornare tellus, ut gravida mi. Fusce vel lacinia lacus.",
             "title": "Inline"
         },
         {
-            "location": "/about/about/#listing",
+            "location": "/about/me/#listing",
             "text": "#!js hl_lines=\"8\"\nvar _extends = function(target) {\n  for (var i = 1; i < arguments.length; i++) {\n    var source = arguments[i];\n    for (var key in source) {\n      target[key] = source[key];\n    }\n  }\n  return target;\n};",
             "title": "Listing"
         },
         {
-            "location": "/about/about/#horizontal-rules",
+            "location": "/about/me/#horizontal-rules",
             "text": "Aenean in finibus diam. Duis mollis est eget nibh volutpat, fermentum aliquet\ndui mollis. Nam vulputate tincidunt fringilla. Nullam dignissim ultrices urna\nnon auctor.   Integer vehicula feugiat magna, a mollis tellus. Nam mollis ex ante, quis\nelementum eros tempor rutrum. Aenean efficitur lobortis lacinia. Nulla\nconsectetur feugiat sodales.",
             "title": "Horizontal rules"
         },
         {
-            "location": "/about/about/#data-tables",
+            "location": "/about/me/#data-tables",
             "text": "Sollicitudo / Pellentesi  consectetur  adipiscing  elit  arcu  sed      Vivamus a pharetra  yes  yes  yes  yes  yes    Ornare viverra ex  yes  yes  yes  yes  yes    Mauris a ullamcorper  yes  yes  partial  yes  yes    Nullam urna elit  yes  yes  yes  yes  yes    Malesuada eget finibus  yes  yes  yes  yes  yes    Ullamcorper  yes  yes  yes  yes  yes    Vestibulum sodales  yes  -  yes  -  yes    Pulvinar nisl  yes  yes  yes  -  -    Pharetra aliquet est  yes  yes  yes  yes  yes    Sed suscipit  yes  yes  yes  yes  yes    Orci non pretium  yes  partial  -  -  -     Sed sagittis eleifend rutrum. Donec vitae suscipit est. Nullam tempus tellus\nnon sem sollicitudin, quis rutrum leo facilisis. Nulla tempor lobortis orci,\nat elementum urna sodales vitae. In in vehicula nulla, quis ornare libero.     Left  Center  Right      Lorem  dolor  amet    ipsum  sit      Vestibulum vitae orci quis ante viverra ultricies ut eget turpis. Sed eu\nlectus dapibus, eleifend nulla varius, lobortis turpis. In ac hendrerit nisl,\nsit amet laoreet nibh.  \n   \n     \n     \n   \n   \n     \n       Table \n       with colgroups (Pandoc) \n     \n   \n   \n     \n       Lorem \n       ipsum dolor sit amet. \n     \n     \n       Sed sagittis \n       eleifend rutrum. Donec vitae suscipit est.",
             "title": "Data tables"
         }
