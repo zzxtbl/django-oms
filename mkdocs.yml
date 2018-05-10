@@ -60,7 +60,18 @@ markdown_extensions:
 
 pages:
   - Home: index.md
-  - Blog: blog.md
+  - Oms: 
+    - 开始: oms/index.md
+    - 用户模块: oms/user.md
+    - 权限&菜单模块: oms/perm.md
+    - 主机模块: oms/host.md
+    - salt模块: oms/salt.md
+    - 发布系统: oms/job.md
+    - 工具介绍: oms/tool.md
+    - 工单系统: oms/workticket.md
+    - 项目管理: oms/project.md
+    - zabbix管理: oms/zabbix.md
+    - dns管理: oms/dns.md
   - About:
-      - view: about/index.md
-      - me: about/about.md
+    - about: about/index.md
+    - me: about/me.md
