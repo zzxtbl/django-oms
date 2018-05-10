@@ -18,13 +18,7 @@
     </url>
         
     <url>
-     <loc>https://itimor.github.io/django-oms//oms/user/</loc>
-     <lastmod>2018-05-10</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://itimor.github.io/django-oms//oms/menu/</loc>
+     <loc>https://itimor.github.io/django-oms//oms/base/</loc>
      <lastmod>2018-05-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
