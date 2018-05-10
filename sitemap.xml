@@ -18,7 +18,7 @@
     </url>
         
     <url>
-     <loc>https://itimor.github.io/django-oms//oms/user/</loc>
+     <loc>https://itimor.github.io/django-oms//oms/base/</loc>
      <lastmod>2018-05-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -36,43 +36,13 @@
     </url>
         
     <url>
-     <loc>https://itimor.github.io/django-oms//oms/salt/</loc>
-     <lastmod>2018-05-10</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://itimor.github.io/django-oms//oms/job/</loc>
-     <lastmod>2018-05-10</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://itimor.github.io/django-oms//oms/tool/</loc>
-     <lastmod>2018-05-10</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://itimor.github.io/django-oms//oms/workticket/</loc>
-     <lastmod>2018-05-10</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://itimor.github.io/django-oms//oms/project/</loc>
-     <lastmod>2018-05-10</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://itimor.github.io/django-oms//oms/zabbix/</loc>
-     <lastmod>2018-05-10</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
      <loc>https://itimor.github.io/django-oms//oms/dns/</loc>
+     <lastmod>2018-05-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://itimor.github.io/django-oms//oms/oa/</loc>
      <lastmod>2018-05-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
