@@ -669,9 +669,9 @@ code, kbd, pre, samp {
 code {
     padding: 3px;
     font-size: 80%;
-    color: #ff9ac4;
+    color: #ff5d5f;
     white-space: nowrap;
-    background-color: #d5ffc4;
+    background-color: #bfe5b0;
     border-radius: 5px
 }
 

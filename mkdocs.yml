@@ -62,10 +62,9 @@ pages:
   - Home: index.md
   - Oms: 
     - 开始: oms/index.md
-    - 用户模块: oms/user.md
-    - 菜单模块: oms/menu.md
-    - 主机 ღ salt模块: oms/host.md
-    - dns ღ zabbix模块: oms/dns.md
+    - 基础模块: oms/base.md
+    - 主机和salt: oms/host.md
+    - dns和zabbix: oms/dns.md
     - 办公系统: oms/oa.md
   - About:
     - about: about/index.md
