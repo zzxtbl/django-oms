@@ -1,9 +1,9 @@
 site_name: oms运维管理系统
 site_description: 'oms运维管理系统 python salt django zabbox oms'
-site_url: 'https://itimor.github.io/ojbk-oms/'
+site_url: 'https://itimor.github.io/django-oms/'
 
 repo_name: 'Github'
-repo_url: 'https://github.com/itimor/ojbk-oms'
+repo_url: 'https://github.com/itimor/django-oms'
 
 theme:
   name: cinder
