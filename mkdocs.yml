@@ -12,6 +12,13 @@ theme:
   logo: 'assets/images/favicon.ico'
   feature:
     tabs: true
+  language: zh
+  palette:
+    primary: cyan
+    accent: purple
+  font:
+    text: Hind Siliguri
+    code: Noto Sans
 
 copyright: "Copyright @ Itimor"
 
