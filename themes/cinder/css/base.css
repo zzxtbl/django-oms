@@ -12,7 +12,7 @@ h1[id]:before, h2[id]:before, h3[id]:before, h4[id]:before, h5[id]:before, h6[id
     height: 75px;
 }
 
-p > img {
+p > a img {
     max-width: 100%;
     height: auto;
 }

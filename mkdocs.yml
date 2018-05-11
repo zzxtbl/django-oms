@@ -1,34 +1,17 @@
 site_name: oms运维管理系统
-site_description: 'oms运维管理系统 python salt django zabbox oms'
+site_description: '运维自动化 python salt django zabbix oms'
 site_url: 'https://itimor.github.io/django-oms/'
 
-repo_name: 'Github'
+repo_name: 'GitHub'
 repo_url: 'https://github.com/itimor/django-oms'
 
 theme:
-  name: cinder
+  name: null
   custom_dir: themes/cinder
-  language: zh
-  palette:
-    primary: cyan
-    accent: purple
-  font:
-    text: Hind Siliguri
-    code: Noto Sans
+  show_edit: false
   logo: 'assets/images/favicon.ico'
   feature:
     tabs: true
-
-extra:
-  social:
-    - type: 'github'
-      link: 'https://github.com/itimor'
-    - type: 'twitter'
-      link: 'https://twitter.com/itimor'
-    - type: 'linkedin'
-      link: 'https://linkedin.com/in/itimor'
-  search:
-    language: 'en, zh'
 
 copyright: "Copyright @ Itimor"
 
@@ -36,9 +19,6 @@ use_directory_urls: true
 
 markdown_extensions:
     - admonition
-#    - codehilite:
-#        guess_lang: false
-#        linenums: false
     - toc:
         permalink: (ง •̀_•́)ง
     - footnotes
@@ -63,9 +43,17 @@ pages:
   - Oms: 
     - 开始: oms/index.md
     - 基础模块: oms/base.md
-    - 主机和salt: oms/host.md
+    - salt与主机: oms/host.md
     - dns和zabbix: oms/dns.md
     - 办公系统: oms/oa.md
-  - About:
-    - about: about/index.md
-    - me: about/me.md
+  - Problem:
+    - about: problem/index.md
+    - me: problem/me.md
+
+dev_addr: 0.0.0.0:5000
+
+extra_css:
+  - assets/css/extra.css
+
+extra_javascript:
+  - assets/js/extra.js

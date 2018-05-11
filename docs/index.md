@@ -1,5 +1,4 @@
 # 概述
-
 随便写写
 
 ---
@@ -17,16 +16,16 @@
 > 先来几张样图
 
 ### 1. 首页
-![首页](/images/index/index1.png)
+![首页](/assets/images/index/index1.png)
 
 ### 2. 工单系统
-![工单系统](/images/index/index2.png)
+![工单系统](/assets/images/index/index2.png)
 
 ### 3. 发布系统
-![发布系统](/images/index/index3.png)
+![发布系统](/assets/images/index/index3.png)
 
 ### 4. 执行命令
-![执行命令](/images/index/index4.png)
+![执行命令](/assets/images/index/index4.png)
 
 
 ## 目录介绍

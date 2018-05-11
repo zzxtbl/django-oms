@@ -1,7 +1,7 @@
-# dns模块
+# dns和zabbix
 
 ---
 
-## 请等待后续完善。。。
+## dns管理
 
-![404](/images/404.jpg)
+## zabbix管理

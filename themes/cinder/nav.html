@@ -15,7 +15,7 @@
 
             <!-- Main title -->
             <a class="navbar-brand" href="{{ nav.homepage.url }}">
-                <img src="{{ base_url }}/img/favicon.ico" height="20"/>
+                <img src="{{ base_url }}/{{ config.theme.logo }}" height="20"/>
                 {{ config.site_name }}
             </a>
         </div>
@@ -73,7 +73,7 @@
                 {%- endblock %}
 
                 {%- block repo %}
-                    {%- if page and page.edit_url %}
+                    {%- if config.theme.show_edit and page and page.edit_url %}
                     <li>
                         <a href="{{ page.edit_url }}">
                             {%- if config.repo_name == 'GitHub' -%}
