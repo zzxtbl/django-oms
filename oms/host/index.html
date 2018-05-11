@@ -179,7 +179,11 @@
 <p>SaltStack经常被描述为Func加强版+Puppet精简版。作为一个强大的配置管理工具，在日常的运维工作中是必不可少的，这里是通过调用 <code>salt api</code> 来实现在web界面操作saltstack.</p>
 </blockquote>
 <h3 id="1-saltapi">1. saltapi<a class="headerlink" href="#1-saltapi" title="Permanent link">(ง •̀_•́)ง</a></h3>
-<p>salt模块的核心，代码详见 <a href="https://github.com/itimor/django-oms/blob/master/omsBackend/salts/saltapi.py">saltapi.py</a>, 这个脚本涵盖了saltapi的一些常用操作，比如 minion管理、远程执行命令、state服务等。</p>
+<p>salt模块的核心</p>
+<blockquote>
+<p><a href="https://github.com/itimor/django-oms/blob/master/omsBackend/salts/saltapi.py">saltapi.py</a></p>
+</blockquote>
+<p>这个脚本涵盖了saltapi的一些常用操作，比如 minion管理、远程执行命令、state服务等。</p>
 <h3 id="2">2. 发布模块<a class="headerlink" href="#2" title="Permanent link">(ง •̀_•́)ง</a></h3>
 <p>这个模块是依赖 <code>saltapi</code> 的远程执行命令功能，salt自带异步功能，首先它把发布任务放入任务队列，然后你通过salt返回的<code>j_id</code>查询发布结果，前后交互的数据都是json格式。</p>
 <p><em>发布任务</em>：</p>
@@ -188,7 +192,7 @@
 <p><img alt="发布结果" src="../../assets/images/host/host1.png" /></p>
 <h3 id="3-state">3. state模块<a class="headerlink" href="#3-state" title="Permanent link">(ง •̀_•́)ง</a></h3>
 <blockquote>
-<p>saltstack最强大功能的是state模块，平时我们为了集中化配置管理服务器，会写很多的 <code>state.sls</code> 来协助日常运维工作， 比如服务器初始化、批量安装软件、批量更新配置等等，现在我们这些 <code>state.sls</code> 存到oms系统，然后在页面上通过点击使其工作。</p>
+<p>saltstack最强大功能的是state模块，平时我们为了集中化配置管理服务器，会写很多的 <code>state.sls</code> 来协助日常运维工作， 比如服务器初始化、批量执行命令、批量更新配置、批量部署zabbix或tomcat等等，现在我们这些 <code>state.sls</code> 存到oms系统，然后在页面上通过点击使其工作。</p>
 </blockquote>
 <p><em>选择主机和state服务</em>：</p>
 <p><img alt="state1" src="../../assets/images/host/host2.png" /></p>

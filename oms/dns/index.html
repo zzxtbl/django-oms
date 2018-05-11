@@ -160,6 +160,9 @@
         <li class="first-level active"><a href="#dnszabbix">dns和zabbix</a></li>
             <li class="second-level"><a href="#dns">dns管理</a></li>
                 
+                <li class="third-level"><a href="#1">1. 环境说明</a></li>
+                <li class="third-level"><a href="#2-dnsapikey">2. 添加dnsapi的key，同步域名</a></li>
+                <li class="third-level"><a href="#3-record">3. 管理record</a></li>
             <li class="second-level"><a href="#zabbix">zabbix管理</a></li>
                 
     </ul>
@@ -167,9 +170,66 @@
         <div class="col-md-9 content" role="main">
 
 <h1 id="dnszabbix">dns和zabbix<a class="headerlink" href="#dnszabbix" title="Permanent link">(ง •̀_•́)ง</a></h1>
+<p>oms系统对接binddns和zabbix</p>
 <hr />
 <h2 id="dns">dns管理<a class="headerlink" href="#dns" title="Permanent link">(ง •̀_•́)ง</a></h2>
-<h2 id="zabbix">zabbix管理<a class="headerlink" href="#zabbix" title="Permanent link">(ง •̀_•́)ง</a></h2></div>
+<h3 id="1">1. 环境说明<a class="headerlink" href="#1" title="Permanent link">(ง •̀_•́)ง</a></h3>
+<p>因为公司使用了众多域名服务商(godaddy/dnspod/bind)，而且域名数量较大，如果域名有问题的时候，不能立马查到域名是在哪里解析的，说以做了这么模块，用于集中化管理所有域名，且能很快知道域名的归属地。</p>
+<p>域名是通过各域名服务商提供的api进行收集和管理，其中bind是自建的dns服务器，它的api是我用django写的，项目地址： <a href="https://github.com/itimor/bindapi.git">bindapi</a>； godaddy的api最烂，几乎没怎么维护；dnspod的api相当友好，文档非常详细，上手容易。</p>
+<p><em>api地址</em>：</p>
+<blockquote>
+<ul>
+<li>
+<p><a href="https://github.com/itimor/django-oms/blob/master/omsBackend/dnsmanager/bind_api.py">bind_api.py</a></p>
+</li>
+<li>
+<p><a href="https://github.com/itimor/django-oms/blob/master/omsBackend/dnsmanager/dnspod_api.py">dnspod_api.py</a></p>
+</li>
+<li>
+<p><a href="https://github.com/itimor/django-oms/blob/master/omsBackend/dnsmanager/godaddy_api.py">godaddyapi.py</a></p>
+</li>
+</ul>
+</blockquote>
+<h3 id="2-dnsapikey">2. 添加dnsapi的key，同步域名<a class="headerlink" href="#2-dnsapikey" title="Permanent link">(ง •̀_•́)ง</a></h3>
+<p><em>dns管理 -&gt; api管理</em></p>
+<p><img alt="发布结果" src="../../assets/images/dns/dns1.png" /></p>
+<blockquote>
+<ol>
+<li>
+<p>在第一列表格添加新的dns服务商的秘钥信息，其中 <code>godaddy</code>用的是 key 和 serert; <code>dnspod</code>和<code>bind</code>用的是id和token；</p>
+</li>
+<li>
+<p>点击刚添加的dns,会看到第二列表格，这个会显示这个dns下的当前所以域名，点击同步，它会把这里的域名同步到oms系统；</p>
+</li>
+<li>
+<p>点击域名，第三列表格会展示这个域名下所以record;</p>
+</li>
+</ol>
+</blockquote>
+<h3 id="3-record">3. 管理record<a class="headerlink" href="#3-record" title="Permanent link">(ง •̀_•́)ง</a></h3>
+<p><em>dns管理 -&gt; 域名列表</em></p>
+<p><img alt="发布结果" src="../../assets/images/dns/dns2.png" /></p>
+<p>在这里可以看到上一步同步过来的域名， 这个列表可以实时的反映每个<code>域名有效期</code> 、<code>ns地址</code>，以及属于哪个dnsapi, 提供搜索功能，方便快速查找域名。</p>
+<ul>
+<li>
+<p>点击同步记录，会把这个域名下的所有记录同步过来；</p>
+</li>
+<li>
+<p>点击添加记录，会在这个域名下添加一条新的记录；</p>
+</li>
+<li>
+<p>点击修改域名，可以给域名添加当前状态和备注信息，dns服务商是没有备注功能的；</p>
+</li>
+</ul>
+<p><img alt="发布结果" src="../../assets/images/dns/dns3.png" /></p>
+<ul>
+<li>点击修改记录，可以更换ip，这个会马上同步到dns服务商</li>
+</ul>
+<h2 id="zabbix">zabbix管理<a class="headerlink" href="#zabbix" title="Permanent link">(ง •̀_•́)ง</a></h2>
+<blockquote>
+<p><a href="https://github.com/itimor/django-oms/blob/master/omsBackend/zbmanager/zabbix_api.py">zabbix_api.py</a></p>
+</blockquote>
+<p>zabbix与oms系统对接都是通过上面的脚本完成的，主要功能是关于zabbix主机的增删改查，可以批量添加或删除主机，再添加监控上可以节省时间。</p></div>
         
     </div>
 
