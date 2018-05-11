@@ -4,7 +4,7 @@
     
     <url>
      <loc>https://itimor.github.io/django-oms//</loc>
-     <lastmod>2018-05-10</lastmod>
+     <lastmod>2018-05-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -13,31 +13,31 @@
         
     <url>
      <loc>https://itimor.github.io/django-oms//oms/</loc>
-     <lastmod>2018-05-10</lastmod>
+     <lastmod>2018-05-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>https://itimor.github.io/django-oms//oms/base/</loc>
-     <lastmod>2018-05-10</lastmod>
+     <lastmod>2018-05-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>https://itimor.github.io/django-oms//oms/host/</loc>
-     <lastmod>2018-05-10</lastmod>
+     <lastmod>2018-05-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>https://itimor.github.io/django-oms//oms/dns/</loc>
-     <lastmod>2018-05-10</lastmod>
+     <lastmod>2018-05-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>https://itimor.github.io/django-oms//oms/oa/</loc>
-     <lastmod>2018-05-10</lastmod>
+     <lastmod>2018-05-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -46,14 +46,14 @@
     
         
     <url>
-     <loc>https://itimor.github.io/django-oms//about/</loc>
-     <lastmod>2018-05-10</lastmod>
+     <loc>https://itimor.github.io/django-oms//problem/</loc>
+     <lastmod>2018-05-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://itimor.github.io/django-oms//about/me/</loc>
-     <lastmod>2018-05-10</lastmod>
+     <loc>https://itimor.github.io/django-oms//problem/me/</loc>
+     <lastmod>2018-05-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
         

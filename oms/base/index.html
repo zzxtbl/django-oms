@@ -5,9 +5,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="oms运维管理系统 python salt django zabbox oms">  
+    <meta name="description" content="运维自动化 python salt django zabbix oms">  
     <link rel="canonical" href="https://itimor.github.io/django-oms/oms/base/">
-    <link rel="shortcut icon" href="../../img/favicon.ico">
+    <link rel="shortcut icon" href="../../assets/images/favicon.ico">
 
     <title>基础模块 - oms运维管理系统</title>
 
@@ -19,6 +19,9 @@
     <link href="../../css/base.css" rel="stylesheet">
     <link href="../../css/cinder.css" rel="stylesheet">
     <link rel="stylesheet" href="../../css/highlight.css">
+
+
+    <link href="../../assets/css/extra.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -56,7 +59,7 @@
 
             <!-- Main title -->
             <a class="navbar-brand" href="../..">
-                <img src="../../img/favicon.ico" height="20"/>
+                <img src="../../assets/images/favicon.ico" height="20"/>
                 oms运维管理系统
             </a>
         </div>
@@ -91,7 +94,7 @@
                         
                             
 <li >
-    <a href="../host/">主机和salt</a>
+    <a href="../host/">salt与主机</a>
 </li>
 
                         
@@ -113,18 +116,18 @@
                 
                 
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Problem <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                         
                             
 <li >
-    <a href="../../about/">about</a>
+    <a href="../../problem/">about</a>
 </li>
 
                         
                             
 <li >
-    <a href="../../about/me/">me</a>
+    <a href="../../problem/me/">me</a>
 </li>
 
                         
@@ -151,7 +154,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="https://github.com/itimor/django-oms/edit/master/docs/oms/base.md">Edit on Github</a>
+                        <a href="https://github.com/itimor/django-oms/"><i class="fa fa-github"></i> GitHub</a>
                     </li>
             </ul>
         </div>
@@ -183,7 +186,7 @@
 <p>用户表增加 <code>通知属性</code> 字段，因为公司的主要通讯工具用的是skype，所以这个项目我加的是<code>skype</code>，你也可以把它定义成其他字段。</p>
 <h3 id="2-adldap">2. 账号与AD域控结合(ldap)<a class="headerlink" href="#2-adldap" title="Permanent link">(ง •̀_•́)ง</a></h3>
 <p>使用的是 <code>django-python3-ldap</code> 模块，集中用户管理，但是这个模块原本是不能同步用户组数据到oms系统，而这个系统所使用的权限管理是基于用户组做的， 所以必须对其稍作修改，文件 <a href="https://github.com/itimor/django-oms/blob/master/ldap.py">lday.py</a>, 替换 <code>/to/path/site-packages/django_python3_ldap/ldap.py</code>, 这样就可以同步用户组信息了， 甚至你还可增加其他字段， 改改脚本一样能同步。</p>
-<p><img alt="首页" src="../../images/base/base1.png" /></p>
+<p><img alt="首页" src="../../assets/images/base/base1.png" /></p>
 <h3 id="3">3. 用户组和角色<a class="headerlink" href="#3" title="Permanent link">(ง •̀_•́)ง</a></h3>
 <p>用户组表本身不用做任何操作，数据是从 <code>ldap</code> 同步过来的，oms系统的菜单、按钮、部分数据等权限都是围绕它做的。</p>
 <p>角色是保留字段， 没有使用，用得着的人可以启用它。</p>
@@ -235,6 +238,7 @@
     </script>
     <script data-main="../../mkdocs/js/search.js"></script>
     <script src="../../js/base.js"></script>
+    <script src="../../assets/js/extra.js"></script>
     <script src="../../search/require.js"></script>
     <script src="../../search/search.js"></script>
 
@@ -266,5 +270,4 @@
     </div>
 
     </body>
-
 </html>
