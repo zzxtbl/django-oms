@@ -4,11 +4,7 @@
 // 给图片添加链接
 $(document).ready(function() {
     $("p img").each(function() {
-        var strA = "<a class='content_img_in' href='" + this.src + "' target='_blank'></a>";
-       $(this).wrapAll(strA);
+        var strA = "<img class='gallery' src='" + this.src + "' data-action='zoom'/>";
+        $(this).replaceWith(strA);
     });
 });
-// fancybox
-$(".content_img_in").click(function(){
-    $("p").slideToggle();
-}); 

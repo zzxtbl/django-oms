@@ -57,3 +57,4 @@ extra_css:
 
 extra_javascript:
   - assets/js/extra.js
+  - assets/js/zoom.js
