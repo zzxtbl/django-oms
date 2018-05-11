@@ -3,12 +3,8 @@
  */
 // 给图片添加链接
 $(document).ready(function() {
-    $("p img").each(function() {var strA = "<a id='content_img' href='" + this.src + "'></a>";
-    $(this).wrapAll(strA);
+    $("p img").each(function() {
+        var strA = "<img class='gallery' src='" + this.src + "' data-action='zoom'/>";
+        $(this).replaceWith(strA);
     });
-});
-// fancybox
-$("#content_img").fadeOut({
-    openEffect    : 'elastic',
-    closeEffect   : 'elastic',
 });
