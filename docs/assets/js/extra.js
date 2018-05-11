@@ -3,12 +3,12 @@
  */
 // 给图片添加链接
 $(document).ready(function() {
-    $("p img").each(function() {var strA = "<a id='content_img' href='" + this.src + "'></a>";
-    $(this).wrapAll(strA);
+    $("p img").each(function() {
+        var strA = "<a class='content_img_in' href='" + this.src + "' target='_blank'></a>";
+       $(this).wrapAll(strA);
     });
 });
 // fancybox
-$("#content_img").fadeOut({
-    openEffect    : 'elastic',
-    closeEffect   : 'elastic',
-});
+$(".content_img_in").click(function(){
+    $("p").slideToggle();
+}); 
