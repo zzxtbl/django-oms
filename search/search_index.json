@@ -82,7 +82,7 @@
         },
         {
             "location": "/oms/",
-            "text": "\u6a21\u5757\u8bf4\u660e\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n\n\n\u57fa\u7840\u7cfb\u7edf\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n\n\n\u51e0\u4e4e\u6240\u6709\u7cfb\u7edf\u90fd\u5fc5\u987b\u6709\u7684\u57fa\u7840\u6a21\u5757\uff0c\u5176\u4ed6\u6a21\u5757\u90fd\u9700\u8981\u57fa\u4e8e\u57fa\u7840\u6a21\u5757\uff0c\u4e0d\u8fc7\u591a\u8bf4\u660e\uff0c\u987e\u540d\u601d\u4e49\u3002\n\n\n\n\n\n\n\u7528\u6237\u6a21\u5757\n\n\n\u83dc\u5355\u6a21\u5757\n\n\n\n\n\u8fd0\u7ef4\u7cfb\u7edf\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n\n\n\u7ed9\u8fd0\u7ef4\u4f7f\u7528\u7684\u4e00\u4e9b\u6a21\u5757\n\n\n\n\n\n\n\u4e3b\u673a\u6a21\u5757\n\n\n\u65e5\u5fd7\u5ba1\u8ba1\u6a21\u5757\n\n\nsalt\u6a21\u5757\n\n\n\u53d1\u5e03\u7cfb\u7edf\n\n\ndns\u57df\u540d\u7ba1\u7406\u96c6\u6210\n\n\n\u76d1\u63a7\u6a21\u5757\n\n\n\u901a\u77e5\n\n\n\n\n\u529e\u516c\u7cfb\u7edf\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n\n\n\u7ed9\u5176\u4ed6\u540c\u4e8b\u4f7f\u7528\u7684\u4e00\u4e9b\u6a21\u5757\n\n\n\n\n\n\n\u5de5\u5355\u7cfb\u7edf\n\n\n\u4efb\u52a1\u7cfb\u7edf\n\n\n\u8003\u52e4\u673a\u96c6\u6210",
+            "text": "\u6a21\u5757\u8bf4\u660e\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n\n\n\u57fa\u7840\u7cfb\u7edf\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n\n\n\u51e0\u4e4e\u6240\u6709\u7cfb\u7edf\u90fd\u5fc5\u987b\u6709\u7684\u57fa\u7840\u6a21\u5757\uff0c\u5176\u4ed6\u6a21\u5757\u90fd\u9700\u8981\u57fa\u4e8e\u57fa\u7840\u6a21\u5757\uff0c\u4e0d\u8fc7\u591a\u8bf4\u660e\uff0c\u987e\u540d\u601d\u4e49\u3002\n\n\n\n\n\n\n\u7528\u6237\u6a21\u5757\n\n\n\u83dc\u5355\u6a21\u5757\n\n\n\n\n\u8fd0\u7ef4\u7cfb\u7edf\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n\n\n\u7ed9\u8fd0\u7ef4\u4f7f\u7528\u7684\u4e00\u4e9b\u6a21\u5757\n\n\n\n\n\n\n\u4e3b\u673a\u6a21\u5757\n\n\n\u65e5\u5fd7\u5ba1\u8ba1\u6a21\u5757\n\n\nsalt\u6a21\u5757\n\n\n\u53d1\u5e03\u7cfb\u7edf\n\n\ndns\u57df\u540d\u7ba1\u7406\n\n\n\u76d1\u63a7\u6a21\u5757\n\n\n\n\n\u529e\u516c\u7cfb\u7edf\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n\n\n\u7ed9\u5176\u4ed6\u540c\u4e8b\u4f7f\u7528\u7684\u4e00\u4e9b\u6a21\u5757\n\n\n\n\n\n\n\u5de5\u5355\u7cfb\u7edf\n\n\n\u8003\u52e4\u673a\u96c6\u6210",
             "title": "\u5f00\u59cb"
         },
         {
@@ -97,12 +97,12 @@
         },
         {
             "location": "/oms/#_3",
-            "text": "\u7ed9\u8fd0\u7ef4\u4f7f\u7528\u7684\u4e00\u4e9b\u6a21\u5757    \u4e3b\u673a\u6a21\u5757  \u65e5\u5fd7\u5ba1\u8ba1\u6a21\u5757  salt\u6a21\u5757  \u53d1\u5e03\u7cfb\u7edf  dns\u57df\u540d\u7ba1\u7406\u96c6\u6210  \u76d1\u63a7\u6a21\u5757  \u901a\u77e5",
+            "text": "\u7ed9\u8fd0\u7ef4\u4f7f\u7528\u7684\u4e00\u4e9b\u6a21\u5757    \u4e3b\u673a\u6a21\u5757  \u65e5\u5fd7\u5ba1\u8ba1\u6a21\u5757  salt\u6a21\u5757  \u53d1\u5e03\u7cfb\u7edf  dns\u57df\u540d\u7ba1\u7406  \u76d1\u63a7\u6a21\u5757",
             "title": "\u8fd0\u7ef4\u7cfb\u7edf"
         },
         {
             "location": "/oms/#_4",
-            "text": "\u7ed9\u5176\u4ed6\u540c\u4e8b\u4f7f\u7528\u7684\u4e00\u4e9b\u6a21\u5757    \u5de5\u5355\u7cfb\u7edf  \u4efb\u52a1\u7cfb\u7edf  \u8003\u52e4\u673a\u96c6\u6210",
+            "text": "\u7ed9\u5176\u4ed6\u540c\u4e8b\u4f7f\u7528\u7684\u4e00\u4e9b\u6a21\u5757    \u5de5\u5355\u7cfb\u7edf  \u8003\u52e4\u673a\u96c6\u6210",
             "title": "\u529e\u516c\u7cfb\u7edf"
         },
         {
@@ -197,7 +197,7 @@
         },
         {
             "location": "/oms/dns/",
-            "text": "dns\u548czabbix\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\noms\u7cfb\u7edf\u5bf9\u63a5binddns\u548czabbix\n\n\n\n\ndns\u7ba1\u7406\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n1. \u73af\u5883\u8bf4\u660e\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n\u56e0\u4e3a\u516c\u53f8\u4f7f\u7528\u4e86\u4f17\u591a\u57df\u540d\u670d\u52a1\u5546(godaddy/dnspod/bind)\uff0c\u800c\u4e14\u57df\u540d\u6570\u91cf\u8f83\u5927\uff0c\u5982\u679c\u57df\u540d\u6709\u95ee\u9898\u7684\u65f6\u5019\uff0c\u4e0d\u80fd\u7acb\u9a6c\u67e5\u5230\u57df\u540d\u662f\u5728\u54ea\u91cc\u89e3\u6790\u7684\uff0c\u8bf4\u4ee5\u505a\u4e86\u8fd9\u4e48\u6a21\u5757\uff0c\u7528\u4e8e\u96c6\u4e2d\u5316\u7ba1\u7406\u6240\u6709\u57df\u540d\uff0c\u4e14\u80fd\u5f88\u5feb\u77e5\u9053\u57df\u540d\u7684\u5f52\u5c5e\u5730\u3002\n\n\n\u57df\u540d\u662f\u901a\u8fc7\u5404\u57df\u540d\u670d\u52a1\u5546\u63d0\u4f9b\u7684api\u8fdb\u884c\u6536\u96c6\u548c\u7ba1\u7406\uff0c\u5176\u4e2dbind\u662f\u81ea\u5efa\u7684dns\u670d\u52a1\u5668\uff0c\u5b83\u7684api\u662f\u6211\u7528django\u5199\u7684\uff0c\u9879\u76ee\u5730\u5740\uff1a \nbindapi\n\uff1b godaddy\u7684api\u6700\u70c2\uff0c\u51e0\u4e4e\u6ca1\u600e\u4e48\u7ef4\u62a4\uff1bdnspod\u7684api\u76f8\u5f53\u53cb\u597d\uff0c\u6587\u6863\u975e\u5e38\u8be6\u7ec6\uff0c\u4e0a\u624b\u5bb9\u6613\u3002\n\n\napi\u5730\u5740\n\uff1a\n\n\n\n\n\n\n\n\nbind_api.py\n\n\n\n\n\n\ndnspod_api.py\n\n\n\n\n\n\ngodaddyapi.py\n\n\n\n\n\n\n\n\n2. \u6dfb\u52a0dnsapi\u7684key\uff0c\u540c\u6b65\u57df\u540d\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\ndns\u7ba1\u7406 -> api\u7ba1\u7406\n\n\n\n\n\n\n\n\n\n\n\u5728\u7b2c\u4e00\u5217\u8868\u683c\u6dfb\u52a0\u65b0\u7684dns\u670d\u52a1\u5546\u7684\u79d8\u94a5\u4fe1\u606f\uff0c\u5176\u4e2d \ngodaddy\n\u7528\u7684\u662f key \u548c serert; \ndnspod\n\u548c\nbind\n\u7528\u7684\u662fid\u548ctoken\uff1b\n\n\n\n\n\n\n\u70b9\u51fb\u521a\u6dfb\u52a0\u7684dns,\u4f1a\u770b\u5230\u7b2c\u4e8c\u5217\u8868\u683c\uff0c\u8fd9\u4e2a\u4f1a\u663e\u793a\u8fd9\u4e2adns\u4e0b\u7684\u5f53\u524d\u6240\u4ee5\u57df\u540d\uff0c\u70b9\u51fb\u540c\u6b65\uff0c\u5b83\u4f1a\u628a\u8fd9\u91cc\u7684\u57df\u540d\u540c\u6b65\u5230oms\u7cfb\u7edf\uff1b\n\n\n\n\n\n\n\u70b9\u51fb\u57df\u540d\uff0c\u7b2c\u4e09\u5217\u8868\u683c\u4f1a\u5c55\u793a\u8fd9\u4e2a\u57df\u540d\u4e0b\u6240\u4ee5record;\n\n\n\n\n\n\n\n\n3. \u7ba1\u7406record\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\ndns\u7ba1\u7406 -> \u57df\u540d\u5217\u8868\n\n\n\n\n\u5728\u8fd9\u91cc\u53ef\u4ee5\u770b\u5230\u4e0a\u4e00\u6b65\u540c\u6b65\u8fc7\u6765\u7684\u57df\u540d\uff0c \u8fd9\u4e2a\u5217\u8868\u53ef\u4ee5\u5b9e\u65f6\u7684\u53cd\u6620\u6bcf\u4e2a\n\u57df\u540d\u6709\u6548\u671f\n \u3001\nns\u5730\u5740\n\uff0c\u4ee5\u53ca\u5c5e\u4e8e\u54ea\u4e2adnsapi, \u63d0\u4f9b\u641c\u7d22\u529f\u80fd\uff0c\u65b9\u4fbf\u5feb\u901f\u67e5\u627e\u57df\u540d\u3002\n\n\n\n\n\n\n\u70b9\u51fb\u540c\u6b65\u8bb0\u5f55\uff0c\u4f1a\u628a\u8fd9\u4e2a\u57df\u540d\u4e0b\u7684\u6240\u6709\u8bb0\u5f55\u540c\u6b65\u8fc7\u6765\uff1b\n\n\n\n\n\n\n\u70b9\u51fb\u6dfb\u52a0\u8bb0\u5f55\uff0c\u4f1a\u5728\u8fd9\u4e2a\u57df\u540d\u4e0b\u6dfb\u52a0\u4e00\u6761\u65b0\u7684\u8bb0\u5f55\uff1b\n\n\n\n\n\n\n\u70b9\u51fb\u4fee\u6539\u57df\u540d\uff0c\u53ef\u4ee5\u7ed9\u57df\u540d\u6dfb\u52a0\u5f53\u524d\u72b6\u6001\u548c\u5907\u6ce8\u4fe1\u606f\uff0cdns\u670d\u52a1\u5546\u662f\u6ca1\u6709\u5907\u6ce8\u529f\u80fd\u7684\uff1b\n\n\n\n\n\n\n\n\n\n\n\u70b9\u51fb\u4fee\u6539\u8bb0\u5f55\uff0c\u53ef\u4ee5\u66f4\u6362ip\uff0c\u8fd9\u4e2a\u4f1a\u9a6c\u4e0a\u540c\u6b65\u5230dns\u670d\u52a1\u5546\n\n\n\n\nzabbix\u7ba1\u7406\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n\n\nzabbix_api.py\n\n\n\n\nzabbix\u4e0eoms\u7cfb\u7edf\u5bf9\u63a5\u90fd\u662f\u901a\u8fc7\u4e0a\u9762\u7684\u811a\u672c\u5b8c\u6210\u7684\uff0c\u4e3b\u8981\u529f\u80fd\u662f\u5173\u4e8ezabbix\u4e3b\u673a\u7684\u589e\u5220\u6539\u67e5\uff0c\u53ef\u4ee5\u6279\u91cf\u6dfb\u52a0\u6216\u5220\u9664\u4e3b\u673a\uff0c\u518d\u6dfb\u52a0\u76d1\u63a7\u4e0a\u53ef\u4ee5\u8282\u7701\u65f6\u95f4\u3002",
+            "text": "dns\u548czabbix\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\noms\u7cfb\u7edf\u5bf9\u63a5binddns\u548czabbix\n\n\n\n\ndns\u7ba1\u7406\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n1. \u73af\u5883\u8bf4\u660e\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n\u56e0\u4e3a\u516c\u53f8\u4f7f\u7528\u4e86\u4f17\u591a\u57df\u540d\u670d\u52a1\u5546(godaddy/dnspod/bind)\uff0c\u800c\u4e14\u57df\u540d\u6570\u91cf\u8f83\u5927\uff0c\u5982\u679c\u57df\u540d\u6709\u95ee\u9898\u7684\u65f6\u5019\uff0c\u4e0d\u80fd\u7acb\u9a6c\u67e5\u5230\u57df\u540d\u662f\u5728\u54ea\u91cc\u89e3\u6790\u7684\uff0c\u8bf4\u4ee5\u505a\u4e86\u8fd9\u4e48\u6a21\u5757\uff0c\u7528\u4e8e\u96c6\u4e2d\u5316\u7ba1\u7406\u6240\u6709\u57df\u540d\uff0c\u4e14\u80fd\u5f88\u5feb\u77e5\u9053\u57df\u540d\u7684\u5f52\u5c5e\u5730\u3002\n\n\n\u57df\u540d\u662f\u901a\u8fc7\u5404\u57df\u540d\u670d\u52a1\u5546\u63d0\u4f9b\u7684api\u8fdb\u884c\u6536\u96c6\u548c\u7ba1\u7406\uff0c\u5176\u4e2dbind\u662f\u81ea\u5efa\u7684dns\u670d\u52a1\u5668\uff0c\u5b83\u7684api\u662f\u6211\u7528django\u5199\u7684\uff0c\u9879\u76ee\u5730\u5740\uff1a \nbindapi\n\uff1b godaddy\u7684api\u6700\u70c2\uff0c\u51e0\u4e4e\u6ca1\u600e\u4e48\u7ef4\u62a4\uff1bdnspod\u7684api\u76f8\u5f53\u53cb\u597d\uff0c\u6587\u6863\u975e\u5e38\u8be6\u7ec6\uff0c\u4e0a\u624b\u5bb9\u6613\u3002\n\n\napi\u5730\u5740\n\uff1a\n\n\n\n\n\n\n\n\nbind_api.py\n\n\n\n\n\n\ndnspod_api.py\n\n\n\n\n\n\ngodaddyapi.py\n\n\n\n\n\n\n\n\n2. \u6dfb\u52a0dnsapi\u7684key\uff0c\u540c\u6b65\u57df\u540d\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\ndns\u7ba1\u7406 -> api\u7ba1\u7406\n\n\n\n\n\n\n\n\n\u5728\u7b2c\u4e00\u5217\u8868\u683c\u6dfb\u52a0\u65b0\u7684dns\u670d\u52a1\u5546\u7684\u79d8\u94a5\u4fe1\u606f\uff0c\u5176\u4e2d \ngodaddy\n\u7528\u7684\u662f key \u548c serert; \ndnspod\n\u548c\nbind\n\u7528\u7684\u662fid\u548ctoken\uff1b\n\n\n\n\n\n\n\u70b9\u51fb\u521a\u6dfb\u52a0\u7684dns,\u4f1a\u770b\u5230\u7b2c\u4e8c\u5217\u8868\u683c\uff0c\u8fd9\u4e2a\u4f1a\u663e\u793a\u8fd9\u4e2adns\u4e0b\u7684\u5f53\u524d\u6240\u4ee5\u57df\u540d\uff0c\u70b9\u51fb\u540c\u6b65\uff0c\u5b83\u4f1a\u628a\u8fd9\u91cc\u7684\u57df\u540d\u540c\u6b65\u5230oms\u7cfb\u7edf\uff1b\n\n\n\n\n\n\n\u70b9\u51fb\u57df\u540d\uff0c\u7b2c\u4e09\u5217\u8868\u683c\u4f1a\u5c55\u793a\u8fd9\u4e2a\u57df\u540d\u4e0b\u6240\u4ee5record;\n\n\n\n\n\n\n3. \u7ba1\u7406record\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\ndns\u7ba1\u7406 -> \u57df\u540d\u5217\u8868\n\n\n\n\n\u5728\u8fd9\u91cc\u53ef\u4ee5\u770b\u5230\u4e0a\u4e00\u6b65\u540c\u6b65\u8fc7\u6765\u7684\u57df\u540d\uff0c \u8fd9\u4e2a\u5217\u8868\u53ef\u4ee5\u5b9e\u65f6\u7684\u53cd\u6620\u6bcf\u4e2a\n\u57df\u540d\u6709\u6548\u671f\n \u3001\nns\u5730\u5740\n\uff0c\u4ee5\u53ca\u5c5e\u4e8e\u54ea\u4e2adnsapi, \u63d0\u4f9b\u641c\u7d22\u529f\u80fd\uff0c\u65b9\u4fbf\u5feb\u901f\u67e5\u627e\u57df\u540d\u3002\n\n\n\n\n\n\n\u70b9\u51fb\u540c\u6b65\u8bb0\u5f55\uff0c\u4f1a\u628a\u8fd9\u4e2a\u57df\u540d\u4e0b\u7684\u6240\u6709\u8bb0\u5f55\u540c\u6b65\u8fc7\u6765\uff1b\n\n\n\n\n\n\n\u70b9\u51fb\u6dfb\u52a0\u8bb0\u5f55\uff0c\u4f1a\u5728\u8fd9\u4e2a\u57df\u540d\u4e0b\u6dfb\u52a0\u4e00\u6761\u65b0\u7684\u8bb0\u5f55\uff1b\n\n\n\n\n\n\n\u70b9\u51fb\u4fee\u6539\u57df\u540d\uff0c\u53ef\u4ee5\u7ed9\u57df\u540d\u6dfb\u52a0\u5f53\u524d\u72b6\u6001\u548c\u5907\u6ce8\u4fe1\u606f\uff0cdns\u670d\u52a1\u5546\u662f\u6ca1\u6709\u5907\u6ce8\u529f\u80fd\u7684\uff1b\n\n\n\n\n\n\n\n\n\n\n\u70b9\u51fb\u4fee\u6539\u8bb0\u5f55\uff0c\u53ef\u4ee5\u66f4\u6362ip\uff0c\u8fd9\u4e2a\u4f1a\u9a6c\u4e0a\u540c\u6b65\u5230dns\u670d\u52a1\u5546\n\n\n\n\nzabbix\u7ba1\u7406\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n\n\nzabbix_api.py\n\n\n\n\nzabbix\u4e0eoms\u7cfb\u7edf\u5bf9\u63a5\u90fd\u662f\u901a\u8fc7\u4e0a\u9762\u7684\u811a\u672c\u5b8c\u6210\u7684\uff0c\u4e3b\u8981\u529f\u80fd\u662f\u5173\u4e8ezabbix\u4e3b\u673a\u7684\u589e\u5220\u6539\u67e5\uff0c\u53ef\u4ee5\u6279\u91cf\u6dfb\u52a0\u6216\u5220\u9664\u4e3b\u673a\uff0c\u518d\u6dfb\u52a0\u76d1\u63a7\u4e0a\u53ef\u4ee5\u8282\u7701\u65f6\u95f4\u3002",
             "title": "dns\u548czabbix"
         },
         {
@@ -217,7 +217,7 @@
         },
         {
             "location": "/oms/dns/#2-dnsapikey",
-            "text": "dns\u7ba1\u7406 -> api\u7ba1\u7406      \u5728\u7b2c\u4e00\u5217\u8868\u683c\u6dfb\u52a0\u65b0\u7684dns\u670d\u52a1\u5546\u7684\u79d8\u94a5\u4fe1\u606f\uff0c\u5176\u4e2d  godaddy \u7528\u7684\u662f key \u548c serert;  dnspod \u548c bind \u7528\u7684\u662fid\u548ctoken\uff1b    \u70b9\u51fb\u521a\u6dfb\u52a0\u7684dns,\u4f1a\u770b\u5230\u7b2c\u4e8c\u5217\u8868\u683c\uff0c\u8fd9\u4e2a\u4f1a\u663e\u793a\u8fd9\u4e2adns\u4e0b\u7684\u5f53\u524d\u6240\u4ee5\u57df\u540d\uff0c\u70b9\u51fb\u540c\u6b65\uff0c\u5b83\u4f1a\u628a\u8fd9\u91cc\u7684\u57df\u540d\u540c\u6b65\u5230oms\u7cfb\u7edf\uff1b    \u70b9\u51fb\u57df\u540d\uff0c\u7b2c\u4e09\u5217\u8868\u683c\u4f1a\u5c55\u793a\u8fd9\u4e2a\u57df\u540d\u4e0b\u6240\u4ee5record;",
+            "text": "dns\u7ba1\u7406 -> api\u7ba1\u7406     \u5728\u7b2c\u4e00\u5217\u8868\u683c\u6dfb\u52a0\u65b0\u7684dns\u670d\u52a1\u5546\u7684\u79d8\u94a5\u4fe1\u606f\uff0c\u5176\u4e2d  godaddy \u7528\u7684\u662f key \u548c serert;  dnspod \u548c bind \u7528\u7684\u662fid\u548ctoken\uff1b    \u70b9\u51fb\u521a\u6dfb\u52a0\u7684dns,\u4f1a\u770b\u5230\u7b2c\u4e8c\u5217\u8868\u683c\uff0c\u8fd9\u4e2a\u4f1a\u663e\u793a\u8fd9\u4e2adns\u4e0b\u7684\u5f53\u524d\u6240\u4ee5\u57df\u540d\uff0c\u70b9\u51fb\u540c\u6b65\uff0c\u5b83\u4f1a\u628a\u8fd9\u91cc\u7684\u57df\u540d\u540c\u6b65\u5230oms\u7cfb\u7edf\uff1b    \u70b9\u51fb\u57df\u540d\uff0c\u7b2c\u4e09\u5217\u8868\u683c\u4f1a\u5c55\u793a\u8fd9\u4e2a\u57df\u540d\u4e0b\u6240\u4ee5record;",
             "title": "2. \u6dfb\u52a0dnsapi\u7684key\uff0c\u540c\u6b65\u57df\u540d"
         },
         {
@@ -232,243 +232,108 @@
         },
         {
             "location": "/oms/oa/",
-            "text": "\u529e\u516c\u7cfb\u7edf\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n\u5de5\u5355\u7cfb\u7edf\u548c\u9879\u76ee\u7ba1\u7406\n\n\n\n\n\u8bf7\u7b49\u5f85\u540e\u7eed\u5b8c\u5584\u3002\u3002\u3002\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07",
-            "title": "\u529e\u516c\u7cfb\u7edf"
+            "text": "\u529e\u516c\u7cfb\u7edf\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n\u5de5\u5355\u7cfb\u7edf\u548c\u8003\u52e4\u7ba1\u7406\n\n\n\n\n\u5de5\u5355\u7cfb\u7edf\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n\u8fd9\u4e2a\u7cfb\u7edf\u4e3b\u8981\u662f\u7ed9\u5ba2\u670d\u4eba\u5458\u7528\u7684\uff0c\u7f51\u7ad9\u5728\u8fd0\u884c\u8fc7\u7a0b\u4e2d\u8fdb\u7a0b\u4f1a\u51fa\u73b0\u7f51\u7edc\u3001\u4ee3\u7801bug\u7b49\u6545\u969c\uff0c\u4ee5\u524d\u51fa\u95ee\u9898\u65f6\uff0c\u8fd0\u7ef4\u9700\u8981\u9a6c\u4e0a\u4e0a\u7ebf\u6392\u67e5\u95ee\u9898\uff0c\u6709\u4e86\u8fd9\u4e2a\u5de5\u5355\u7cfb\u7edf\u540e\uff0c\u53ef\u4ee5\u5148\u5728\u5de5\u5355\u4e0a\u63d0\u4ea4\u95ee\u9898\uff0c\u6839\u636e\u95ee\u9898\u4e25\u91cd\u6027\u8bbe\u7f6e\u95ee\u9898\u7ea7\u522b\uff0c \u7ea7\u522b\u9ad8\u7684\u8fd0\u7ef4\u53ef\u4ee5\u4f18\u5148\u5904\u7406\uff0c\u7ea7\u522b\u4f4e\u7684\u5ef6\u540e\u5904\u7406\uff0c\u8fd0\u7ef4\u4eba\u5458\u53ef\u4ee5\u628a\u76f8\u5173\u7684\u5904\u7406\u8fc7\u7a0b\u548c\u7ed3\u679c\u90fd\u5199\u5230\u5de5\u5355\u91cc\u9762\uff0c\u8fd9\u6837\u5927\u5bb6\u90fd\u80fd\u770b\u7684\u8fd9\u4e2a\u5904\u7406\u8fc7\u7a0b\uff0c\u4e5f\u65b9\u4fbf\u65e5\u540e\u95ee\u9898\u8ffd\u8e2a\u548c\u67e5\u770b\uff0c\u5982\u679c\u6709\u76f8\u540c\u7684\u95ee\u9898\uff0c\u53ef\u4ee5\u76f4\u63a5\u67e5\u770b\u5386\u53f2\u5de5\u5355\u7684\u5904\u7406\u65b9\u6cd5\u3002\u5de5\u5355\u521b\u5efa\u6216\u5b8c\u6210\u65f6\uff0c\u90fd\u4f1a\u53d1\u9001\u6d88\u606f\u7ed9\u76f8\u5e94\u7684\u4eba\uff0c\u53ef\u4ee5\u8bbe\u7f6e\u591a\u4e2a\u53d1\u6d88\u606f\u65b9\u5f0f\u3002\n\n\n1. \u5de5\u5355\u5217\u8868\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n\n\n2. \u5de5\u5355\u67e5\u770b\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n\n\n3. \u5904\u7406\u8fc7\u7a0b\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n\n\n\u8003\u52e4\u673a\u7ba1\u7406\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n\n\n\u8fd9\u4e2a\u4e3b\u610f\u662f\u65b9\u4fbf\u9886\u5bfc\u67e5\u770b\u8003\u52e4\u6570\u636e\n\n\n\n\n\u5229\u7528\u8003\u52e4\u673a\u7cfb\u7edf\u63d0\u4f9b\u7684sdk(\u6b64sdk\u53ea\u80fd\u8fd0\u884c\u5728windows\u4e0a)\u505a\u4e00\u4e2arestful-api\u63a5\u53e3, \u7136\u540e\u518d\u63a5\u5165oms, \u5b83\u6bcf\u5929\u5728\u4e0b\u73ed\u540e\u4f1a\u6536\u96c6\u5458\u5de5\u7684\u8003\u52e4\u6570\u636e\uff0c\u6839\u636e\u76f8\u5173\u8bbe\u7f6e\u5224\u65ad\u5458\u5de5\u662f\u5426\u6709\u65e9\u9000\u8fdf\u5230\u6216\u65f7\u5de5\uff0c\u6709\u9700\u6c42\u53ef\u4ee5\u53d1\u9001\u8003\u52e4\u62a5\u8868\uff0c\u9886\u5bfc\u53ef\u4ee5\u968f\u65f6\u5728\u8fd9\u4e2a\u4e0a\u9762\u67e5\u8be2\u6bcf\u4e2a\u5458\u5de5\u7684\u8003\u52e4\u60c5\u51b5\u3002",
+            "title": "\u5de5\u5355\u548c\u8003\u52e4"
         },
         {
             "location": "/oms/oa/#_1",
-            "text": "\u5de5\u5355\u7cfb\u7edf\u548c\u9879\u76ee\u7ba1\u7406",
+            "text": "\u5de5\u5355\u7cfb\u7edf\u548c\u8003\u52e4\u7ba1\u7406",
             "title": "\u529e\u516c\u7cfb\u7edf"
         },
         {
             "location": "/oms/oa/#_2",
+            "text": "\u8fd9\u4e2a\u7cfb\u7edf\u4e3b\u8981\u662f\u7ed9\u5ba2\u670d\u4eba\u5458\u7528\u7684\uff0c\u7f51\u7ad9\u5728\u8fd0\u884c\u8fc7\u7a0b\u4e2d\u8fdb\u7a0b\u4f1a\u51fa\u73b0\u7f51\u7edc\u3001\u4ee3\u7801bug\u7b49\u6545\u969c\uff0c\u4ee5\u524d\u51fa\u95ee\u9898\u65f6\uff0c\u8fd0\u7ef4\u9700\u8981\u9a6c\u4e0a\u4e0a\u7ebf\u6392\u67e5\u95ee\u9898\uff0c\u6709\u4e86\u8fd9\u4e2a\u5de5\u5355\u7cfb\u7edf\u540e\uff0c\u53ef\u4ee5\u5148\u5728\u5de5\u5355\u4e0a\u63d0\u4ea4\u95ee\u9898\uff0c\u6839\u636e\u95ee\u9898\u4e25\u91cd\u6027\u8bbe\u7f6e\u95ee\u9898\u7ea7\u522b\uff0c \u7ea7\u522b\u9ad8\u7684\u8fd0\u7ef4\u53ef\u4ee5\u4f18\u5148\u5904\u7406\uff0c\u7ea7\u522b\u4f4e\u7684\u5ef6\u540e\u5904\u7406\uff0c\u8fd0\u7ef4\u4eba\u5458\u53ef\u4ee5\u628a\u76f8\u5173\u7684\u5904\u7406\u8fc7\u7a0b\u548c\u7ed3\u679c\u90fd\u5199\u5230\u5de5\u5355\u91cc\u9762\uff0c\u8fd9\u6837\u5927\u5bb6\u90fd\u80fd\u770b\u7684\u8fd9\u4e2a\u5904\u7406\u8fc7\u7a0b\uff0c\u4e5f\u65b9\u4fbf\u65e5\u540e\u95ee\u9898\u8ffd\u8e2a\u548c\u67e5\u770b\uff0c\u5982\u679c\u6709\u76f8\u540c\u7684\u95ee\u9898\uff0c\u53ef\u4ee5\u76f4\u63a5\u67e5\u770b\u5386\u53f2\u5de5\u5355\u7684\u5904\u7406\u65b9\u6cd5\u3002\u5de5\u5355\u521b\u5efa\u6216\u5b8c\u6210\u65f6\uff0c\u90fd\u4f1a\u53d1\u9001\u6d88\u606f\u7ed9\u76f8\u5e94\u7684\u4eba\uff0c\u53ef\u4ee5\u8bbe\u7f6e\u591a\u4e2a\u53d1\u6d88\u606f\u65b9\u5f0f\u3002",
+            "title": "\u5de5\u5355\u7cfb\u7edf"
+        },
+        {
+            "location": "/oms/oa/#1",
             "text": "",
-            "title": "\u8bf7\u7b49\u5f85\u540e\u7eed\u5b8c\u5584\u3002\u3002\u3002"
+            "title": "1. \u5de5\u5355\u5217\u8868"
+        },
+        {
+            "location": "/oms/oa/#2",
+            "text": "",
+            "title": "2. \u5de5\u5355\u67e5\u770b"
+        },
+        {
+            "location": "/oms/oa/#3",
+            "text": "",
+            "title": "3. \u5904\u7406\u8fc7\u7a0b"
+        },
+        {
+            "location": "/oms/oa/#_3",
+            "text": "\u8fd9\u4e2a\u4e3b\u610f\u662f\u65b9\u4fbf\u9886\u5bfc\u67e5\u770b\u8003\u52e4\u6570\u636e   \u5229\u7528\u8003\u52e4\u673a\u7cfb\u7edf\u63d0\u4f9b\u7684sdk(\u6b64sdk\u53ea\u80fd\u8fd0\u884c\u5728windows\u4e0a)\u505a\u4e00\u4e2arestful-api\u63a5\u53e3, \u7136\u540e\u518d\u63a5\u5165oms, \u5b83\u6bcf\u5929\u5728\u4e0b\u73ed\u540e\u4f1a\u6536\u96c6\u5458\u5de5\u7684\u8003\u52e4\u6570\u636e\uff0c\u6839\u636e\u76f8\u5173\u8bbe\u7f6e\u5224\u65ad\u5458\u5de5\u662f\u5426\u6709\u65e9\u9000\u8fdf\u5230\u6216\u65f7\u5de5\uff0c\u6709\u9700\u6c42\u53ef\u4ee5\u53d1\u9001\u8003\u52e4\u62a5\u8868\uff0c\u9886\u5bfc\u53ef\u4ee5\u968f\u65f6\u5728\u8fd9\u4e2a\u4e0a\u9762\u67e5\u8be2\u6bcf\u4e2a\u5458\u5de5\u7684\u8003\u52e4\u60c5\u51b5\u3002",
+            "title": "\u8003\u52e4\u673a\u7ba1\u7406"
         },
         {
             "location": "/problem/",
-            "text": "Cinder Theme \nfor MkDocs\n\n\n\nAbout\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nCinder is a clean, responsive theme for static documentation sites that are generated with \nMkDocs\n. It's built on the \nBootstrap framework\n and includes pre-packaged syntax highlighting (\nhighlight.js\n), icons (\n \nFontAwesome\n), and a smashingly legible type scheme to get your message out to your users.\n\n\nYou are looking at the theme and can see a selection of the theme elements on the \nSpecimen page\n.\n\n\nInstall\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nRequired\n: Python 2.6+ or 3.3+\n\n\nInstall MkDocs & Create a New Project\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nIf you haven't installed MkDocs yet, use the following command to install it:\n\n\n$ pip install mkdocs\n\n\n\nNext, navigate to a clean directory and create a new MkDocs project with the following command:\n\n\n$ mkdocs new [projectname]\n\n\n\nReplace \n[projectname]\n with the name of your project (without the brackets).\n\n\nThen navigate to the root of your project directory:\n\n\n$ cd [projectname]\n\n\n\nInstall the Cinder Theme\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nChoose one of the following install approaches:\n\n\n1. Install with pip\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nIf you are using MkDocs v0.15.0 or higher, you can install the Cinder theme with pip using the command:\n\n\n$ pip install mkdocs-cinder\n\n\n\nMkDocs projects use a YAML settings file called \nmkdocs.yml\n.  This is located in the root of your project directory after you use the \nmkdocs new\n command.  Open the file in a text editor and modify it to define Cinder in the \ntheme\n setting as follows (note that this is case-sensitive):\n\n\ndef create(self, validated_data):\n    cmd = SaltState.objects.get(name=validated_data[\"statejob\"]).cmd\n    hosts = validated_data[\"hosts\"]\n    jid = sapi.remote_state(tgt=hosts.split(','), arg=cmd)\n    validated_data[\"j_id\"] = jid\n    job = StateJob.objects.create(**validated_data)\n    job.save()\n    return job\n\n\n\n\nTheme Updates\n: If you choose the pip install approach, you can update your Cinder theme to new releases with the command \n$ pip install --upgrade mkdocs-cinder\n.  Then re-build your static site files (see instructions below).\n\n\n2. Manual Install\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nDownload the Cinder theme archive.\n\n\n  Download Cinder v0.10.0\n\n\nUnpack the contents of the archive into a directory named \ncinder\n at the top level of your MkDocs project directory.\n\n\nYour project directory should now look like this:\n\n\n.\n\u251c\u2500\u2500 mkdocs.yml\n\u251c\u2500\u2500 cinder\n\u2502     \u251c\u2500\u2500 css\n\u2502     \u251c\u2500\u2500 img\n\u2502     \u251c\u2500\u2500 js\n\u2502     \u251c\u2500\u2500 base.html\n\u2502\u00a0\u00a0   \u251c\u2500\u2500 content.html\n\u2502     \u251c\u2500\u2500 404.html\n\u2502     \u251c\u2500\u2500 nav-sub.html\n\u2502\u00a0\u00a0   \u251c\u2500\u2500 nav.html\n\u2502\u00a0\u00a0   \u2514\u2500\u2500 toc.html\n\u2514\u2500\u2500 docs\n      \u2514\u2500\u2500 index.md\n\n\n\n\nMkDocs projects use a YAML settings file called \nmkdocs.yml\n.  This is located in the root of your project directory after you use the \nmkdocs new\n command.  Open the file in a text editor and modify it to include the \ntheme_dir\n setting as follows:\n\n\nsite_name: [YOURPROJECT]\ntheme_dir: cinder\npages:\n- Home: index.md\n\n\n\n\nTheme Updates\n: If you choose the manual install approach, you can update your Cinder theme by downloading the new cinder.zip release archive and including it in your project. Then re-build your static site files (see instructions below).\n\n\nTest with a Local Site Server\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nUse the following command to establish a local server for your site:\n\n\n$ mkdocs serve\n\n\n\nThen open your site in any browser at the URL \nhttp://localhost:8000\n.\n\n\nCreate Your Site\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nAdd Content with Markdown Syntax\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nGet to work on your site home page by opening the \ndocs/index.md\n file and editing it in Markdown syntax.  The HTML automatically updates in the browser when you save the Markdown file if you use the MkDocs server (see command above).\n\n\nAdd New Pages\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nAdd new pages to your site by creating a new Markdown file in your \ndocs\n directory, then linking to the new page in the \nmkdocs.yml\n file.  This uses a \nPage Name : Markdown file\n syntax.\n\n\nFor example, to add an About page using a Markdown file that is located on the path \ndocs/about.md\n, you would format the \nmkdocs.yml\n file as follows:\n\n\nsite_name: [YOURPROJECT]\ntheme_dir: cinder\npages:\n- Home: index.md\n- About: about.md\n\n\n\nAdd additional pages to your site by repeating the above series of steps.\n\n\nBuild Your Site\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nBuild your site files with the command:\n\n\n$ mkdocs build\n\n\n\nYour site files are built in the \nsite\n directory and are ready to use.  Deploy the contents of the \nsite\n directory to your web server.\n\n\nSite Customization\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nThe following are a few common customizations that you might be interested in.  For much more detail about the configuration of your site, check out the \nMkDocs Configuration documentation\n.\n\n\nSite Favicon\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nPlace your site favicon image file in the top level of your docs directory and then include a new \nsite_favicon:\n field in the \nmkdocs.yml\n file:\n\n\nsite_name: [YOURPROJECT]\ntheme_dir: cinder\nsite_favicon: favicon.ico\npages:\n  - Home: index.md\n  - About: about.md\n\n\n\nAdd Your Own CSS Stylesheets\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nCreate a \ncss\n directory inside your \ndocs\n directory and add your CSS files.  You can overwrite any of the Cinder styles in your CSS files.  Then include your CSS files in the \nmkdocs.yml\n file with the \nextra_css\n field:\n\n\nsite_name: [YOURPROJECT]\ntheme_dir: cinder\nextra_css:\n  - \"css/mystyle.css\"\n  - \"css/myotherstyle.css\"\npages:\n  - Home: index.md\n  - About: about.md\n\n\n\nYour CSS styles fall at the end of the cascade and will override all styles included in the theme (including Bootstrap and default Cinder styles).  You can find the Cinder and Bootstrap CSS files on the paths \ncinder/css/cinder.css\n and \ncinder/css/bootstrap.min.css\n, respectively.\n\n\nAdd Your Own JavaScript\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nCreate a \njs\n directory inside your \ndocs\n directory and add your JS files.  Then include your JS files in the \nmkdocs.yml\n file with the \nextra_js\n field:\n\n\nsite_name: [YOURPROJECT]\ntheme_dir: cinder\nextra_js:\n  - \"js/myscript.js\"\n  - \"js/myotherscript.js\"\npages:\n  - Home: index.md\n  - About: about.md\n\n\n\nGithub or Bitbucket Repository Link\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nInclude the \nrepo_url\n field and define it with your repository URL:\n\n\nsite_name: [YOURPROJECT]\ntheme_dir: cinder\nrepo_url: \"https://github.com/chrissimpkins/cinder\"\npages:\n  - Home: index.md\n  - About: about.md\n\n\n\nThe link appears at the upper right hand corner of your site.\n\n\nLicense Declaration and Link\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nThe Cinder theme displays your license declaration in the footer if you include a \ncopyright\n field and define it with the text (and optionally the HTML link) that you would like to display:\n\n\nsite_name: [YOURPROJECT]\ntheme_dir: cinder\ncopyright: \"Cinder is licensed under the <a href='https://github.com/chrissimpkins/cinder/blob/master/LICENSE.md'>MIT license\n\"\npages:\n  - Home: index.md\n  - About: about.md\n\n\n\nIssues\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nIf you have any issues with the theme, please report them on the Cinder repository:\n\n\nReport Issue\n\n\nActive Issues\n\n\nLicense\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nCinder is licensed under the MIT license. The full text of the license is available \nhere\n.",
-            "title": "about"
+            "text": "\u95ee\u9898\u6536\u96c6\u548c\u5904\u7406\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n\u56e0\u4e3a\u73af\u5883\u4e0d\u540c\uff0c\u53ef\u80fd\u5b89\u88c5\u90e8\u7f72\u4f1a\u6709\u4e00\u4e9b\u95ee\u9898\n\n\n\n\n\u5b89\u88c5\u95ee\u9898\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n1. \u95ee\u9898\u4e0d\u5927\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n2. \u95ee\u9898\u5f88\u5c0f\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n3. \u6ca1\u6709\u95ee\u9898\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n\u4ee3\u7801\u95ee\u9898\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n1. \u95ee\u9898\u4e0d\u5927\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n2. \u95ee\u9898\u5f88\u5c0f\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n3. \u6ca1\u6709\u95ee\u9898\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n\u5efa\u8bae\u4e0e\u59b9\u7eb8\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n1. \u6ca1\u6709\u5efa\u8bae\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n2. \u6ca1\u6709\u5efa\u8bae\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n3. \u6ca1\u6709\u5efa\u8bae\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07",
+            "title": "Problem"
         },
         {
-            "location": "/problem/#about",
-            "text": "Cinder is a clean, responsive theme for static documentation sites that are generated with  MkDocs . It's built on the  Bootstrap framework  and includes pre-packaged syntax highlighting ( highlight.js ), icons (   FontAwesome ), and a smashingly legible type scheme to get your message out to your users.  You are looking at the theme and can see a selection of the theme elements on the  Specimen page .",
-            "title": "About"
+            "location": "/problem/#_1",
+            "text": "\u56e0\u4e3a\u73af\u5883\u4e0d\u540c\uff0c\u53ef\u80fd\u5b89\u88c5\u90e8\u7f72\u4f1a\u6709\u4e00\u4e9b\u95ee\u9898",
+            "title": "\u95ee\u9898\u6536\u96c6\u548c\u5904\u7406"
         },
         {
-            "location": "/problem/#install",
-            "text": "Required : Python 2.6+ or 3.3+",
-            "title": "Install"
-        },
-        {
-            "location": "/problem/#install-mkdocs-create-a-new-project",
-            "text": "If you haven't installed MkDocs yet, use the following command to install it:  $ pip install mkdocs  Next, navigate to a clean directory and create a new MkDocs project with the following command:  $ mkdocs new [projectname]  Replace  [projectname]  with the name of your project (without the brackets).  Then navigate to the root of your project directory:  $ cd [projectname]",
-            "title": "Install MkDocs &amp; Create a New Project"
-        },
-        {
-            "location": "/problem/#install-the-cinder-theme",
-            "text": "Choose one of the following install approaches:",
-            "title": "Install the Cinder Theme"
-        },
-        {
-            "location": "/problem/#1-install-with-pip",
-            "text": "If you are using MkDocs v0.15.0 or higher, you can install the Cinder theme with pip using the command:  $ pip install mkdocs-cinder  MkDocs projects use a YAML settings file called  mkdocs.yml .  This is located in the root of your project directory after you use the  mkdocs new  command.  Open the file in a text editor and modify it to define Cinder in the  theme  setting as follows (note that this is case-sensitive):  def create(self, validated_data):\n    cmd = SaltState.objects.get(name=validated_data[\"statejob\"]).cmd\n    hosts = validated_data[\"hosts\"]\n    jid = sapi.remote_state(tgt=hosts.split(','), arg=cmd)\n    validated_data[\"j_id\"] = jid\n    job = StateJob.objects.create(**validated_data)\n    job.save()\n    return job  Theme Updates : If you choose the pip install approach, you can update your Cinder theme to new releases with the command  $ pip install --upgrade mkdocs-cinder .  Then re-build your static site files (see instructions below).",
-            "title": "1. Install with pip"
-        },
-        {
-            "location": "/problem/#2-manual-install",
-            "text": "Download the Cinder theme archive.    Download Cinder v0.10.0  Unpack the contents of the archive into a directory named  cinder  at the top level of your MkDocs project directory.  Your project directory should now look like this:  .\n\u251c\u2500\u2500 mkdocs.yml\n\u251c\u2500\u2500 cinder\n\u2502     \u251c\u2500\u2500 css\n\u2502     \u251c\u2500\u2500 img\n\u2502     \u251c\u2500\u2500 js\n\u2502     \u251c\u2500\u2500 base.html\n\u2502\u00a0\u00a0   \u251c\u2500\u2500 content.html\n\u2502     \u251c\u2500\u2500 404.html\n\u2502     \u251c\u2500\u2500 nav-sub.html\n\u2502\u00a0\u00a0   \u251c\u2500\u2500 nav.html\n\u2502\u00a0\u00a0   \u2514\u2500\u2500 toc.html\n\u2514\u2500\u2500 docs\n      \u2514\u2500\u2500 index.md  MkDocs projects use a YAML settings file called  mkdocs.yml .  This is located in the root of your project directory after you use the  mkdocs new  command.  Open the file in a text editor and modify it to include the  theme_dir  setting as follows:  site_name: [YOURPROJECT]\ntheme_dir: cinder\npages:\n- Home: index.md  Theme Updates : If you choose the manual install approach, you can update your Cinder theme by downloading the new cinder.zip release archive and including it in your project. Then re-build your static site files (see instructions below).",
-            "title": "2. Manual Install"
-        },
-        {
-            "location": "/problem/#test-with-a-local-site-server",
-            "text": "Use the following command to establish a local server for your site:  $ mkdocs serve  Then open your site in any browser at the URL  http://localhost:8000 .",
-            "title": "Test with a Local Site Server"
-        },
-        {
-            "location": "/problem/#create-your-site",
+            "location": "/problem/#_2",
             "text": "",
-            "title": "Create Your Site"
+            "title": "\u5b89\u88c5\u95ee\u9898"
         },
         {
-            "location": "/problem/#add-content-with-markdown-syntax",
-            "text": "Get to work on your site home page by opening the  docs/index.md  file and editing it in Markdown syntax.  The HTML automatically updates in the browser when you save the Markdown file if you use the MkDocs server (see command above).",
-            "title": "Add Content with Markdown Syntax"
-        },
-        {
-            "location": "/problem/#add-new-pages",
-            "text": "Add new pages to your site by creating a new Markdown file in your  docs  directory, then linking to the new page in the  mkdocs.yml  file.  This uses a  Page Name : Markdown file  syntax.  For example, to add an About page using a Markdown file that is located on the path  docs/about.md , you would format the  mkdocs.yml  file as follows:  site_name: [YOURPROJECT]\ntheme_dir: cinder\npages:\n- Home: index.md\n- About: about.md  Add additional pages to your site by repeating the above series of steps.",
-            "title": "Add New Pages"
-        },
-        {
-            "location": "/problem/#build-your-site",
-            "text": "Build your site files with the command:  $ mkdocs build  Your site files are built in the  site  directory and are ready to use.  Deploy the contents of the  site  directory to your web server.",
-            "title": "Build Your Site"
-        },
-        {
-            "location": "/problem/#site-customization",
-            "text": "The following are a few common customizations that you might be interested in.  For much more detail about the configuration of your site, check out the  MkDocs Configuration documentation .",
-            "title": "Site Customization"
-        },
-        {
-            "location": "/problem/#site-favicon",
-            "text": "Place your site favicon image file in the top level of your docs directory and then include a new  site_favicon:  field in the  mkdocs.yml  file:  site_name: [YOURPROJECT]\ntheme_dir: cinder\nsite_favicon: favicon.ico\npages:\n  - Home: index.md\n  - About: about.md",
-            "title": "Site Favicon"
-        },
-        {
-            "location": "/problem/#add-your-own-css-stylesheets",
-            "text": "Create a  css  directory inside your  docs  directory and add your CSS files.  You can overwrite any of the Cinder styles in your CSS files.  Then include your CSS files in the  mkdocs.yml  file with the  extra_css  field:  site_name: [YOURPROJECT]\ntheme_dir: cinder\nextra_css:\n  - \"css/mystyle.css\"\n  - \"css/myotherstyle.css\"\npages:\n  - Home: index.md\n  - About: about.md  Your CSS styles fall at the end of the cascade and will override all styles included in the theme (including Bootstrap and default Cinder styles).  You can find the Cinder and Bootstrap CSS files on the paths  cinder/css/cinder.css  and  cinder/css/bootstrap.min.css , respectively.",
-            "title": "Add Your Own CSS Stylesheets"
-        },
-        {
-            "location": "/problem/#add-your-own-javascript",
-            "text": "Create a  js  directory inside your  docs  directory and add your JS files.  Then include your JS files in the  mkdocs.yml  file with the  extra_js  field:  site_name: [YOURPROJECT]\ntheme_dir: cinder\nextra_js:\n  - \"js/myscript.js\"\n  - \"js/myotherscript.js\"\npages:\n  - Home: index.md\n  - About: about.md",
-            "title": "Add Your Own JavaScript"
-        },
-        {
-            "location": "/problem/#github-or-bitbucket-repository-link",
-            "text": "Include the  repo_url  field and define it with your repository URL:  site_name: [YOURPROJECT]\ntheme_dir: cinder\nrepo_url: \"https://github.com/chrissimpkins/cinder\"\npages:\n  - Home: index.md\n  - About: about.md  The link appears at the upper right hand corner of your site.",
-            "title": "Github or Bitbucket Repository Link"
-        },
-        {
-            "location": "/problem/#license-declaration-and-link",
-            "text": "The Cinder theme displays your license declaration in the footer if you include a  copyright  field and define it with the text (and optionally the HTML link) that you would like to display:  site_name: [YOURPROJECT]\ntheme_dir: cinder\ncopyright: \"Cinder is licensed under the <a href='https://github.com/chrissimpkins/cinder/blob/master/LICENSE.md'>MIT license \"\npages:\n  - Home: index.md\n  - About: about.md",
-            "title": "License Declaration and Link"
-        },
-        {
-            "location": "/problem/#issues",
-            "text": "If you have any issues with the theme, please report them on the Cinder repository:  Report Issue  Active Issues",
-            "title": "Issues"
-        },
-        {
-            "location": "/problem/#license",
-            "text": "Cinder is licensed under the MIT license. The full text of the license is available  here .",
-            "title": "License"
-        },
-        {
-            "location": "/problem/me/",
-            "text": "Specimen\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nBody copy\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Cras arcu libero,\nmollis sed massa vel, \nornare viverra ex\n. Mauris a ullamcorper lacus. Nullam\nurna elit, malesuada eget finibus ut, ullamcorper ac tortor. Vestibulum sodales\npulvinar nisl, pharetra aliquet est. Quisque volutpat erat ac nisi accumsan\ntempor.\n\n\nSed suscipit\n, orci non pretium pretium, quam mi gravida metus, vel\nvenenatis justo est condimentum diam. Maecenas non ornare justo. Nam a ipsum\neros. \nNulla aliquam\n orci sit amet nisl posuere malesuada. Proin aliquet\nnulla velit, quis ultricies orci feugiat et. \nUt tincidunt sollicitudin\n\ntincidunt. Aenean ullamcorper sit amet nulla at interdum.\n\n\nHeadings\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nThe 3\nrd\n level\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nThe 4\nth\n level\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nThe 5\nth\n level\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nThe 6\nth\n level\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nHeadings \nwith secondary text\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nThe 3\nrd\n level \nwith secondary text\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nThe 4\nth\n level \nwith secondary text\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nThe 5\nth\n level \nwith secondary text\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nThe 6\nth\n level \nwith secondary text\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nBlockquotes\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n\n\nMorbi eget dapibus felis. Vivamus venenatis porttitor tortor sit amet rutrum.\n  Pellentesque aliquet quam enim, eu volutpat urna rutrum a. Nam vehicula nunc\n  mauris, a ultricies libero efficitur sed. \nClass aptent\n taciti sociosqu ad\n  litora torquent per conubia nostra, per inceptos himenaeos. Sed molestie\n  imperdiet consectetur.\n\n\n\n\nBlockquote nesting\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n\n\nSed aliquet\n, neque at rutrum mollis, neque nisi tincidunt nibh, vitae\n  faucibus lacus nunc at lacus. Nunc scelerisque, quam id cursus sodales, lorem\n  \nlibero fermentum\n urna, ut efficitur elit ligula et nunc.\n\n\n\n\nMauris dictum mi lacus, sit amet pellentesque urna vehicula fringilla.\n    Ut sit amet placerat ante. Proin sed elementum nulla. Nunc vitae sem odio.\n    Suspendisse ac eros arcu. Vivamus orci erat, volutpat a tempor et, rutrum.\n    eu odio.\n\n\n\n\nSuspendisse rutrum facilisis risus\n, eu posuere neque commodo a.\n      Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed nec leo\n      bibendum, sodales mauris ut, tincidunt massa.\n\n\n\n\n\n\n\n\nOther content blocks\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n\n\nVestibulum vitae orci quis ante viverra ultricies ut eget turpis. Sed eu\n  lectus dapibus, eleifend nulla varius, lobortis turpis. In ac hendrerit nisl,\n  sit amet laoreet nibh.\n  \njs\n  var _extends = function(target) {\n    for (var i = 1; i < arguments.length; i++) {\n      var source = arguments[i];\n      for (var key in source) {\n        target[key] = source[key];\n      }\n    }\n    return target;\n  };\n\n\n\n\nPraesent at \nreturn\n \ntarget\n, sodales nibh vel, tempor felis. Fusce\n      vel lacinia lacus. Suspendisse rhoncus nunc non nisi iaculis ultrices.\n      Donec consectetur mauris non neque imperdiet, eget volutpat libero.\n\n\n\n\n\n\nLists\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nUnordered lists\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n\n\n\n\nSed sagittis eleifend rutrum. Donec vitae suscipit est. Nullam tempus tellus\n  non sem sollicitudin, quis rutrum leo facilisis. Nulla tempor lobortis orci,\n  at elementum urna sodales vitae. In in vehicula nulla, quis ornare libero.\n\n\n\n\nDuis mollis est eget nibh volutpat, fermentum aliquet dui mollis.\n\n\nNam vulputate tincidunt fringilla.\n\n\nNullam dignissim ultrices urna non auctor.\n\n\n\n\n\n\n\n\nAliquam metus eros, pretium sed nulla venenatis, faucibus auctor ex. Proin ut\n  eros sed sapien ullamcorper consequat. Nunc ligula ante, fringilla at aliquam\n  ac, aliquet sed mauris.\n\n\n\n\n\n\nNulla et rhoncus turpis. Mauris ultricies elementum leo. Duis efficitur\n  accumsan nibh eu mattis. Vivamus tempus velit eros, porttitor placerat nibh\n  lacinia sed. Aenean in finibus diam.\n\n\n\n\n\n\nOrdered lists\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n\n\n\n\nInteger vehicula feugiat magna, a mollis tellus. Nam mollis ex ante, quis\n  elementum eros tempor rutrum. Aenean efficitur lobortis lacinia. Nulla\n  consectetur feugiat sodales.\n\n\n\n\n\n\nCum sociis natoque penatibus et magnis dis parturient montes, nascetur\n  ridiculus mus. Aliquam ornare feugiat quam et egestas. Nunc id erat et quam\n  pellentesque lacinia eu vel odio.\n\n\n\n\n\n\nVivamus venenatis porttitor tortor sit amet rutrum. Pellentesque aliquet\n  quam enim, eu volutpat urna rutrum a. Nam vehicula nunc mauris, a\n  ultricies libero efficitur sed.\n\n\n\n\nMauris dictum mi lacus\n\n\nUt sit amet placerat ante\n\n\nSuspendisse ac eros arcu\n\n\n\n\n\n\n\n\nMorbi eget dapibus felis. Vivamus venenatis porttitor tortor sit amet\n  rutrum. Pellentesque aliquet quam enim, eu volutpat urna rutrum a. Sed\n  aliquet, neque at rutrum mollis, neque nisi tincidunt nibh.\n\n\n\n\n\n\nPellentesque eget \nvar\n \n_extends\n ornare tellus, ut gravida mi.\n\njs hl_lines=\"1\"\nvar _extends = function(target) {\n  for (var i = 1; i < arguments.length; i++) {\n    var source = arguments[i];\n    for (var key in source) {\n      target[key] = source[key];\n    }\n  }\n  return target;\n};\n\n\n\n\n\n\n\n\n\n\nVivamus id mi enim. Integer id turpis sapien. Ut condimentum lobortis\n  sagittis. Aliquam purus tellus, faucibus eget urna at, iaculis venenatis\n  nulla. Vivamus a pharetra leo.\n\n\n\n\n\n\nDefinition lists\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n\n\nLorem ipsum dolor sit amet\n\n\n\n\nSed sagittis eleifend rutrum. Donec vitae suscipit est. Nullam tempus\ntellus non sem sollicitudin, quis rutrum leo facilisis. Nulla tempor\nlobortis orci, at elementum urna sodales vitae. In in vehicula nulla.\n\n\nDuis mollis est eget nibh volutpat, fermentum aliquet dui mollis.\nNam vulputate tincidunt fringilla.\nNullam dignissim ultrices urna non auctor.\n\n\n\n\nCras arcu libero\n\n\n\n\nAliquam metus eros, pretium sed nulla venenatis, faucibus auctor ex. Proin\nut eros sed sapien ullamcorper consequat. Nunc ligula ante, fringilla at\naliquam ac, aliquet sed mauris.\n\n\n\n\n\n\nCode blocks\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nInline\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nMorbi eget \ndapibus felis\n. Vivamus \nvenenatis porttitor\n tortor sit amet\nrutrum. Class aptent taciti sociosqu ad litora torquent per conubia nostra,\nper inceptos himenaeos. \nPellentesque aliquet quam enim\n, eu volutpat urna\nrutrum a.\n\n\nNam vehicula nunc \nreturn\n \ntarget\n mauris, a ultricies libero efficitur\nsed. Sed molestie imperdiet consectetur. Vivamus a pharetra leo. Pellentesque\neget ornare tellus, ut gravida mi. Fusce vel lacinia lacus.\n\n\nListing\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n#!js hl_lines=\"8\"\nvar _extends = function(target) {\n  for (var i = 1; i < arguments.length; i++) {\n    var source = arguments[i];\n    for (var key in source) {\n      target[key] = source[key];\n    }\n  }\n  return target;\n};\n\n\n\nHorizontal rules\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\nAenean in finibus diam. Duis mollis est eget nibh volutpat, fermentum aliquet\ndui mollis. Nam vulputate tincidunt fringilla. Nullam dignissim ultrices urna\nnon auctor.\n\n\n\n\nInteger vehicula feugiat magna, a mollis tellus. Nam mollis ex ante, quis\nelementum eros tempor rutrum. Aenean efficitur lobortis lacinia. Nulla\nconsectetur feugiat sodales.\n\n\nData tables\n(\u0e07 \u2022\u0300_\u2022\u0301)\u0e07\n\n\n\n\n\n\n\n\nSollicitudo / Pellentesi\n\n\nconsectetur\n\n\nadipiscing\n\n\nelit\n\n\narcu\n\n\nsed\n\n\n\n\n\n\n\n\n\n\nVivamus a pharetra\n\n\nyes\n\n\nyes\n\n\nyes\n\n\nyes\n\n\nyes\n\n\n\n\n\n\nOrnare viverra ex\n\n\nyes\n\n\nyes\n\n\nyes\n\n\nyes\n\n\nyes\n\n\n\n\n\n\nMauris a ullamcorper\n\n\nyes\n\n\nyes\n\n\npartial\n\n\nyes\n\n\nyes\n\n\n\n\n\n\nNullam urna elit\n\n\nyes\n\n\nyes\n\n\nyes\n\n\nyes\n\n\nyes\n\n\n\n\n\n\nMalesuada eget finibus\n\n\nyes\n\n\nyes\n\n\nyes\n\n\nyes\n\n\nyes\n\n\n\n\n\n\nUllamcorper\n\n\nyes\n\n\nyes\n\n\nyes\n\n\nyes\n\n\nyes\n\n\n\n\n\n\nVestibulum sodales\n\n\nyes\n\n\n-\n\n\nyes\n\n\n-\n\n\nyes\n\n\n\n\n\n\nPulvinar nisl\n\n\nyes\n\n\nyes\n\n\nyes\n\n\n-\n\n\n-\n\n\n\n\n\n\nPharetra aliquet est\n\n\nyes\n\n\nyes\n\n\nyes\n\n\nyes\n\n\nyes\n\n\n\n\n\n\nSed suscipit\n\n\nyes\n\n\nyes\n\n\nyes\n\n\nyes\n\n\nyes\n\n\n\n\n\n\nOrci non pretium\n\n\nyes\n\n\npartial\n\n\n-\n\n\n-\n\n\n-\n\n\n\n\n\n\n\n\nSed sagittis eleifend rutrum. Donec vitae suscipit est. Nullam tempus tellus\nnon sem sollicitudin, quis rutrum leo facilisis. Nulla tempor lobortis orci,\nat elementum urna sodales vitae. In in vehicula nulla, quis ornare libero.\n\n\n\n\n\n\n\n\nLeft\n\n\nCenter\n\n\nRight\n\n\n\n\n\n\n\n\n\n\nLorem\n\n\ndolor\n\n\namet\n\n\n\n\n\n\nipsum\n\n\nsit\n\n\n\n\n\n\n\n\n\n\nVestibulum vitae orci quis ante viverra ultricies ut eget turpis. Sed eu\nlectus dapibus, eleifend nulla varius, lobortis turpis. In ac hendrerit nisl,\nsit amet laoreet nibh.\n\n\n\n  \n\n    \n\n    \n\n  \n\n  \n\n    \n\n      \nTable\n\n      \nwith colgroups (Pandoc)\n\n    \n\n  \n\n  \n\n    \n\n      \nLorem\n\n      \nipsum dolor sit amet.\n\n    \n\n    \n\n      \nSed sagittis\n\n      \neleifend rutrum. Donec vitae suscipit est.",
-            "title": "me"
-        },
-        {
-            "location": "/problem/me/#specimen",
+            "location": "/problem/#1",
             "text": "",
-            "title": "Specimen"
+            "title": "1. \u95ee\u9898\u4e0d\u5927"
         },
         {
-            "location": "/problem/me/#body-copy",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras arcu libero,\nmollis sed massa vel,  ornare viverra ex . Mauris a ullamcorper lacus. Nullam\nurna elit, malesuada eget finibus ut, ullamcorper ac tortor. Vestibulum sodales\npulvinar nisl, pharetra aliquet est. Quisque volutpat erat ac nisi accumsan\ntempor.  Sed suscipit , orci non pretium pretium, quam mi gravida metus, vel\nvenenatis justo est condimentum diam. Maecenas non ornare justo. Nam a ipsum\neros.  Nulla aliquam  orci sit amet nisl posuere malesuada. Proin aliquet\nnulla velit, quis ultricies orci feugiat et.  Ut tincidunt sollicitudin \ntincidunt. Aenean ullamcorper sit amet nulla at interdum.",
-            "title": "Body copy"
-        },
-        {
-            "location": "/problem/me/#headings",
+            "location": "/problem/#2",
             "text": "",
-            "title": "Headings"
+            "title": "2. \u95ee\u9898\u5f88\u5c0f"
         },
         {
-            "location": "/problem/me/#the-3rd-level",
+            "location": "/problem/#3",
             "text": "",
-            "title": "The 3rd level"
+            "title": "3. \u6ca1\u6709\u95ee\u9898"
         },
         {
-            "location": "/problem/me/#the-4th-level",
+            "location": "/problem/#_3",
             "text": "",
-            "title": "The 4th level"
+            "title": "\u4ee3\u7801\u95ee\u9898"
         },
         {
-            "location": "/problem/me/#the-5th-level",
+            "location": "/problem/#1_1",
             "text": "",
-            "title": "The 5th level"
+            "title": "1. \u95ee\u9898\u4e0d\u5927"
         },
         {
-            "location": "/problem/me/#the-6th-level",
+            "location": "/problem/#2_1",
             "text": "",
-            "title": "The 6th level"
+            "title": "2. \u95ee\u9898\u5f88\u5c0f"
         },
         {
-            "location": "/problem/me/#headings-with-secondary-text",
+            "location": "/problem/#3_1",
             "text": "",
-            "title": "Headings with secondary text"
+            "title": "3. \u6ca1\u6709\u95ee\u9898"
         },
         {
-            "location": "/problem/me/#the-3rd-level-with-secondary-text",
+            "location": "/problem/#_4",
             "text": "",
-            "title": "The 3rd level with secondary text"
+            "title": "\u5efa\u8bae\u4e0e\u59b9\u7eb8"
         },
         {
-            "location": "/problem/me/#the-4th-level-with-secondary-text",
+            "location": "/problem/#1_2",
             "text": "",
-            "title": "The 4th level with secondary text"
+            "title": "1. \u6ca1\u6709\u5efa\u8bae"
         },
         {
-            "location": "/problem/me/#the-5th-level-with-secondary-text",
+            "location": "/problem/#2_2",
             "text": "",
-            "title": "The 5th level with secondary text"
+            "title": "2. \u6ca1\u6709\u5efa\u8bae"
         },
         {
-            "location": "/problem/me/#the-6th-level-with-secondary-text",
+            "location": "/problem/#3_2",
             "text": "",
-            "title": "The 6th level with secondary text"
-        },
-        {
-            "location": "/problem/me/#blockquotes",
-            "text": "Morbi eget dapibus felis. Vivamus venenatis porttitor tortor sit amet rutrum.\n  Pellentesque aliquet quam enim, eu volutpat urna rutrum a. Nam vehicula nunc\n  mauris, a ultricies libero efficitur sed.  Class aptent  taciti sociosqu ad\n  litora torquent per conubia nostra, per inceptos himenaeos. Sed molestie\n  imperdiet consectetur.",
-            "title": "Blockquotes"
-        },
-        {
-            "location": "/problem/me/#blockquote-nesting",
-            "text": "Sed aliquet , neque at rutrum mollis, neque nisi tincidunt nibh, vitae\n  faucibus lacus nunc at lacus. Nunc scelerisque, quam id cursus sodales, lorem\n   libero fermentum  urna, ut efficitur elit ligula et nunc.   Mauris dictum mi lacus, sit amet pellentesque urna vehicula fringilla.\n    Ut sit amet placerat ante. Proin sed elementum nulla. Nunc vitae sem odio.\n    Suspendisse ac eros arcu. Vivamus orci erat, volutpat a tempor et, rutrum.\n    eu odio.   Suspendisse rutrum facilisis risus , eu posuere neque commodo a.\n      Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed nec leo\n      bibendum, sodales mauris ut, tincidunt massa.",
-            "title": "Blockquote nesting"
-        },
-        {
-            "location": "/problem/me/#other-content-blocks",
-            "text": "Vestibulum vitae orci quis ante viverra ultricies ut eget turpis. Sed eu\n  lectus dapibus, eleifend nulla varius, lobortis turpis. In ac hendrerit nisl,\n  sit amet laoreet nibh.\n   js\n  var _extends = function(target) {\n    for (var i = 1; i < arguments.length; i++) {\n      var source = arguments[i];\n      for (var key in source) {\n        target[key] = source[key];\n      }\n    }\n    return target;\n  };   Praesent at  return   target , sodales nibh vel, tempor felis. Fusce\n      vel lacinia lacus. Suspendisse rhoncus nunc non nisi iaculis ultrices.\n      Donec consectetur mauris non neque imperdiet, eget volutpat libero.",
-            "title": "Other content blocks"
-        },
-        {
-            "location": "/problem/me/#lists",
-            "text": "",
-            "title": "Lists"
-        },
-        {
-            "location": "/problem/me/#unordered-lists",
-            "text": "Sed sagittis eleifend rutrum. Donec vitae suscipit est. Nullam tempus tellus\n  non sem sollicitudin, quis rutrum leo facilisis. Nulla tempor lobortis orci,\n  at elementum urna sodales vitae. In in vehicula nulla, quis ornare libero.   Duis mollis est eget nibh volutpat, fermentum aliquet dui mollis.  Nam vulputate tincidunt fringilla.  Nullam dignissim ultrices urna non auctor.     Aliquam metus eros, pretium sed nulla venenatis, faucibus auctor ex. Proin ut\n  eros sed sapien ullamcorper consequat. Nunc ligula ante, fringilla at aliquam\n  ac, aliquet sed mauris.    Nulla et rhoncus turpis. Mauris ultricies elementum leo. Duis efficitur\n  accumsan nibh eu mattis. Vivamus tempus velit eros, porttitor placerat nibh\n  lacinia sed. Aenean in finibus diam.",
-            "title": "Unordered lists"
-        },
-        {
-            "location": "/problem/me/#ordered-lists",
-            "text": "Integer vehicula feugiat magna, a mollis tellus. Nam mollis ex ante, quis\n  elementum eros tempor rutrum. Aenean efficitur lobortis lacinia. Nulla\n  consectetur feugiat sodales.    Cum sociis natoque penatibus et magnis dis parturient montes, nascetur\n  ridiculus mus. Aliquam ornare feugiat quam et egestas. Nunc id erat et quam\n  pellentesque lacinia eu vel odio.    Vivamus venenatis porttitor tortor sit amet rutrum. Pellentesque aliquet\n  quam enim, eu volutpat urna rutrum a. Nam vehicula nunc mauris, a\n  ultricies libero efficitur sed.   Mauris dictum mi lacus  Ut sit amet placerat ante  Suspendisse ac eros arcu     Morbi eget dapibus felis. Vivamus venenatis porttitor tortor sit amet\n  rutrum. Pellentesque aliquet quam enim, eu volutpat urna rutrum a. Sed\n  aliquet, neque at rutrum mollis, neque nisi tincidunt nibh.    Pellentesque eget  var   _extends  ornare tellus, ut gravida mi. js hl_lines=\"1\"\nvar _extends = function(target) {\n  for (var i = 1; i < arguments.length; i++) {\n    var source = arguments[i];\n    for (var key in source) {\n      target[key] = source[key];\n    }\n  }\n  return target;\n};      Vivamus id mi enim. Integer id turpis sapien. Ut condimentum lobortis\n  sagittis. Aliquam purus tellus, faucibus eget urna at, iaculis venenatis\n  nulla. Vivamus a pharetra leo.",
-            "title": "Ordered lists"
-        },
-        {
-            "location": "/problem/me/#definition-lists",
-            "text": "Lorem ipsum dolor sit amet   Sed sagittis eleifend rutrum. Donec vitae suscipit est. Nullam tempus\ntellus non sem sollicitudin, quis rutrum leo facilisis. Nulla tempor\nlobortis orci, at elementum urna sodales vitae. In in vehicula nulla.  Duis mollis est eget nibh volutpat, fermentum aliquet dui mollis.\nNam vulputate tincidunt fringilla.\nNullam dignissim ultrices urna non auctor.   Cras arcu libero   Aliquam metus eros, pretium sed nulla venenatis, faucibus auctor ex. Proin\nut eros sed sapien ullamcorper consequat. Nunc ligula ante, fringilla at\naliquam ac, aliquet sed mauris.",
-            "title": "Definition lists"
-        },
-        {
-            "location": "/problem/me/#code-blocks",
-            "text": "",
-            "title": "Code blocks"
-        },
-        {
-            "location": "/problem/me/#inline",
-            "text": "Morbi eget  dapibus felis . Vivamus  venenatis porttitor  tortor sit amet\nrutrum. Class aptent taciti sociosqu ad litora torquent per conubia nostra,\nper inceptos himenaeos.  Pellentesque aliquet quam enim , eu volutpat urna\nrutrum a.  Nam vehicula nunc  return   target  mauris, a ultricies libero efficitur\nsed. Sed molestie imperdiet consectetur. Vivamus a pharetra leo. Pellentesque\neget ornare tellus, ut gravida mi. Fusce vel lacinia lacus.",
-            "title": "Inline"
-        },
-        {
-            "location": "/problem/me/#listing",
-            "text": "#!js hl_lines=\"8\"\nvar _extends = function(target) {\n  for (var i = 1; i < arguments.length; i++) {\n    var source = arguments[i];\n    for (var key in source) {\n      target[key] = source[key];\n    }\n  }\n  return target;\n};",
-            "title": "Listing"
-        },
-        {
-            "location": "/problem/me/#horizontal-rules",
-            "text": "Aenean in finibus diam. Duis mollis est eget nibh volutpat, fermentum aliquet\ndui mollis. Nam vulputate tincidunt fringilla. Nullam dignissim ultrices urna\nnon auctor.   Integer vehicula feugiat magna, a mollis tellus. Nam mollis ex ante, quis\nelementum eros tempor rutrum. Aenean efficitur lobortis lacinia. Nulla\nconsectetur feugiat sodales.",
-            "title": "Horizontal rules"
-        },
-        {
-            "location": "/problem/me/#data-tables",
-            "text": "Sollicitudo / Pellentesi  consectetur  adipiscing  elit  arcu  sed      Vivamus a pharetra  yes  yes  yes  yes  yes    Ornare viverra ex  yes  yes  yes  yes  yes    Mauris a ullamcorper  yes  yes  partial  yes  yes    Nullam urna elit  yes  yes  yes  yes  yes    Malesuada eget finibus  yes  yes  yes  yes  yes    Ullamcorper  yes  yes  yes  yes  yes    Vestibulum sodales  yes  -  yes  -  yes    Pulvinar nisl  yes  yes  yes  -  -    Pharetra aliquet est  yes  yes  yes  yes  yes    Sed suscipit  yes  yes  yes  yes  yes    Orci non pretium  yes  partial  -  -  -     Sed sagittis eleifend rutrum. Donec vitae suscipit est. Nullam tempus tellus\nnon sem sollicitudin, quis rutrum leo facilisis. Nulla tempor lobortis orci,\nat elementum urna sodales vitae. In in vehicula nulla, quis ornare libero.     Left  Center  Right      Lorem  dolor  amet    ipsum  sit      Vestibulum vitae orci quis ante viverra ultricies ut eget turpis. Sed eu\nlectus dapibus, eleifend nulla varius, lobortis turpis. In ac hendrerit nisl,\nsit amet laoreet nibh.  \n   \n     \n     \n   \n   \n     \n       Table \n       with colgroups (Pandoc) \n     \n   \n   \n     \n       Lorem \n       ipsum dolor sit amet. \n     \n     \n       Sed sagittis \n       eleifend rutrum. Donec vitae suscipit est.",
-            "title": "Data tables"
+            "title": "3. \u6ca1\u6709\u5efa\u8bae"
         }
     ]
 }

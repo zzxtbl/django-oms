@@ -9,7 +9,7 @@
     <link rel="canonical" href="https://itimor.github.io/django-oms/oms/oa/">
     <link rel="shortcut icon" href="../../assets/images/favicon.ico">
 
-    <title>办公系统 - oms运维管理系统</title>
+    <title>工单和考勤 - oms运维管理系统</title>
 
     <link href="../../css/bootstrap-custom.css" rel="stylesheet">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -98,7 +98,7 @@
                         
                             
 <li class="active">
-    <a href="./">办公系统</a>
+    <a href="./">工单和考勤</a>
 </li>
 
                         
@@ -107,23 +107,8 @@
                 
                 
                 
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Problem <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                        
-                            
-<li >
-    <a href="../../problem/">about</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../../problem/me/">me</a>
-</li>
-
-                        
-                        </ul>
+                    <li >
+                        <a href="../../problem/">Problem</a>
                     </li>
                 
                 
@@ -158,17 +143,34 @@
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
         <li class="first-level active"><a href="#_1">办公系统</a></li>
-            <li class="second-level"><a href="#_2">请等待后续完善。。。</a></li>
+            <li class="second-level"><a href="#_2">工单系统</a></li>
+                
+                <li class="third-level"><a href="#1">1. 工单列表</a></li>
+                <li class="third-level"><a href="#2">2. 工单查看</a></li>
+                <li class="third-level"><a href="#3">3. 处理过程</a></li>
+            <li class="second-level"><a href="#_3">考勤机管理</a></li>
                 
     </ul>
 </div></div>
         <div class="col-md-9 content" role="main">
 
 <h1 id="_1">办公系统<a class="headerlink" href="#_1" title="Permanent link">(ง •̀_•́)ง</a></h1>
-<p>工单系统和项目管理</p>
+<p>工单系统和考勤管理</p>
 <hr />
-<h2 id="_2">请等待后续完善。。。<a class="headerlink" href="#_2" title="Permanent link">(ง •̀_•́)ง</a></h2>
-<p><img alt="404" src="../../images/404.jpg" /></p></div>
+<h2 id="_2">工单系统<a class="headerlink" href="#_2" title="Permanent link">(ง •̀_•́)ง</a></h2>
+<p>这个系统主要是给客服人员用的，网站在运行过程中进程会出现网络、代码bug等故障，以前出问题时，运维需要马上上线排查问题，有了这个工单系统后，可以先在工单上提交问题，根据问题严重性设置问题级别， 级别高的运维可以优先处理，级别低的延后处理，运维人员可以把相关的处理过程和结果都写到工单里面，这样大家都能看的这个处理过程，也方便日后问题追踪和查看，如果有相同的问题，可以直接查看历史工单的处理方法。工单创建或完成时，都会发送消息给相应的人，可以设置多个发消息方式。</p>
+<h3 id="1">1. 工单列表<a class="headerlink" href="#1" title="Permanent link">(ง •̀_•́)ง</a></h3>
+<p><img alt="工单系统" src="../../assets/images/index/index2.png" /></p>
+<h3 id="2">2. 工单查看<a class="headerlink" href="#2" title="Permanent link">(ง •̀_•́)ง</a></h3>
+<p><img alt="工单系统" src="../../assets/images/oa/oa1.png" /></p>
+<h3 id="3">3. 处理过程<a class="headerlink" href="#3" title="Permanent link">(ง •̀_•́)ง</a></h3>
+<p><img alt="工单系统" src="../../assets/images/oa/oa2.png" /></p>
+<h2 id="_3">考勤机管理<a class="headerlink" href="#_3" title="Permanent link">(ง •̀_•́)ง</a></h2>
+<blockquote>
+<p>这个主意是方便领导查看考勤数据</p>
+</blockquote>
+<p>利用考勤机系统提供的sdk(此sdk只能运行在windows上)做一个restful-api接口, 然后再接入oms, 它每天在下班后会收集员工的考勤数据，根据相关设置判断员工是否有早退迟到或旷工，有需求可以发送考勤报表，领导可以随时在这个上面查询每个员工的考勤情况。</p>
+<p><img alt="工单系统" src="../../assets/images/oa/oa3.png" /></p></div>
         
     </div>
 

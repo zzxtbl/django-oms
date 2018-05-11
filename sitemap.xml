@@ -44,19 +44,11 @@
     
 
     
-        
     <url>
      <loc>https://itimor.github.io/django-oms//problem/</loc>
      <lastmod>2018-05-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
-    <url>
-     <loc>https://itimor.github.io/django-oms//problem/me/</loc>
-     <lastmod>2018-05-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
     
 
 </urlset>
