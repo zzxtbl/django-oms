@@ -10,6 +10,7 @@
 注意：该项目是采用的前后端分离开发，是在python3.6下面开发的，因为是使用的django-rest-framework，理论也支持python2.7x；由于前端使用的是vuejs,所以不支持低版本ie游览器。
 
 本项目集成工单系统、发布系统、dns和zabbix管理、saltstack管理。
+a
 [文档查看](https://itimor.github.io/django-oms/)
 
 ## 项目实践
