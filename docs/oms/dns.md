@@ -25,11 +25,11 @@ oms系统对接binddns和zabbix
 
 ![发布结果](/assets/images/dns/dns1.png)
 
-> 1. 在第一列表格添加新的dns服务商的秘钥信息，其中 `godaddy`用的是 key 和 serert; `dnspod`和`bind`用的是id和token；
+- 在第一列表格添加新的dns服务商的秘钥信息，其中 `godaddy`用的是 key 和 serert; `dnspod`和`bind`用的是id和token；
 
-> 2. 点击刚添加的dns,会看到第二列表格，这个会显示这个dns下的当前所以域名，点击同步，它会把这里的域名同步到oms系统；
+- 点击刚添加的dns,会看到第二列表格，这个会显示这个dns下的当前所以域名，点击同步，它会把这里的域名同步到oms系统；
 
-> 3. 点击域名，第三列表格会展示这个域名下所以record;
+- 点击域名，第三列表格会展示这个域名下所以record;
 
 
 ### 3. 管理record

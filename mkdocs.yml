@@ -52,10 +52,8 @@ pages:
     - 基础模块: oms/base.md
     - salt与主机: oms/host.md
     - dns和zabbix: oms/dns.md
-    - 办公系统: oms/oa.md
-  - Problem:
-    - about: problem/index.md
-    - me: problem/me.md
+    - 工单和考勤: oms/oa.md
+  - Problem: problem.md
 
 dev_addr: 0.0.0.0:5000
 

@@ -16,13 +16,11 @@
 - [日志审计模块](/oms/host/)
 - [salt模块](/oms/host/#salt_1)
 - [发布系统](/oms/host/#2)
-- [dns域名管理集成](/oms/dns/)
-- [监控模块](/oms/dns/)
-- [通知](/oms/dns/)
+- [dns域名管理](/oms/dns/#dns)
+- [监控模块](/oms/dns/#zabbix)
 
 ## 办公系统
 > 给其他同事使用的一些模块
 
-- [工单系统](/oms/oa/)
-- [任务系统](/oms/oa/)
-- [考勤机集成](/oms/oa/)
+- [工单系统](/oms/oa/#_2)
+- [考勤机集成](/oms/oa/#_3)
