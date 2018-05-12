@@ -20,6 +20,8 @@ theme:
     text: Hind Siliguri
     code: Noto Sans
 
+google_analytics: ['UA-119111951-1', 'django-oms']
+    
 copyright: "Copyright @ Itimor"
 
 use_directory_urls: true
