@@ -7,7 +7,7 @@ repo_url: 'https://github.com/itimor/django-oms'
 
 theme:
   name: null
-  custom_dir: themes/cinder
+  custom_dir: themes/itimor
   show_edit: false
   logo: 'assets/images/favicon.ico'
   feature:
@@ -56,10 +56,3 @@ pages:
   - Problem: problem.md
 
 dev_addr: 0.0.0.0:5000
-
-extra_css:
-  - assets/css/extra.css
-
-extra_javascript:
-  - assets/js/extra.js
-  - assets/js/zoom.js
