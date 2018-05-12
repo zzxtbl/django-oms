@@ -24,7 +24,7 @@ theme:
 
 google_analytics: ['UA-119111951-1', 'django-oms']
     
-copyright: "Copyright @ Itimor"
+copyright: "Copyright @ <a href='https://github.com/itimor/'>Itimor</a>"
 
 use_directory_urls: true
 
