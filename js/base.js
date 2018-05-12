@@ -20,8 +20,10 @@ $("li.disabled a").click(function() {
 $(document).ready(function() {
     var n = 1;
     $("p img").each(function() {
-        n++;   // 让图片独立
-        var strA = "<a href='" + this.src + "' data-lightbox='xxoo-" + n + "' data-title='" + this.alt + "'></a>";
+        // 让图片不以图集存在
+        // n++;
+        // var strA = "<a href='" + this.src + "' data-lightbox='xxoo-" + n + "' data-title='" + this.alt + "'></a>";
+        var strA = "<a href='" + this.src + "' data-lightbox='xxoo' data-title='" + this.alt + "'></a>";
         $(this).wrapAll(strA);
     });
 });
