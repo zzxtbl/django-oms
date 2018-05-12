@@ -180,17 +180,17 @@
 <p>saltstack最强大功能的是state模块，平时我们为了集中化配置管理服务器，会写很多的 <code>state.sls</code> 来协助日常运维工作， 比如服务器初始化、批量执行命令、批量更新配置、批量部署zabbix或tomcat等等，现在我们这些 <code>state.sls</code> 存到oms系统，然后在页面上通过点击使其工作。</p>
 </blockquote>
 <p><em>选择主机和state服务</em>：</p>
-<p><img alt="state1" src="../../assets/images/host/host2.png" /></p>
+<p><img alt="执行state服务" src="../../assets/images/host/host2.png" /></p>
 <p><em>执行记录查看</em>：</p>
-<p><img alt="state2" src="../../assets/images/host/host3.png" /></p>
+<p><img alt="查看执行结果" src="../../assets/images/host/host3.png" /></p>
 <hr />
 <h2 id="_1">资产模块<a class="headerlink" href="#_1" title="Permanent link">(ง •̀_•́)ง</a></h2>
 <h3 id="1">1. 主机的自动收集和更新<a class="headerlink" href="#1" title="Permanent link">(ง •̀_•́)ง</a></h3>
 <p>这个是利用salt的grains获取minion节点的系统信息，不用再手动往里录入资产信息，有这个就轻松很多了，不过针对一些交换机路由器等设备，你还是得手动录入。</p>
-<p><img alt="record" src="../../assets/images/host/host4.png" /></p>
+<p><img alt="主机列表" src="../../assets/images/host/host4.png" /></p>
 <h3 id="2_1">2. 资产修改记录<a class="headerlink" href="#2_1" title="Permanent link">(ง •̀_•́)ง</a></h3>
 <p>这个是一个修改记录表，在主机列表里面变更数据，都会记录到这里面，无论是手动更改还是自动更改的数据，同时会记录修改时间和修改人。</p>
-<p><img alt="record" src="../../assets/images/host/host5.png" /></p>
+<p><img alt="资产修改记录" src="../../assets/images/host/host5.png" /></p>
 <hr /></div>
         
     </div>
