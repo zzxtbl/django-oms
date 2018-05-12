@@ -5,6 +5,8 @@ site_url: 'https://itimor.github.io/django-oms/'
 repo_name: 'GitHub'
 repo_url: 'https://github.com/itimor/django-oms'
 
+dev_addr: 0.0.0.0:5000
+
 theme:
   name: null
   custom_dir: themes/itimor
@@ -59,4 +61,6 @@ pages:
     - 工单和考勤: oms/oa.md
   - Problem: problem.md
 
-dev_addr: 0.0.0.0:5000
+extra_css:
+
+extra_javascript:
