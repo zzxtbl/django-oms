@@ -156,13 +156,12 @@ html.lb-disable-scrolling {
 
 .lb-data {
   padding: 0 4px;
-  color: #ccc;
 }
 
 .lb-data .lb-details {
-  width: 85%;
+  width: 100%;
   float: left;
-  text-align: left;
+  text-align: center;
   line-height: 1.1em;
 }
 
@@ -170,8 +169,7 @@ html.lb-disable-scrolling {
   font-size: 13px;
   font-weight: bold;
   line-height: 1em;
-  color: #ff5391;
-  text-align: center;
+  color: #cc229b;
 }
 
 .lb-data .lb-number {
@@ -182,15 +180,14 @@ html.lb-disable-scrolling {
   color: #999999;
 }
 
-.lb-data .lb-close {
-  display: block;
-  float: right;
+.lb-close {
   width: 30px;
   height: 30px;
+  float: right;
+  margin-right: -30px;
   background: url(../images/close.png) top right no-repeat;
-  text-align: right;
   outline: none;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 0.7;
   -webkit-transition: opacity 0.2s;
   -moz-transition: opacity 0.2s;
@@ -198,7 +195,7 @@ html.lb-disable-scrolling {
   transition: opacity 0.2s;
 }
 
-.lb-data .lb-close:hover {
+.lb-close:hover {
   cursor: pointer;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
