@@ -29,11 +29,11 @@ salt模块的核心
 
 *选择主机和state服务*：
 
-![state1](/assets/images/host/host2.png)
+![执行state服务](/assets/images/host/host2.png)
 
 *执行记录查看*：
 
-![state2](/assets/images/host/host3.png)
+![查看执行结果](/assets/images/host/host3.png)
 
 ---
 
@@ -42,12 +42,12 @@ salt模块的核心
 ### 1. 主机的自动收集和更新
 这个是利用salt的grains获取minion节点的系统信息，不用再手动往里录入资产信息，有这个就轻松很多了，不过针对一些交换机路由器等设备，你还是得手动录入。
 
-![record](/assets/images/host/host4.png)
+![主机列表](/assets/images/host/host4.png)
 
 ### 2. 资产修改记录
 
 这个是一个修改记录表，在主机列表里面变更数据，都会记录到这里面，无论是手动更改还是自动更改的数据，同时会记录修改时间和修改人。
 
-![record](/assets/images/host/host5.png)
+![资产修改记录](/assets/images/host/host5.png)
 
 ---

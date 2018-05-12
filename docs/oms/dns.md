@@ -23,7 +23,7 @@ oms系统对接binddns和zabbix
 
 *dns管理 -> api管理*
 
-![发布结果](/assets/images/dns/dns1.png)
+![dns-api管理](/assets/images/dns/dns1.png)
 
 - 在第一列表格添加新的dns服务商的秘钥信息，其中 `godaddy`用的是 key 和 serert; `dnspod`和`bind`用的是id和token；
 
@@ -36,7 +36,7 @@ oms系统对接binddns和zabbix
 
 *dns管理 -> 域名列表*
 
-![发布结果](/assets/images/dns/dns2.png)
+![域名列表](/assets/images/dns/dns2.png)
 
 在这里可以看到上一步同步过来的域名， 这个列表可以实时的反映每个`域名有效期` 、`ns地址`，以及属于哪个dnsapi, 提供搜索功能，方便快速查找域名。
 
@@ -46,7 +46,7 @@ oms系统对接binddns和zabbix
 
 - 点击修改域名，可以给域名添加当前状态和备注信息，dns服务商是没有备注功能的；
 
-![发布结果](/assets/images/dns/dns3.png)
+![添加域名备注](/assets/images/dns/dns3.png)
 
 - 点击修改记录，可以更换ip，这个会马上同步到dns服务商
 
