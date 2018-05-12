@@ -10,6 +10,8 @@ theme:
   custom_dir: themes/itimor
   show_edit: false
   logo: 'assets/images/favicon.ico'
+  static_templates:
+    - 404.html
   feature:
     tabs: true
   language: zh
