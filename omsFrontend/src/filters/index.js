@@ -94,9 +94,8 @@ export function nFormatter(num, digits) {
 
 export function parseDate(datestr) {
   if (datestr !== undefined) {
-    const datetime = datestr.split('T')
-    const date = datetime[0]
-    const time = datetime[1].slice(0, 8)
+    const date = datestr.slice(0, 10)
+    const time = datestr.slice(11, 19)
     return date + ' ' + time
   }
 }
