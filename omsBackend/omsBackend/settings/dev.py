@@ -2,7 +2,7 @@
 # author: itimor
 
 import os
-
+DEBUG = True
 TIME_ZONE = 'Asia/Shanghai'
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
