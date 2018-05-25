@@ -22,49 +22,6 @@
       </div>
       <div>
         <el-table :data="tableData" border style="width: 100%" @sort-change="handleSortChange">
-          <el-table-column label="任务" type="expand" width="50">
-            <template slot-scope="scope">
-              <el-table :data="scope.row.projectData" border stripe style="width: 100%">
-                <el-table-column type="index" width="50"></el-table-column>
-                <el-table-column prop="pid" label="编号"></el-table-column>
-                <el-table-column prop="name" label="任务概要"></el-table-column>
-                <el-table-column prop="action_user" label="负责人"></el-table-column>
-                <el-table-column prop="start_time" label="开始日期" sortable></el-table-column>
-                <el-table-column prop="end_time" label="完成日期"></el-table-column>
-                <el-table-column prop="status" label="状态">
-                  <template slot-scope="props">
-                    <div slot="reference">
-                      <el-tag size="mini" :type="STATUS_COLOR[props.row.status]">
-                        {{STATUS_TEXT[props.row.status]}}
-                      </el-tag>
-                    </div>
-                  </template>
-                </el-table-column>
-                <el-table-column prop="task_complete" label="进度" sortable>
-                  <template slot-scope="props">
-                    <div slot="reference" class="name-wrapper">
-                      {{props.row.task_complete}}%
-                      <el-tooltip class="item" effect="dark" content="更新任务进度" placement="top">
-                        <el-button v-if="scope.row.status==0&&props.row.task_complete!=100"
-                                   @click="updateTaskComplete(props.row)" type="text"
-                                   icon="el-icon-edit"></el-button>
-                      </el-tooltip>
-                    </div>
-                  </template>
-                </el-table-column>
-                <el-table-column label="操作" width="230">
-                  <template slot-scope="props">
-                    <el-button-group>
-                      <el-button type="success" plain size="mini" @click=showProject(props.row)>详情</el-button>
-                      <el-button v-if="props.row.status==0" type="primary" plain size="mini" @click=updateProjectContent2(props.row)>修改
-                      </el-button>
-                      <el-button v-if="props.row.status==0" type="danger" plain size="mini" @click=deleteProject(props.row)>删除</el-button>
-                    </el-button-group>
-                  </template>
-                </el-table-column>
-              </el-table>
-            </template>
-          </el-table-column>
           <el-table-column prop='pid' label='编号'>
             <template slot-scope="scope">
               <div slot="reference">
@@ -75,8 +32,18 @@
             </template>
           </el-table-column>
           <el-table-column prop='name' label='名称'></el-table-column>
-          <el-table-column prop='start_time' label='开始日期' sortable="custom"></el-table-column>
-          <el-table-column prop='end_time' label='结束日期'></el-table-column>
+          <el-table-column prop='start_time' label='开始日期' sortable="custom">
+            <template slot-scope="scope">
+              <a v-if="scope.row.is_ci">持续项目</a>
+              <a v-else>{{scope.row.start_time}}</a>
+            </template>
+          </el-table-column>
+          <el-table-column prop='end_time' label='结束日期'>
+            <template slot-scope="scope">
+              <a v-if="scope.row.is_ci">持续项目</a>
+              <a v-else>{{scope.row.end_time}}</a>
+            </template>
+          </el-table-column>
           <el-table-column prop='status' label='状态' sortable="custom">
             <template slot-scope="scope">
               <div slot="reference" class="name-wrapper">
@@ -84,7 +51,8 @@
                   {{STATUS_TEXT[scope.row.status]}}
                 </el-tag>
                 <el-tooltip class="item" effect="dark" content="更改状态" placement="top">
-                  <el-button v-if="scope.row.status!=1" type="text" icon="el-icon-edit" class="modifychange"
+                  <el-button v-if="scope.row.status!=1 & !scope.row.is_ci" type="text" icon="el-icon-edit"
+                             class="modifychange"
                              @click="updateDemand(scope.row.id)"></el-button>
                 </el-tooltip>
               </div>
@@ -93,14 +61,18 @@
           <el-table-column prop='task_complete' label='项目进度' sortable="custom">
             <template slot-scope="scope">
               <div slot="reference" class="name-wrapper">
-                {{scope.row.task_complete}}%
+                <a v-if="scope.row.is_ci">持续项目</a>
+                <a v-else>{{scope.row.task_complete}}%</a>
               </div>
             </template>
           </el-table-column>
-          <el-table-column label="操作" width="230">
+          <el-table-column label="操作" width="180">
             <template slot-scope="scope">
               <el-button-group v-if="scope.row.status==0">
-                <el-button type="primary" size="mini" @click="addProject(scope.row)">增加任务</el-button>
+                <router-link :to="'/opstasks/editopsdemand/' + scope.row.id">
+                  <el-button type="success" size="mini">修改</el-button>
+                </router-link>
+                <!--<el-button type="primary" size="mini" @click="addProject(scope.row)">增加任务</el-button>-->
                 <el-button type="danger" size="mini" @click="deleteDemand(scope.row.id)">删除</el-button>
               </el-button-group>
             </template>
@@ -124,21 +96,6 @@
       </div>
     </el-card>
 
-    <el-dialog :visible.sync="addProForm">
-      <add-project :demand="demand_id" @DialogStatus="getDialogStatus"></add-project>
-    </el-dialog>
-
-    <el-dialog title="任务详情" :visible.sync="showProForm">
-      <el-card>
-        <div slot="header" class="clearfix">任务内容</div>
-        <vue-markdown :source="proContent.content1"></vue-markdown>
-      </el-card>
-      <el-card>
-        <div slot="header" class="clearfix">完成情况</div>
-        <vue-markdown :source="proContent.content2"></vue-markdown>
-      </el-card>
-    </el-dialog>
-
     <el-dialog :visible.sync="demandstatusForm">
       <el-form label-width="90px">
         <el-form-item label="更改状态" prop="status">
@@ -152,56 +109,6 @@
         </el-form-item>
       </el-form>
     </el-dialog>
-
-    <el-dialog title="更新任务进度" :visible.sync="taskCompleteForm">
-      <el-form label-width="90px">
-        <el-form-item label="完成百分比" prop="task_complete">
-          <el-slider
-            style="margin-right: 50px"
-            v-model="updatetaskform.task_complete"
-            :step="10">
-          </el-slider>
-          <a>{{updatetaskform.task_complete}}%</a>
-        </el-form-item>
-        <el-form-item>
-          <el-button @click="changeComplete" type="success" size="mini">确定</el-button>
-        </el-form-item>
-      </el-form>
-    </el-dialog>
-
-    <el-dialog title="更新完成情况" :visible.sync="content2ProForm">
-      <el-form label-width="100px">
-        <el-form-item label="名称" prop="name">
-          <el-input v-model="updatecontent2form.name" placeholder="请输入名称"></el-input>
-        </el-form-item>
-        <el-form-item label="指派人" prop="action_user">
-          <el-select v-model="updatecontent2form.action_user" filterable placeholder="请选择指派人">
-            <el-option v-for="item in users" :key="item.id" :value="item.username"></el-option>
-          </el-select>
-        </el-form-item>
-        <el-form-item label="内容" prop="content1">
-          <el-input v-model="updatecontent2form.content1" type="textarea"
-                    :autosize="{ minRows: 5, maxRows: 10}"></el-input>
-        </el-form-item>
-        <el-form-item label="实际完成情况" prop="content2">
-          <el-input v-model="updatecontent2form.content2" type="textarea"
-                    :autosize="{ minRows: 5, maxRows: 10}"></el-input>
-        </el-form-item>
-        <el-form-item label="时间" prop="time">
-          <el-date-picker
-            v-model="ttime"
-            type="daterange"
-            range-separator="至"
-            start-placeholder="开始日期"
-            end-placeholder="结束日期"
-            value-format="yyyy-MM-dd">
-          </el-date-picker>
-        </el-form-item>
-        <el-form-item>
-          <el-button @click="changeProjectContent2" type="success" size="mini">确定</el-button>
-        </el-form-item>
-      </el-form>
-    </el-dialog>
   </div>
 </template>
 
@@ -210,9 +117,7 @@ import {
   getDemandManager,
   deleteDemandManager,
   patchDemandManager,
-  getProject,
-  deleteProject,
-  patchProject
+  getProject
 } from '@/api/optask'
 import { LIMIT, pagesize, pageformat } from '@/config'
 import addProject from './components/addproject.vue'
@@ -239,24 +144,12 @@ export default {
         search: '',
         ordering: ''
       },
-      addProForm: false,
-      showProForm: false,
-      demand_id: '',
-      proContent: {},
       demandstatusForm: false,
-      taskCompleteForm: false,
       updateform: {
         id: '',
         status: '1'
       },
-      updatetaskform: {
-        id: '',
-        task_complete: ''
-      },
-      updatecontent2form: {},
-      content2ProForm: false,
-      users: [],
-      ttime: []
+      users: []
     }
   },
   created() {
@@ -280,8 +173,15 @@ export default {
               item.task_complete += pp.task_complete
             }
             item.task_complete = Math.round(item.task_complete / res.data.length)
-            const data = {
-              task_complete: item.task_complete
+            let data
+            if (item.task_complete) {
+              data = {
+                task_complete: item.task_complete
+              }
+            } else {
+              data = {
+                task_complete: 0
+              }
             }
             patchDemandManager(item.id, data)
           })
@@ -298,10 +198,6 @@ export default {
         search: '',
         ordering: ''
       }
-      this.fetchData()
-    },
-    getDialogStatus(data) {
-      this.addProForm = data
       this.fetchData()
     },
     searchClick() {
@@ -329,35 +225,23 @@ export default {
       this.fetchData()
     },
     deleteDemand(id) {
-      deleteDemandManager(id).then(response => {
-        this.$message({
-          message: '恭喜你，删除成功',
-          type: 'success'
+      this.$confirm('你确定要删除这个, 是否继续?', '美丽的妲己提示', {
+        confirmButtonText: '确定',
+        cancelButtonText: '取消',
+        type: 'warning'
+      }).then(() => {
+        deleteDemandManager(id).then(response => {
+          this.$message({
+            message: '恭喜你，删除成功',
+            type: 'success'
+          })
+          this.fetchData()
         })
-        this.fetchData()
-      }).catch(error => {
-        this.$message.error('删除失败')
-        console.log(error)
-      })
-    },
-    addProject(row) {
-      this.addProForm = true
-      this.demand_id = row.id
-    },
-    showProject(row) {
-      this.showProForm = true
-      this.proContent = row
-    },
-    deleteProject(row) {
-      deleteProject(row.id).then(response => {
+      }).catch(() => {
         this.$message({
-          message: '恭喜你，删除成功',
-          type: 'success'
+          type: 'info',
+          message: '已取消删除'
         })
-        this.fetchData()
-      }).catch(error => {
-        this.$message.error('删除失败')
-        console.log(error)
       })
     },
     updateDemand(id) {
@@ -367,35 +251,6 @@ export default {
     changeDemandStatus() {
       patchDemandManager(this.updateform.id, this.updateform).then(() => {
         this.demandstatusForm = false
-        this.fetchData()
-      })
-    },
-    updateTaskComplete(row) {
-      this.taskCompleteForm = true
-      this.updatetaskform.id = row.id
-      this.updatetaskform.task_complete = row.task_complete
-    },
-    changeComplete() {
-      if (this.updatetaskform.task_complete === 100) {
-        this.updatetaskform.status = 1
-      } else {
-        this.updatetaskform.status = 0
-      }
-      patchProject(this.updatetaskform.id, this.updatetaskform).then(response => {
-        this.fetchData()
-        this.taskCompleteForm = false
-      })
-    },
-    updateProjectContent2(row) {
-      this.content2ProForm = true
-      this.updatecontent2form = row
-      this.ttime = [row.start_time, row.end_time]
-    },
-    changeProjectContent2() {
-      this.updatecontent2form.start_time = this.ttime[0]
-      this.updatecontent2form.end_time = this.ttime[1]
-      patchProject(this.updatecontent2form.id, this.updatecontent2form).then(response => {
-        this.content2ProForm = false
         this.fetchData()
       })
     },

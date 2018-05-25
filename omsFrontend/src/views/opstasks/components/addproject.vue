@@ -38,7 +38,14 @@ import { getConversionTime } from '@/utils'
 
 export default {
   components: {},
-  props: ['demand'],
+  props: {
+    demand: {
+      type: Object,
+      default: () => {
+        return {}
+      }
+    }
+  },
   data() {
     return {
       route_path: this.$route.path.split('/'),
@@ -70,13 +77,12 @@ export default {
       sendnotice: false
     }
   },
-
   created() {
     this.getUsers()
   },
   methods: {
     postForm(formName) {
-      this.ruleForm.demand = this.demand
+      this.ruleForm.demand = this.demand.name
       this.$refs[formName].validate((valid) => {
         if (valid) {
           this.ruleForm.start_time = this.ruleForm.time[0]
@@ -97,6 +103,7 @@ export default {
               }
               postSendmessage(messageForm)
             }
+            this.resetForm(formName)
             this.$emit('DialogStatus', false)
           })
         } else {

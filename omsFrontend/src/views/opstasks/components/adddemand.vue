@@ -14,7 +14,14 @@
         <el-form-item label="预算" prop="content3">
           <el-input v-model="ruleForm.content3" type="textarea" :autosize="{ minRows: 5, maxRows: 10}"></el-input>
         </el-form-item>
-        <el-form-item label="时间" prop="time">
+        <el-form-item label="是否持续" prop="is_ci">
+          <el-switch
+            v-model="ruleForm.is_ci"
+            active-color="#13ce66"
+            inactive-color="#ff4949">
+          </el-switch>
+        </el-form-item>
+        <el-form-item v-if="!ruleForm.is_ci" label="时间" prop="time">
           <el-date-picker
             v-model="ruleForm.time"
             type="daterange"
@@ -61,7 +68,8 @@ export default {
         create_user: localStorage.getItem('username'),
         action_user: [],
         pid: '',
-        time: ''
+        time: '',
+        is_ci: false
       },
       rules: {
         name: [
@@ -106,8 +114,8 @@ export default {
       this.$refs[formName].validate((valid) => {
         if (valid) {
           this.ruleForm.pid = 'ppt' + getConversionTime()
-          this.ruleForm.start_time = this.ruleForm.time[0]
-          this.ruleForm.end_time = this.ruleForm.time[1]
+          this.ruleForm.start_time = this.ruleForm.time ? this.ruleForm.time[0] : '2018-09-09'
+          this.ruleForm.end_time = this.ruleForm.time ? this.ruleForm.time[1] : '2018-09-09'
           postopsDemandManager(this.ruleForm).then(response => {
             if (response.statusText === '"Created"') {
               this.$message({

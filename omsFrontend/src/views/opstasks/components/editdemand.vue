@@ -14,7 +14,14 @@
         <el-form-item label="预算" prop="content3">
           <el-input v-model="ruleForm.content3" type="textarea" :autosize="{ minRows: 5, maxRows: 10}"></el-input>
         </el-form-item>
-        <el-form-item label="时间" prop="ttime">
+        <el-form-item label="是否持续" prop="is_ci">
+          <el-switch
+            v-model="ruleForm.is_ci"
+            active-color="#13ce66"
+            inactive-color="#ff4949">
+          </el-switch>
+        </el-form-item>
+        <el-form-item v-if="!ruleForm.is_ci" label="时间" prop="time">
           <el-date-picker
             v-model="ttime"
             type="daterange"

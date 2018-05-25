@@ -14,7 +14,7 @@ TicketStatus = {
 
 class OpsDemandManager(models.Model):
     pid = models.CharField(max_length=100, unique=True, verbose_name=u'编号')
-    name = models.CharField(max_length=100, blank=True, verbose_name=u'标题')
+    name = models.CharField(max_length=100, blank=True, unique=True, verbose_name=u'标题')
     task_complete = models.IntegerField(default=0, blank=True, verbose_name=u'任务进度')
     content1 = models.TextField(blank=True, null=True, verbose_name=u'目标')
     content2 = models.TextField(blank=True, null=True, verbose_name=u'范围')
@@ -23,8 +23,9 @@ class OpsDemandManager(models.Model):
     action_user = models.ManyToManyField(User, related_name='optasks_demand_action_user', verbose_name=u'参与者')
     status = models.CharField(max_length=3, choices=TicketStatus.items(), default=0, verbose_name=u'状态')
     create_time = models.DateTimeField(auto_now_add=True, verbose_name=u'创建时间')
-    start_time = models.DateField(verbose_name=u'开始时间')
-    end_time = models.DateField(verbose_name=u'计划完成时间')
+    is_ci = models.BooleanField(default=False, verbose_name=u'是否持久')
+    start_time = models.DateField(blank=True, null=True, verbose_name=u'开始时间')
+    end_time = models.DateField(blank=True, null=True, verbose_name=u'计划完成时间')
     desc = models.TextField(blank=True, null=True, verbose_name=u'备注')
 
     def __str__(self):
@@ -56,7 +57,10 @@ class OpsProject(models.Model):
     status = models.CharField(max_length=3, choices=TicketStatus.items(), default=0, verbose_name=u'状态')
     create_user = models.ForeignKey(User, related_name='optasks_create_user', verbose_name=u'创建者')
     action_user = models.ForeignKey(User, related_name='optasks_action_user', verbose_name=u'负责人')
+    create_date = models.DateField(auto_now_add=True, verbose_name=u'创建日期')
+    update_date = models.DateField(auto_now=True, verbose_name=u'更新日期')
     create_time = models.DateTimeField(auto_now_add=True, verbose_name=u'创建时间')
+    update_time = models.DateTimeField(auto_now=True, verbose_name=u'更新时间')
     start_time = models.DateField(null=True, blank=True, verbose_name=u'开始时间')
     end_time = models.DateField(null=True, blank=True, verbose_name=u'计划完成时间')
 
@@ -66,3 +70,14 @@ class OpsProject(models.Model):
     class Meta:
         verbose_name = u'项目'
         verbose_name_plural = u'项目'
+
+
+class ProjectComment(models.Model):
+    project = models.ForeignKey(OpsProject, verbose_name=u'任务')
+    content = models.TextField(verbose_name=u'回复内容')
+    create_user = models.ForeignKey(User, related_name='opsproject_createuser', verbose_name=u'回复人')
+    create_time = models.DateTimeField(auto_now_add=True, verbose_name=u'回复时间')
+
+    class Meta:
+        verbose_name = u'工单回复'
+        verbose_name_plural = u'工单回复'

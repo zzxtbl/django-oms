@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # author: kiven
 
-from optasks.models import OpsProject, OpsDemandManager, OpsDemandEnclosure
+from optasks.models import OpsProject, OpsDemandManager, OpsDemandEnclosure, ProjectComment
 from rest_framework import serializers
 from users.models import User, Group
 from tools.models import Upload
@@ -15,7 +15,7 @@ class OpsDemandManagerSerializer(serializers.ModelSerializer):
         model = OpsDemandManager
         fields = (
             'url', 'id', 'pid', 'name', 'task_complete', 'content1', 'content2', 'content3', 'create_user',
-            'action_user', 'status', 'create_time', 'start_time', 'end_time', 'desc')
+            'action_user', 'status', 'create_time', 'is_ci', 'start_time', 'end_time', 'desc')
 
 
 class OpsDemandEnclosureSerializer(serializers.ModelSerializer):
@@ -28,6 +28,7 @@ class OpsDemandEnclosureSerializer(serializers.ModelSerializer):
 
 
 class OpsProjectSerializer(serializers.ModelSerializer):
+    demand = serializers.SlugRelatedField(queryset=OpsDemandManager.objects.all(), slug_field='name')
     create_user = serializers.SlugRelatedField(queryset=User.objects.all(), slug_field='username')
     action_user = serializers.SlugRelatedField(queryset=User.objects.all(), slug_field='username')
 
@@ -35,4 +36,12 @@ class OpsProjectSerializer(serializers.ModelSerializer):
         model = OpsProject
         fields = (
             'url', 'id', 'demand', 'pid', 'name', 'status', 'task_complete', 'content1', 'content2', 'create_user',
-            'action_user', 'create_time', 'start_time', 'end_time')
+            'action_user', 'create_date', 'update_date', 'create_time', 'update_time', 'start_time', 'end_time')
+
+
+class ProjectCommentSerializer(serializers.ModelSerializer):
+    create_user = serializers.SlugRelatedField(queryset=User.objects.all(), slug_field='username')
+
+    class Meta:
+        model = ProjectComment
+        fields = ('url', 'id', 'project', 'content', 'create_user', 'create_time')

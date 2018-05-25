@@ -2,10 +2,12 @@
 # author: kiven
 
 from rest_framework import viewsets
-from optasks.models import OpsProject, OpsDemandManager, OpsDemandEnclosure
+from optasks.models import OpsProject, OpsDemandManager, OpsDemandEnclosure, ProjectComment
 from optasks.serializers import (OpsProjectSerializer,
                                  OpsDemandManagerSerializer,
-                                 OpsDemandEnclosureSerializer)
+                                 OpsDemandEnclosureSerializer,
+                                 ProjectCommentSerializer)
+from optasks.filters import OpsProjectFilter
 
 
 class OpsDemandManagerViewSet(viewsets.ModelViewSet):
@@ -25,4 +27,11 @@ class OpsDemandEnclosureViewSet(viewsets.ModelViewSet):
 class OpsProjectViewSet(viewsets.ModelViewSet):
     queryset = OpsProject.objects.all().order_by('start_time')
     serializer_class = OpsProjectSerializer
-    filter_fields = ['demand__id']
+    filter_class = OpsProjectFilter
+    search_fields = ['pid', 'name', 'content1']
+
+
+class ProjectCommentViewSet(viewsets.ModelViewSet):
+    queryset = ProjectComment.objects.all().order_by('create_time')
+    serializer_class = ProjectCommentSerializer
+    filter_fields = ['project__id']
