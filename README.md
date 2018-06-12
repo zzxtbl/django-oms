@@ -13,6 +13,7 @@
 
 
 [文档查看](https://itimor.github.io/django-oms/)
+[线上demo](http://oms.itimor.cf/)
 
 ## 项目实践
 
