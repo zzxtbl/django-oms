@@ -125,15 +125,3 @@ from salts.views import SaltStateViewSet, StateJobViewSet, SaltStateGroupViewSet
 router.register(r'saltstates', SaltStateViewSet)
 router.register(r'saltstategroups', SaltStateGroupViewSet)
 router.register(r'saltjobs', StateJobViewSet)
-
-from workflow.views import (ProcessCategoryViewSet, ProcessViewSet, NodeViewSet, TransitionViewSet,
-                            ProcessInstanceViewSet, TaskViewSet, EventViewSet, IssueViewSet)
-
-router.register(r'wfcategorys', ProcessCategoryViewSet)
-router.register(r'wfprocess', ProcessViewSet)
-router.register(r'wfnodes', NodeViewSet)
-router.register(r'wftransitions', TransitionViewSet)
-router.register(r'wfinstances', ProcessInstanceViewSet)
-router.register(r'wftasks', TaskViewSet)
-router.register(r'wfevents', EventViewSet)
-router.register(r'wfissues', IssueViewSet)

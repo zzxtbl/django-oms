@@ -162,12 +162,5 @@ module.exports = {
   // zabbix
   zbhosts: `${url}/api/zbhosts/`,
   zbhostgroups: `${url}/api/zbhostgroups/`,
-  zbtemplates: `${url}/api/zbtemplates/`,
-
-  // workflow
-  wfcategorys: `${url}/api/wfcategorys/`,
-  wfinstances: `${url}/api/wfinstances/`,
-  wftasks: `${url}/api/wftasks/`,
-  wfevents: `${url}/api/wfevents/`,
-  wfissues: `${url}/api/wfissues/`
+  zbtemplates: `${url}/api/zbtemplates/`
 }

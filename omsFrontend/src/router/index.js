@@ -85,17 +85,6 @@ export const asyncRouterMap = [
     ]
   },
   {
-    name: '工作流',
-    path: '/workflows',
-    component: Layout,
-    icon: 'bitcoin',
-    redirect: 'wfcategory',
-    children: [
-      { path: 'wfcategory', component: _import('workflows/wfcategory'), name: '新建工作' },
-      { path: 'mytodo', component: _import('workflows/mytodo'), name: '我的工作' }
-    ]
-  },
-  {
     name: '系统研发',
     path: '/projects',
     component: Layout,
