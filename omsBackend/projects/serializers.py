@@ -2,7 +2,7 @@
 # author: kiven
 
 from projects.models import Project, ProjectComment, ProjectEnclosure, ProjectType, BugManager, TestManager, \
-    DemandManager, DemandEnclosure
+    DemandManager, DemandEnclosure, ProjectComplete
 from rest_framework import serializers
 from users.models import User, Group
 from tools.models import Upload
@@ -16,13 +16,62 @@ class ProjectSerializer(serializers.ModelSerializer):
                                                allow_null=True)
     follow_user = serializers.SlugRelatedField(many=True, queryset=User.objects.all(), slug_field='username',
                                                allow_null=True)
+    user_complete = serializers.SerializerMethodField()
+
+    def get_user_complete(self, obj):
+        users = obj.action_user.all()
+        user_completes = []
+        sum = 0
+        for user in users:
+            try:
+                o = ProjectComplete.objects.get(project=obj.id, user=user.id)
+                complete = o.complete
+            except:
+                complete = 0
+                o = ProjectComplete.objects.create(project=obj, user=user, complete=complete)
+
+            sum += complete
+            user_completes.append({'id': o.id, 'action_user': user.username, 'complete': complete})
+        b = Project.objects.get(id=obj.id)
+
+        if b.status == '7':
+            b.task_complete = 100
+            b.test_complete = 100
+        else:
+            b.task_complete = int(sum / len(users))
+            if b.task_complete == 100:
+                if int(b.status) < 3:
+                    b.status = 3
+
+                if 0 < b.test_complete < 100:
+                    b.status = 4
+                elif b.test_complete == 100:
+                    if int(b.status) < 6:
+                        b.status = 6
+            elif b.task_complete == 0:
+                b.test_complete = 0
+                b.status = 1
+            else:
+                b.test_complete = 0
+                b.status = 2
+
+        b.save()
+        return user_completes
 
     class Meta:
         model = Project
         fields = (
             'url', 'id', 'demand', 'pid', 'name', 'type', 'level', 'status', 'task_complete', 'test_complete',
             'content', 'create_user', 'test_user', 'action_user', 'follow_user', 'from_user', 'create_date',
-            'update_date', 'create_time', 'update_time', 'start_time', 'end_time', 'is_public')
+            'update_date', 'create_time', 'update_time', 'start_time', 'end_time', 'is_public', 'user_complete')
+
+
+class ProjectCompleteSerializer(serializers.ModelSerializer):
+    user = serializers.SlugRelatedField(queryset=User.objects.all(), slug_field='username')
+
+    class Meta:
+        model = ProjectComplete
+        fields = ('url', 'id', 'project', 'complete', 'user')
 
 
 class ProjectCommentSerializer(serializers.ModelSerializer):

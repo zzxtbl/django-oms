@@ -28,7 +28,8 @@ TicketStatus = {
     0: '未审核',
     1: '已通过',
     2: '未通过',
-    3: '已完成'
+    3: '已完成',
+    4: '已取消',
 }
 
 admin_groups = ['admin', 'OMS_Dev_Manager', 'OMS_Test_Manager', 'OMS_Super_Admin']
@@ -94,6 +95,16 @@ class Project(models.Model):
     class Meta:
         verbose_name = u'项目'
         verbose_name_plural = u'项目'
+
+
+class ProjectComplete(models.Model):
+    project = models.ForeignKey(Project, verbose_name=u'项目')
+    complete = models.IntegerField(default=0, blank=True, verbose_name=u'进度')
+    user = models.ForeignKey(User, verbose_name=u'指派人')
+
+    class Meta:
+        verbose_name = u'任务进度'
+        verbose_name_plural = u'任务进度'
 
 
 class ProjectComment(models.Model):

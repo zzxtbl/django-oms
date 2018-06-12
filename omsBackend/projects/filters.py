@@ -7,13 +7,20 @@ from django.db.models import Q
 from dry_rest_permissions.generics import DRYPermissionFiltersBase
 
 from django_filters import rest_framework as filters
-from django_filters import DateFromToRangeFilter
+from django_filters import DateFromToRangeFilter, CharFilter
 from projects.models import Project
 
 
 class ProjectFilter(filters.FilterSet):
     create_date = DateFromToRangeFilter()
     update_date = DateFromToRangeFilter()
+    status = CharFilter(method='status_custom_filter')
+
+    def status_custom_filter(self, queryset, name, value):
+        queryset_list = []
+        for s in value.split(','):
+            queryset_list += queryset.filter(status=s)
+        return queryset_list
 
     class Meta:
         model = Project

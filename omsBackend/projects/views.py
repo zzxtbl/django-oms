@@ -3,7 +3,7 @@
 
 from rest_framework import viewsets
 from projects.models import Project, ProjectComment, ProjectEnclosure, ProjectType, BugManager, TestManager, \
-    DemandManager, DemandEnclosure
+    DemandManager, DemandEnclosure, ProjectComplete
 from projects.serializers import (ProjectSerializer,
                                   ProjectCommentSerializer,
                                   ProjectEnclosureSerializer,
@@ -11,7 +11,8 @@ from projects.serializers import (ProjectSerializer,
                                   BugManagerSerializer,
                                   TestManagerSerializer,
                                   DemandManagerSerializer,
-                                  DemandEnclosureSerializer)
+                                  DemandEnclosureSerializer,
+                                  ProjectCompleteSerializer)
 from projects.filters import ProjectFilterBackend
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.filters import SearchFilter, OrderingFilter
@@ -25,6 +26,12 @@ class ProjectViewSet(viewsets.ModelViewSet):
     filter_class = ProjectFilter
     search_fields = ['pid', 'name', 'content', 'type__name']
     ordering_fields = ['level', 'task_complete', 'test_complete', 'create_time', 'update_time']
+
+
+class ProjectCompleteViewSet(viewsets.ModelViewSet):
+    queryset = ProjectComplete.objects.all().order_by('complete')
+    serializer_class = ProjectCompleteSerializer
+    filter_fields = ['project__id', 'user__username']
 
 
 class ProjectCommentViewSet(viewsets.ModelViewSet):
