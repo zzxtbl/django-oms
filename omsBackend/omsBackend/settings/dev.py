@@ -66,7 +66,7 @@ CACHES = {
 
 # saltapi
 salt_info = {
-    "url": "http://127.0.0.1:8080",
+    "url": "http://127.0.0.1:8888",
     "username": "saltapi",
     "password": "222222"
 }
