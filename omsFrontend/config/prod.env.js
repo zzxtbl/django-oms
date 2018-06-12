@@ -1,6 +1,6 @@
 module.exports = {
-    NODE_ENV: '"production"',
-    ENV_CONFIG: '"prod"',
-    BASE_API: '"http://oms.itimor.cf"',
-    APP_ORIGIN: '"https://wallstreetcn.com"'
-};
+  NODE_ENV: '"production"',
+  ENV_CONFIG: '"prod"',
+  BASE_API: '"http://oms.itimor.cf"',
+  APP_ORIGIN: '"https://wallstreetcn.com"'
+}
