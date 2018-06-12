@@ -1,7 +1,7 @@
 from django.utils import timezone
 
-from .models import Event
-from .models import Task
+from workflow.models import Event
+from workflow.models import Task
 
 
 def create_event(instance, transition, **kwargs):

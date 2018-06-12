@@ -2,7 +2,6 @@
 # author: kiven
 
 from rest_framework import viewsets
-from rest_framework.response import Response
 from workflow.models import ProcessCategory, Process, Node, Transition, ProcessInstance, Task, Event, Issue
 from workflow.serializers import (ProcessCategorySerializer, ProcessSerializer, NodeSerializer, TransitionSerializer,
                                   ProcessInstanceSerializer, TaskSerializer, EventSerializer, IssueSerializer)

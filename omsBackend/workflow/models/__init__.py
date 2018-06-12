@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
 # author: itimor
 
-from .config import *
-from .instance import *
+from workflow.models.config import *
+from workflow.models.instance import *
