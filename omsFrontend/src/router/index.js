@@ -85,6 +85,17 @@ export const asyncRouterMap = [
     ]
   },
   {
+    name: '工作流',
+    path: '/workflows',
+    component: Layout,
+    icon: 'bitcoin',
+    redirect: 'wfcategory',
+    children: [
+      { path: 'wfcategory', component: _import('workflows/wfcategory'), name: '新建工作' },
+      { path: 'mytodo', component: _import('workflows/mytodo'), name: '我的工作' }
+    ]
+  },
+  {
     name: '系统研发',
     path: '/projects',
     component: Layout,
@@ -125,10 +136,11 @@ export const asyncRouterMap = [
     icon: 'angellist',
     redirect: 'opsdemands',
     children: [
-      { path: 'opsdemands', component: _import('opstasks/demands'), name: '项目列表' },
-      { path: 'addopsdemand', hidden: true, component: _import('opstasks/components/adddemand'), name: '添加项目' },
-      { path: 'editopsdemand/:id', hidden: true, component: _import('opstasks/components/editdemand'), name: '编辑项目' },
-      { path: 'viewopsdemand/:id', hidden: true, component: _import('opstasks/components/viewdemand'), name: '查看项目' }
+      { path: 'opsdemands', component: _import('opstasks/demands'), name: '运维项目' },
+      { path: 'projects', component: _import('opstasks/projects'), name: '运维任务' },
+      { path: 'addopsdemand', hidden: true, component: _import('opstasks/components/adddemand'), name: '添加运维项目' },
+      { path: 'editopsdemand/:id', hidden: true, component: _import('opstasks/components/editdemand'), name: '编辑运维项目' },
+      { path: 'viewopsdemand/:id', hidden: true, component: _import('opstasks/components/viewdemand'), name: '查看运维项目' }
     ]
   },
   {
@@ -161,7 +173,7 @@ export const asyncRouterMap = [
     icon: 'eye',
     redirect: 'zbhosts',
     children: [
-      { path: 'zbhosts', component: _import('zbmanager/zbhosts'), name: '主机列表' },
+      { path: 'zbhosts', component: _import('zbmanager/zbhosts'), name: 'zabbix主机' },
       { path: 'zbhostgroups', component: _import('zbmanager/zbhostgroups'), name: '主机组列表' },
       { path: 'zbtemplates', component: _import('zbmanager/zbtemplates'), name: '模板列表' }
     ]

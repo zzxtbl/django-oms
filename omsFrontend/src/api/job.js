@@ -97,6 +97,15 @@ export function deleteDeployJob(id) {
   })
 }
 
+// deployresults
+export function getDeployResult(query) {
+  return request({
+    url: apiURL.deployresults,
+    method: 'get',
+    params: query
+  })
+}
+
 // updaejobsstatus
 export function getUpdateJobsStatus(query) {
   return request({

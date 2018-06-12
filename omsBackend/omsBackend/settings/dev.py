@@ -68,7 +68,7 @@ CACHES = {
 salt_info = {
     "url": "http://127.0.0.1:8080",
     "username": "saltapi",
-    "password": "123456"
+    "password": "2222222"
 }
 
 from salts.saltapi import SaltAPI

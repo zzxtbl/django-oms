@@ -97,6 +97,23 @@ export function deleteProjectEnclosure(id) {
   })
 }
 
+// projectcompletes
+export function getProjectComplete(query) {
+  return request({
+    url: apiURL.projectcompletes,
+    method: 'get',
+    params: query
+  })
+}
+
+export function putProjectComplete(id, data) {
+  return request({
+    url: apiURL.projectcompletes + id + '/',
+    method: 'put',
+    data
+  })
+}
+
 // projectcomments
 export function postProjectComment(data) {
   return request({

@@ -106,6 +106,7 @@ module.exports = {
   jobs: `${url}/api/jobs/`,
   deployenvs: `${url}/api/deployenvs/`,
   deployjobs: `${url}/api/deployjobs/`,
+  deployresults: `${url}/api/deployresults/`,
   updaejobsstatus: `${url}/api/update_jobs_status/`,
   deploycmds: `${url}/api/deploycmds/`,
   deployversions: `${url}/api/deployversions/`,
@@ -127,6 +128,7 @@ module.exports = {
 
   // 项目
   projects: `${url}/api/projects/`,
+  projectcompletes: `${url}/api/projectcompletes/`,
   projectcomments: `${url}/api/projectcomments/`,
   projectenclosures: `${url}/api/projectenclosures/`,
   projecttypes: `${url}/api/projecttypes/`,
@@ -139,6 +141,7 @@ module.exports = {
   opsprojects: `${url}/api/opsprojects/`,
   opsdemandmanagers: `${url}/api/opsdemandmanagers/`,
   opsdemandenclosures: `${url}/api/opsdemandenclosures/`,
+  opsprojectcomments: `${url}/api/opsprojectcomments/`,
 
   // zk考勤机
   zkusers: `${zkurl}/api/zkusers/`,
@@ -159,5 +162,12 @@ module.exports = {
   // zabbix
   zbhosts: `${url}/api/zbhosts/`,
   zbhostgroups: `${url}/api/zbhostgroups/`,
-  zbtemplates: `${url}/api/zbtemplates/`
+  zbtemplates: `${url}/api/zbtemplates/`,
+
+  // workflow
+  wfcategorys: `${url}/api/wfcategorys/`,
+  wfinstances: `${url}/api/wfinstances/`,
+  wftasks: `${url}/api/wftasks/`,
+  wfevents: `${url}/api/wfevents/`,
+  wfissues: `${url}/api/wfissues/`
 }

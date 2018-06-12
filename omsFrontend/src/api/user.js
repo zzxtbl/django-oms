@@ -1,10 +1,10 @@
 import request from '@/utils/request'
-import apiURL from '@/config'
+import apiUrl from '@/config'
 
 // users
 export function postUser(data) {
   return request({
-    url: apiURL.users,
+    url: apiUrl.users,
     method: 'post',
     data
   })
@@ -12,7 +12,7 @@ export function postUser(data) {
 
 export function getUser(query) {
   return request({
-    url: apiURL.users,
+    url: apiUrl.users,
     method: 'get',
     params: query
   })
@@ -20,7 +20,7 @@ export function getUser(query) {
 
 export function patchUser(id, data) {
   return request({
-    url: apiURL.users + id + '/',
+    url: apiUrl.users + id + '/',
     method: 'patch',
     data
   })
@@ -28,7 +28,7 @@ export function patchUser(id, data) {
 
 export function deleteUser(id) {
   return request({
-    url: apiURL.users + id + '/',
+    url: apiUrl.users + id + '/',
     method: 'delete'
   })
 }
@@ -36,7 +36,7 @@ export function deleteUser(id) {
 // groups
 export function postGroup(data) {
   return request({
-    url: apiURL.groups,
+    url: apiUrl.groups,
     method: 'post',
     data
   })
@@ -44,7 +44,7 @@ export function postGroup(data) {
 
 export function getGroup(query) {
   return request({
-    url: apiURL.groups,
+    url: apiUrl.groups,
     method: 'get',
     params: query
   })
@@ -52,7 +52,7 @@ export function getGroup(query) {
 
 export function putGroup(id, data) {
   return request({
-    url: apiURL.groups + id + '/',
+    url: apiUrl.groups + id + '/',
     method: 'put',
     data
   })
@@ -60,7 +60,7 @@ export function putGroup(id, data) {
 
 export function deleteGroup(id) {
   return request({
-    url: apiURL.groups + id + '/',
+    url: apiUrl.groups + id + '/',
     method: 'delete'
   })
 }
@@ -68,7 +68,7 @@ export function deleteGroup(id) {
 // roles
 export function postRole(data) {
   return request({
-    url: apiURL.roles,
+    url: apiUrl.roles,
     method: 'post',
     data
   })
@@ -76,7 +76,7 @@ export function postRole(data) {
 
 export function getRole(query) {
   return request({
-    url: apiURL.roles,
+    url: apiUrl.roles,
     method: 'get',
     params: query
   })
@@ -84,7 +84,7 @@ export function getRole(query) {
 
 export function putRole(id, data) {
   return request({
-    url: apiURL.roles + id + '/',
+    url: apiUrl.roles + id + '/',
     method: 'put',
     data
   })
@@ -92,7 +92,7 @@ export function putRole(id, data) {
 
 export function deleteRole(id) {
   return request({
-    url: apiURL.roles + id + '/',
+    url: apiUrl.roles + id + '/',
     method: 'delete'
   })
 }

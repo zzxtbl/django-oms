@@ -82,6 +82,9 @@
 
     <el-dialog title="任务进度" :visible.sync="editForm">
       <el-form label-width="90px">
+        <el-form-item label="任务内容">
+          <span>{{completeform.content1}}</span>
+        </el-form-item>
         <el-form-item label="完成百分比">
           <el-slider
             style="margin-right: 50px"
@@ -204,6 +207,7 @@ export default {
       }
       this.completeform.id = this.commentform.project = row.id
       this.completeform.task_complete = row.task_complete
+      this.completeform.content1 = row.content1
       this.completeform.status = row.status.toString()
       this.fetchCommentData(this.completeform.id)
     },

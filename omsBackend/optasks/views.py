@@ -25,7 +25,7 @@ class OpsDemandEnclosureViewSet(viewsets.ModelViewSet):
 
 
 class OpsProjectViewSet(viewsets.ModelViewSet):
-    queryset = OpsProject.objects.all().order_by('start_time')
+    queryset = OpsProject.objects.all().order_by('-update_time', 'create_time')
     serializer_class = OpsProjectSerializer
     filter_class = OpsProjectFilter
     search_fields = ['pid', 'name', 'content1']

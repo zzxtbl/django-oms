@@ -61,12 +61,13 @@ router.register(r'idcs', IdcViewSet)
 router.register(r'hostgroups', HostGroupViewSet)
 
 from jobs.views import JobsViewSet, DeployenvViewSet, DeploycmdViewSet, DeployJobsViewSet, DeployTicketViewSet, \
-    DeployTicketEnclosureViewSet, SqlTicketTicketViewSet
+    DeployTicketEnclosureViewSet, SqlTicketTicketViewSet, DeployResultsViewSet
 
 router.register(r'jobs', JobsViewSet)
 router.register(r'deployenvs', DeployenvViewSet)
 router.register(r'deploycmds', DeploycmdViewSet)
 router.register(r'deployjobs', DeployJobsViewSet)
+router.register(r'deployresults', DeployResultsViewSet)
 router.register(r'deploytickets', DeployTicketViewSet)
 router.register(r'deployticketenclosures', DeployTicketEnclosureViewSet)
 router.register(r'sqltickets', SqlTicketTicketViewSet)
@@ -76,9 +77,10 @@ from records.views import RecordViewSet
 router.register(r'records', RecordViewSet)
 
 from projects.views import ProjectViewSet, ProjectCommentViewSet, ProjectEnclosureViewSet, ProjectTypeViewSet, \
-    BugManagerViewSet, TestManagerViewSet, DemandManagerViewSet, DemandEnclosureViewSet
+    BugManagerViewSet, TestManagerViewSet, DemandManagerViewSet, DemandEnclosureViewSet, ProjectCompleteViewSet
 
 router.register(r'projects', ProjectViewSet)
+router.register(r'projectcompletes', ProjectCompleteViewSet)
 router.register(r'projectcomments', ProjectCommentViewSet)
 router.register(r'projectenclosures', ProjectEnclosureViewSet)
 router.register(r'projecttypes', ProjectTypeViewSet)
@@ -87,10 +89,11 @@ router.register(r'testmanagers', TestManagerViewSet)
 router.register(r'demandmanagers', DemandManagerViewSet)
 router.register(r'demandenclosures', DemandEnclosureViewSet)
 
-from optasks.views import OpsProjectViewSet, OpsDemandManagerViewSet
+from optasks.views import OpsProjectViewSet, OpsDemandManagerViewSet, ProjectCommentViewSet
 
 router.register(r'opsprojects', OpsProjectViewSet)
 router.register(r'opsdemandmanagers', OpsDemandManagerViewSet)
+router.register(r'opsprojectcomments', ProjectCommentViewSet)
 
 from dnsmanager.views import DnsApiKeyViewSet, DnsDomainViewSet, DnsRecordViewSet, DnspodDomainViewSet, \
     DnspodRecordViewSet, GodaddyDomainViewSet, GodaddyRecordViewSet, BindDomainViewSet, BindRecordViewSet
@@ -117,9 +120,20 @@ router.register(r'zbhosts', ZbHostViewSet, base_name='zbhosts')
 router.register(r'zbhostgroups', ZbHostGroupViewSet, base_name='zbhostgroups')
 router.register(r'zbtemplates', ZbTemplateViewSet, base_name='zbtemplates')
 
-
 from salts.views import SaltStateViewSet, StateJobViewSet, SaltStateGroupViewSet
 
 router.register(r'saltstates', SaltStateViewSet)
 router.register(r'saltstategroups', SaltStateGroupViewSet)
 router.register(r'saltjobs', StateJobViewSet)
+
+from workflow.views import (ProcessCategoryViewSet, ProcessViewSet, NodeViewSet, TransitionViewSet,
+                            ProcessInstanceViewSet, TaskViewSet, EventViewSet, IssueViewSet)
+
+router.register(r'wfcategorys', ProcessCategoryViewSet)
+router.register(r'wfprocess', ProcessViewSet)
+router.register(r'wfnodes', NodeViewSet)
+router.register(r'wftransitions', TransitionViewSet)
+router.register(r'wfinstances', ProcessInstanceViewSet)
+router.register(r'wftasks', TaskViewSet)
+router.register(r'wfevents', EventViewSet)
+router.register(r'wfissues', IssueViewSet)

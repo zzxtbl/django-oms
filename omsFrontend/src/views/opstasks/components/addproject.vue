@@ -52,7 +52,6 @@ export default {
       ruleForm: {
         name: '',
         content1: '',
-        content2: '',
         create_user: localStorage.getItem('username'),
         task_complete: 0,
         action_user: '',

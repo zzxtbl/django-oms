@@ -53,7 +53,6 @@ class OpsProject(models.Model):
     name = models.CharField(max_length=100, blank=True, verbose_name=u'标题')
     task_complete = models.IntegerField(default=0, blank=True, verbose_name=u'任务进度')
     content1 = models.TextField(blank=True, null=True, verbose_name=u'内容')
-    content2 = models.TextField(blank=True, null=True, verbose_name=u'完成情况')
     status = models.CharField(max_length=3, choices=TicketStatus.items(), default=0, verbose_name=u'状态')
     create_user = models.ForeignKey(User, related_name='optasks_create_user', verbose_name=u'创建者')
     action_user = models.ForeignKey(User, related_name='optasks_action_user', verbose_name=u'负责人')

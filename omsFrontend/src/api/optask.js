@@ -104,3 +104,27 @@ export function deleteDemandEnclosure(id) {
     method: 'delete'
   })
 }
+
+// opsprojectcomments
+export function postProjectComment(data) {
+  return request({
+    url: apiURL.opsprojectcomments,
+    method: 'post',
+    data
+  })
+}
+
+export function getProjectComment(query) {
+  return request({
+    url: apiURL.opsprojectcomments,
+    method: 'get',
+    params: query
+  })
+}
+
+export function deleteProjectComment(id) {
+  return request({
+    url: apiURL.opsprojectcomments + id + '/',
+    method: 'delete'
+  })
+}
