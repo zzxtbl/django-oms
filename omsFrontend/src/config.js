@@ -3,7 +3,7 @@
  */
 
 let CONFIG
-const rest_url = 'oms.tb-gaming.local'
+const rest_url = 'oms.itimor.cf'
 const ws_scheme = window.location.protocol === 'https:' ? 'wss' : 'ws'
 
 // if (process.env.NODE_ENV === 'development') {
@@ -16,7 +16,7 @@ if (process.env.NODE_ENV === 'production') {
   }
 } else if (process.env.NODE_ENV === 'test') {
   CONFIG = {
-    apiUrl: 'http://oms.tb-gaming.local:8000',
+    apiUrl: 'http://oms.itimor.cf:8000',
     zkapiUrl: 'http://172.19.6.99:9000',
     super_group: 'admin',
     wsurl: ws_scheme + '://' + rest_url + '/ws'
