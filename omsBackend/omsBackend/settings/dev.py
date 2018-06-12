@@ -66,9 +66,9 @@ CACHES = {
 
 # saltapi
 salt_info = {
-    "url": "http://salt.oms.com/api/",
+    "url": "http://127.0.0.1:8080",
     "username": "saltapi",
-    "password": "saltapi"
+    "password": "123456"
 }
 
 from salts.saltapi import SaltAPI
@@ -83,5 +83,6 @@ zabbix_info = {
     'password': 'zabbix'
 }
 
-zapi = ZabbixApi(zabbix_info["apiurl"], zabbix_info["username"], zabbix_info["password"])
-zapi.login()
+#zapi = ZabbixApi(zabbix_info["apiurl"], zabbix_info["username"], zabbix_info["password"])
+#zapi.login()
+zapi = 'zapi'
