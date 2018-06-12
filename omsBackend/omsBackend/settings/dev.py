@@ -33,12 +33,12 @@ MAIL_ACOUNT = {
 from skpy import Skype
 
 # skype账号
-SK_ACOUNT = {
-    'sk_user': 'admin@oms.com',
-    'sk_pass': 'jjyy'
-}
-SK = Skype(SK_ACOUNT["sk_user"], SK_ACOUNT["sk_pass"])
-#SK = 'skype'
+# SK_ACOUNT = {
+#     'sk_user': 'admin@oms.com',
+#     'sk_pass': 'jjyy'
+# }
+# SK = Skype(SK_ACOUNT["sk_user"], SK_ACOUNT["sk_pass"])
+SK = 'skype'
 
 REDIS_URL = 'redis://127.0.0.1:6379/'
 # celery配置
