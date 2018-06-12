@@ -14,8 +14,9 @@ DATABASES = {
     }
 }
 
-# 使用ldap认证
-AUTHENTICATION_BACKENDS = ("django_python3_ldap.auth.LDAPBackend",)
+# 开启ldap认证，不开启就注释下面一行
+# AUTHENTICATION_BACKENDS = ("django_python3_ldap.auth.LDAPBackend",)
+
 LDAP_AUTH_URL = "ldap://192.168.6.99:389"
 LDAP_AUTH_SEARCH_BASE = "ou=AllUser,dc=oms,dc=com"
 LDAP_AUTH_CONNECTION_USERNAME = r'oms\admin'
