@@ -116,7 +116,6 @@ class DeployJobs(models.Model):
     content = models.TextField(verbose_name=u'更新内容')
     deploy_cmd = models.TextField(verbose_name=u'发布命令')
     action_user = models.ForeignKey(User, verbose_name=u'操作人')
-    result = models.TextField(null=True, blank=True, verbose_name=u'发布结果')
     create_time = models.DateTimeField(auto_now_add=True, verbose_name=u'创建时间')
 
     def __str__(self):
@@ -125,6 +124,15 @@ class DeployJobs(models.Model):
     class Meta:
         verbose_name = u'执行发布'
         verbose_name_plural = u'执行发布'
+
+
+class DeployResults(models.Model):
+    deployjob = models.ForeignKey(DeployJobs, verbose_name=u'发布任务', related_name='deployjob')
+    result = models.TextField(null=True, blank=True, verbose_name=u'发布结果')
+
+    class Meta:
+        verbose_name = u'发布结果'
+        verbose_name_plural = u'发布结果'
 
 
 Status = {
@@ -139,6 +147,7 @@ class DeployTicket(models.Model):
     name = models.CharField(max_length=100, blank=True, verbose_name=u'标题')
     version = models.TextField(default='HEAD', verbose_name=u'项目版本')
     content = models.TextField(verbose_name=u'上线内容')
+    desc = models.TextField(null=True, blank=True, verbose_name=u'发布说明')
     create_user = models.ForeignKey(User, related_name='deployticket_create_user', verbose_name=u'创建者')
     status = models.CharField(max_length=3, choices=Status.items(), default=0, verbose_name=u'状态')
     skype_to = models.CharField(max_length=100, null=True, blank=True, verbose_name=u'通知人')
@@ -171,6 +180,7 @@ SqlStatus = {
 
 class SqlTicket(models.Model):
     name = models.CharField(max_length=100, blank=True, verbose_name=u'标题')
+    dbname = models.CharField(max_length=100, verbose_name=u'db')
     content = models.TextField(verbose_name=u'sql语句')
     desc = models.TextField(verbose_name=u'说明')
     status = models.CharField(max_length=3, choices=SqlStatus.items(), default=0, verbose_name=u'状态')

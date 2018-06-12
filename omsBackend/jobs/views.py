@@ -2,9 +2,9 @@
 # author: itimor
 
 from rest_framework import viewsets
-from jobs.models import Jobs, Deployenv, Deploycmd, DeployJobs, DeployTicket, DeployTicketEnclosure, SqlTicket
+from jobs.models import Jobs, Deployenv, Deploycmd, DeployJobs, DeployTicket, DeployTicketEnclosure, SqlTicket, DeployResults
 from jobs.serializers import (JobsSerializer, DeployenvSerializer, DeploycmdSerializer, DeployJobsSerializer,
-                              DeployTicketSerializer, DeployTicketEnclosureSerializer, SqlTicketSerializer)
+                              DeployTicketSerializer, DeployTicketEnclosureSerializer, SqlTicketSerializer, DeployResultsSerializer)
 from omsBackend.settings import sapi
 from jobs.filters import JobFilterBackend, SqlTicketFilterBackend
 from rest_framework.filters import SearchFilter, DjangoFilterBackend
@@ -40,6 +40,12 @@ class DeployJobsViewSet(viewsets.ModelViewSet):
     search_fields = ['version', 'content']
 
 
+class DeployResultsViewSet(viewsets.ModelViewSet):
+    queryset = DeployResults.objects.all()
+    serializer_class = DeployResultsSerializer
+    filter_fields = ['deployjob__id']
+
+
 class DeployTicketViewSet(viewsets.ModelViewSet):
     queryset = DeployTicket.objects.all().order_by('-create_time')
     serializer_class = DeployTicketSerializer
@@ -73,7 +79,7 @@ def update_jobs_status(request):
                 if list(set(job_status.values()))[0]:
                     import re
                     results = sapi.get_cmd_result(j_id)
-                    j.result = json.dumps(results)
+                    DeployResults.objects.create(deployjob=j, result=json.dumps(results))
                     for result in results.values():
                         error_result = bool(re.search(r'Error', result, re.I))
                         if error_result > 0:
@@ -83,6 +89,7 @@ def update_jobs_status(request):
                 else:
                     j.deploy_status = 'deploy'
             except Exception as e:
+                print(e)
                 pass
             j.save()
         return Response({"results": 'success', "count": count})

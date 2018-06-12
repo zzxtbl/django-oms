@@ -2,12 +2,11 @@
 # author: itimor
 
 from rest_framework import serializers
-from jobs.models import Jobs, Deployenv, Deploycmd, DeployJobs, DeployTicket, DeployTicketEnclosure, SqlTicket
+from jobs.models import Jobs, Deployenv, Deploycmd, DeployJobs, DeployTicket, DeployTicketEnclosure, SqlTicket, DeployResults
 from hosts.models import Host
 from users.models import User
 from tools.models import Upload
 from omsBackend.settings import sapi
-
 
 
 class JobsSerializer(serializers.ModelSerializer):
@@ -38,7 +37,7 @@ class DeployJobsSerializer(serializers.ModelSerializer):
     class Meta:
         model = DeployJobs
         fields = ['url', 'id', 'job', 'j_id', 'deploy_status', 'deploy_hosts', 'deploy_cmd_host', 'version', 'content',
-                  'env', 'deploy_path', 'deploy_cmd', 'action_user', 'result', 'create_time']
+                  'env', 'deploy_path', 'deploy_cmd', 'action_user', 'create_time']
 
     def create(self, validated_data):
         deploy_path = validated_data["deploy_path"]
@@ -67,6 +66,12 @@ class DeployJobsSerializer(serializers.ModelSerializer):
         return deployjobs[0]
 
 
+class DeployResultsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = DeployResults
+        fields = ['url', 'id', 'deployjob', 'result']
+
+
 class DeployTicketSerializer(serializers.ModelSerializer):
     create_user = serializers.SlugRelatedField(queryset=User.objects.all(), slug_field='username')
     file_count = serializers.SerializerMethodField()
@@ -77,7 +82,7 @@ class DeployTicketSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = DeployTicket
-        fields = ['url', 'id', 'name', 'create_user', 'version', 'content', 'status', 'skype_to', 'file_count', 'create_time']
+        fields = ['url', 'id', 'name', 'create_user', 'version', 'content', 'desc', 'status', 'skype_to', 'file_count', 'create_time']
 
 
 class DeployTicketEnclosureSerializer(serializers.ModelSerializer):
@@ -95,4 +100,4 @@ class SqlTicketSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = SqlTicket
-        fields = ['url', 'id', 'name', 'create_user', 'action_user', 'content', 'desc', 'status', 'env', 'create_time']
+        fields = ['url', 'id', 'name', 'create_user', 'action_user', 'dbname', 'content', 'desc', 'status', 'env', 'create_time']
