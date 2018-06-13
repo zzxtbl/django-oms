@@ -8,9 +8,10 @@ import { Message } from 'element-ui'
 function hasPermission(groups, permissionGroups) {
   if (groups.indexOf('admin') >= 0) {
     // admin权限 直接通过
+    console.log('group is admin')
     return true
   } else {
-    console.log('not admin')
+    console.log('group not admin')
   }
   if (!permissionGroups) return true
   return groups.some(group => permissionGroups.indexOf(group) >= 0)
