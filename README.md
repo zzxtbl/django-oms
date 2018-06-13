@@ -16,6 +16,11 @@
 
 [线上demo](http://oms.itimor.cf/)
 
+```
+用户名：admin
+密码: qwert@12345
+```
+
 ## 项目实践
 
 ### 1. 克隆项目
