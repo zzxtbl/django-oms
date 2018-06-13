@@ -41,7 +41,7 @@ export default {
         if (value.indexOf(i) > -1) {
           num = 0
           const cmd = value.split(' ')[0]
-          this.results = ['&#x1f47f;你坏坏！命令【' + cmd + '】已进入黑名单']
+          this.results = ['(ง •̀_•́)ง 你坏坏！命令【' + cmd + '】已进入黑名单']
         } else {
           num = num * num
         }
