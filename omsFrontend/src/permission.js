@@ -6,7 +6,12 @@ import { Message } from 'element-ui'
 
 // permissiom judge
 function hasPermission(groups, permissionGroups) {
-  if (groups.indexOf('admin') >= 0) return true // admin权限 直接通过
+  if (groups.indexOf('admin') >= 0) {
+    // admin权限 直接通过
+    return true
+  } else {
+    console.log('not admin')
+  }
   if (!permissionGroups) return true
   return groups.some(group => permissionGroups.indexOf(group) >= 0)
 }
