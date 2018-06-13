@@ -11,7 +11,7 @@ if (process.env.NODE_ENV === 'production') {
   CONFIG = {
     apiUrl: '',
     zkapiUrl: 'http://172.19.6.99:9000',
-    super_group: 'OMS_Super_Admin',
+    super_group: 'admin',
     wsurl: ws_scheme + '://' + rest_url + '/ws'
   }
 } else if (process.env.NODE_ENV === 'test') {
