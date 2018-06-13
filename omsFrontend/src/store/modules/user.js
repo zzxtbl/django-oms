@@ -65,6 +65,7 @@ const user = {
           const groups = data.groups
           commit('SET_GROUPS', groups)
           localStorage.setItem('groups', groups)
+          console.log('super_group: ' + super_group)
           if (groups.indexOf(super_group) >= 0) {
             console.log('user is super')
             commit('SET_ROLE', 'super')
