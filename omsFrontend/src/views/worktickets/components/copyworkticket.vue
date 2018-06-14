@@ -3,7 +3,6 @@
     <el-card>
       <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px">
         <el-form-item label="转移">
-          <el-radio v-model="copy" label="op">运维</el-radio>
           <el-radio v-model="copy" label="dev">研发</el-radio>
         </el-form-item>
         <el-form-item label="名称" prop="name">
@@ -79,7 +78,7 @@ export default {
           { required: true, message: '请输入正确的内容', trigger: 'blur' }
         ]
       },
-      copy: 'op',
+      copy: 'dev',
       users: [],
       toolbars: {
         preview: true, // 预览
@@ -202,7 +201,7 @@ export default {
             }
           }
           const messageForm = {
-            action_user: 'itsupport',
+            action_user: 'admin',
             title: '【新需求】' + DemandForm.name,
             message: `需求创建人: ${DemandForm.create_user}`
           }

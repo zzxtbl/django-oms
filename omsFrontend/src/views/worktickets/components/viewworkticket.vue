@@ -294,7 +294,7 @@ export default {
           }
           if (this.sendop) {
             const messageForm = {
-              action_user: 'itsupport',
+              action_user: 'admin',
               title: '【工单有新回复】' + this.ticketData.name,
               message: `指派人: ${this.ticketData.action_user}\n工单地址: ${window.location.href}`
             }

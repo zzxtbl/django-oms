@@ -3,7 +3,7 @@
     <el-card>
       <div class="head-lavel">
         <div class="table-button">
-          <el-button type="primary" icon="el-icon-plus" @click="addForm=true">新建</el-button>
+          <el-button type="primary" icon="el-icon-plus" @click="addForm=true" disabled>新建</el-button>
 
           <el-radio-group v-model="listQuery.showdev" @change="changeStatus" style="margin-left: 20px">
             <el-radio label="">全部</el-radio>

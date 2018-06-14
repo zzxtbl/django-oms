@@ -253,7 +253,7 @@ export default {
       }
       patchDeployTicket(row.id, rowdata).then(() => {
         const messageForm = {
-          action_user: 'itsupport',
+          action_user: 'admin',
           title: '【上线申请通过】' + row.name,
           message: `上线内容: ${row.version}`
         }
@@ -272,7 +272,7 @@ export default {
       }
       patchDeployTicket(this.nopass.id, rowdata).then(() => {
         const messageForm = {
-          action_user: 'itsupport',
+          action_user: 'admin',
           title: '【申请未通过】' + this.nopass.name,
           message: `原因: ${this.nopass.content}`
         }

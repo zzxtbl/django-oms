@@ -70,7 +70,7 @@ export default {
         content: '',
         create_user: localStorage.getItem('username'),
         level: 2,
-        action_user: 'itsupport',
+        action_user: localStorage.getItem('username'),
         edit_user: '',
         create_group: [],
         pid: ''

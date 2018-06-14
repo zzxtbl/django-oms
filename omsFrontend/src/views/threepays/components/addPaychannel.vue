@@ -56,7 +56,7 @@ export default {
         m_forwardurl: '',
         m_submiturl: '',
         create_user: localStorage.getItem('username'),
-        action_user: 'itsupport'
+        action_user: 'admin'
       },
       rules: {
         platform: [

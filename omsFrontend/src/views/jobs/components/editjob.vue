@@ -20,7 +20,7 @@
         <el-form-item label="发布步骤">
           <el-card>
             <div slot="header">
-              <el-button class="card-head-btn" type="text" icon="el-icon-plus" @click="addenvForm=true"></el-button>
+              <el-button class="card-head-btn" type="text" icon="el-icon-plus" @click="addenvForm=true" disabled></el-button>
             </div>
             <el-table :data="envsData" stripe @row-click="clickenvTable" style="width: 100%">
               <el-table-column prop="level" label="顺序" width="50"></el-table-column>
@@ -37,8 +37,8 @@
               </el-table-column>
               <el-table-column label="操作" width="180">
                 <template slot-scope="scope">
-                  <el-button type="success" size="mini" @click="updateenvForm(scope.row)">修改</el-button>
-                  <el-button type="danger" size="mini" @click="deleteenvForm(scope.row.id)">删除</el-button>
+                  <el-button type="success" size="mini" @click="updateenvForm(scope.row)" disabled>修改</el-button>
+                  <el-button type="danger" size="mini" @click="deleteenvForm(scope.row.id)" disabled>删除</el-button>
                 </template>
               </el-table-column>
             </el-table>
@@ -47,7 +47,7 @@
         <el-form-item v-if="showcmd" label="配置命令">
           <el-card>
             <div slot="header">
-              <el-button class="card-head-btn" type="text" icon="el-icon-plus" @click="addcmdForm=true"></el-button>
+              <el-button class="card-head-btn" type="text" icon="el-icon-plus" @click="addcmdForm=true" disabled></el-button>
             </div>
             <el-table :data="cmdsData" stripe style="width: 100%">
               <el-table-column type="index" width="50"></el-table-column>

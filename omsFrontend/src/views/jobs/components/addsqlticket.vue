@@ -75,7 +75,7 @@ export default {
               message: '恭喜你，新建成功'
             })
             const messageForm = {
-              action_user: 'itsupport',
+              action_user: 'admin',
               title: '【sql执行申请】' + this.ruleForm.name,
               message: this.ruleForm.desc
             }
